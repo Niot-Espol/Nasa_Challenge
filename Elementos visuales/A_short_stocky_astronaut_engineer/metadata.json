@@ -1,0 +1,79 @@
+{
+  "group_id": "302c1200-c436-4a06-bb26-5837092119f3",
+  "states": [
+    {
+      "character": {
+        "id": "3edb9ff8-3ee6-4fd6-b3ea-38a92a13ed79",
+        "name": "Idle",
+        "prompt": "A short, stocky astronaut engineer with a bulky white and industrial orange spacesuit, squared helmet with a rectangular dark blue visor, large mechanical backpack, reinforced shoulder pads, heavy boots, utility belt with tools. Wide silhouette, strong arms, charming semi-chibi proportions, cozy sci-fi pixel art RPG character, clean dark outlines, limited color palette, classic Game Boy Advance style.",
+        "size": {
+          "width": 32,
+          "height": 32
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-11-14T16:09:50.698290+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {
+          "Running": {
+            "north": [
+              "Idle/animations/Running/north/frame_000.png",
+              "Idle/animations/Running/north/frame_001.png",
+              "Idle/animations/Running/north/frame_002.png",
+              "Idle/animations/Running/north/frame_003.png",
+              "Idle/animations/Running/north/frame_004.png",
+              "Idle/animations/Running/north/frame_005.png",
+              "Idle/animations/Running/north/frame_006.png",
+              "Idle/animations/Running/north/frame_007.png"
+            ],
+            "east": [
+              "Idle/animations/Running/east/frame_000.png",
+              "Idle/animations/Running/east/frame_001.png",
+              "Idle/animations/Running/east/frame_002.png",
+              "Idle/animations/Running/east/frame_003.png",
+              "Idle/animations/Running/east/frame_004.png",
+              "Idle/animations/Running/east/frame_005.png",
+              "Idle/animations/Running/east/frame_006.png",
+              "Idle/animations/Running/east/frame_007.png"
+            ],
+            "south": [
+              "Idle/animations/Running/south/frame_000.png",
+              "Idle/animations/Running/south/frame_001.png",
+              "Idle/animations/Running/south/frame_002.png",
+              "Idle/animations/Running/south/frame_003.png",
+              "Idle/animations/Running/south/frame_004.png",
+              "Idle/animations/Running/south/frame_005.png",
+              "Idle/animations/Running/south/frame_006.png",
+              "Idle/animations/Running/south/frame_007.png"
+            ],
+            "west": [
+              "Idle/animations/Running/west/frame_000.png",
+              "Idle/animations/Running/west/frame_001.png",
+              "Idle/animations/Running/west/frame_002.png",
+              "Idle/animations/Running/west/frame_003.png",
+              "Idle/animations/Running/west/frame_004.png",
+              "Idle/animations/Running/west/frame_005.png",
+              "Idle/animations/Running/west/frame_006.png",
+              "Idle/animations/Running/west/frame_007.png"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-11-14T18:26:30.040571"
+}
