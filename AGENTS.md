@@ -72,7 +72,14 @@ Elementos visuales/                   zips originales de los personajes (fuente;
 - [x] **Protagonista: `AstronautStocky`.** Las otras dos variantes quedan disponibles cambiando el controller del Animator por su override.
 - [x] Prefab `Assets/_Project/Prefabs/Player.prefab`: en la raíz tiene `Rigidbody2D`, un `BoxCollider2D` solo en los pies, `TopDownMover` y `CharacterAnimator`; el hijo `Sprite` tiene `SpriteRenderer` y `Animator`. `CharacterAnimator` pasa `Facing` e `IsMoving` al Animator, decide la dirección dominante y aplica `flipX` a la izquierda. Está colocado en `01_Hub` sobre un fondo greybox gris azulado.
 - [ ] Interacción con los puntos científicos (acercarse y presionar E).
-- [ ] Contrato del modelo: `RoverDesign`, `MissionResult`, `GameSession`.
+- [x] Contrato del modelo:
+  - `Scripts/Model/` (C# puro): `RoverDesign`, `Verifier` (con `VerificationResult` y `VerificationIssue`, mensajes de BIMO) y `MissionResult` (`ScienceSite`, `MissionIncident`).
+  - `Scripts/Core/GameSession.cs`, con `EnsureDesign()`, `EnsureResult()` y `Reset()`.
+  - `Scripts/Data/`: `ComponentData` (ScriptableObject) y `RoverDesignBuilder`.
+  - 14 assets en `ScriptableObjects/Components/`.
+  - Verificado: los diseños objetivo del doc de recursos dan exactamente 470/99, 500/106, 455/108 y 480/97 (✓), y "Lo quiero todo" da 550/129 (✗).
+  - **Pendiente de diseño:** definir el "consumo base" de energía (regla de verificación) y los `nasaFact` con fuente de cada componente.
+- [ ] `MissionState` (estado en vivo de Marte: energía, tiempo, puntos) y `ReportBuilder` (textos del reporte a partir de `Design` + `Result`).
 - [ ] Primera build de principio a fin con placeholders (meta: sábado ~20:00).
 
 ## 6. Reglas para agentes (importante)
