@@ -71,7 +71,11 @@ Elementos visuales/                   zips originales de los personajes (fuente;
 - [x] Animaciones de los astronautas: 6 clips por personaje (`Idle_Down/Up/Side`, `Run_Down/Up/Side`, 10 fps). `Astronaut.controller` usa blend trees 2D con los parámetros `FacingX`, `FacingY` e `IsMoving`, y hay override controllers para Agile y Cute. Para ir a la izquierda se usa el clip *Side* con `SpriteRenderer.flipX`.
 - [x] **Protagonista: `AstronautStocky`.** Las otras dos variantes quedan disponibles cambiando el controller del Animator por su override.
 - [x] Prefab `Assets/_Project/Prefabs/Player.prefab`: en la raíz tiene `Rigidbody2D`, un `BoxCollider2D` solo en los pies, `TopDownMover` y `CharacterAnimator`; el hijo `Sprite` tiene `SpriteRenderer` y `Animator`. `CharacterAnimator` pasa `Facing` e `IsMoving` al Animator, decide la dirección dominante y aplica `flipX` a la izquierda. Está colocado en `01_Hub` sobre un fondo greybox gris azulado.
-- [ ] Interacción con los puntos científicos (acercarse y presionar E).
+- [x] `04_Mars` jugable (greybox):
+  - `Mission` con `MissionController`: avanza el estado, bloquea al rover en modo seguro y dispara los eventos (tormenta en t=70 s durante 30 s; apagón en t=150 s con la duración de la antena).
+  - 3 `ScienceSitePoint` (Delta azul, Mineral morado, Roca especial dorada) con trigger, indicador "[E]" y color al completarse.
+  - HUD **provisional** de texto (`MissionHUD`) con energía, tiempo, puntos, estados y mensaje de BIMO.
+  - Botón "Terminar misión" → `FinishMission()`: guarda `GameSession.Result` y carga `05_Report`. Al acabarse el tiempo también termina.
 - [x] Contrato del modelo:
   - `Scripts/Model/` (C# puro): `RoverDesign`, `Verifier` (con `VerificationResult` y `VerificationIssue`, mensajes de BIMO) y `MissionResult` (`ScienceSite`, `MissionIncident`).
   - `Scripts/Core/GameSession.cs`, con `EnsureDesign()`, `EnsureResult()` y `Reset()`.
@@ -79,7 +83,11 @@ Elementos visuales/                   zips originales de los personajes (fuente;
   - 14 assets en `ScriptableObjects/Components/`.
   - Verificado: los diseños objetivo del doc de recursos dan exactamente 470/99, 500/106, 455/108 y 480/97 (✓), y "Lo quiero todo" da 550/129 (✗).
   - **Pendiente de diseño:** definir el "consumo base" de energía (regla de verificación) y los `nasaFact` con fuente de cada componente.
-- [ ] `MissionState` (estado en vivo de Marte: energía, tiempo, puntos) y `ReportBuilder` (textos del reporte a partir de `Design` + `Result`).
+- [x] `MissionState` (`Scripts/Model/`, C# puro): estado en vivo de Marte.
+  - Energía: moverse gasta 1/s, escanear lo que cueste el instrumento, la fuente recarga; los paneles no recargan durante la tormenta.
+  - Tiempo de 240 s y modo seguro (energía en 0 → detenido hasta el 30 %).
+  - Escaneo con `ScanStatus` y mensajes de BIMO; va registrando incidentes en `Result`.
+- [ ] `ReportBuilder` (textos del reporte a partir de `Design` + `Result`) y pantalla de Reporte que los muestre.
 - [ ] Primera build de principio a fin con placeholders (meta: sábado ~20:00).
 
 ## 6. Reglas para agentes (importante)
