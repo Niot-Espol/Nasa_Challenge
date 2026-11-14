@@ -14,6 +14,7 @@
 ### Documentos (lee el que aplique antes de trabajar en esa parte)
 - [`docs/game-design/alcance-mision-marte.md`](docs/game-design/alcance-mision-marte.md): **alcance acordado** (solo Marte), flujo, qué entra y qué se recorta, y cronograma.
 - [`docs/game-design/sistema-recursos-y-assets.md`](docs/game-design/sistema-recursos-y-assets.md): recursos, valores de los componentes, diseños objetivo, eventos, puntuación y lista de assets.
+- [`docs/game-design/lista-arte-para-dibujar.md`](docs/game-design/lista-arte-para-dibujar.md): **lista de arte para el equipo** (tamaños, frames, prioridades). Sin capas: el rover es un solo dibujo y los componentes son íconos sueltos.
 - [`docs/architecture/arquitectura-unity.md`](docs/architecture/arquitectura-unity.md): escenas y sus dueños, `GameSession`, `ComponentData` y prefabs.
 - [`docs/game-design/historia-mars-crafts.md`](docs/game-design/historia-mars-crafts.md): historia del equipo. La versión vigente es la **1.65**; la 1.0 está descartada. Las tres misiones son la visión, pero **solo se construye Marte**: la Tierra y la Luna aparecen bloqueadas en el menú.
 
