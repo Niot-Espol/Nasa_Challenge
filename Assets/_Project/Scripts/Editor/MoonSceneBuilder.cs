@@ -145,6 +145,10 @@ public static class MoonSceneBuilder
             dark.transform.localScale = new Vector3(ShadowRect.width / size.x, ShadowRect.height / size.y, 1f);
         }
 
+        // El hielo es lo único que brilla en la oscuridad: se dibuja por encima de la sombra
+        foreach (var sp in Object.FindObjectsByType<ScienceSitePoint>(FindObjectsInactive.Include))
+            if (sp.Site == ScienceSite.Ice) { var body = sp.transform.Find("Body"); if (body != null) body.GetComponent<SpriteRenderer>().sortingOrder = dsr.sortingOrder + 1; }
+
         var nosig = new GameObject("NoSignalZone_CraterFloor");
         nosig.transform.SetParent(zones.transform, false);
         nosig.transform.position = CraterCenter;
