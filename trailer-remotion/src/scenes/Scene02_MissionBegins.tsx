@@ -1,18 +1,16 @@
 import React from "react";
 import {
   AbsoluteFill,
-  Img,
   interpolate,
   spring,
-  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
 import { PixelSprite } from "../components/PixelSprite";
+import { GroundedSprite, HubTilemap } from "../components/GameTilemap";
 import { FONTS } from "../styles/theme";
 import {
   DiagonalWipeIn,
-  ForegroundParticles,
   ImpactFlash,
   TacticalHudFrame,
 } from "../components/CinematicEffects";
@@ -21,12 +19,11 @@ export const Scene02_MissionBegins: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  // Camera pans across the EXPANDED REAL GAME HUB SCENARIO (Generator Sector -> Central Command -> Workshop Airlock)
   const isPart2 = frame >= 75;
-  const camScale = interpolate(frame, [0, 75, 150], [1.05, 1.14, 1.22], {
+  const camScale = interpolate(frame, [0, 150], [1.04, 1.16], {
     extrapolateRight: "clamp",
   });
-  const camX = interpolate(frame, [0, 75, 150], [120, 0, -90], {
+  const camX = interpolate(frame, [0, 150], [90, -80], {
     extrapolateRight: "clamp",
   });
 
@@ -38,14 +35,13 @@ export const Scene02_MissionBegins: React.FC = () => {
 
   const mateoIdx = Math.floor(frame / 6) % 2;
   const lunaIdx = Math.floor(frame / 6) % 2;
-
   const runIdx = Math.floor(frame / 3) % 8;
   const playerFrame = `game-assets/Sprites/Characters/AstronautStocky/Running/East/frame_00${runIdx}.png`;
 
-  const playerX = interpolate(frame, [0, 150], [380, 1080], {
+  const playerX = interpolate(frame, [0, 150], [420, 1080], {
     extrapolateRight: "clamp",
   });
-  const bimoX = interpolate(frame, [0, 150], [260, 950], {
+  const bimoX = interpolate(frame, [0, 150], [300, 950], {
     extrapolateRight: "clamp",
   });
 
@@ -58,211 +54,181 @@ export const Scene02_MissionBegins: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: "#0a0f1d", overflow: "hidden" }}>
       <DiagonalWipeIn color="#38bdf8" />
-      <ImpactFlash triggerFrame={75} duration={7} color="#38bdf8" maxOpacity={0.55} />
+      <ImpactFlash triggerFrame={75} duration={6} color="#38bdf8" maxOpacity={0.45} />
 
-      {/* REAL GAME SCENARIO: 01_Hub Space Center built with LabTilesPNG + Hub Structure & Interior Props */}
       <AbsoluteFill
         style={{
           transform: `translate(${camX}px, 0px) scale(${camScale})`,
           transformOrigin: "center center",
         }}
       >
-        {/* Main Metallic Tilemap Floor (floor_panels.png) */}
-        <AbsoluteFill
-          style={{
-            backgroundImage: `url(${staticFile(
-              "game-assets/Tilesets/Hub/LabTilesPNG/floor_panels.png"
-            )})`,
-            backgroundSize: "96px 96px",
-            imageRendering: "pixelated",
-          }}
-        />
+        {/* Multi-tile 18-variant Hub Tilemap */}
+        <HubTilemap variant="hub" />
 
-        {/* Central Engineering Walkway (floor_grate.png) */}
-        <div
-          style={{
-            position: "absolute",
-            left: 0,
-            right: 0,
-            top: 460,
-            height: 220,
-            backgroundImage: `url(${staticFile(
-              "game-assets/Tilesets/Hub/LabTilesPNG/floor_grate.png"
-            )})`,
-            backgroundSize: "96px 96px",
-            imageRendering: "pixelated",
-            borderTop: "4px solid #38bdf8",
-            borderBottom: "4px solid #38bdf8",
-          }}
-        />
-
-        {/* Top Structural Wall built with real Hub wall panels & airlocks */}
+        {/* Top Structural Wall with Real Hub Panels & Airlocks */}
         <div
           style={{
             position: "absolute",
             top: 0,
-            left: 0,
-            right: 0,
-            height: 230,
-            background: "linear-gradient(180deg, #0f172a 0%, #1e293b 100%)",
+            left: -128,
+            right: -128,
+            height: 210,
+            background: "linear-gradient(180deg, #0b1120 0%, #1e293b 100%)",
             borderBottom: "8px solid #334155",
             display: "flex",
             alignItems: "flex-end",
             justifyContent: "space-around",
-            padding: "0 40px",
+            padding: "0 80px",
+            zIndex: 10,
           }}
         >
-          <PixelSprite src="game-assets/Sprites/Hub/Structure/muro-panel-a.png" size={180} />
-          <PixelSprite src="game-assets/Sprites/Hub/Structure/esclusa-cian.png" size={210} />
-          <PixelSprite src="game-assets/Sprites/Hub/Structure/muro-panel-b.png" size={180} />
-          <PixelSprite src="game-assets/Sprites/Hub/Structure/muro-panel-c.png" size={180} />
-          <PixelSprite src="game-assets/Sprites/Hub/Structure/esclusa-naranja.png" size={210} />
+          <PixelSprite src="game-assets/Sprites/Hub/Structure/muro-panel-a.png" size={175} />
+          <PixelSprite src="game-assets/Sprites/Hub/Structure/esclusa-cian.png" size={200} />
+          <PixelSprite src="game-assets/Sprites/Hub/Structure/muro-panel-b.png" size={175} />
+          <PixelSprite src="game-assets/Sprites/Hub/Structure/muro-panel-c.png" size={175} />
+          <PixelSprite src="game-assets/Sprites/Hub/Structure/esclusa-naranja.png" size={200} />
         </div>
 
-        {/* SECTOR 1 (LEFT): Power Generator & Reactor Bay (Misión 1 Generator Repair!) */}
-        <div style={{ position: "absolute", left: 130, top: 210 }}>
-          <PixelSprite src="game-assets/Sprites/Hub/Interior/reactor-cian.png" size={220} />
-          {/* Reactor Energy Pulse */}
-          <div
-            style={{
-              position: "absolute",
-              left: 20,
-              top: 20,
-              width: 180,
-              height: 180,
-              borderRadius: "50%",
-              background:
-                "radial-gradient(circle, rgba(56,189,248,0.6) 0%, transparent 70%)",
-              opacity: 0.6 + 0.4 * Math.sin(frame * 0.35),
-            }}
-          />
-        </div>
-        <div style={{ position: "absolute", left: 350, top: 260 }}>
-          <PixelSprite src="game-assets/Sprites/Hub/Interior/servidor.png" size={150} />
-        </div>
-        <div style={{ position: "absolute", left: 140, top: 690 }}>
-          <PixelSprite src="game-assets/Sprites/Hub/Props/tanques-gemelos.png" size={155} />
-        </div>
+        {/* Grounded Interior Props & Stations with Contact Shadows */}
+        <GroundedSprite
+          src="game-assets/Sprites/Hub/Interior/reactor-cian.png"
+          x={240}
+          y={310}
+          size={210}
+        />
+        <GroundedSprite
+          src="game-assets/Sprites/Hub/Interior/servidor.png"
+          x={440}
+          y={320}
+          size={145}
+        />
+        <GroundedSprite
+          src="game-assets/Sprites/Hub/Props/tanques-gemelos.png"
+          x={250}
+          y={740}
+          size={150}
+        />
 
-        {/* SECTOR 2 (CENTER): Mission Control Consoles & Research Station */}
-        <div style={{ position: "absolute", left: 680, top: 240 }}>
-          <PixelSprite src="game-assets/Sprites/Hub/Interior/consola-control.png" size={210} />
-        </div>
-        <div style={{ position: "absolute", left: 930, top: 240 }}>
-          <PixelSprite src="game-assets/Sprites/Hub/Interior/consola-investigacion.png" size={210} />
-        </div>
-        <div style={{ position: "absolute", left: 790, top: 690 }}>
-          <PixelSprite src="game-assets/Sprites/Hub/Interior/mesa-laboratorio.png" size={180} />
-        </div>
+        <GroundedSprite
+          src="game-assets/Sprites/Hub/Interior/consola-control.png"
+          x={780}
+          y={320}
+          size={200}
+        />
+        <GroundedSprite
+          src="game-assets/Sprites/Hub/Interior/consola-investigacion.png"
+          x={1030}
+          y={320}
+          size={200}
+        />
+        <GroundedSprite
+          src="game-assets/Sprites/Hub/Interior/mesa-laboratorio.png"
+          x={900}
+          y={740}
+          size={175}
+        />
 
-        {/* SECTOR 3 (RIGHT): Diagnostic Station, Hydroponics & Workshop Gate */}
-        <div style={{ position: "absolute", left: 1290, top: 235 }}>
-          <PixelSprite src="game-assets/Sprites/Hub/Interior/estacion-diagnostico.png" size={210} />
-        </div>
-        <div style={{ position: "absolute", left: 1560, top: 250 }}>
-          <PixelSprite src="game-assets/Sprites/Hub/Interior/cultivo-hidroponico.png" size={190} />
-        </div>
-        <div style={{ position: "absolute", left: 1420, top: 690 }}>
-          <PixelSprite src="game-assets/Sprites/Hub/Interior/consola-logistica.png" size={185} />
-        </div>
+        <GroundedSprite
+          src="game-assets/Sprites/Hub/Interior/estacion-diagnostico.png"
+          x={1370}
+          y={320}
+          size={200}
+        />
+        <GroundedSprite
+          src="game-assets/Sprites/Hub/Interior/cultivo-hidroponico.png"
+          x={1630}
+          y={330}
+          size={185}
+        />
+        <GroundedSprite
+          src="game-assets/Sprites/Hub/Interior/consola-logistica.png"
+          x={1480}
+          y={740}
+          size={180}
+        />
 
-        {/* ALL 5 GAME CHARACTERS ALIVE IN THE HUB SCENARIO */}
-        {/* Mateo Rojas by the Reactor & Server */}
-        <div style={{ position: "absolute", left: 450, top: 380 }}>
-          <PixelSprite
-            src={`game-assets/Sprites/Characters/Mateo/Idle/South/idle_south_00${mateoIdx}.png`}
-            size={145}
-          />
-        </div>
+        {/* Grounded Characters with Y-Sorting & Contact Shadows */}
+        <GroundedSprite
+          src={`game-assets/Sprites/Characters/Mateo/Idle/South/idle_south_00${mateoIdx}.png`}
+          x={520}
+          y={420}
+          size={135}
+          shadowWidth={64}
+        />
+        <GroundedSprite
+          src={vegaFrame}
+          x={910}
+          y={425}
+          size={140}
+          shadowWidth={66}
+        />
+        <GroundedSprite
+          src={`game-assets/Sprites/Characters/Luna/Idle/South/idle_south_00${lunaIdx}.png`}
+          x={1250}
+          y={430}
+          size={135}
+          shadowWidth={64}
+        />
 
-        {/* Dra. Elena Vega at Central Mission Control */}
-        <div style={{ position: "absolute", left: 880, top: 380 }}>
-          <PixelSprite src={vegaFrame} size={150} />
-        </div>
-
-        {/* Luna Torres at Operations & Comms */}
-        <div style={{ position: "absolute", left: 1220, top: 390 }}>
-          <PixelSprite
-            src={`game-assets/Sprites/Characters/Luna/Idle/South/idle_south_00${lunaIdx}.png`}
-            size={145}
-          />
-        </div>
-
-        {/* Commander & BIMO walking along the grated corridor */}
-        <div style={{ position: "absolute", left: playerX, top: 495 }}>
-          <PixelSprite src={playerFrame} size={155} />
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            left: bimoX,
-            top: 515 + Math.sin(frame * 0.35) * 8,
-          }}
-        >
-          <PixelSprite src={bimoFrame} size={125} />
-        </div>
+        <GroundedSprite
+          src={playerFrame}
+          x={playerX}
+          y={525}
+          size={142}
+          shadowWidth={68}
+        />
+        <GroundedSprite
+          src={bimoFrame}
+          x={bimoX}
+          y={535 + Math.sin(frame * 0.3) * 5}
+          size={112}
+          shadowWidth={56}
+        />
       </AbsoluteFill>
 
-      <ForegroundParticles
-        color="#38bdf8"
-        secondaryColor="#facc15"
-        count={16}
-        speedY={-1.8}
-        speedX={1.0}
-      />
-
-      {/* Zone Arrival Banner (ZoneBanner style from 01_Hub) */}
+      {/* Top-Left Zone Banner */}
       <div
         style={{
           position: "absolute",
-          top: 32,
-          left: 44,
+          top: 28,
+          left: 40,
           padding: "12px 26px",
           background: "linear-gradient(180deg, rgba(11, 18, 36, 0.94) 0%, rgba(5, 9, 20, 0.97) 100%)",
-          imageRendering: "pixelated",
           border: "3px solid #38bdf8",
           boxShadow: "0 12px 32px rgba(0,0,0,0.85)",
-          zIndex: 65,
+          zIndex: 90,
         }}
       >
-        <div
-          style={{
-            fontFamily: FONTS.title,
-            fontSize: 28,
-            color: "#38bdf8",
-            letterSpacing: 2,
-          }}
-        >
-          01_HUB // CENTRO ESPACIAL MARS CRAFTS (REACTOR • CONTROL • TALLER)
+        <div style={{ fontFamily: FONTS.title, fontSize: 26, color: "#38bdf8", letterSpacing: 2 }}>
+          01_HUB // CENTRO ESPACIAL MARS CRAFTS
         </div>
       </div>
 
-      {/* Authentic Game Dialogue Box using UI/Dialogue/dialogue_frame.png */}
+      {/* Bottom Dialogue Box */}
       <div
         style={{
           position: "absolute",
-          bottom: 30,
+          bottom: 28,
           left: 130,
           right: 130,
-          height: 158,
+          height: 152,
           transform: `scale(${dialogPop})`,
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.94) 0%, rgba(5, 9, 20, 0.97) 100%)",
-          imageRendering: "pixelated",
+          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
           border: "3px solid #38bdf8",
           boxShadow: "0 18px 45px rgba(0,0,0,0.92)",
           display: "flex",
           alignItems: "center",
-          padding: "18px 30px",
+          padding: "16px 28px",
           gap: 24,
-          zIndex: 65,
+          zIndex: 90,
         }}
       >
         <div
           style={{
-            width: 114,
-            height: 114,
-            background: "linear-gradient(180deg, rgba(11, 18, 36, 0.94) 0%, rgba(5, 9, 20, 0.97) 100%)",
-            imageRendering: "pixelated",
+            width: 110,
+            height: 110,
+            background: "#090f20",
+            border: "3px solid #38bdf8",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -275,7 +241,7 @@ export const Scene02_MissionBegins: React.FC = () => {
                 ? "game-assets/Sprites/Portraits/DrElenaVega/vega-portrait-happy.png"
                 : "game-assets/Sprites/Portraits/BIMO/bimo_happy.png"
             }
-            size={98}
+            size={96}
           />
         </div>
 
@@ -283,28 +249,20 @@ export const Scene02_MissionBegins: React.FC = () => {
           <div
             style={{
               fontFamily: FONTS.title,
-              fontSize: 24,
+              fontSize: 23,
               color: !isPart2 ? "#38bdf8" : "#facc15",
               letterSpacing: 1.5,
-              marginBottom: 6,
+              marginBottom: 4,
             }}
           >
             {!isPart2
-              ? "DRA. ELENA VEGA — BRIEFING DE LAS 3 EXPEDICIONES"
-              : "BIMO & MATEO ROJAS — ACCESO AL TALLER DE INGENIERÍA DESBLOQUEADO"}
+              ? "DRA. ELENA VEGA — BRIEFING DE MISIÓN"
+              : "BIMO & MATEO ROJAS — RUMBO AL TALLER DE INGENIERÍA"}
           </div>
-          <div
-            style={{
-              fontFamily: FONTS.body,
-              fontSize: 23,
-              fontWeight: 800,
-              color: "#f8fafc",
-              lineHeight: 1.3,
-            }}
-          >
+          <div style={{ fontFamily: FONTS.body, fontSize: 22, fontWeight: 800, color: "#f8fafc", lineHeight: 1.3 }}>
             {!isPart2
-              ? "«Bienvenido al Centro Espacial. Estudiaremos la Tierra con el satélite Terra, el hielo polar de la Luna y el cráter Jezero en Marte.»"
-              : "«¡Reactor en línea y esclusa abierta, Comandante! Vamos al Taller a ensamblar nuestro satélite y el rover.»"}
+              ? "«Bienvenido, Comandante. Cada decisión de diseño determinará si nuestra misión logra sobrevivir en la Luna y Marte.»"
+              : "«¡Esclusa abierta! Vamos a la bahía de ensamblaje para configurar la energía, ruedas e instrumentos del rover.»"}
           </div>
         </div>
       </div>

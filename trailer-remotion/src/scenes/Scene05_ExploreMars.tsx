@@ -1,7 +1,6 @@
 import React from "react";
 import {
   AbsoluteFill,
-  Img,
   interpolate,
   spring,
   staticFile,
@@ -9,10 +8,10 @@ import {
   useVideoConfig,
 } from "remotion";
 import { PixelSprite } from "../components/PixelSprite";
+import { GroundedSprite, MarsTilemap } from "../components/GameTilemap";
 import { FONTS } from "../styles/theme";
 import {
   DiagonalWipeIn,
-  ForegroundParticles,
   ImpactFlash,
   TacticalHudFrame,
 } from "../components/CinematicEffects";
@@ -21,21 +20,21 @@ export const Scene05_ExploreMars: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  // Dynamic Camera Tracking across the EXPANDED REAL GAME SCENARIO 04_Mars
-  const camScale = interpolate(frame, [0, 90, 180], [1.04, 1.15, 1.24], {
+  const camScale = interpolate(frame, [0, 180], [1.04, 1.18], {
     extrapolateRight: "clamp",
   });
-  const camX = interpolate(frame, [0, 180], [90, -110], {
+  const camX = interpolate(frame, [0, 180], [80, -100], {
     extrapolateRight: "clamp",
   });
-  const camY = interpolate(frame, [0, 180], [30, -40], {
+  const camY = interpolate(frame, [0, 180], [20, -25], {
     extrapolateRight: "clamp",
   });
 
-  const roverX = interpolate(frame, [0, 180], [360, 1140], {
+  // Rover follows the stepped ancient river delta channel smoothly
+  const roverX = interpolate(frame, [0, 180], [380, 1180], {
     extrapolateRight: "clamp",
   });
-  const roverY = interpolate(frame, [0, 90, 180], [560, 470, 440], {
+  const roverY = interpolate(frame, [0, 90, 180], [560, 510, 470], {
     extrapolateRight: "clamp",
   });
 
@@ -53,146 +52,142 @@ export const Scene05_ExploreMars: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: "#3b170e", overflow: "hidden" }}>
       <DiagonalWipeIn color="#f97316" />
-      <ImpactFlash triggerFrame={105} duration={8} color="#f97316" maxOpacity={0.65} />
+      <ImpactFlash triggerFrame={105} duration={7} color="#f97316" maxOpacity={0.5} />
 
-      {/* REAL GAME SCENARIO: 04_Mars Expanded Tilemap (MarsTilesPNG + Relief + Craters + SciencePoints) */}
       <AbsoluteFill
         style={{
           transform: `translate(${camX}px, ${camY}px) scale(${camScale})`,
           transformOrigin: "center center",
         }}
       >
-        {/* Base Martian Regolith Tilemap (dirt_a.png) */}
-        <AbsoluteFill
-          style={{
-            backgroundImage: `url(${staticFile(
-              "game-assets/Tilesets/Mars/MarsTilesPNG/dirt_a.png"
-            )})`,
-            backgroundSize: "96px 96px",
-            imageRendering: "pixelated",
-          }}
+        {/* Elaborated 25-tile Mars Jezero Crater Tilemap (Stepped Delta, Mud, Sand, Dunes, RockyZone) */}
+        <MarsTilemap />
+
+        {/* Grounded Cliffs, Mesas, Craters, Rocks & Minerals with Contact Shadows */}
+        <GroundedSprite
+          src="game-assets/Sprites/Mars/Relief/meseta-grande.png"
+          x={190}
+          y={180}
+          size={260}
+        />
+        <GroundedSprite
+          src="game-assets/Sprites/Mars/Relief/cantil-largo.png"
+          x={580}
+          y={165}
+          size={250}
+        />
+        <GroundedSprite
+          src="game-assets/Sprites/Mars/Relief/meseta-alta.png"
+          x={1040}
+          y={175}
+          size={255}
+        />
+        <GroundedSprite
+          src="game-assets/Sprites/Mars/Relief/aguja-rocosa.png"
+          x={1520}
+          y={195}
+          size={235}
         />
 
-        {/* Ancient River Delta Channel & Sedimentary Sand Band (sand_a.png) */}
-        <div
-          style={{
-            position: "absolute",
-            left: -100,
-            right: -100,
-            top: 390,
-            height: 290,
-            transform: "rotate(-6deg)",
-            backgroundImage: `url(${staticFile(
-              "game-assets/Tilesets/Mars/MarsTilesPNG/sand_a.png"
-            )})`,
-            backgroundSize: "96px 96px",
-            imageRendering: "pixelated",
-            borderTop: "6px dashed rgba(251,146,60,0.45)",
-            borderBottom: "6px dashed rgba(251,146,60,0.45)",
-          }}
+        <GroundedSprite
+          src="game-assets/Sprites/Mars/Craters/crater-grande.png"
+          x={520}
+          y={340}
+          size={175}
+          shadowHeight={20}
+        />
+        <GroundedSprite
+          src="game-assets/Sprites/Mars/Craters/crater-hondo.png"
+          x={1380}
+          y={330}
+          size={165}
+          shadowHeight={20}
         />
 
-        {/* Rocky Hazard Zone (rocky_ground.png) */}
-        <div
-          style={{
-            position: "absolute",
-            left: 740,
-            top: 640,
-            width: 580,
-            height: 260,
-            backgroundImage: `url(${staticFile(
-              "game-assets/Tilesets/Mars/MarsTilesPNG/rocky_ground.png"
-            )})`,
-            backgroundSize: "96px 96px",
-            imageRendering: "pixelated",
-            border: "3px solid rgba(234,88,12,0.5)",
-          }}
+        <GroundedSprite
+          src="game-assets/Sprites/Mars/Rocks/roca-ancha.png"
+          x={840}
+          y={740}
+          size={140}
+        />
+        <GroundedSprite
+          src="game-assets/Sprites/Mars/Resources/deposito-cristal.png"
+          x={1060}
+          y={760}
+          size={130}
+        />
+        <GroundedSprite
+          src="game-assets/Sprites/Mars/Resources/mena-hierro.png"
+          x={1540}
+          y={700}
+          size={135}
         />
 
-        {/* Top & Border Canyon Mesas & Cliffs (Real Game Sprites/Mars/Relief/*) */}
-        <div style={{ position: "absolute", left: 60, top: 80 }}>
-          <PixelSprite src="game-assets/Sprites/Mars/Relief/meseta-grande.png" size={280} />
-        </div>
-        <div style={{ position: "absolute", left: 480, top: 60 }}>
-          <PixelSprite src="game-assets/Sprites/Mars/Relief/cantil-largo.png" size={260} />
-        </div>
-        <div style={{ position: "absolute", left: 960, top: 75 }}>
-          <PixelSprite src="game-assets/Sprites/Mars/Relief/meseta-alta.png" size={270} />
-        </div>
-        <div style={{ position: "absolute", left: 1460, top: 90 }}>
-          <PixelSprite src="game-assets/Sprites/Mars/Relief/aguja-rocosa.png" size={250} />
-        </div>
+        {/* Grounded Mars Lander Module */}
+        <GroundedSprite
+          src="game-assets/Sprites/Mars/Landing/landing_module.png"
+          x={220}
+          y={560}
+          size={220}
+          shadowWidth={160}
+        />
 
-        {/* Craters, Rocks & Mineral Deposits (Real Game Sprites/Mars/Craters, Rocks, Resources) */}
-        <div style={{ position: "absolute", left: 460, top: 260 }}>
-          <PixelSprite src="game-assets/Sprites/Mars/Craters/crater-grande.png" size={190} />
-        </div>
-        <div style={{ position: "absolute", left: 1340, top: 290 }}>
-          <PixelSprite src="game-assets/Sprites/Mars/Craters/crater-hondo.png" size={175} />
-        </div>
-        <div style={{ position: "absolute", left: 840, top: 680 }}>
-          <PixelSprite src="game-assets/Sprites/Mars/Rocks/roca-ancha.png" size={145} />
-        </div>
-        <div style={{ position: "absolute", left: 1050, top: 720 }}>
-          <PixelSprite src="game-assets/Sprites/Mars/Resources/deposito-cristal.png" size={135} />
-        </div>
-        <div style={{ position: "absolute", left: 1540, top: 640 }}>
-          <PixelSprite src="game-assets/Sprites/Mars/Resources/mena-hierro.png" size={140} />
-        </div>
-
-        {/* Real Game Mars Lander Module (Sprites/Mars/Landing/landing_module.png) */}
-        <div style={{ position: "absolute", left: 140, top: 470 }}>
-          <PixelSprite src="game-assets/Sprites/Mars/Landing/landing_module.png" size={235} />
-        </div>
-
-        {/* 3 Real Game Science Points (science_point_delta, science_point_mineral, science_point_special_rock) */}
-        <div style={{ position: "absolute", left: 680, top: 450 }}>
-          <PixelSprite
-            src="game-assets/Sprites/Mars/SciencePoints/science_point_delta.png"
-            size={155}
-          />
-          <div style={{ position: "absolute", left: 48, top: -48 }}>
+        {/* 3 Grounded Science Points */}
+        <GroundedSprite
+          src="game-assets/Sprites/Mars/SciencePoints/science_point_delta.png"
+          x={720}
+          y={520}
+          size={145}
+        >
+          <div style={{ position: "absolute", left: 46, top: -44 }}>
             <PixelSprite
               src="game-assets/Sprites/Mars/Indicators/science_completed.png"
-              size={54}
+              size={50}
             />
           </div>
-        </div>
+        </GroundedSprite>
 
-        <div style={{ position: "absolute", left: 1160, top: 380 }}>
-          <PixelSprite
-            src="game-assets/Sprites/Mars/SciencePoints/science_point_special_rock.png"
-            size={160}
-          />
-          {frame >= 65 && (
+        <GroundedSprite
+          src="game-assets/Sprites/Mars/SciencePoints/science_point_special_rock.png"
+          x={1160}
+          y={455}
+          size={150}
+        >
+          {frame >= 60 && (
             <div style={{ position: "absolute", left: -18, top: -18 }}>
               <PixelSprite
                 src={`game-assets/Sprites/Mars/Effects/Scan/scan_00${scanIdx}.png`}
-                size={195}
+                size={185}
               />
             </div>
           )}
-        </div>
+        </GroundedSprite>
 
-        <div style={{ position: "absolute", left: 1520, top: 450 }}>
-          <PixelSprite
-            src="game-assets/Sprites/Mars/SciencePoints/science_point_mineral.png"
-            size={155}
-          />
-          <div style={{ position: "absolute", left: 48, top: -48 }}>
+        <GroundedSprite
+          src="game-assets/Sprites/Mars/SciencePoints/science_point_mineral.png"
+          x={1520}
+          y={520}
+          size={145}
+        >
+          <div style={{ position: "absolute", left: 46, top: -44 }}>
             <PixelSprite
               src={`game-assets/Sprites/Mars/Indicators/Interaction/interaction_e_00${frame % 2}.png`}
-              size={52}
+              size={48}
             />
           </div>
-        </div>
+        </GroundedSprite>
 
-        {/* Real Game Driving Rover (DrivingV2/East/drive_east_000..003.png) */}
-        <div style={{ position: "absolute", left: roverX, top: roverY }}>
-          <PixelSprite src={roverSprite} size={190} />
-        </div>
+        {/* Grounded Driving Rover with Wheel Contact Shadow & Y-Sorting */}
+        <GroundedSprite
+          src={roverSprite}
+          x={roverX}
+          y={roverY}
+          size={185}
+          shadowWidth={140}
+          shadowHeight={38}
+        />
 
-        {/* Real Game Dust Storm Overlay (mars_dust_texture.png) */}
+        {/* Real Game Dust Storm Overlay */}
         {isStorm && (
           <AbsoluteFill
             style={{
@@ -200,21 +195,14 @@ export const Scene05_ExploreMars: React.FC = () => {
                 "game-assets/Sprites/Mars/Effects/Dust/mars_dust_texture.png"
               )})`,
               backgroundSize: "512px 512px",
-              backgroundPosition: `${-frame * 28}px ${frame * 10}px`,
-              opacity: 0.45,
+              backgroundPosition: `${-frame * 26}px ${frame * 9}px`,
+              opacity: 0.42,
               mixBlendMode: "screen",
+              zIndex: 2000,
             }}
           />
         )}
       </AbsoluteFill>
-
-      <ForegroundParticles
-        color="#fb923c"
-        secondaryColor="#fde047"
-        count={24}
-        speedY={-2.5}
-        speedX={6.0}
-      />
 
       {/* Top-Left Narrative Stamp: EXPLORA */}
       <div
@@ -224,63 +212,44 @@ export const Scene05_ExploreMars: React.FC = () => {
           left: 40,
           transform: `scale(${stampPop})`,
           padding: "12px 26px",
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.94) 0%, rgba(5, 9, 20, 0.97) 100%)",
-          imageRendering: "pixelated",
+          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
           border: "4px solid #f97316",
           boxShadow: "0 14px 36px rgba(0,0,0,0.85)",
-          zIndex: 65,
+          zIndex: 90,
         }}
       >
-        <div
-          style={{
-            fontFamily: FONTS.title,
-            fontSize: 52,
-            color: "#fb923c",
-            letterSpacing: 5,
-            lineHeight: 1,
-          }}
-        >
+        <div style={{ fontFamily: FONTS.title, fontSize: 50, color: "#fb923c", letterSpacing: 5, lineHeight: 1 }}>
           EXPLORA
         </div>
-        <div
-          style={{
-            fontFamily: FONTS.body,
-            fontSize: 17,
-            fontWeight: 900,
-            color: "#f8fafc",
-            letterSpacing: 1.5,
-            marginTop: 4,
-          }}
-        >
-          04_MARS // CRÁTER JEZERO, DELTA FLUVIAL Y TORMENTA DE POLVO
+        <div style={{ fontFamily: FONTS.body, fontSize: 17, fontWeight: 900, color: "#f8fafc", letterSpacing: 1.5, marginTop: 4 }}>
+          04_MARS // CRÁTER JEZERO Y ANTIGUO DELTA FLUVIAL
         </div>
       </div>
 
-      {/* Top-Right Real GameMars HUD (Energy, Science Points, Sols, Storm Alert) */}
+      {/* Top-Right Mars HUD */}
       <div
         style={{
           position: "absolute",
           top: 28,
           right: 40,
           padding: "12px 22px",
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.94) 0%, rgba(5, 9, 20, 0.97) 100%)",
-          imageRendering: "pixelated",
+          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
           border: `3px solid ${isStorm ? "#ef4444" : "#f59e0b"}`,
           display: "flex",
           alignItems: "center",
-          gap: 20,
-          zIndex: 65,
+          gap: 18,
+          zIndex: 90,
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <PixelSprite src="game-assets/Sprites/Icons/Resources/energy.png" size={30} />
-          <span style={{ fontFamily: FONTS.title, fontSize: 22, color: "#4ade80" }}>
+          <PixelSprite src="game-assets/Sprites/Icons/Resources/energy.png" size={28} />
+          <span style={{ fontFamily: FONTS.title, fontSize: 21, color: "#4ade80" }}>
             RTG 92 %
           </span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <PixelSprite src="game-assets/Sprites/Icons/Resources/science_data.png" size={30} />
-          <span style={{ fontFamily: FONTS.title, fontSize: 22, color: "#38bdf8" }}>
+          <PixelSprite src="game-assets/Sprites/Icons/Resources/science_data.png" size={28} />
+          <span style={{ fontFamily: FONTS.title, fontSize: 21, color: "#38bdf8" }}>
             2 / 3 PUNTOS
           </span>
         </div>
@@ -300,7 +269,7 @@ export const Scene05_ExploreMars: React.FC = () => {
         )}
       </div>
 
-      {/* Bottom Real Game Science Popup (UI/Science/science_popup_frame.png) */}
+      {/* Bottom Science Popup */}
       <div
         style={{
           position: "absolute",
@@ -308,28 +277,25 @@ export const Scene05_ExploreMars: React.FC = () => {
           left: 140,
           right: 140,
           padding: "14px 26px",
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.94) 0%, rgba(5, 9, 20, 0.97) 100%)",
-          imageRendering: "pixelated",
+          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
           border: "3px solid #f59e0b",
           boxShadow: "0 16px 40px rgba(0,0,0,0.92)",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
-          zIndex: 65,
+          gap: 16,
+          zIndex: 90,
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <PixelSprite
-            src="game-assets/Sprites/Mars/SciencePoints/science_point_special_rock.png"
-            size={64}
-          />
-          <div>
-            <div style={{ fontFamily: FONTS.title, fontSize: 22, color: "#facc15" }}>
-              DATO CIENTÍFICO NASA — DELTA FLUVIAL DEL CRÁTER JEZERO
-            </div>
-            <div style={{ fontFamily: FONTS.body, fontSize: 19, fontWeight: 800, color: "#f8fafc", marginTop: 2 }}>
-              Perseverance confirmó que el Cráter Jezero albergó un antiguo lago y un delta hace más de 3.500 millones de años.
-            </div>
+        <PixelSprite
+          src="game-assets/Sprites/Mars/SciencePoints/science_point_special_rock.png"
+          size={60}
+        />
+        <div>
+          <div style={{ fontFamily: FONTS.title, fontSize: 22, color: "#facc15" }}>
+            DATO CIENTÍFICO NASA — DELTA DEL CRÁTER JEZERO
+          </div>
+          <div style={{ fontFamily: FONTS.body, fontSize: 19, fontWeight: 800, color: "#f8fafc", marginTop: 2 }}>
+            Perseverance confirmó que el Cráter Jezero albergó un antiguo lago y un delta fluvial hace más de 3.500 millones de años.
           </div>
         </div>
       </div>
