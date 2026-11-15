@@ -94,6 +94,7 @@ public static class MoonSceneBuilder
             }
             siteProp.enumValueIndex = (int)site;
             so.FindProperty("fact").stringValue = fact;
+            so.FindProperty("factEn").stringValue = FactEn(site);
             so.FindProperty("factSource").stringValue = source;
             so.ApplyModifiedPropertiesWithoutUndo();
             sp.gameObject.name = "Site_" + site;
@@ -115,8 +116,8 @@ public static class MoonSceneBuilder
 
         // Cielo negro (fuera del mapa) y nombre de la zona
         if (Camera.main != null) Camera.main.backgroundColor = new Color(0.01f, 0.012f, 0.025f);
-        SetText("ZoneBanner", "Luna · Polo sur");
-        SetText("ZoneTag", "Polo sur lunar");
+        SetText("ZoneBanner", "Luna · Polo sur", "Moon · South Pole");
+        SetText("ZoneTag", "Polo sur lunar", "Lunar South Pole");
 
         // --- 4) Distribución distinta a Marte: espejo, salida arriba, anillo de rocas en el cráter ---
         var map = GameObject.Find("Map");
@@ -245,6 +246,16 @@ public static class MoonSceneBuilder
             }
     }
 
+    static string FactEn(ScienceSite site)
+    {
+        switch (site)
+        {
+            case ScienceSite.RimRock: return "Near the south pole, some high ground gets sunlight almost all the time, while the floors of many craters never do. That's why sunlit rims are candidates for future lunar bases.";
+            case ScienceSite.Regolith: return "Regolith is the layer of dust and rock fragments covering the Moon, created by billions of years of impacts. Apollo samples include tiny glass beads formed by impacts and ancient volcanic eruptions.";
+            default: return "In 2009, the LCROSS spacecraft struck Cabeus crater, near the south pole, and detected water in the plume it kicked up. In permanently shadowed craters temperatures drop to about -240 °C, so ice can survive for billions of years.";
+        }
+    }
+
     static void SetKind(EnvironmentZone z, EnvironmentZone.Kind kind, float drain)
     {
         var so = new SerializedObject(z);
@@ -253,12 +264,15 @@ public static class MoonSceneBuilder
         so.ApplyModifiedPropertiesWithoutUndo();
     }
 
-    static void SetText(string objectName, string text)
+    static void SetText(string objectName, string text, string english)
     {
         var go = GameObject.Find(objectName);
         if (go == null) return;
         var t = go.GetComponentInChildren<TMPro.TMP_Text>(true);
-        if (t != null) { t.text = text; EditorUtility.SetDirty(t); }
+        if (t == null) return;
+        t.text = text; EditorUtility.SetDirty(t);
+        var lt = t.GetComponent<LocalizedText>(); if (lt == null) lt = t.gameObject.AddComponent<LocalizedText>();
+        lt.english = english; lt.SetSpanish(text); EditorUtility.SetDirty(lt);
     }
 
     static Sprite Load(string rel) => AssetDatabase.LoadAssetAtPath<Sprite>(Art + rel);

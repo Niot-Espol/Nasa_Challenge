@@ -15,20 +15,21 @@ public class IntroCinematic : MonoBehaviour
     RectTransform stage;          // contenedor de cada plano
     Image fade;                   // negro para fundidos
     TMP_Text caption;
-    bool skipping;
+    bool skipping, picking;
     UITheme th;
 
     void Start()
     {
         th = UITheme.Current;
         Build();
-        StartCoroutine(Play());
+        if (LocSettings.HasChoice) StartCoroutine(Play());
+        else StartCoroutine(PickLanguage());
     }
 
     void Update()
     {
         var k = Keyboard.current; var m = Mouse.current;
-        if (skipping) return;
+        if (skipping || picking) return;
         if ((k != null && (k.spaceKey.wasPressedThisFrame || k.enterKey.wasPressedThisFrame || k.escapeKey.wasPressedThisFrame))
             || (m != null && m.leftButton.wasPressedThisFrame))
         {
@@ -48,7 +49,7 @@ public class IntroCinematic : MonoBehaviour
         StartCoroutine(Zoom(bg.rectTransform, 1f, 1.08f, 6f));
         StartCoroutine(Drift(earth.rectTransform, new Vector2(-420, 40), new Vector2(-380, 50), 6f));
         yield return Fade(1, 0, 0.6f);
-        yield return Say("La humanidad lleva décadas explorando el sistema solar.", 1.1f);
+        yield return Say(Loc.T("La humanidad lleva décadas explorando el sistema solar.", "For decades, humanity has been exploring the solar system."), 2.1f);
 
         // 2) Hacia la Luna
         var moon = Img(th.moon != null ? th.moon : th.earth, new Vector2(460, 120), new Vector2(170, 170));
@@ -56,7 +57,7 @@ public class IntroCinematic : MonoBehaviour
         StartCoroutine(FadeImg(moon, 0, 1, 0.6f));
         var ship = Img(th.cruiseShip, new Vector2(-260, 40), new Vector2(110, 110));
         StartCoroutine(Fly(ship.rectTransform, new Vector2(-260, 40), new Vector2(380, 120), 2.6f));
-        yield return Say("Observamos la Tierra. Buscamos hielo en la Luna.", 1.2f);
+        yield return Say(Loc.T("Observamos la Tierra. Buscamos hielo en la Luna.", "We watch the Earth. We search for ice on the Moon."), 2.2f);
         yield return Fade(0, 1, 0.45f);
 
         // 3) Marte crece en pantalla
@@ -65,7 +66,7 @@ public class IntroCinematic : MonoBehaviour
         var mars = Img(th.mars, new Vector2(0, 40), new Vector2(180, 180));
         StartCoroutine(Grow(mars.rectTransform, 180f, 620f, 3.6f));
         yield return Fade(1, 0, 0.45f);
-        yield return Say("Y en Marte hubo ríos y lagos. ¿Qué guardan sus rocas?", 1.3f);
+        yield return Say(Loc.T("Y en Marte hubo ríos y lagos. ¿Qué guardan sus rocas?", "And Mars once had rivers and lakes. What do its rocks hold?"), 2.3f);
         yield return Fade(0, 1, 0.45f);
 
         // 4) Superficie: el rover cruza el paisaje
@@ -75,7 +76,7 @@ public class IntroCinematic : MonoBehaviour
         var rover = Img(th.roverPreview, new Vector2(-1100, -250), new Vector2(330, 330));
         StartCoroutine(Fly(rover.rectTransform, new Vector2(-1100, -250), new Vector2(150, -250), 3.4f, bob: true));
         yield return Fade(1, 0, 0.45f);
-        yield return Say("Cada misión se diseña con presupuesto, masa y energía limitados.", 1.3f);
+        yield return Say(Loc.T("Cada misión se diseña con presupuesto, masa y energía limitados.", "Every mission is designed with limited budget, mass and energy."), 2.3f);
         yield return Fade(0, 1, 0.45f);
 
         // 5) El centro espacial: Vega y BIMO
@@ -88,9 +89,9 @@ public class IntroCinematic : MonoBehaviour
         var bimo = Img(DialogueData.Portrait(Speaker.Bimo, Expression.Happy), new Vector2(480, 50), new Vector2(340, 340));
         vega.color = bimo.color = new Color(1, 1, 1, 0.35f);
         yield return Fade(1, 0, 0.4f);
-        yield return Talk(vega, bimo, "Dra. Elena Vega", "Bienvenido a Mars Crafts, comandante. Te estábamos esperando.");
-        yield return Talk(bimo, vega, "BIMO", "¡Por fin! Llevo tres horas cargado al 100 %... y dos revisando que no exploto.");
-        yield return Talk(vega, bimo, "Dra. Elena Vega", "Aquí diseñarás y lanzarás tus propias misiones. ¿Listo?");
+        yield return Talk(vega, bimo, DialogueData.SpeakerName(Speaker.Vega), Loc.T("Bienvenido a Mars Crafts, comandante. Te estábamos esperando.", "Welcome to Mars Crafts, commander. We've been waiting for you."));
+        yield return Talk(bimo, vega, "BIMO", Loc.T("¡Por fin! Llevo tres horas cargado al 100 %... y dos revisando que no exploto.", "Finally! I've been charged to 100% for three hours... and spent two checking I won't explode."));
+        yield return Talk(vega, bimo, DialogueData.SpeakerName(Speaker.Vega), Loc.T("Aquí diseñarás y lanzarás tus propias misiones. ¿Listo?", "Here you'll design and launch your own missions. Ready?"));
         yield return Fade(0, 1, 0.45f);
 
         // 6) Logo
@@ -102,10 +103,33 @@ public class IntroCinematic : MonoBehaviour
         yield return Fade(1, 0, 0.35f);
         AudioManager.Play(Sfx.StarDing);
         yield return Pop(logo.rectTransform, 0.6f);
-        caption.text = "<size=80%>Presiona cualquier tecla</size>";
+        caption.text = Loc.T("<size=80%>Presiona cualquier tecla</size>", "<size=80%>Press any key</size>");
         for (float t = 0; t < 2f; t += Time.deltaTime) { caption.alpha = 0.5f + 0.5f * Mathf.Sin(t * 4f); yield return null; }
         skipping = true;
         SceneFlow.Go(SceneFlow.Title);
+    }
+
+    // ---------- Selector de idioma (solo la primera vez) ----------
+    IEnumerator PickLanguage()
+    {
+        picking = true;
+        var canvas = GameObject.Find("Canvas").transform;
+        fade.color = new Color(0, 0, 0, 1);
+        var panel = UIKit.Panel(canvas, "LanguagePicker", UIElement.Panel);
+        UIKit.Place(panel.rectTransform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(760, 420));
+        UIKit.VList(panel.gameObject, 22, 44, TextAnchor.UpperCenter);
+        var title = UIKit.Text(panel.transform, "Title", "Elige tu idioma\n<size=75%>Choose your language</size>", 40, TextAlignmentOptions.Center, TextTone.Accent);
+        title.GetComponent<ThemedText>().title = true; title.GetComponent<ThemedText>().Apply(); UIKit.Size(title, -1, 110);
+        bool chosen = false;
+        UIKit.Size(UIKit.Button(panel.transform, "Es", "ESPAÑOL", 34, UIElement.ButtonPrimary, () => { LocSettings.Choose(Lang.Es); chosen = true; }), -1, 84);
+        UIKit.Size(UIKit.Button(panel.transform, "En", "ENGLISH", 34, UIElement.ButtonPrimary, () => { LocSettings.Choose(Lang.En); chosen = true; }), -1, 84);
+        while (!chosen) yield return null;
+        AudioManager.Play(Sfx.Click);
+        Destroy(panel.gameObject);
+        foreach (var t in canvas.GetComponentsInChildren<TMP_Text>(true)) if (t.name == "Skip") t.text = Loc.T("Espacio: saltar", "Space: skip");
+        yield return null;
+        picking = false;
+        StartCoroutine(Play());
     }
 
     // ---------- Construcción ----------
@@ -125,7 +149,7 @@ public class IntroCinematic : MonoBehaviour
         caption = UIKit.Text(canvas, "Caption", "", 34, TextAlignmentOptions.Center);
         var crt = caption.rectTransform; crt.anchorMin = new Vector2(0.5f, 0); crt.anchorMax = new Vector2(0.5f, 0); crt.pivot = new Vector2(0.5f, 0);
         crt.sizeDelta = new Vector2(1500, 110); crt.anchoredPosition = new Vector2(0, 8);
-        var hint = UIKit.Text(canvas, "Skip", "Espacio: saltar", 20, TextAlignmentOptions.Right, TextTone.Muted);
+        var hint = UIKit.Text(canvas, "Skip", Loc.T("Espacio: saltar", "Space: skip"), 20, TextAlignmentOptions.Right, TextTone.Muted);
         var hrt = hint.rectTransform; hrt.anchorMin = hrt.anchorMax = new Vector2(1, 1); hrt.pivot = new Vector2(1, 1); hrt.sizeDelta = new Vector2(400, 40); hrt.anchoredPosition = new Vector2(-30, -40);
         fade = UIKit.Panel(canvas, "Fade", UIElement.Overlay); fade.color = Color.black; fade.raycastTarget = false; UIKit.Fill(fade.rectTransform);
     }
@@ -173,7 +197,7 @@ public class IntroCinematic : MonoBehaviour
     {
         speaker.color = Color.white; other.color = new Color(1, 1, 1, 0.35f);
         StartCoroutine(Pop(speaker.rectTransform, 0.25f, 1.06f));
-        yield return Say($"<color=#FF9A3C>{name}:</color> {text}", 1.4f);
+        yield return Say($"<color=#FF9A3C>{name}:</color> {text}", 2.4f);
     }
 
     IEnumerator Zoom(RectTransform rt, float a, float b, float secs)

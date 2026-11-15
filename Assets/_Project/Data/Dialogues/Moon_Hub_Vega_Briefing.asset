@@ -17,39 +17,55 @@ MonoBehaviour:
     expression: 1
     text: "Bienvenido de nuevo, comandante. Hoy viajamos mucho m\xE1s cerca: a la
       Luna, a solo unos 384.400 kil\xF3metros."
+    textEn: 'Welcome back, commander. Today we''re going much closer: to the Moon,
+      only about 384,400 kilometers away.'
     highlight: 
   - speaker: 0
     expression: 0
     text: "La NASA ha encontrado evidencias de hielo de agua en el polo sur lunar,
       dentro de cr\xE1teres donde la luz del Sol nunca llega."
+    textEn: NASA has found evidence of water ice at the lunar south pole, inside
+      craters where sunlight never reaches.
     highlight: 
   - speaker: 0
     expression: 0
     text: "Nuestra pregunta cient\xEDfica: \xBFhay hielo en esos cr\xE1teres en sombra
       permanente, y podr\xEDa servir para futuras misiones?"
+    textEn: 'Our science question: is there ice in those permanently shadowed craters,
+      and could it be useful for future missions?'
     highlight: 
   - speaker: 0
     expression: 0
     text: "Estudiar\xE1s tres puntos: una roca del borde iluminado, el regolito y,
       en el fondo de un cr\xE1ter, el hielo. Cada uno necesita un instrumento distinto."
+    textEn: 'You''ll study three sites: a rock on the sunlit rim, the regolith and,
+      at the bottom of a crater, the ice. Each one needs a different instrument.'
     highlight: 
   - speaker: 0
     expression: 2
     text: "Cuidado: en la sombra no hay Sol para los paneles y el fr\xEDo gasta energ\xEDa.
       Y desde el fondo del cr\xE1ter no se ve la Tierra: sin un rel\xE9, perder\xE1s
       la se\xF1al."
+    textEn: 'Careful: in the shadow there''s no sunlight for the panels and the cold
+      drains energy. And from the crater floor you can''t see Earth: without a relay,
+      you''ll lose the signal.'
     highlight: 
   - speaker: 1
     expression: 1
     text: "\xBFAgua en la Luna? \xA1Excelente! \xA1Preparar\xE9 mi flotador espacial!"
+    textEn: Water on the Moon? Excellent! I'll get my space floatie ready!
     highlight: 
   - speaker: 0
     expression: 0
     text: "BIMO, no vamos de vacaciones. Necesitamos un rover que sobreviva al fr\xEDo
       y a la oscuridad."
+    textEn: BIMO, this isn't a vacation. We need a rover that can survive the cold
+      and the dark.
     highlight: 
   - speaker: 0
     expression: 1
     text: "Dise\xF1a bien tu rover en el taller. Cuando est\xE9s listo, entra por
       la puerta del fondo."
+    textEn: Design your rover carefully in the workshop. When you're ready, go through
+      the door at the back.
     highlight: 

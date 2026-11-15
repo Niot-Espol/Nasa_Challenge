@@ -27,7 +27,7 @@ public class RoomCamera : MonoBehaviour
         if (player != null) mover = player.GetComponent<TopDownMover>();
         CurrentRoom = RoomOf(player != null ? player.position.x : 0f);
         transform.position = Target(CurrentRoom);
-        RoomChanged?.Invoke(roomNames[CurrentRoom]);
+        RoomChanged?.Invoke(RoomName(CurrentRoom));
     }
 
     int RoomOf(float x)
@@ -37,6 +37,10 @@ public class RoomCamera : MonoBehaviour
             if (Mathf.Abs(x - roomCentersX[i]) < Mathf.Abs(x - roomCentersX[best])) best = i;
         return best;
     }
+
+    // Nombres en inglés (mismo orden que roomNames)
+    [SerializeField] string[] roomNamesEn = { "Telemetry room", "Mission control", "Mars Yard" };
+    string RoomName(int i) => Loc.T(roomNames[i], i < roomNamesEn.Length ? roomNamesEn[i] : null);
 
     Vector3 Target(int room) => new Vector3(roomCentersX[room], cameraY, transform.position.z);
 
@@ -48,7 +52,7 @@ public class RoomCamera : MonoBehaviour
         {
             CurrentRoom = room;
             from = transform.position; to = Target(room); slideT = 0f;
-            RoomChanged?.Invoke(roomNames[room]);
+            RoomChanged?.Invoke(RoomName(room));
         }
         if (slideT < 1f)
         {

@@ -31,7 +31,13 @@ public class ReportScreen : MonoBehaviour
         var result = GameSession.EnsureResult();
         var mission = GameSession.EnsureMission();
         var rep = ReportBuilder.Build(design, result, mission);
-        if (compareTitle != null) compareTitle.text = mission.ComparisonTitle;
+        if (compareTitle != null)
+        {
+            compareTitle.text = mission.ComparisonTitle;
+            // En inglés el título es más largo: se ajusta a una línea
+            compareTitle.textWrappingMode = TextWrappingModes.NoWrap;
+            compareTitle.enableAutoSizing = true; compareTitle.fontSizeMin = 18; compareTitle.fontSizeMax = 30;
+        }
         Show(rep);
         StartCoroutine(RevealStars(rep.Stars));
     }
@@ -87,7 +93,7 @@ public class ReportScreen : MonoBehaviour
         {
             UIKit.Clear(badgesRow);
             if (rep.Badges.Count == 0)
-                UIKit.Size(UIKit.Text(badgesRow, "None", "Sin insignias esta vez", 24, TextAlignmentOptions.Left, TextTone.Muted), 400, 40);
+                UIKit.Size(UIKit.Text(badgesRow, "None", Loc.T("Sin insignias esta vez", "No badges this time"), 24, TextAlignmentOptions.Left, TextTone.Muted), 400, 40);
             foreach (var b in rep.Badges) AddBadge(b, th);
         }
 
@@ -95,18 +101,18 @@ public class ReportScreen : MonoBehaviour
         {
             int used = Mathf.RoundToInt(rep.TimeUsed);
             resourcesText.text =
-                $"Presupuesto: {rep.CostUsed}/{rep.Budget} créditos\n" +
-                $"Masa: {rep.MassUsed}/{rep.MassCapacity} kg\n" +
-                $"Energía gastada: {rep.EnergyConsumed:0}\n" +
-                $"Tiempo: {used / 60}:{used % 60:00} de {Mathf.RoundToInt(rep.TimeLimit) / 60}:{Mathf.RoundToInt(rep.TimeLimit) % 60:00}";
+                Loc.T("Presupuesto", "Budget") + $": {rep.CostUsed}/{rep.Budget}\n" +
+                Loc.T("Masa", "Mass") + $": {rep.MassUsed}/{rep.MassCapacity} kg\n" +
+                Loc.T("Energía gastada", "Energy used") + $": {rep.EnergyConsumed:0}\n" +
+                Loc.T("Tiempo", "Time") + $": {used / 60}:{used % 60:00} / {Mathf.RoundToInt(rep.TimeLimit) / 60}:{Mathf.RoundToInt(rep.TimeLimit) % 60:00}";
         }
 
         // Recursos como barras
         int tUsed = Mathf.RoundToInt(rep.TimeUsed), tLim = Mathf.RoundToInt(rep.TimeLimit);
-        SetBar(budgetBar, budgetText, rep.CostUsed, rep.Budget, $"Presupuesto  <b>{rep.CostUsed}</b> / {rep.Budget} créditos");
-        SetBar(massBar, massText, rep.MassUsed, rep.MassCapacity, $"Masa  <b>{rep.MassUsed}</b> / {rep.MassCapacity} kg");
-        SetBar(timeBar, timeText, rep.TimeUsed, rep.TimeLimit, $"Tiempo  <b>{tUsed / 60}:{tUsed % 60:00}</b> / {tLim / 60}:{tLim % 60:00}");
-        SetBar(scienceBar, scienceText, rep.Stars, 3, $"Puntos científicos  <b>{rep.Stars}</b> / 3");
+        SetBar(budgetBar, budgetText, rep.CostUsed, rep.Budget, Loc.T($"Presupuesto  <b>{rep.CostUsed}</b> / {rep.Budget} créditos", $"Budget  <b>{rep.CostUsed}</b> / {rep.Budget} credits"));
+        SetBar(massBar, massText, rep.MassUsed, rep.MassCapacity, Loc.T("Masa", "Mass") + $"  <b>{rep.MassUsed}</b> / {rep.MassCapacity} kg");
+        SetBar(timeBar, timeText, rep.TimeUsed, rep.TimeLimit, Loc.T("Tiempo", "Time") + $"  <b>{tUsed / 60}:{tUsed % 60:00}</b> / {tLim / 60}:{tLim % 60:00}");
+        SetBar(scienceBar, scienceText, rep.Stars, 3, Loc.T("Puntos científicos", "Science sites") + $"  <b>{rep.Stars}</b> / 3");
 
         if (roverImage != null && th != null) { roverImage.sprite = th.roverPreview; roverImage.enabled = th.roverPreview != null; roverImage.preserveAspect = true; }
 

@@ -42,10 +42,10 @@ public static class ReportBuilder
             EnergyConsumed = r.EnergyConsumed, TimeUsed = r.TimeUsedSeconds, TimeLimit = r.TimeLimitSeconds,
         };
 
-        rep.Grade = r.Stars == 3 ? "¡Misión cumplida!"
-                  : r.Stars == 2 ? "Buena misión"
-                  : r.Stars == 1 ? "Misión parcial"
-                  : "La misión no obtuvo datos... pero aprendimos mucho";
+        rep.Grade = r.Stars == 3 ? Loc.T("¡Misión cumplida!", "Mission accomplished!")
+                  : r.Stars == 2 ? Loc.T("Buena misión", "Good mission")
+                  : r.Stars == 1 ? Loc.T("Misión parcial", "Partial mission")
+                  : Loc.T("La misión no obtuvo datos... pero aprendimos mucho", "No data this time... but we learned a lot");
 
         // --- Insignias ---
         if (r.Stars == 3) rep.Badges.Add(Badge.Commander);
@@ -59,13 +59,13 @@ public static class ReportBuilder
             var instr = info.Instrument;
             if (r.CompletedSites.Contains(site))
                 rep.Lines.Add(new ReportLine(ReportTone.Good,
-                    $"Estudiaste {info.Name} con {MissionState.InstrumentName(instr)}."));
+                    Loc.T($"Estudiaste {info.Name} con {MissionState.InstrumentName(instr)}.", $"You studied {info.Name} with {MissionState.InstrumentName(instr)}.")));
             else if (!d.HasInstrument(instr))
                 rep.Lines.Add(new ReportLine(ReportTone.Bad,
-                    $"No llevabas {MissionState.InstrumentName(instr)}: no pudiste estudiar {info.Name}."));
+                    Loc.T($"No llevabas {MissionState.InstrumentName(instr)}: no pudiste estudiar {info.Name}.", $"You didn't bring {MissionState.InstrumentName(instr)}: you couldn't study {info.Name}.")));
             else
                 rep.Lines.Add(new ReportLine(ReportTone.Bad,
-                    $"Llevabas {MissionState.InstrumentName(instr)}, pero no llegaste a estudiar {info.Name} a tiempo."));
+                    Loc.T($"Llevabas {MissionState.InstrumentName(instr)}, pero no llegaste a estudiar {info.Name} a tiempo.", $"You had {MissionState.InstrumentName(instr)}, but didn't reach {info.Name} in time.")));
         }
 
         // --- Energía (propia de cada misión: tormenta, sombra...) ---
@@ -79,11 +79,11 @@ public static class ReportBuilder
 
         // --- Presupuesto ---
         rep.Lines.Add(d.RemainingBudget >= 10
-            ? new ReportLine(ReportTone.Good, $"Gastaste {d.TotalCost} de {RoverDesign.Budget} créditos: te sobraron {d.RemainingBudget}.")
-            : new ReportLine(ReportTone.Info, $"Gastaste {d.TotalCost} de {RoverDesign.Budget} créditos."));
+            ? new ReportLine(ReportTone.Good, Loc.T($"Gastaste {d.TotalCost} de {RoverDesign.Budget} créditos: te sobraron {d.RemainingBudget}.", $"You spent {d.TotalCost} of {RoverDesign.Budget} credits: {d.RemainingBudget} left over."))
+            : new ReportLine(ReportTone.Info, Loc.T($"Gastaste {d.TotalCost} de {RoverDesign.Budget} créditos.", $"You spent {d.TotalCost} of {RoverDesign.Budget} credits.")));
 
         if (r.CountOf(IncidentType.TimeOut) > 0 && r.Stars < 3)
-            rep.Lines.Add(new ReportLine(ReportTone.Info, "Se acabó el tiempo de la misión antes de completar todos los puntos."));
+            rep.Lines.Add(new ReportLine(ReportTone.Info, Loc.T("Se acabó el tiempo de la misión antes de completar todos los puntos.", "Mission time ran out before completing all sites.")));
 
         // --- Comparación con la misión real de referencia ---
         mission.AddComparison(rep, d, r);
@@ -101,9 +101,9 @@ public static class ReportBuilder
     {
         switch (b)
         {
-            case Badge.Commander: return "Comandante Mars Crafts";
-            case Badge.Efficient: return "Eficiente";
-            default: return "Sin modo seguro";
+            case Badge.Commander: return Loc.T("Comandante Mars Crafts", "Mars Crafts Commander");
+            case Badge.Efficient: return Loc.T("Eficiente", "Efficient");
+            default: return Loc.T("Sin modo seguro", "No safe mode");
         }
     }
 

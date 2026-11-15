@@ -21,19 +21,29 @@ public class PauseMenu : MonoBehaviour
         DontDestroyOnLoad(go);
         instance = go.AddComponent<PauseMenu>();
         instance.Build();
+        Loc.Changed += () => { if (instance != null) instance.Rebuild(); };
         SceneManager.sceneLoaded += (s, m) => instance.SetPaused(false);
+    }
+
+    void Rebuild()
+    {
+        if (root != null) Destroy(root);
+        Build();
     }
 
     void Build()
     {
-        var canvas = gameObject.AddComponent<Canvas>();
-        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-        canvas.sortingOrder = 900;
-        var scaler = gameObject.AddComponent<CanvasScaler>();
-        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-        scaler.referenceResolution = new Vector2(1920, 1080);
-        scaler.matchWidthOrHeight = 0.5f;
-        gameObject.AddComponent<GraphicRaycaster>();
+        if (GetComponent<Canvas>() == null)
+        {
+            var canvas = gameObject.AddComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            canvas.sortingOrder = 900;
+            var scaler = gameObject.AddComponent<CanvasScaler>();
+            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+            scaler.referenceResolution = new Vector2(1920, 1080);
+            scaler.matchWidthOrHeight = 0.5f;
+            gameObject.AddComponent<GraphicRaycaster>();
+        }
 
         var overlay = UIKit.Panel(transform, "Overlay", UIElement.Overlay);
         UIKit.Fill(overlay.rectTransform);
@@ -42,12 +52,12 @@ public class PauseMenu : MonoBehaviour
         var panel = UIKit.Panel(overlay.transform, "Panel", UIElement.Panel);
         UIKit.Place(panel.rectTransform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(560, 420));
         UIKit.VList(panel.gameObject, 18, 36, TextAnchor.UpperCenter);
-        var pt = UIKit.Text(panel.transform, "Title", "PAUSA", 48, TMPro.TextAlignmentOptions.Center, TextTone.Accent);
+        var pt = UIKit.Text(panel.transform, "Title", Loc.T("PAUSA", "PAUSED"), 48, TMPro.TextAlignmentOptions.Center, TextTone.Accent);
         pt.GetComponent<ThemedText>().title = true; pt.GetComponent<ThemedText>().Apply();
         UIKit.Size(pt, -1, 70);
-        UIKit.Size(UIKit.Button(panel.transform, "Resume", "Continuar", 30, UIElement.ButtonPrimary, () => SetPaused(false)), -1, 76);
-        UIKit.Size(UIKit.Button(panel.transform, "Restart", "Reiniciar esta etapa", 30, UIElement.Button, Restart), -1, 76);
-        UIKit.Size(UIKit.Button(panel.transform, "Title", "Volver al título", 30, UIElement.Button, BackToTitle), -1, 76);
+        UIKit.Size(UIKit.Button(panel.transform, "Resume", Loc.T("Continuar", "Resume"), 30, UIElement.ButtonPrimary, () => SetPaused(false)), -1, 76);
+        UIKit.Size(UIKit.Button(panel.transform, "Restart", Loc.T("Reiniciar esta etapa", "Restart this stage"), 30, UIElement.Button, Restart), -1, 76);
+        UIKit.Size(UIKit.Button(panel.transform, "Title", Loc.T("Volver al título", "Back to title"), 30, UIElement.Button, BackToTitle), -1, 76);
         root.SetActive(false);
     }
 

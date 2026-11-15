@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ComponentData
   id: power_rtg
   displayName: RTG
+  displayNameEn: RTG
   category: 1
   mass: 120
   cost: 30
@@ -27,5 +28,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: f471b4992c0f4fc694f2ef040e926ef0, type: 3}
   description: "Generador que da energ\xEDa constante pase lo que pase. Pesado y
     caro."
+  descriptionEn: Generator that gives steady power no matter what. Heavy and expensive.
   nasaFact: 
+  nasaFactEn: 
   nasaSourceUrl: 

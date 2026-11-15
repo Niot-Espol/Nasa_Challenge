@@ -20,8 +20,8 @@ public class ControlRoomMission : MonoBehaviour
     enum Step { Briefing, Explore, Waiting, Done }
     Step step = Step.Briefing;
 
-    static readonly string[] Antennas = { "Goldstone (EE. UU.)", "Madrid (España)", "Canberra (Australia)" };
-    static readonly string[] Maneuvers = { "Avanzar a toda potencia", "Retroceder despacio girando las ruedas", "Girar en el sitio" };
+    static string[] Antennas => new[] { Loc.T("Goldstone (EE. UU.)", "Goldstone (USA)"), Loc.T("Madrid (España)", "Madrid (Spain)"), "Canberra (Australia)" };
+    static string[] Maneuvers => new[] { Loc.T("Avanzar a toda potencia", "Drive forward at full power"), Loc.T("Retroceder despacio girando las ruedas", "Back up slowly while turning the wheels"), Loc.T("Girar en el sitio", "Turn in place") };
     const int Correct = 1;
 
     int visibleAntenna;             // la que ve Marte en esta partida (se lee en la sala de telemetría)
@@ -54,10 +54,10 @@ public class ControlRoomMission : MonoBehaviour
     {
         yield return null;
         Say(new[] {
-            L(Speaker.Vega, Expression.Worried, "¡Comandante! Alerta de Marte: nuestro rover entró en modo seguro y dejó de moverse.", null),
-            L(Speaker.Vega, Expression.Neutral, "No podemos ir a arreglarlo: todo se hace desde la Tierra. Tenemos tres salas para ello.", null),
-            L(Speaker.Bimo, Expression.Neutral, "A la izquierda, la sala de telemetría: su pantalla dice qué le pasa al rover. A la derecha, el Mars Yard, con una réplica para probar maniobras.", null),
-            L(Speaker.Vega, Expression.Neutral, "Y aquí, la consola de la Red de Espacio Profundo para enviar el comando. Ve investigando, comandante.", null) },
+            L(Speaker.Vega, Expression.Worried, Loc.T("¡Comandante! Alerta de Marte: nuestro rover entró en modo seguro y dejó de moverse.", "Commander! Alert from Mars: our rover went into safe mode and stopped moving."), null),
+            L(Speaker.Vega, Expression.Neutral, Loc.T("No podemos ir a arreglarlo: todo se hace desde la Tierra. Tenemos tres salas para ello.", "We can't go and fix it: everything is done from Earth. We have three rooms for that."), null),
+            L(Speaker.Bimo, Expression.Neutral, Loc.T("A la izquierda, la sala de telemetría: su pantalla dice qué le pasa al rover. A la derecha, el Mars Yard, con una réplica para probar maniobras.", "On the left, the telemetry room: its screen tells us what's wrong with the rover. On the right, the Mars Yard, with a replica to test maneuvers."), null),
+            L(Speaker.Vega, Expression.Neutral, Loc.T("Y aquí, la consola de la Red de Espacio Profundo para enviar el comando. Ve investigando, comandante.", "And here, the Deep Space Network console to send the command. Start investigating, commander."), null) },
             () => { step = Step.Explore; Refresh(); });
     }
 
@@ -66,9 +66,9 @@ public class ControlRoomMission : MonoBehaviour
     {
         switch (k)
         {
-            case ConsoleStation.Kind.Telemetry: return "Pantalla de telemetría";
-            case ConsoleStation.Kind.TestBench: return "Réplica del rover · probar maniobra";
-            default: return "Red de Espacio Profundo (DSN) · enviar comando";
+            case ConsoleStation.Kind.Telemetry: return Loc.T("Pantalla de telemetría", "Telemetry screen");
+            case ConsoleStation.Kind.TestBench: return Loc.T("Réplica del rover · probar maniobra", "Rover replica · test maneuver");
+            default: return Loc.T("Red de Espacio Profundo (DSN) · enviar comando", "Deep Space Network (DSN) · send command");
         }
     }
 
@@ -89,9 +89,9 @@ public class ControlRoomMission : MonoBehaviour
         bool first = !readTelemetry;
         readTelemetry = true;
         Say(new[] {
-            L(Speaker.Bimo, Expression.Worried, "Telemetría: las seis ruedas giran, pero el rover no avanza. Batería al 40 %. Está ATASCADO EN ARENA BLANDA, como le pasó al rover Spirit en 2009.", null),
-            L(Speaker.Bimo, Expression.Neutral, $"Y mira la esquina de la pantalla: ahora mismo la antena que ve Marte es la de <b>{Antennas[visibleAntenna]}</b>. ¡Lo anoto!", null),
-            L(Speaker.Bimo, Expression.Neutral, first ? "La red DSN tiene tres complejos repartidos por el planeta, separados unos 120°, para que siempre alguno vea la nave mientras la Tierra gira." : "Recuerda: prueba la maniobra en el Mars Yard antes de enviarla.", null) },
+            L(Speaker.Bimo, Expression.Worried, Loc.T("Telemetría: las seis ruedas giran, pero el rover no avanza. Batería al 40 %. Está ATASCADO EN ARENA BLANDA, como le pasó al rover Spirit en 2009.", "Telemetry: all six wheels spin, but the rover doesn't move. Battery at 40%. It's STUCK IN SOFT SAND, like the Spirit rover in 2009."), null),
+            L(Speaker.Bimo, Expression.Neutral, Loc.T($"Y mira la esquina de la pantalla: ahora mismo la antena que ve Marte es la de <b>{Antennas[visibleAntenna]}</b>. ¡Lo anoto!", $"And look at the corner of the screen: right now the antenna that can see Mars is <b>{Antennas[visibleAntenna]}</b>. I'll note it!"), null),
+            L(Speaker.Bimo, Expression.Neutral, first ? Loc.T("La red DSN tiene tres complejos repartidos por el planeta, separados unos 120°, para que siempre alguno vea la nave mientras la Tierra gira.", "The DSN has three complexes around the planet, about 120° apart, so one can always see the spacecraft as Earth turns.") : Loc.T("Recuerda: prueba la maniobra en el Mars Yard antes de enviarla.", "Remember: test the maneuver in the Mars Yard before sending it."), null) },
             Refresh);
     }
 
@@ -135,12 +135,12 @@ public class ControlRoomMission : MonoBehaviour
         busy = false;
         Say(new[] {
             L(Speaker.Bimo, i == Correct ? Expression.Happy : Expression.Worried,
-                i == Correct ? "¡La réplica salió de la arena retrocediendo despacio! Esta maniobra funciona."
-              : i == 0 ? "Las ruedas giraron en falso y la réplica se hundió MÁS. Mala idea."
-              : "Al girar, la réplica cavó un hoyo y quedó inclinada. Demasiado arriesgado.", null),
+                i == Correct ? Loc.T("¡La réplica salió de la arena retrocediendo despacio! Esta maniobra funciona.", "The replica got out of the sand by backing up slowly! This maneuver works.")
+              : i == 0 ? Loc.T("Las ruedas giraron en falso y la réplica se hundió MÁS. Mala idea.", "The wheels spun in place and the replica sank DEEPER. Bad idea.")
+              : Loc.T("Al girar, la réplica cavó un hoyo y quedó inclinada. Demasiado arriesgado.", "Turning dug a hole and left the replica tilted. Too risky."), null),
             L(Speaker.Bimo, Expression.Neutral, i == Correct
-                ? "Vuelve al centro de control y envíala por la red DSN. ¡Elige bien la antena!"
-                : "Prueba otra maniobra antes de enviar nada a Marte.", null) },
+                ? Loc.T("Vuelve al centro de control y envíala por la red DSN. ¡Elige bien la antena!", "Go back to mission control and send it through the DSN. Pick the right antenna!")
+                : Loc.T("Prueba otra maniobra antes de enviar nada a Marte.", "Try another maneuver before sending anything to Mars."), null) },
             () => { ResetReplica(); Refresh(); });
     }
 
@@ -155,7 +155,7 @@ public class ControlRoomMission : MonoBehaviour
     {
         if (chosen < 0)
         {
-            Say(new[] { L(Speaker.Bimo, Expression.Neutral, "Aún no tenemos maniobra. Primero averigua qué le pasa (telemetría, a la izquierda) y pruébala en el Mars Yard (a la derecha).", null) }, null);
+            Say(new[] { L(Speaker.Bimo, Expression.Neutral, Loc.T("Aún no tenemos maniobra. Primero averigua qué le pasa (telemetría, a la izquierda) y pruébala en el Mars Yard (a la derecha).", "We don't have a maneuver yet. First find out what's wrong (telemetry, on the left) and test it in the Mars Yard (on the right)."), null) }, null);
             return;
         }
         Open(antennaPanel);
@@ -169,8 +169,8 @@ public class ControlRoomMission : MonoBehaviour
             wrongAntenna++;
             AudioManager.Play(Sfx.Error);
             Say(new[] { L(Speaker.Bimo, Expression.Worried, readTelemetry
-                ? $"{Antennas[a]} no ve Marte ahora mismo: la Tierra la tapa. ¿No era otra la que anotamos?"
-                : $"{Antennas[a]} no ve Marte ahora mismo. La pantalla de telemetría dice cuál sí lo ve.", null) }, Refresh);
+                ? Loc.T($"{Antennas[a]} no ve Marte ahora mismo: la Tierra la tapa. ¿No era otra la que anotamos?", $"{Antennas[a]} can't see Mars right now: Earth is in the way. Didn't we note a different one?")
+                : Loc.T($"{Antennas[a]} no ve Marte ahora mismo. La pantalla de telemetría dice cuál sí lo ve.", $"{Antennas[a]} can't see Mars right now. The telemetry screen says which one can."), null) }, Refresh);
             return;
         }
         sends++;
@@ -184,23 +184,23 @@ public class ControlRoomMission : MonoBehaviour
     {
         for (float t = signalDelay; t > 0; t -= Time.deltaTime)
         {
-            objective.text = $"Comando en camino a Marte desde {Antennas[visibleAntenna]}... respuesta en {t:0} s\n<size=78%>La señal viaja a la velocidad de la luz, pero a Marte tarda entre 3 y 22 minutos.</size>";
+            objective.text = Loc.T($"Comando en camino a Marte desde {Antennas[visibleAntenna]}... respuesta en {t:0} s\n<size=78%>La señal viaja a la velocidad de la luz, pero a Marte tarda entre 3 y 22 minutos.</size>", $"Command on its way to Mars from {Antennas[visibleAntenna]}... reply in {t:0} s\n<size=78%>The signal travels at the speed of light, but it takes 3 to 22 minutes to reach Mars.</size>");
             yield return null;
         }
         if (chosen == Correct)
         {
             AudioManager.Play(Sfx.Success);
             Say(new[] {
-                L(Speaker.Bimo, Expression.Happy, "¡Llegó la respuesta! El rover retrocedió y salió de la arena. ¡Está libre!", null),
-                L(Speaker.Vega, Expression.Happy, "Excelente trabajo, comandante: diagnosticar, probar en la Tierra y enviar por la antena correcta. Así se rescata un rover.", null) },
+                L(Speaker.Bimo, Expression.Happy, Loc.T("¡Llegó la respuesta! El rover retrocedió y salió de la arena. ¡Está libre!", "The reply is in! The rover backed up and got out of the sand. It's free!"), null),
+                L(Speaker.Vega, Expression.Happy, Loc.T("Excelente trabajo, comandante: diagnosticar, probar en la Tierra y enviar por la antena correcta. Así se rescata un rover.", "Excellent work, commander: diagnose, test on Earth and send through the right antenna. That's how you rescue a rover."), null) },
                 Finish);
         }
         else
         {
             AudioManager.Play(Sfx.SafeMode);
             Say(new[] {
-                L(Speaker.Bimo, Expression.Worried, "Respuesta recibida... el rover se hundió más en la arena.", null),
-                L(Speaker.Vega, Expression.Worried, "Aún podemos intentarlo. Vuelve al Mars Yard y busca una maniobra que funcione.", null) },
+                L(Speaker.Bimo, Expression.Worried, Loc.T("Respuesta recibida... el rover se hundió más en la arena.", "Reply received... the rover sank deeper into the sand."), null),
+                L(Speaker.Vega, Expression.Worried, Loc.T("Aún podemos intentarlo. Vuelve al Mars Yard y busca una maniobra que funcione.", "We can still try. Go back to the Mars Yard and find a maneuver that works."), null) },
                 () => { step = Step.Explore; Refresh(); });
         }
     }
@@ -213,7 +213,7 @@ public class ControlRoomMission : MonoBehaviour
         bool rightAntenna = wrongAntenna == 0;
         if (firstTry) stars++;
         if (rightAntenna) stars++;
-        objective.text = "¡Rover rescatado!";
+        objective.text = Loc.T("¡Rover rescatado!", "Rover rescued!");
         ShowEnd(stars, firstTry, rightAntenna);
     }
 
@@ -221,13 +221,13 @@ public class ControlRoomMission : MonoBehaviour
     void Refresh()
     {
         if (objective == null || step == Step.Waiting || step == Step.Done) return;
-        if (!readTelemetry) objective.text = "Objetivo: averigua qué le pasa al rover en la <b>pantalla de la sala de telemetría</b> (a la izquierda).";
-        else if (!tested[Correct]) objective.text = "Objetivo: prueba maniobras con la <b>réplica del Mars Yard</b> (a la derecha).";
-        else objective.text = "Objetivo: envía la maniobra desde la <b>consola DSN</b> (centro) por la antena que ve Marte.";
+        if (!readTelemetry) objective.text = Loc.T("Objetivo: averigua qué le pasa al rover en la <b>pantalla de la sala de telemetría</b> (a la izquierda).", "Goal: find out what's wrong with the rover on the <b>telemetry room screen</b> (on the left).");
+        else if (!tested[Correct]) objective.text = Loc.T("Objetivo: prueba maniobras con la <b>réplica del Mars Yard</b> (a la derecha).", "Goal: test maneuvers with the <b>Mars Yard replica</b> (on the right).");
+        else objective.text = Loc.T("Objetivo: envía la maniobra desde la <b>consola DSN</b> (centro) por la antena que ve Marte.", "Goal: send the maneuver from the <b>DSN console</b> (center) through the antenna that can see Mars.");
 
-        string n = "<b>Notas</b>\n";
-        n += readTelemetry ? $"· Diagnóstico: atascado en arena\n· Antena con Marte a la vista: <color=#72C88B>{Antennas[visibleAntenna]}</color>\n" : "· Diagnóstico: ?\n· Antena: ?\n";
-        n += chosen >= 0 ? $"· Última prueba: {Maneuvers[chosen]} {(chosen == Correct ? "<color=#72C88B>(funciona)</color>" : "<color=#FF6B6B>(falla)</color>")}" : "· Maniobra: sin probar";
+        string n = Loc.T("<b>Notas</b>\n", "<b>Notes</b>\n");
+        n += readTelemetry ? Loc.T($"· Diagnóstico: atascado en arena\n· Antena con Marte a la vista: <color=#72C88B>{Antennas[visibleAntenna]}</color>\n", $"· Diagnosis: stuck in sand\n· Antenna with Mars in view: <color=#72C88B>{Antennas[visibleAntenna]}</color>\n") : Loc.T("· Diagnóstico: ?\n· Antena: ?\n", "· Diagnosis: ?\n· Antenna: ?\n");
+        n += chosen >= 0 ? Loc.T("· Última prueba: ", "· Last test: ") + $"{Maneuvers[chosen]} {(chosen == Correct ? Loc.T("<color=#72C88B>(funciona)</color>", "<color=#72C88B>(works)</color>") : Loc.T("<color=#FF6B6B>(falla)</color>", "<color=#FF6B6B>(fails)</color>"))}" : Loc.T("· Maniobra: sin probar", "· Maneuver: not tested");
         notes.text = n;
     }
 
@@ -240,15 +240,15 @@ public class ControlRoomMission : MonoBehaviour
         UIKit.VList(top.gameObject, 4, 16, TextAnchor.UpperCenter);
         roomLabel = UIKit.Text(top.transform, "Room", "", 24, TextAlignmentOptions.Center, TextTone.Accent);
         roomLabel.GetComponent<ThemedText>().title = true; roomLabel.GetComponent<ThemedText>().Apply(); UIKit.Size(roomLabel, -1, 30);
-        objective = UIKit.Text(top.transform, "Objective", "Centro de control · alerta de Marte", 24, TextAlignmentOptions.Center); UIKit.Size(objective, -1, 60);
+        objective = UIKit.Text(top.transform, "Objective", Loc.T("Centro de control · alerta de Marte", "Mission control · alert from Mars"), 24, TextAlignmentOptions.Center); UIKit.Size(objective, -1, 60);
 
         var np = UIKit.Panel(canvas, "NotesPanel", UIElement.PanelDark);
         UIKit.Place(np.rectTransform, new Vector2(1, 1), new Vector2(1, 1), new Vector2(1, 1), new Vector2(-16, -150), new Vector2(430, 170));
         UIKit.VList(np.gameObject, 0, 16, TextAnchor.UpperLeft);
         notes = UIKit.Text(np.transform, "Notes", "", 20, TextAlignmentOptions.TopLeft); UIKit.Size(notes, -1, 140);
 
-        choicePanel = MakeChoicePanel(canvas, "ManeuverPanel", "Réplica del rover: ¿qué maniobra pruebas?", Maneuvers, i => Choose(i));
-        antennaPanel = MakeChoicePanel(canvas, "AntennaPanel", "Red de Espacio Profundo: ¿por qué antena envías?", Antennas, i => PickAntenna(i));
+        choicePanel = MakeChoicePanel(canvas, "ManeuverPanel", Loc.T("Réplica del rover: ¿qué maniobra pruebas?", "Rover replica: which maneuver will you test?"), Maneuvers, i => Choose(i));
+        antennaPanel = MakeChoicePanel(canvas, "AntennaPanel", Loc.T("Red de Espacio Profundo: ¿por qué antena envías?", "Deep Space Network: which antenna will you use?"), Antennas, i => PickAntenna(i));
         Refresh();
     }
 
@@ -265,7 +265,7 @@ public class ControlRoomMission : MonoBehaviour
             int k = i;
             UIKit.Size(UIKit.Button(p.transform, "Option" + i, options[i], 28, UIElement.Button, () => onPick(k)), -1, 82);
         }
-        UIKit.Size(UIKit.Button(p.transform, "Cancel", "Cancelar", 24, UIElement.Button, ClosePanels), 260, 56);
+        UIKit.Size(UIKit.Button(p.transform, "Cancel", Loc.T("Cancelar", "Cancel"), 24, UIElement.Button, ClosePanels), 260, 56);
         dim.gameObject.SetActive(false);
         return dim.gameObject;
     }
@@ -277,20 +277,20 @@ public class ControlRoomMission : MonoBehaviour
         var p = UIKit.Panel(dim.transform, "End", UIElement.Panel);
         UIKit.Place(p.rectTransform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(1120, 660));
         UIKit.VList(p.gameObject, 14, 40, TextAnchor.UpperCenter);
-        var title = UIKit.Text(p.transform, "Title", "RESCATE COMPLETADO", 46, TextAlignmentOptions.Center, TextTone.Accent);
+        var title = UIKit.Text(p.transform, "Title", Loc.T("RESCATE COMPLETADO", "RESCUE COMPLETE"), 46, TextAlignmentOptions.Center, TextTone.Accent);
         title.GetComponent<ThemedText>().title = true; title.GetComponent<ThemedText>().Apply(); UIKit.Size(title, -1, 64);
         var row = UIKit.NewRect("Stars", p.transform); UIKit.HList(row.gameObject, 16, 0, TextAnchor.MiddleCenter); UIKit.Size(row, -1, 90);
         var th = UITheme.Current;
         for (int i = 0; i < 3; i++) { var img = UIKit.Icon(row, "Star", i < stars ? th.starFull : th.starEmpty, new Vector2(84, 84)); img.enabled = true; }
         string lines =
-            "<color=#72C88B>+</color> Rescataste el rover desde la Tierra.\n" +
-            (firstTry ? "<color=#72C88B>+</color> Probaste la maniobra en la réplica y acertaste en el primer envío.\n"
-                      : "<color=#FF6B6B>x</color> Enviaste algo sin probar o fallaste un envío: en Marte cada error cuesta días.\n") +
-            (rightAntenna ? "<color=#72C88B>+</color> Usaste la antena que veía Marte gracias a la telemetría.\n"
-                          : "<color=#FF6B6B>x</color> Intentaste enviar por una antena que no veía Marte.\n") +
-            "\n<size=85%><color=#C8D2E6>Dato NASA: la Red de Espacio Profundo tiene complejos en Goldstone, Madrid y Canberra para hablar con las naves a toda hora. En 2009 el rover Spirit quedó atascado en arena blanda; JPL ensayó maniobras con una réplica, pero Spirit no salió y siguió trabajando como estación fija hasta 2010.</color></size>";
+            Loc.T("<color=#72C88B>+</color> Rescataste el rover desde la Tierra.\n", "<color=#72C88B>+</color> You rescued the rover from Earth.\n") +
+            (firstTry ? Loc.T("<color=#72C88B>+</color> Probaste la maniobra en la réplica y acertaste en el primer envío.\n", "<color=#72C88B>+</color> You tested the maneuver on the replica and got it right on the first send.\n")
+                      : Loc.T("<color=#FF6B6B>x</color> Enviaste algo sin probar o fallaste un envío: en Marte cada error cuesta días.\n", "<color=#FF6B6B>x</color> You sent something untested or a send failed: on Mars every mistake costs days.\n")) +
+            (rightAntenna ? Loc.T("<color=#72C88B>+</color> Usaste la antena que veía Marte gracias a la telemetría.\n", "<color=#72C88B>+</color> You used the antenna that could see Mars, thanks to telemetry.\n")
+                          : Loc.T("<color=#FF6B6B>x</color> Intentaste enviar por una antena que no veía Marte.\n", "<color=#FF6B6B>x</color> You tried to send through an antenna that couldn't see Mars.\n")) +
+            Loc.T("\n<size=85%><color=#C8D2E6>Dato NASA: la Red de Espacio Profundo tiene complejos en Goldstone, Madrid y Canberra para hablar con las naves a toda hora. En 2009 el rover Spirit quedó atascado en arena blanda; JPL ensayó maniobras con una réplica, pero Spirit no salió y siguió trabajando como estación fija hasta 2010.</color></size>", "\n<size=85%><color=#C8D2E6>NASA fact: the Deep Space Network has complexes in Goldstone, Madrid and Canberra to talk to spacecraft around the clock. In 2009 the Spirit rover got stuck in soft sand; JPL tested maneuvers with a replica, but Spirit never got out and kept working as a stationary science platform until 2010.</color></size>");
         var tx = UIKit.Text(p.transform, "Lines", lines, 24, TextAlignmentOptions.TopLeft); UIKit.Size(tx, -1, 320);
-        var b = UIKit.Button(p.transform, "Back", "Volver al título", 28, UIElement.ButtonPrimary, () => { GameSession.Reset(); SceneFlow.Go(SceneFlow.Title); });
+        var b = UIKit.Button(p.transform, "Back", Loc.T("Volver al título", "Back to title"), 28, UIElement.ButtonPrimary, () => { GameSession.Reset(); SceneFlow.Go(SceneFlow.Title); });
         UIKit.Size(b, 360, 70);
     }
 

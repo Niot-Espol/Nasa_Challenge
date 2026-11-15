@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ComponentData
   id: instrument_camera
   displayName: "C\xE1mara"
+  displayNameEn: Camera
   category: 3
   mass: 15
   cost: 8
@@ -26,5 +27,7 @@ MonoBehaviour:
   crossesRockyZone: 0
   icon: {fileID: 21300000, guid: f45144cbf25f47a8a402822fe4f87281, type: 3}
   description: "Necesaria para estudiar el delta. Escanear cuesta 10 de energ\xEDa."
+  descriptionEn: Needed to study the delta. Scanning costs 10 energy.
   nasaFact: 
+  nasaFactEn: 
   nasaSourceUrl: 

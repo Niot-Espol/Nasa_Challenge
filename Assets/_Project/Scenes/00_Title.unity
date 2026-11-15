@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 115007142}
   - component: {fileID: 115007141}
   - component: {fileID: 115007140}
+  - component: {fileID: 115007143}
   m_Layer: 5
   m_Name: Footer
   m_TagString: Untagged
@@ -369,6 +370,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115007138}
   m_CullTransparentMesh: 1
+--- !u!114 &115007143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115007138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: "NASA Space Apps Challenge 2026 \xB7 Team Niot-Espol (ESPOL)\nIndependent
+    educational project based on public NASA information. Not affiliated with, sponsored
+    or endorsed by NASA."
+  spanish: "NASA Space Apps Challenge 2026 \xB7 Equipo Niot-Espol (ESPOL)\nProyecto
+    educativo independiente basado en informaci\xF3n p\xFAblica de la NASA. No est\xE1
+    afiliado, patrocinado ni respaldado por la NASA."
 --- !u!1 &139041074
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,6 +619,7 @@ GameObject:
   - component: {fileID: 217514414}
   - component: {fileID: 217514413}
   - component: {fileID: 217514412}
+  - component: {fileID: 217514416}
   m_Layer: 5
   m_Name: Status
   m_TagString: Untagged
@@ -760,6 +780,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217514410}
   m_CullTransparentMesh: 1
+--- !u!114 &217514416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217514410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Coming soon
+  spanish: "Pr\xF3ximamente"
 --- !u!1 &297621819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,6 +1062,7 @@ GameObject:
   - component: {fileID: 480258563}
   - component: {fileID: 480258562}
   - component: {fileID: 480258561}
+  - component: {fileID: 480258565}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -1188,6 +1223,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480258559}
   m_CullTransparentMesh: 1
+--- !u!114 &480258565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480258559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Guardians of the Earth
+  spanish: Guardianes de la Tierra
 --- !u!1 &534254512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,6 +1250,7 @@ GameObject:
   - component: {fileID: 534254516}
   - component: {fileID: 534254515}
   - component: {fileID: 534254514}
+  - component: {fileID: 534254518}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -1361,6 +1411,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534254512}
   m_CullTransparentMesh: 1
+--- !u!114 &534254518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534254512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: 'Mars: Traces of the Past'
+  spanish: 'Marte: huellas del pasado'
 --- !u!1 &697517191
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1534,7 @@ GameObject:
   - component: {fileID: 912603540}
   - component: {fileID: 912603539}
   - component: {fileID: 912603538}
+  - component: {fileID: 912603542}
   m_Layer: 5
   m_Name: Status
   m_TagString: Untagged
@@ -1559,7 +1624,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4291605158
+    rgba: 4294111986
   m_fontColor: {r: 0.95, g: 0.95, b: 0.95, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1630,6 +1695,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912603536}
   m_CullTransparentMesh: 1
+--- !u!114 &912603542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912603536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Start mission!
+  spanish: "\xA1Empezar misi\xF3n!"
 --- !u!1 &981696283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1853,6 +1932,7 @@ GameObject:
   - component: {fileID: 1109284678}
   - component: {fileID: 1109284677}
   - component: {fileID: 1109284676}
+  - component: {fileID: 1109284679}
   m_Layer: 5
   m_Name: Subtitle
   m_TagString: Untagged
@@ -1993,6 +2073,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109284674}
   m_CullTransparentMesh: 1
+--- !u!114 &1109284679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109284674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Design, launch and explore your own mission to Mars
+  spanish: "Dise\xF1a, lanza y explora tu propia misi\xF3n a Marte"
 --- !u!1 &1174083983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2146,6 +2240,7 @@ GameObject:
   - component: {fileID: 1268889486}
   - component: {fileID: 1268889485}
   - component: {fileID: 1268889484}
+  - component: {fileID: 1268889488}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -2306,6 +2401,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268889482}
   m_CullTransparentMesh: 1
+--- !u!114 &1268889488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268889482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: The Secret of the Moon
+  spanish: El secreto de la Luna
 --- !u!1 &1318222477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2606,6 +2715,7 @@ GameObject:
   - component: {fileID: 1375687473}
   - component: {fileID: 1375687472}
   - component: {fileID: 1375687471}
+  - component: {fileID: 1375687475}
   m_Layer: 5
   m_Name: Status
   m_TagString: Untagged
@@ -2766,6 +2876,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375687469}
   m_CullTransparentMesh: 1
+--- !u!114 &1375687475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375687469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Start mission!
+  spanish: "\xA1Empezar misi\xF3n!"
 --- !u!1 &1399705060
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,6 +3181,7 @@ GameObject:
   - component: {fileID: 1503255527}
   - component: {fileID: 1503255526}
   - component: {fileID: 1503255525}
+  - component: {fileID: 1503255529}
   m_Layer: 5
   m_Name: Status
   m_TagString: Untagged
@@ -3217,6 +3342,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503255523}
   m_CullTransparentMesh: 1
+--- !u!114 &1503255529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503255523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Start mission!
+  spanish: "\xA1Empezar misi\xF3n!"
 --- !u!1 &1539408197
 GameObject:
   m_ObjectHideFlags: 0
@@ -4332,6 +4471,7 @@ GameObject:
   - component: {fileID: 2073111107}
   - component: {fileID: 2073111106}
   - component: {fileID: 2073111105}
+  - component: {fileID: 2073111109}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -4492,6 +4632,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073111103}
   m_CullTransparentMesh: 1
+--- !u!114 &2073111109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073111103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Mission Control Rescue
+  spanish: Rescate en el centro de control
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -26,6 +26,6 @@ public class RockyZone : MonoBehaviour
         var mc = MissionController.Instance;
         if (mc == null) return;
         mc.State.RecordIncident(IncidentType.RockyZoneBlocked);
-        mc.PostMessage("Zona rocosa: con ruedas estándar no podemos cruzarla. Hay que rodearla.");
+        mc.PostMessage(Loc.T("Zona rocosa: con ruedas estándar no podemos cruzarla. Hay que rodearla.", "Rocky zone: with standard wheels we can't cross it. We have to go around."));
     }
 }

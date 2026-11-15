@@ -1458,6 +1458,7 @@ GameObject:
   - component: {fileID: 143350758}
   - component: {fileID: 143350756}
   - component: {fileID: 143350755}
+  - component: {fileID: 143350759}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1618,6 +1619,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &143350759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143350753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Sites
+  spanish: Puntos
 --- !u!1 &166596533
 GameObject:
   m_ObjectHideFlags: 0
@@ -5028,6 +5043,7 @@ GameObject:
   - component: {fileID: 398438437}
   - component: {fileID: 398438435}
   - component: {fileID: 398438434}
+  - component: {fileID: 398438438}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -5188,6 +5204,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &398438438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398438432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Time
+  spanish: Tiempo
 --- !u!1 &400811793
 GameObject:
   m_ObjectHideFlags: 0
@@ -6670,6 +6700,9 @@ MonoBehaviour:
   fastForwardSpeed: 4
   reportScene: 05_Report
   intro: {fileID: 11400000, guid: a79b804cf46234356b6d85944d3c43b8, type: 2}
+  missionId: mars
+  timedDustStorm: 1
+  timedBlackout: 1
   dustStormAt: 30
   dustStormDuration: 25
   blackoutAt: 75
@@ -7949,6 +7982,10 @@ MonoBehaviour:
     de agua. Por eso los cient\xEDficos los buscan: cuentan c\xF3mo era el ambiente
     de Marte en el pasado. Perseverance analiza su composici\xF3n con instrumentos
     como SuperCam y PIXL."
+  factEn: 'Some minerals, like clays and carbonates, form in the presence of water.
+    That''s why scientists look for them: they reveal what Mars''s environment was
+    like in the past. Perseverance analyzes their composition with instruments like
+    SuperCam and PIXL.'
   factSource: "NASA \xB7 Perseverance Science Objectives \u2014 science.nasa.gov/mission/mars-2020-perseverance/science-objectives"
 --- !u!58 &576593068
 CircleCollider2D:
@@ -12712,6 +12749,7 @@ GameObject:
   - component: {fileID: 952204602}
   - component: {fileID: 952204601}
   - component: {fileID: 952204600}
+  - component: {fileID: 952204603}
   m_Layer: 5
   m_Name: ZoneName
   m_TagString: Untagged
@@ -12852,6 +12890,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952204598}
   m_CullTransparentMesh: 1
+--- !u!114 &952204603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952204598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: "Mars \xB7 Jezero Crater"
+  spanish: "Marte \xB7 Cr\xE1ter Jezero"
 --- !u!1 &965773243
 GameObject:
   m_ObjectHideFlags: 0
@@ -13048,6 +13100,7 @@ GameObject:
   - component: {fileID: 986010738}
   - component: {fileID: 986010737}
   - component: {fileID: 986010736}
+  - component: {fileID: 986010739}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -13188,6 +13241,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986010734}
   m_CullTransparentMesh: 1
+--- !u!114 &986010739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986010734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: End mission
+  spanish: "Terminar misi\xF3n"
 --- !u!1 &995028552
 GameObject:
   m_ObjectHideFlags: 0
@@ -15718,6 +15785,9 @@ MonoBehaviour:
     en tubos sellados. Las rocas sedimentarias pueden conservar informaci\xF3n sobre
     el agua y quiz\xE1 rastros de vida microbiana antigua... aunque eso a\xFAn no
     se ha confirmado."
+  factEn: Perseverance uses a drill to extract rock cores and store them in sealed
+    tubes. Sedimentary rocks can preserve information about water and maybe traces
+    of ancient microbial life... although that hasn't been confirmed yet.
   factSource: "NASA \xB7 Mars 2020 Perseverance \u2014 science.nasa.gov/mission/mars-2020-perseverance"
 --- !u!58 &1099790710
 CircleCollider2D:
@@ -18065,6 +18135,9 @@ MonoBehaviour:
   fact: "Hace m\xE1s de 3.500 millones de a\xF1os, un r\xEDo desembocaba en un lago
     dentro del cr\xE1ter Jezero y form\xF3 un delta. Los deltas acumulan sedimentos
     en capas que pueden conservar se\xF1ales de ambientes habitables."
+  factEn: More than 3.5 billion years ago, a river flowed into a lake inside Jezero
+    crater and formed a delta. Deltas build up sediment in layers that can preserve
+    signs of habitable environments.
   factSource: "NASA \xB7 Mars 2020 Perseverance \u2014 science.nasa.gov/mission/mars-2020-perseverance"
 --- !u!58 &1240192245
 CircleCollider2D:
@@ -18571,6 +18644,7 @@ GameObject:
   - component: {fileID: 1287923468}
   - component: {fileID: 1287923467}
   - component: {fileID: 1287923466}
+  - component: {fileID: 1287923469}
   m_Layer: 5
   m_Name: ZoneName
   m_TagString: Untagged
@@ -18711,6 +18785,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287923464}
   m_CullTransparentMesh: 1
+--- !u!114 &1287923469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287923464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Jezero Crater
+  spanish: "Cr\xE1ter Jezero"
 --- !u!1 &1289741585
 GameObject:
   m_ObjectHideFlags: 0
@@ -34628,6 +34716,7 @@ GameObject:
   - component: {fileID: 1717997269}
   - component: {fileID: 1717997267}
   - component: {fileID: 1717997266}
+  - component: {fileID: 1717997270}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -34788,6 +34877,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1717997270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717997264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Energy
+  spanish: "Energ\xEDa"
 --- !u!1 &1723876442
 GameObject:
   m_ObjectHideFlags: 0

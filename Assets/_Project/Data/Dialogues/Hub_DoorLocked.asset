@@ -17,4 +17,5 @@ MonoBehaviour:
     expression: 2
     text: "\xA1Espera, comandante! Primero habla con la Dra. Vega para recibir el
       briefing de la misi\xF3n."
+    textEn: Wait, commander! First talk to Dr. Vega to get the mission briefing.
     highlight: 

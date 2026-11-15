@@ -1619,6 +1619,7 @@ GameObject:
   - component: {fileID: 895428770}
   - component: {fileID: 895428769}
   - component: {fileID: 895428768}
+  - component: {fileID: 895428772}
   m_Layer: 5
   m_Name: LinesTitle
   m_TagString: Untagged
@@ -1779,6 +1780,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895428766}
   m_CullTransparentMesh: 1
+--- !u!114 &895428772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895428766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: What happened and why
+  spanish: "Qu\xE9 pas\xF3 y por qu\xE9"
 --- !u!1 &906600926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,6 +1899,7 @@ GameObject:
   - component: {fileID: 915747395}
   - component: {fileID: 915747394}
   - component: {fileID: 915747393}
+  - component: {fileID: 915747397}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -2044,6 +2060,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915747391}
   m_CullTransparentMesh: 1
+--- !u!114 &915747397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915747391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Dr. Elena Vega
+  spanish: Dra. Elena Vega
 --- !u!1 &990230524
 GameObject:
   m_ObjectHideFlags: 0
@@ -2774,6 +2804,7 @@ GameObject:
   - component: {fileID: 1137076111}
   - component: {fileID: 1137076110}
   - component: {fileID: 1137076109}
+  - component: {fileID: 1137076112}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -2914,6 +2945,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137076107}
   m_CullTransparentMesh: 1
+--- !u!114 &1137076112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137076107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Redesign
+  spanish: "Redise\xF1ar"
 --- !u!1 &1191120587
 GameObject:
   m_ObjectHideFlags: 0
@@ -3331,6 +3376,7 @@ GameObject:
   - component: {fileID: 1422195787}
   - component: {fileID: 1422195786}
   - component: {fileID: 1422195785}
+  - component: {fileID: 1422195788}
   m_Layer: 5
   m_Name: Header
   m_TagString: Untagged
@@ -3471,6 +3517,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1422195783}
   m_CullTransparentMesh: 1
+--- !u!114 &1422195788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422195783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: MISSION REPORT
+  spanish: "REPORTE DE MISI\xD3N"
 --- !u!1 &1481344861
 GameObject:
   m_ObjectHideFlags: 0
@@ -4553,6 +4613,7 @@ GameObject:
   - component: {fileID: 1953439174}
   - component: {fileID: 1953439173}
   - component: {fileID: 1953439172}
+  - component: {fileID: 1953439175}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -4693,6 +4754,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1953439170}
   m_CullTransparentMesh: 1
+--- !u!114 &1953439175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953439170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Finish
+  spanish: Terminar
 --- !u!1 &1953549562
 GameObject:
   m_ObjectHideFlags: 0

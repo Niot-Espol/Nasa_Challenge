@@ -17,19 +17,27 @@ MonoBehaviour:
     expression: 1
     text: "\xA1Aterrizamos en el polo sur de la Luna, comandante! Mira qu\xE9 gris
       es todo... y qu\xE9 oscuro est\xE1 ese cr\xE1ter."
+    textEn: We've landed at the Moon's south pole, commander! Look how gray everything
+      is... and how dark that crater is.
     highlight: 
   - speaker: 1
     expression: 0
     text: "Esta es nuestra energ\xEDa. Moverse y escanear la gastan. En las zonas
       en sombra, adem\xE1s, el fr\xEDo la consume y los paneles no recargan."
+    textEn: This is our energy. Driving and scanning use it. In shadowed areas the
+      cold drains it too, and the panels don't recharge.
     highlight: energy
   - speaker: 1
     expression: 0
     text: "Tenemos dos minutos y medio de operaci\xF3n. Planifica la ruta: entra
       al cr\xE1ter solo cuando est\xE9s listo."
+    textEn: 'We have two and a half minutes of operations. Plan your route: only
+      go into the crater when you''re ready.'
     highlight: time
   - speaker: 1
     expression: 1
     text: "Hay tres puntos cient\xEDficos. El m\xE1s importante es el hielo, en el
       fondo del cr\xE1ter en sombra. \xA1Vamos a buscarlo!"
+    textEn: There are three science sites. The most important is the ice, at the
+      bottom of the shadowed crater. Let's go find it!
     highlight: science

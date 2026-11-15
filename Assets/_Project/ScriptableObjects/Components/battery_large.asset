@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ComponentData
   id: battery_large
   displayName: "Bater\xEDa grande"
+  displayNameEn: Large battery
   category: 2
   mass: 60
   cost: 12
@@ -26,5 +27,7 @@ MonoBehaviour:
   crossesRockyZone: 0
   icon: {fileID: 21300000, guid: ba765457c08d44e2bafdb403fc89116d, type: 3}
   description: "Guarda hasta 120 de energ\xEDa."
+  descriptionEn: Stores up to 120 energy.
   nasaFact: 
+  nasaFactEn: 
   nasaSourceUrl: 

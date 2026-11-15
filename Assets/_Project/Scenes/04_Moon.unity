@@ -1458,6 +1458,7 @@ GameObject:
   - component: {fileID: 143350758}
   - component: {fileID: 143350756}
   - component: {fileID: 143350755}
+  - component: {fileID: 143350759}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1618,6 +1619,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &143350759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143350753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Sites
+  spanish: Puntos
 --- !u!1 &166596533
 GameObject:
   m_ObjectHideFlags: 0
@@ -5028,6 +5043,7 @@ GameObject:
   - component: {fileID: 398438437}
   - component: {fileID: 398438435}
   - component: {fileID: 398438434}
+  - component: {fileID: 398438438}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -5188,6 +5204,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &398438438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398438432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Time
+  spanish: Tiempo
 --- !u!1 &400811793
 GameObject:
   m_ObjectHideFlags: 0
@@ -8035,6 +8065,9 @@ MonoBehaviour:
     creada por miles de millones de a\xF1os de impactos. Las muestras de las misiones
     Apolo incluyen peque\xF1as esferas de vidrio formadas por impactos y antiguas
     erupciones volc\xE1nicas."
+  factEn: Regolith is the layer of dust and rock fragments covering the Moon, created
+    by billions of years of impacts. Apollo samples include tiny glass beads formed
+    by impacts and ancient volcanic eruptions.
   factSource: "NASA \xB7 Muestras lunares del programa Apolo \u2014 curator.jsc.nasa.gov/lunar"
 --- !u!58 &576593068
 CircleCollider2D:
@@ -12638,6 +12671,7 @@ GameObject:
   - component: {fileID: 952204602}
   - component: {fileID: 952204601}
   - component: {fileID: 952204600}
+  - component: {fileID: 952204603}
   m_Layer: 5
   m_Name: ZoneName
   m_TagString: Untagged
@@ -12778,6 +12812,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952204598}
   m_CullTransparentMesh: 1
+--- !u!114 &952204603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952204598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: "Moon \xB7 South Pole"
+  spanish: "Luna \xB7 Polo sur"
 --- !u!1 &965773243
 GameObject:
   m_ObjectHideFlags: 0
@@ -12974,6 +13022,7 @@ GameObject:
   - component: {fileID: 986010738}
   - component: {fileID: 986010737}
   - component: {fileID: 986010736}
+  - component: {fileID: 986010739}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -13114,6 +13163,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986010734}
   m_CullTransparentMesh: 1
+--- !u!114 &986010739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986010734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: End mission
+  spanish: "Terminar misi\xF3n"
 --- !u!1 &995028552
 GameObject:
   m_ObjectHideFlags: 0
@@ -15451,6 +15514,9 @@ MonoBehaviour:
     y detect\xF3 agua en la nube de material que levant\xF3. En los cr\xE1teres en
     sombra permanente la temperatura baja a unos -240 \xB0C, as\xED que el hielo
     puede conservarse durante miles de millones de a\xF1os."
+  factEn: "In 2009, the LCROSS spacecraft struck Cabeus crater, near the south pole,
+    and detected water in the plume it kicked up. In permanently shadowed craters
+    temperatures drop to about -240 \xB0C, so ice can survive for billions of years."
   factSource: "NASA \xB7 LCROSS y LRO (Diviner) \u2014 science.nasa.gov/mission/lcross"
 --- !u!58 &1099790710
 CircleCollider2D:
@@ -17706,6 +17772,9 @@ MonoBehaviour:
   fact: "Cerca del polo sur, algunas zonas altas reciben luz del Sol casi todo el
     tiempo, mientras que el fondo de muchos cr\xE1teres no la recibe nunca. Por eso
     los bordes iluminados son candidatos para futuras bases lunares."
+  factEn: Near the south pole, some high ground gets sunlight almost all the time,
+    while the floors of many craters never do. That's why sunlit rims are candidates
+    for future lunar bases.
   factSource: "NASA \xB7 Lunar Reconnaissance Orbiter (LRO) \u2014 science.nasa.gov/mission/lro"
 --- !u!58 &1240192245
 CircleCollider2D:
@@ -18212,6 +18281,7 @@ GameObject:
   - component: {fileID: 1287923468}
   - component: {fileID: 1287923467}
   - component: {fileID: 1287923466}
+  - component: {fileID: 1287923469}
   m_Layer: 5
   m_Name: ZoneName
   m_TagString: Untagged
@@ -18352,6 +18422,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287923464}
   m_CullTransparentMesh: 1
+--- !u!114 &1287923469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287923464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Lunar South Pole
+  spanish: Polo sur lunar
 --- !u!1 &1289741585
 GameObject:
   m_ObjectHideFlags: 0
@@ -33703,6 +33787,7 @@ GameObject:
   - component: {fileID: 1717997269}
   - component: {fileID: 1717997267}
   - component: {fileID: 1717997266}
+  - component: {fileID: 1717997270}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -33863,6 +33948,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1717997270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717997264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: Energy
+  spanish: "Energ\xEDa"
 --- !u!1 &1723876442
 GameObject:
   m_ObjectHideFlags: 0

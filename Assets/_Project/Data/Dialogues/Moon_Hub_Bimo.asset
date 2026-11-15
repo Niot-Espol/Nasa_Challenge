@@ -17,14 +17,20 @@ MonoBehaviour:
     expression: 2
     text: "Comandante... \xBFsab\xEDas que en los cr\xE1teres en sombra hace unos
       -240 \xB0C? Mis circuitos tiemblan solo de pensarlo."
+    textEn: "Commander... did you know it's about -240 \xB0C in the shadowed craters?
+      My circuits shiver just thinking about it."
     highlight: 
   - speaker: 1
     expression: 0
     text: "Un consejo: los paneles solares no sirven en la oscuridad, y el fr\xEDo
       nos va a gastar energ\xEDa. Un RTG o una bater\xEDa grande nos dar\xEDan margen."
+    textEn: 'A tip: solar panels are useless in the dark, and the cold will drain
+      our energy. An RTG or a big battery would give us some margin.'
     highlight: 
   - speaker: 1
     expression: 1
     text: "Y si queremos escanear dentro del cr\xE1ter, necesitaremos el rel\xE9
       v\xEDa orbitador. \xA1La antena directa no ve la Tierra desde ah\xED abajo!"
+    textEn: And if we want to scan inside the crater, we'll need the orbital relay.
+      The direct antenna can't see Earth from down there!
     highlight: 

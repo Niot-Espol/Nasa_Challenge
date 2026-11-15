@@ -8,13 +8,14 @@ using System.Collections.Generic;
 public class SiteInfo
 {
     public ScienceSite Site;
-    public string Name;          // en frases: "el delta del antiguo río"
-    public string ShortName;     // flechas del mapa: "Delta"
     public Instrument Instrument;
+    readonly string name, nameEn, shortName, shortNameEn;
+    public string Name => Loc.T(name, nameEn);                 // en frases: "el delta del antiguo río"
+    public string ShortName => Loc.T(shortName, shortNameEn);  // flechas del mapa: "Delta"
 
-    public SiteInfo(ScienceSite site, string name, string shortName, Instrument instrument)
+    public SiteInfo(ScienceSite site, string name, string nameEn, string shortName, string shortNameEn, Instrument instrument)
     {
-        Site = site; Name = name; ShortName = shortName; Instrument = instrument;
+        Site = site; this.name = name; this.nameEn = nameEn; this.shortName = shortName; this.shortNameEn = shortNameEn; Instrument = instrument;
     }
 }
 
@@ -49,9 +50,9 @@ public abstract class MissionDefinition
         if (blackout != null)
             rep.Lines.Add(d.BlackoutSeconds > 20f
                 ? new ReportLine(ReportTone.Bad,
-                    $"Con la antena directa perdiste la comunicación {d.BlackoutSeconds:0} s y no pudiste escanear. Un relé vía orbitador lo reduce a 10 s.")
+                    Loc.T($"Con la antena directa perdiste la comunicación {d.BlackoutSeconds:0} s y no pudiste escanear. Un relé vía orbitador lo reduce a 10 s.", $"With the direct antenna you lost contact for {d.BlackoutSeconds:0} s and couldn't scan. An orbital relay cuts that to 10 s."))
                 : new ReportLine(ReportTone.Good,
-                    $"El relé vía orbitador redujo la pérdida de comunicación a solo {d.BlackoutSeconds:0} s."));
+                    Loc.T($"El relé vía orbitador redujo la pérdida de comunicación a solo {d.BlackoutSeconds:0} s.", $"The orbital relay cut the communication loss to just {d.BlackoutSeconds:0} s.")));
     }
 
     // ¿Hubo modo seguro mientras duraba un incidente de este tipo (tormenta, sombra...)?
@@ -75,7 +76,7 @@ public abstract class MissionDefinition
     }
 
     // Ayudas comunes para las subclases
-    protected static string Times(int n) => n == 1 ? "una vez" : n + " veces";
+    protected static string Times(int n) => n == 1 ? Loc.T("una vez", "once") : n + Loc.T(" veces", " times");
 }
 
 public static class MissionCatalog

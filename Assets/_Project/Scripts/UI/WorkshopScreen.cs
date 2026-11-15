@@ -29,14 +29,16 @@ public class WorkshopScreen : MonoBehaviour
     [SerializeField] float cardHeight = 112f;
 
     // Orden y nombre de las categorías en pantalla
-    static readonly (ComponentCategory cat, string title, bool multi)[] Categories =
+    // Propiedad (no campo estático): así los títulos salen en el idioma actual
+    static (ComponentCategory cat, string title, bool multi)[] Categories =>
+    new[]
     {
-        (ComponentCategory.Launcher,   "Lanzador",        false),
-        (ComponentCategory.Energy,     "Energía",         false),
-        (ComponentCategory.Battery,    "Batería",         false),
-        (ComponentCategory.Instrument, "Instrumentos (elige los que quieras)", true),
-        (ComponentCategory.Comms,      "Comunicaciones",  false),
-        (ComponentCategory.Wheels,     "Ruedas",          false),
+        (ComponentCategory.Launcher,   Loc.T("Lanzador", "Launcher"),        false),
+        (ComponentCategory.Energy,     Loc.T("Energía", "Power"),         false),
+        (ComponentCategory.Battery,    Loc.T("Batería", "Battery"),         false),
+        (ComponentCategory.Instrument, Loc.T("Instrumentos (elige los que quieras)", "Instruments (pick as many as you like)"), true),
+        (ComponentCategory.Comms,      Loc.T("Comunicaciones", "Communications"),  false),
+        (ComponentCategory.Wheels,     Loc.T("Ruedas", "Wheels"),          false),
     };
 
     readonly HashSet<ComponentData> selected = new HashSet<ComponentData>();
@@ -114,7 +116,7 @@ public class WorkshopScreen : MonoBehaviour
         var texts = UIKit.NewRect("Texts", content);
         UIKit.VList(texts.gameObject, 2);
         UIKit.Size(texts, -1, -1, 1);
-        UIKit.Size(UIKit.Text(texts, "Name", c.displayName, 25), -1, 30);
+        UIKit.Size(UIKit.Text(texts, "Name", c.Name, 25), -1, 30);
         UIKit.Size(UIKit.Text(texts, "Cost", CostLine(c), 20, TextAlignmentOptions.Left, TextTone.Muted), -1, 26);
         UIKit.Size(UIKit.Text(texts, "Effect", EffectLine(c), 19, TextAlignmentOptions.Left, TextTone.Normal), -1, 26);
 
@@ -133,7 +135,7 @@ public class WorkshopScreen : MonoBehaviour
             selected.RemoveWhere(x => x.category == c.category);
             selected.Add(c);
         }
-        infoOverride = $"<b>{c.displayName}</b>: {c.description}";
+        infoOverride = $"<b>{c.Name}</b>: {c.Description}";
         AudioManager.Play(Sfx.Select);
         Refresh();
     }
@@ -148,28 +150,28 @@ public class WorkshopScreen : MonoBehaviour
 
         var th = UITheme.Current;
         if (budgetBar != null) { budgetBar.useStateColors = true; budgetBar.Set(design.TotalCost, RoverDesign.Budget); }
-        if (budgetText != null) budgetText.text = $"Presupuesto: {design.TotalCost} / {RoverDesign.Budget} créditos";
+        if (budgetText != null) budgetText.text = Loc.T($"Presupuesto: {design.TotalCost} / {RoverDesign.Budget} créditos", $"Budget: {design.TotalCost} / {RoverDesign.Budget} credits");
 
         int cap = design.LauncherCapacity;
         if (massBar != null) { massBar.useStateColors = true; massBar.Set(design.TotalMass, cap > 0 ? cap : design.TotalMass); }
         if (massText != null) massText.text = cap > 0
-            ? $"Masa: {design.TotalMass} / {cap} kg"
-            : $"Masa: {design.TotalMass} kg (elige un lanzador)";
+            ? Loc.T($"Masa: {design.TotalMass} / {cap} kg", $"Mass: {design.TotalMass} / {cap} kg")
+            : Loc.T($"Masa: {design.TotalMass} kg (elige un lanzador)", $"Mass: {design.TotalMass} kg (pick a launcher)");
 
         if (statsText != null)
         {
-            string power = design.Power == PowerSource.Solar ? "Paneles solares"
+            string power = design.Power == PowerSource.Solar ? Loc.T("Paneles solares", "Solar panels")
                          : design.Power == PowerSource.RTG ? "RTG" : "—";
             var instr = new List<string>();
-            if (design.HasInstrument(Instrument.Camera)) instr.Add("Cámara");
-            if (design.HasInstrument(Instrument.Spectrometer)) instr.Add("Espectrómetro");
-            if (design.HasInstrument(Instrument.Drill)) instr.Add("Taladro");
-            statsText.text =
-                $"Energía: {power}  (+{design.RechargePerSecond:0.#}/s)\n" +
-                $"Batería: {design.BatteryCapacity:0}\n" +
-                $"Instrumentos: {(instr.Count > 0 ? string.Join(", ", instr) : "ninguno")}\n" +
-                $"Apagón de comunicación: {(design.CommsId != null ? design.BlackoutSeconds.ToString("0") + " s" : "—")}\n" +
-                $"Zona rocosa: {(design.AllTerrainWheels ? "sí la cruza" : "no la cruza")}";
+            if (design.HasInstrument(Instrument.Camera)) instr.Add(Loc.T("Cámara", "Camera"));
+            if (design.HasInstrument(Instrument.Spectrometer)) instr.Add(Loc.T("Espectrómetro", "Spectrometer"));
+            if (design.HasInstrument(Instrument.Drill)) instr.Add(Loc.T("Taladro", "Drill"));
+            string instrList = instr.Count > 0 ? string.Join(", ", instr) : Loc.T("ninguno", "none");
+            string blackout = design.CommsId != null ? design.BlackoutSeconds.ToString("0") + " s" : "—";
+            string rocky = design.AllTerrainWheels ? Loc.T("sí la cruza", "can cross it") : Loc.T("no la cruza", "can't cross it");
+            statsText.text = Loc.T(
+                $"Energía: {power}  (+{design.RechargePerSecond:0.#}/s)\nBatería: {design.BatteryCapacity:0}\nInstrumentos: {instrList}\nApagón de comunicación: {blackout}\nZona rocosa: {rocky}",
+                $"Power: {power}  (+{design.RechargePerSecond:0.#}/s)\nBattery: {design.BatteryCapacity:0}\nInstruments: {instrList}\nComms blackout: {blackout}\nRocky zone: {rocky}");
         }
 
         if (bimoText != null)
@@ -182,9 +184,9 @@ public class WorkshopScreen : MonoBehaviour
                 lines.Add($"<color={col}>{i.Message}</color>");
             }
             if (verification.CanLaunch && verification.Issues.Count == 0)
-                lines.Add("<color=#73E67F>¡Todo en orden, comandante! Listos para lanzar.</color>");
+                lines.Add(Loc.T("<color=#73E67F>¡Todo en orden, comandante! Listos para lanzar.</color>", "<color=#73E67F>All good, commander! Ready for launch.</color>"));
             else if (verification.CanLaunch)
-                lines.Add("<color=#73E67F>Podemos lanzar, pero revisa los avisos.</color>");
+                lines.Add(Loc.T("<color=#73E67F>Podemos lanzar, pero revisa los avisos.</color>", "<color=#73E67F>We can launch, but check the warnings.</color>"));
             bimoText.text = string.Join("\n", lines);
         }
 
@@ -200,21 +202,21 @@ public class WorkshopScreen : MonoBehaviour
     }
 
     static string CostLine(ComponentData c) =>
-        c.category == ComponentCategory.Launcher ? $"{c.cost} créditos" : $"{c.mass} kg · {c.cost} créditos";
+        c.category == ComponentCategory.Launcher ? Loc.T($"{c.cost} créditos", $"{c.cost} credits") : Loc.T($"{c.mass} kg · {c.cost} créditos", $"{c.mass} kg · {c.cost} credits");
 
     static string EffectLine(ComponentData c)
     {
         switch (c.category)
         {
-            case ComponentCategory.Launcher: return $"Lleva hasta {c.capacity:0} kg";
+            case ComponentCategory.Launcher: return Loc.T($"Lleva hasta {c.capacity:0} kg", $"Carries up to {c.capacity:0} kg");
             case ComponentCategory.Energy:
                 return c.powerSource == PowerSource.Solar
-                    ? $"Recarga {c.rechargePerSecond:0.#}/s · 0 en tormenta"
-                    : $"Recarga {c.rechargePerSecond:0.#}/s siempre";
-            case ComponentCategory.Battery: return $"Energía máxima {c.capacity:0}";
-            case ComponentCategory.Instrument: return $"Escanear: {c.scanCost:0} de energía";
-            case ComponentCategory.Comms: return $"Apagón de {c.blackoutSeconds:0} s";
-            default: return c.crossesRockyZone ? "Cruza la zona rocosa" : "No cruza la zona rocosa";
+                    ? Loc.T($"Recarga {c.rechargePerSecond:0.#}/s · 0 en tormenta", $"Recharge {c.rechargePerSecond:0.#}/s · 0 in storms")
+                    : Loc.T($"Recarga {c.rechargePerSecond:0.#}/s siempre", $"Recharge {c.rechargePerSecond:0.#}/s always");
+            case ComponentCategory.Battery: return Loc.T($"Energía máxima {c.capacity:0}", $"Max energy {c.capacity:0}");
+            case ComponentCategory.Instrument: return Loc.T($"Escanear: {c.scanCost:0} de energía", $"Scan: {c.scanCost:0} energy");
+            case ComponentCategory.Comms: return Loc.T($"Apagón de {c.blackoutSeconds:0} s", $"{c.blackoutSeconds:0} s blackout");
+            default: return c.crossesRockyZone ? Loc.T("Cruza la zona rocosa", "Crosses the rocky zone") : Loc.T("No cruza la zona rocosa", "Can't cross the rocky zone");
         }
     }
 }

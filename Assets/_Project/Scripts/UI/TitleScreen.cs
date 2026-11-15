@@ -16,6 +16,7 @@ public class TitleScreen : MonoBehaviour
     void Start()
     {
         GameSession.Reset();
+        LanguageButton();
         var th = UITheme.Current;
         if (th == null) return;
         Apply(background, th.titleBackground);
@@ -26,6 +27,21 @@ public class TitleScreen : MonoBehaviour
         Apply(marsIcon, th.missionMars);
         Apply(earthLock, th.iconLock);
         Apply(moonLock, th.iconLock);
+    }
+
+    // Botón arriba a la derecha para cambiar de idioma (se recuerda la elección)
+    void LanguageButton()
+    {
+        var canvas = GameObject.Find("Canvas");
+        if (canvas == null) return;
+        var b = UIKit.Button(canvas.transform, "LanguageButton", Loc.IsEnglish ? "ESPAÑOL" : "ENGLISH", 24, UIElement.Button, () =>
+        {
+            LocSettings.Choose(Loc.IsEnglish ? Lang.Es : Lang.En);
+            SceneFlow.Go(SceneFlow.Title);   // recarga el título en el nuevo idioma
+        });
+        var rt = (RectTransform)b.transform;
+        rt.anchorMin = rt.anchorMax = new Vector2(1, 1); rt.pivot = new Vector2(1, 1);
+        rt.sizeDelta = new Vector2(220, 60); rt.anchoredPosition = new Vector2(-30, -30);
     }
 
     static void Apply(Image img, Sprite s)

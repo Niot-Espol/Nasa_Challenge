@@ -40,7 +40,7 @@ public class LaunchSequence : MonoBehaviour
         ApplyTheme();
         var d = GameSession.EnsureDesign();
         if (designText != null)
-            designText.text = $"{LauncherName(d.LauncherId)} · {d.TotalMass}/{d.LauncherCapacity} kg · {d.InstrumentCount} instrumentos";
+            designText.text = $"{LauncherName(d.LauncherId)} · {d.TotalMass}/{d.LauncherCapacity} kg · {d.InstrumentCount} " + Loc.T("instrumentos", "instruments");
         StartCoroutine(Run());
     }
 
@@ -65,7 +65,7 @@ public class LaunchSequence : MonoBehaviour
             AudioManager.Play(Sfx.Countdown);
             yield return Wait(1f);
         }
-        countdownText.text = "¡DESPEGUE!";
+        countdownText.text = Loc.T("¡DESPEGUE!", "LIFTOFF!");
         AudioManager.Play(Sfx.Countdown, 1.5f);
         AudioManager.SetLoop(Loop.RocketRoar, true);
         RectTransform shakeTarget = (RectTransform)launchGroup.transform;
@@ -187,7 +187,7 @@ public class LaunchSequence : MonoBehaviour
         var mission = GameSession.EnsureMission();
         SetSprite(mars.GetComponent<Image>(), mission.Id == "moon" && th.moon != null ? th.moon : th.mars);
         var destLabel = mars.GetComponentInChildren<TMPro.TMP_Text>(true);
-        if (destLabel != null) destLabel.text = mission.Id == "moon" ? "Luna" : "Marte";
+        if (destLabel != null) destLabel.text = mission.Id == "moon" ? Loc.T("Luna", "Moon") : Loc.T("Marte", "Mars");
         if (mission.Id == "moon") mars.sizeDelta *= 0.8f;   // la Luna se ve más pequeña
         SetSprite(ship.GetComponent<Image>(), th.cruiseShip);
     }
@@ -203,10 +203,10 @@ public class LaunchSequence : MonoBehaviour
     {
         switch (id)
         {
-            case "launcher_light": return "Lanzador ligero";
-            case "launcher_medium": return "Lanzador medio";
-            case "launcher_heavy": return "Lanzador pesado";
-            default: return "Lanzador";
+            case "launcher_light": return Loc.T("Lanzador ligero", "Light launcher");
+            case "launcher_medium": return Loc.T("Lanzador medio", "Medium launcher");
+            case "launcher_heavy": return Loc.T("Lanzador pesado", "Heavy launcher");
+            default: return Loc.T("Lanzador", "Launcher");
         }
     }
 }

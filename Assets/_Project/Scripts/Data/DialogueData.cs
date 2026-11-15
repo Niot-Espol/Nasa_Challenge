@@ -14,6 +14,8 @@ public class DialogueLine
     public Speaker speaker;
     public Expression expression;
     [TextArea(2, 5)] public string text;
+    [TextArea(2, 5)] public string textEn;   // inglés (vacío = se usa el español)
+    public string Text => Loc.T(text, textEn);
     [Tooltip("Opcional: id de un elemento de la UI que se anima mientras se muestra esta línea (p. ej. 'energy', 'time', 'science').")]
     public string highlight;
 }
@@ -27,11 +29,11 @@ public class DialogueData : ScriptableObject
     {
         switch (s)
         {
-            case Speaker.Vega: return "Dra. Elena Vega";
+            case Speaker.Vega: return Loc.T("Dra. Elena Vega", "Dr. Elena Vega");
             case Speaker.Bimo: return "BIMO";
             case Speaker.Mateo: return "Mateo Rojas";
             case Speaker.Luna: return "Luna Torres";
-            case Speaker.Commander: return "Comandante";
+            case Speaker.Commander: return Loc.T("Comandante", "Commander");
             default: return "";
         }
     }

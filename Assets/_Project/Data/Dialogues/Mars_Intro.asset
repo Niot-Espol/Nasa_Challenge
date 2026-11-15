@@ -17,19 +17,27 @@ MonoBehaviour:
     expression: 1
     text: "\xA1Aterrizamos en Jezero, comandante! Hace miles de millones de a\xF1os
       aqu\xED hubo un lago."
+    textEn: We've landed in Jezero, commander! Billions of years ago there was a
+      lake right here.
     highlight: 
   - speaker: 1
     expression: 0
     text: "Esta es nuestra energ\xEDa. Moverse y escanear la gastan, y nuestra fuente
       la recarga. Si llega a cero, el rover entra en modo seguro."
+    textEn: This is our energy. Driving and scanning use it, and our power source
+      recharges it. If it hits zero, the rover enters safe mode.
     highlight: energy
   - speaker: 1
     expression: 0
     text: "Tenemos solo dos minutos y medio de operaci\xF3n antes de que se cierre
       la ventana de la misi\xF3n. Planifica la ruta."
+    textEn: We only have two and a half minutes of operations before the mission
+      window closes. Plan your route.
     highlight: time
   - speaker: 1
     expression: 1
     text: "Hay tres puntos cient\xEDficos. Las flechas en el borde de la pantalla
       te indican d\xF3nde est\xE1n. Ac\xE9rcate y presiona E para escanear. \xA1Vamos!"
+    textEn: There are three science sites. The arrows on the edge of the screen show
+      where they are. Get close and press E to scan. Let's go!
     highlight: science

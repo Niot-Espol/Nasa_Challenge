@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ComponentData
   id: wheels_allterrain
   displayName: Ruedas todoterreno
+  displayNameEn: All-terrain wheels
   category: 5
   mass: 40
   cost: 10
@@ -26,5 +27,7 @@ MonoBehaviour:
   crossesRockyZone: 1
   icon: {fileID: 21300000, guid: b5b71a19dcc94da88c1c06c50bf74618, type: 3}
   description: 'Cruzan la zona rocosa: abren un atajo en el mapa.'
+  descriptionEn: 'Cross the rocky zone: they open a shortcut on the map.'
   nasaFact: 
+  nasaFactEn: 
   nasaSourceUrl: 

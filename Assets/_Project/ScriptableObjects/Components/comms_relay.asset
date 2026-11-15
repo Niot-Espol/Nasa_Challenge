@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ComponentData
   id: comms_relay
   displayName: "Rel\xE9 v\xEDa orbitador"
+  displayNameEn: Orbital relay
   category: 4
   mass: 10
   cost: 15
@@ -27,5 +28,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: c104a17c4e634dfda50998f4ae3bdfce, type: 3}
   description: "Env\xEDa los datos a trav\xE9s de un sat\xE9lite. El apag\xF3n dura
     solo 10 s."
+  descriptionEn: Sends data through a satellite. The blackout lasts only 10 s.
   nasaFact: 
+  nasaFactEn: 
   nasaSourceUrl: 

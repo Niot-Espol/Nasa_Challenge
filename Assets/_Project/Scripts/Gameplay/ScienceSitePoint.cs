@@ -15,6 +15,7 @@ public class ScienceSitePoint : Interactable
     [Header("Dato NASA (se muestra al completar)")]
     [SerializeField] string factTitle = "Dato NASA";
     [SerializeField, TextArea(3, 6)] string fact;
+    [SerializeField, TextArea(3, 6)] string factEn;   // inglés
     [SerializeField] string factSource;
 
     public ScienceSite Site => site;
@@ -63,7 +64,7 @@ public class ScienceSitePoint : Interactable
         {
             if (status != ScanStatus.Ok) return;
             if (!string.IsNullOrEmpty(fact) && DialogueBox.Instance != null)
-                DialogueBox.Instance.ShowFact(factTitle, fact, factSource, () => AudioManager.Play(Sfx.SiteComplete));
+                DialogueBox.Instance.ShowFact(Loc.T(factTitle, "NASA fact"), Loc.T(fact, factEn), factSource, () => AudioManager.Play(Sfx.SiteComplete));
             else
                 AudioManager.Play(Sfx.SiteComplete);
         }));

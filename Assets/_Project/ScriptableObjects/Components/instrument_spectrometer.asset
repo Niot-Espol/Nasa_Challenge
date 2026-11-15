@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ComponentData
   id: instrument_spectrometer
   displayName: "Espectr\xF3metro"
+  displayNameEn: Spectrometer
   category: 3
   mass: 40
   cost: 18
@@ -26,5 +27,7 @@ MonoBehaviour:
   crossesRockyZone: 0
   icon: {fileID: 21300000, guid: eb637b700970468792359b9b5831a5e9, type: 3}
   description: "Necesario para el afloramiento mineral. Escanear cuesta 25 de energ\xEDa."
+  descriptionEn: Needed for the mineral outcrop. Scanning costs 25 energy.
   nasaFact: 
+  nasaFactEn: 
   nasaSourceUrl: 

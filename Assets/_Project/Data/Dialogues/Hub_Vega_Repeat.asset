@@ -17,4 +17,6 @@ MonoBehaviour:
     expression: 2
     text: "Recuerda: ninguna configuraci\xF3n es perfecta. Piensa qu\xE9 est\xE1s
       dispuesto a sacrificar: ciencia, energ\xEDa o presupuesto."
+    textEn: 'Remember: no design is perfect. Think about what you''re willing to
+      give up: science, energy or budget.'
     highlight: 

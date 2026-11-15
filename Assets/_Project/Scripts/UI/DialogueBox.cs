@@ -75,7 +75,7 @@ public class DialogueBox : MonoBehaviour
         if (sourceText != null)
         {
             sourceText.gameObject.SetActive(!string.IsNullOrEmpty(source));
-            sourceText.text = "Fuente: " + source;
+            sourceText.text = Loc.T("Fuente: ", "Source: ") + source;
         }
         Type(fact);
     }
@@ -97,7 +97,7 @@ public class DialogueBox : MonoBehaviour
         SetHighlight(l.highlight);
         if (nameText != null) nameText.text = DialogueData.SpeakerName(l.speaker);
         SetPortrait(l.speaker, l.expression);
-        Type(l.text);
+        Type(l.Text);
     }
 
     void SetPortrait(Speaker s, Expression e = Expression.Neutral)
@@ -140,7 +140,7 @@ public class DialogueBox : MonoBehaviour
         }
         bodyText.maxVisibleCharacters = int.MaxValue;
         typing = false;
-        if (hintText != null) hintText.text = index < lines.Length - 1 ? "E / Espacio: continuar" : "E / Espacio: cerrar";
+        if (hintText != null) hintText.text = index < lines.Length - 1 ? Loc.T("E / Espacio: continuar", "E / Space: continue") : Loc.T("E / Espacio: cerrar", "E / Space: close");
     }
 
     void Update()

@@ -8,6 +8,7 @@ public class SlowZone : MonoBehaviour
 {
     [SerializeField, Range(0.1f, 1f)] float speedFactor = 0.55f;
     [SerializeField] string message = "Sedimento blando: el rover avanza más lento. Con ruedas todoterreno no sería problema.";
+    [SerializeField] string messageEn = "Soft sediment: the rover slows down. All-terrain wheels would handle it.";
 
     static bool warned;   // un solo aviso por misión
 
@@ -19,7 +20,7 @@ public class SlowZone : MonoBehaviour
         var mover = other.GetComponentInParent<TopDownMover>();
         if (mover == null || GameSession.EnsureDesign().AllTerrainWheels) return;
         mover.SpeedMultiplier = speedFactor;
-        if (!warned && MissionController.Instance != null) { warned = true; MissionController.Instance.PostMessage(message); }
+        if (!warned && MissionController.Instance != null) { warned = true; MissionController.Instance.PostMessage(Loc.T(message, messageEn)); }
     }
 
     void OnTriggerExit2D(Collider2D other)

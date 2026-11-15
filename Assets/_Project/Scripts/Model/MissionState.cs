@@ -171,13 +171,13 @@ public class MissionState
     {
         switch (status)
         {
-            case ScanStatus.Ok: return $"¡Datos obtenidos! Punto completado ({Result.ScienceCount}/{Mission.Sites.Count}).";
-            case ScanStatus.AlreadyDone: return "Ya estudiamos este punto, comandante.";
-            case ScanStatus.MissingInstrument: return $"No traemos {InstrumentName(RequiredInstrument(site))}. No podemos estudiar este punto.";
-            case ScanStatus.NotEnoughEnergy: return $"Necesitamos {Design.ScanCosts[RequiredInstrument(site)]:0} de energía para escanear. Esperemos a recargar.";
-            case ScanStatus.CommsDown: return "Sin comunicación con la Tierra: no podemos escanear ahora.";
-            case ScanStatus.SafeMode: return "Modo seguro: el rover está recargando.";
-            default: return "La misión terminó.";
+            case ScanStatus.Ok: return Loc.T($"¡Datos obtenidos! Punto completado ({Result.ScienceCount}/{Mission.Sites.Count}).", $"Data collected! Site complete ({Result.ScienceCount}/{Mission.Sites.Count}).");
+            case ScanStatus.AlreadyDone: return Loc.T("Ya estudiamos este punto, comandante.", "We already studied this site, commander.");
+            case ScanStatus.MissingInstrument: return Loc.T($"No traemos {InstrumentName(RequiredInstrument(site))}. No podemos estudiar este punto.", $"We didn't bring {InstrumentName(RequiredInstrument(site))}. We can't study this site.");
+            case ScanStatus.NotEnoughEnergy: return Loc.T($"Necesitamos {Design.ScanCosts[RequiredInstrument(site)]:0} de energía para escanear. Esperemos a recargar.", $"We need {Design.ScanCosts[RequiredInstrument(site)]:0} energy to scan. Let's wait to recharge.");
+            case ScanStatus.CommsDown: return Loc.T("Sin comunicación con la Tierra: no podemos escanear ahora.", "No contact with Earth: we can't scan right now.");
+            case ScanStatus.SafeMode: return Loc.T("Modo seguro: el rover está recargando.", "Safe mode: the rover is recharging.");
+            default: return Loc.T("La misión terminó.", "The mission is over.");
         }
     }
 
@@ -185,9 +185,9 @@ public class MissionState
     {
         switch (i)
         {
-            case Instrument.Camera: return "la cámara";
-            case Instrument.Spectrometer: return "el espectrómetro";
-            default: return "el brazo con taladro";
+            case Instrument.Camera: return Loc.T("la cámara", "the camera");
+            case Instrument.Spectrometer: return Loc.T("el espectrómetro", "the spectrometer");
+            default: return Loc.T("el brazo con taladro", "the drill arm");
         }
     }
 

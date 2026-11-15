@@ -32,7 +32,7 @@ public class MissionController : MonoBehaviour
     public static MissionController Instance { get; private set; }
 
     // Último mensaje de BIMO para el HUD (escaneos, eventos).
-    public string LastMessage { get; private set; } = "Estudia los 3 puntos científicos: acércate y presiona E.";
+    public string LastMessage { get; private set; } = Loc.T("Estudia los 3 puntos científicos: acércate y presiona E.", "Study the 3 science sites: get close and press E.");
     public event System.Action<string> MessagePosted;
 
     bool ended;
@@ -57,7 +57,7 @@ public class MissionController : MonoBehaviour
         State.SafeModeChanged += on =>
         {
             if (on) OnSafeModeEntered();
-            else Post("Energía recuperada. ¡Podemos seguir!");
+            else Post(Loc.T("Energía recuperada. ¡Podemos seguir!", "Energy restored. We can keep going!"));
         };
         State.MissionEnded += OnMissionEnded;
     }
@@ -76,7 +76,7 @@ public class MissionController : MonoBehaviour
     // --- Adelantar el tiempo (mantener Espacio con el rover detenido) ---
     public bool IsFastForwarding { get; private set; }
     public float FastForwardSpeed => fastForwardSpeed;
-    const string FastForwardTip = "Consejo: mientras esperas, mantén presionada la barra ESPACIO (con el rover quieto) para adelantar el tiempo.";
+    static string FastForwardTip => Loc.T("Consejo: mientras esperas, mantén presionada la barra ESPACIO (con el rover quieto) para adelantar el tiempo.", "Tip: while you wait, hold the SPACE bar (with the rover stopped) to fast-forward time.");
 
     // ¿Está el jugador en una situación en la que solo puede esperar? (solo aquí se permite adelantar el tiempo)
     // Modo seguro, apagón de comunicación o tormenta con paneles solares (no recargan).
@@ -122,15 +122,15 @@ public class MissionController : MonoBehaviour
             if (storm) { AudioManager.Play(Sfx.DustStorm); CameraShake.Shake(0.35f, 1.2f); }
             if (storm) Explain(State.Design.UsesSolar
                 ? new[] {
-                    "¡Tormenta de polvo! El polvo tapa el Sol: nuestros paneles solares NO van a recargar durante unos " + dustStormDuration.ToString("0") + " segundos.",
-                    "Si la energía llega a cero, el rover se detendrá hasta que pase la tormenta. ¡Muévete solo lo necesario!",
+                    Loc.T("¡Tormenta de polvo! El polvo tapa el Sol: nuestros paneles solares NO van a recargar durante unos " + dustStormDuration.ToString("0") + " segundos.", "Dust storm! The dust blocks the Sun: our solar panels will NOT recharge for about " + dustStormDuration.ToString("0") + " seconds."),
+                    Loc.T("Si la energía llega a cero, el rover se detendrá hasta que pase la tormenta. ¡Muévete solo lo necesario!", "If energy hits zero, the rover will stop until the storm passes. Only move when you need to!"),
                     FastForwardTip }
-                : new[] { "¡Tormenta de polvo! Por suerte nuestro RTG no depende del Sol: seguimos recargando con normalidad." });
+                : new[] { Loc.T("¡Tormenta de polvo! Por suerte nuestro RTG no depende del Sol: seguimos recargando con normalidad.", "Dust storm! Luckily our RTG doesn't depend on the Sun: we keep recharging as usual.") });
             CameraShake.SetContinuous(storm ? 0.06f : 0f);
             if (storm) Post(State.Design.UsesSolar
-                ? "Tormenta: los paneles solares no recargan mientras dure."
-                : "Tormenta: el RTG sigue dando energía.");
-            else Post("La tormenta pasó. Los paneles vuelven a recargar.");
+                ? Loc.T("Tormenta: los paneles solares no recargan mientras dure.", "Storm: the solar panels won't recharge while it lasts.")
+                : Loc.T("Tormenta: el RTG sigue dando energía.", "Storm: the RTG keeps supplying power."));
+            else Post(Loc.T("La tormenta pasó. Los paneles vuelven a recargar.", "The storm has passed. The panels are recharging again."));
         }
 
         // El apagón nunca llega justo después de otra espera: necesita minFreeGap segundos de juego libre.
@@ -144,13 +144,13 @@ public class MissionController : MonoBehaviour
             AudioManager.Play(down ? Sfx.CommsLost : Sfx.CommsBack);
             if (down) CameraShake.Shake(0.1f, 0.3f);
             if (down) Explain(State.Design.BlackoutSeconds > 20f
-                ? new[] { "¡Perdimos la comunicación con la Tierra! Durante " + State.Design.BlackoutSeconds.ToString("0") + " segundos no podremos escanear.",
-                          "Con un relé vía orbitador en vez de la antena directa, el apagón duraría solo 10 segundos.",
+                ? new[] { Loc.T("¡Perdimos la comunicación con la Tierra! Durante " + State.Design.BlackoutSeconds.ToString("0") + " segundos no podremos escanear.", "We lost contact with Earth! For " + State.Design.BlackoutSeconds.ToString("0") + " seconds we won't be able to scan."),
+                          Loc.T("Con un relé vía orbitador en vez de la antena directa, el apagón duraría solo 10 segundos.", "With an orbital relay instead of the direct antenna, the blackout would last only 10 seconds."),
                           FastForwardTip }
-                : new[] { "Perdimos la comunicación, pero gracias al relé vía orbitador volverá en unos " + State.Design.BlackoutSeconds.ToString("0") + " segundos." });
+                : new[] { Loc.T("Perdimos la comunicación, pero gracias al relé vía orbitador volverá en unos " + State.Design.BlackoutSeconds.ToString("0") + " segundos.", "We lost contact, but thanks to the orbital relay it'll be back in about " + State.Design.BlackoutSeconds.ToString("0") + " seconds.") });
             Post(down
-                ? $"¡Perdimos la comunicación con la Tierra! ({State.Design.BlackoutSeconds:0} s sin poder escanear)"
-                : "Comunicación restablecida.");
+                ? Loc.T($"¡Perdimos la comunicación con la Tierra! ({State.Design.BlackoutSeconds:0} s sin poder escanear)", $"We lost contact with Earth! ({State.Design.BlackoutSeconds:0} s unable to scan)")
+                : Loc.T("Comunicación restablecida.", "Communication restored."));
         }
     }
 
@@ -184,7 +184,7 @@ public class MissionController : MonoBehaviour
         if (pre != ScanStatus.Ok) { done?.Invoke(Scan(site)); yield break; }
         IsScanning = true; ScanProgress = 0f; ScanningSite = site;
         AudioManager.Play(Sfx.Scan);
-        Post("Escaneando...");
+        Post(Loc.T("Escaneando...", "Scanning..."));
         while (ScanProgress < 1f)
         {
             if (State.IsOver) { IsScanning = false; yield break; }
@@ -202,7 +202,7 @@ public class MissionController : MonoBehaviour
         Post(State.ScanMessage(status, site));
         if (status == ScanStatus.Ok && State.Result.ScienceCount >= State.Mission.Sites.Count)
         {
-            Post("¡Los 3 puntos completados! Transmitiendo los datos a la Tierra...");
+            Post(Loc.T("¡Los 3 puntos completados! Transmitiendo los datos a la Tierra...", "All 3 sites complete! Sending the data to Earth..."));
             Invoke(nameof(FinishMission), 2.5f);   // tiempo escalado: espera a que se cierre el popup
         }
         return status;
@@ -222,7 +222,7 @@ public class MissionController : MonoBehaviour
         AudioManager.SetLoop(Loop.Wind, false);
         AudioManager.SetLoop(Loop.Static, false);
         CameraShake.SetContinuous(0f);
-        Post("Transmitiendo datos al centro de control...");
+        Post(Loc.T("Transmitiendo datos al centro de control...", "Sending data to mission control..."));
         Invoke(nameof(GoToReport), 1.5f);
     }
 
@@ -248,17 +248,17 @@ public class MissionController : MonoBehaviour
         bool stormBlocks = State.DustStormActive && State.Design.UsesSolar;
         if (stormBlocks)
             Explain(new[] {
-                "¡Nos quedamos sin energía y la tormenta sigue tapando el Sol! Los paneles no recargan: hay que esperar unos " + StormTimeLeft.ToString("0") + " segundos a que pase.",
-                "Con un RTG en lugar de paneles solares, esto no habría pasado: el RTG recarga aunque no haya Sol. Lo anotaré para el reporte.",
+                Loc.T("¡Nos quedamos sin energía y la tormenta sigue tapando el Sol! Los paneles no recargan: hay que esperar unos " + StormTimeLeft.ToString("0") + " segundos a que pase.", "We're out of energy and the storm is still blocking the Sun! The panels can't recharge: we have to wait about " + StormTimeLeft.ToString("0") + " seconds for it to pass."),
+                Loc.T("Con un RTG en lugar de paneles solares, esto no habría pasado: el RTG recarga aunque no haya Sol. Lo anotaré para el reporte.", "With an RTG instead of solar panels, this wouldn't have happened: the RTG recharges even without sunlight. I'll note it for the report."),
                 FastForwardTip });
         else
         {
             float secs = State.CurrentRecharge > 0 ? State.MaxEnergy * MissionState.SafeModeResumeFraction / State.CurrentRecharge : 0f;
             Explain(new[] {
-                "¡Sin energía! Modo seguro: el rover se detiene hasta recargar el 30 % (unos " + secs.ToString("0") + " segundos).",
+                Loc.T("¡Sin energía! Modo seguro: el rover se detiene hasta recargar el 30 % (unos " + secs.ToString("0") + " segundos).", "Out of energy! Safe mode: the rover stops until it recharges to 30% (about " + secs.ToString("0") + " seconds)."),
                 State.Design.BatteryCapacity < 100f
-                    ? "Moverse y escanear gastan energía. Con la batería grande tendríamos más margen."
-                    : "Moverse y escanear gastan energía: conviene parar a recargar antes de llegar a cero.",
+                    ? Loc.T("Moverse y escanear gastan energía. Con la batería grande tendríamos más margen.", "Driving and scanning use energy. With the large battery we'd have more margin.")
+                    : Loc.T("Moverse y escanear gastan energía: conviene parar a recargar antes de llegar a cero.", "Driving and scanning use energy: it's best to stop and recharge before hitting zero."),
                 FastForwardTip });
         }
     }

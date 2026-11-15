@@ -16,14 +16,19 @@ MonoBehaviour:
   - speaker: 1
     expression: 2
     text: "Entonces... \xBFviajaremos millones de kil\xF3metros para recoger piedras?"
+    textEn: So... we're traveling millions of kilometers to pick up rocks?
     highlight: 
   - speaker: 1
     expression: 1
     text: "\xA1Ah, ya s\xE9! Las rocas pueden guardar la historia de un planeta.
       \xA1Las piedras m\xE1s importantes de mi carrera espacial!"
+    textEn: Oh, I get it! Rocks can hold the history of a planet. The most important
+      rocks of my space career!
     highlight: 
   - speaker: 1
     expression: 0
     text: "Un consejo: los paneles solares son ligeros y baratos... pero en Marte
       hay tormentas de polvo. Pi\xE9nsalo bien."
+    textEn: 'A tip: solar panels are light and cheap... but Mars has dust storms.
+      Think it through.'
     highlight: 

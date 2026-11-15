@@ -17,34 +17,47 @@ MonoBehaviour:
     expression: 1
     text: "Bienvenido a Mars Crafts, comandante. Durante a\xF1os hemos estudiado
       la Tierra, la Luna y Marte, pero a\xFAn quedan muchas preguntas."
+    textEn: Welcome to Mars Crafts, commander. For years we've studied the Earth,
+      the Moon and Mars, but many questions remain.
     highlight: 
   - speaker: 0
     expression: 0
     text: "Hoy empieza nuestra misi\xF3n m\xE1s importante: investigar una regi\xF3n
       inspirada en el cr\xE1ter Jezero, donde la NASA encontr\xF3 evidencias de un
       antiguo lago y un delta."
+    textEn: 'Today our most important mission begins: exploring a region inspired
+      by Jezero crater, where NASA found evidence of an ancient lake and delta.'
     highlight: 
   - speaker: 0
     expression: 0
     text: "Nuestra pregunta cient\xEDfica: \xBFqu\xE9 podemos aprender sobre los
       antiguos ambientes con agua de Marte estudiando sus rocas?"
+    textEn: 'Our science question: what can we learn about Mars''s ancient watery
+      environments by studying its rocks?'
     highlight: 
   - speaker: 0
     expression: 0
     text: "All\xE1 estudiar\xE1s tres puntos: el delta, un afloramiento mineral y
       una roca especial. Cada uno necesita un instrumento distinto."
+    textEn: 'There you''ll study three sites: the delta, a mineral outcrop and a
+      special rock. Each one needs a different instrument.'
     highlight: 
   - speaker: 0
     expression: 0
     text: "En el taller dise\xF1ar\xE1s tu rover. Tienes 110 cr\xE9ditos, y cada
       componente suma masa: tu cohete solo puede llevar cierto peso."
+    textEn: 'In the workshop you''ll design your rover. You have 110 credits, and
+      every part adds mass: your rocket can only carry so much.'
     highlight: 
   - speaker: 1
     expression: 1
     text: "\xA1Y yo te ayudar\xE9, comandante! Mi \xFAltimo diagn\xF3stico dice que
       funciono casi perfectamente."
+    textEn: And I'll help you, commander! My last diagnostic says I work almost perfectly.
     highlight: 
   - speaker: 0
     expression: 1
     text: "Cuando est\xE9s listo, entra al taller por la puerta del fondo. Suerte."
+    textEn: When you're ready, go into the workshop through the door at the back.
+      Good luck.
     highlight: 

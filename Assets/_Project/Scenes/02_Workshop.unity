@@ -339,6 +339,7 @@ GameObject:
   - component: {fileID: 119673028}
   - component: {fileID: 119673027}
   - component: {fileID: 119673026}
+  - component: {fileID: 119673029}
   m_Layer: 5
   m_Name: Header
   m_TagString: Untagged
@@ -479,6 +480,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119673024}
   m_CullTransparentMesh: 1
+--- !u!114 &119673029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119673024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: "WORKSHOP \xB7 Design your rover"
+  spanish: "TALLER \xB7 Dise\xF1a tu rover"
 --- !u!1 &128545428
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,6 +1204,7 @@ GameObject:
   - component: {fileID: 505264538}
   - component: {fileID: 505264537}
   - component: {fileID: 505264536}
+  - component: {fileID: 505264539}
   m_Layer: 5
   m_Name: Subheader
   m_TagString: Untagged
@@ -1330,6 +1346,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505264534}
   m_CullTransparentMesh: 1
+--- !u!114 &505264539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505264534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: 'Pick one option per category. No design is perfect: decide what to give
+    up.'
+  spanish: "Elige una opci\xF3n por categor\xEDa. Ninguna configuraci\xF3n es perfecta:
+    decide qu\xE9 sacrificar."
 --- !u!1 &648675788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,6 +1374,7 @@ GameObject:
   - component: {fileID: 648675792}
   - component: {fileID: 648675791}
   - component: {fileID: 648675790}
+  - component: {fileID: 648675793}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -1482,6 +1515,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648675788}
   m_CullTransparentMesh: 1
+--- !u!114 &648675793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648675788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: LAUNCH!
+  spanish: "\xA1LANZAR!"
 --- !u!1 &693709623
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,6 +2706,7 @@ GameObject:
   - component: {fileID: 1596904947}
   - component: {fileID: 1596904948}
   - component: {fileID: 1596904946}
+  - component: {fileID: 1596904949}
   m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
@@ -2801,6 +2849,24 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1596904949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596904944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cfc6ca3b72a4c2e8a2c01f3715bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  english: 'Rover preview
+
+    (art pending)'
+  spanish: 'Vista previa del rover
+
+    (arte pendiente)'
 --- !u!1 &1625866365
 GameObject:
   m_ObjectHideFlags: 0

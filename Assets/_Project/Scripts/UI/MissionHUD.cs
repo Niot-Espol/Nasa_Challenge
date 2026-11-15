@@ -153,7 +153,7 @@ public class MissionHUD : MonoBehaviour
             if (th != null) energyBar.SetColor(s.InSafeMode ? th.error : s.Energy < s.MaxEnergy * 0.3f ? th.warning : th.good);
         }
         if (energyText != null)
-            energyText.text = $"Energía {s.Energy:0}/{s.MaxEnergy:0}   <size=80%>(+{s.CurrentRecharge:0.#}/s)</size>";
+            energyText.text = Loc.T("Energía", "Energy") + $" {s.Energy:0}/{s.MaxEnergy:0}   <size=80%>(+{s.CurrentRecharge:0.#}/s)</size>";
 
         int secs = Mathf.CeilToInt(s.TimeLeft);
         if (timeBar != null)
@@ -161,30 +161,30 @@ public class MissionHUD : MonoBehaviour
             timeBar.Set(s.TimeLeft, s.TimeLimit);
             if (th != null) timeBar.SetColor(s.TimeLeft < 30f ? th.warning : th.accent);
         }
-        if (timeText != null) timeText.text = $"Tiempo {secs / 60}:{secs % 60:00}";
+        if (timeText != null) timeText.text = Loc.T("Tiempo", "Time") + $" {secs / 60}:{secs % 60:00}";
 
-        if (scienceText != null) scienceText.text = $"Puntos científicos: {s.Result.ScienceCount}/{s.Mission.Sites.Count}";
+        if (scienceText != null) scienceText.text = Loc.T("Puntos científicos", "Science sites") + $": {s.Result.ScienceCount}/{s.Mission.Sites.Count}";
 
         string status = "";
         if (s.InSafeMode)
             status += s.DustStormActive && s.Design.UsesSolar
-                ? $"<color=#FF5555>MODO SEGURO · sin Sol, espera {mc.StormTimeLeft:0} s</color>   "
-                : $"<color=#FF5555>MODO SEGURO · recargando {Mathf.Clamp01(s.Energy / (s.MaxEnergy * MissionState.SafeModeResumeFraction)) * 100f:0}%</color>   ";
-        if (s.DustStormActive) status += $"<color=#FFAA44>TORMENTA {mc.StormTimeLeft:0} s</color>   ";
+                ? Loc.T($"<color=#FF5555>MODO SEGURO · sin Sol, espera {mc.StormTimeLeft:0} s</color>   ", $"<color=#FF5555>SAFE MODE · no sunlight, wait {mc.StormTimeLeft:0} s</color>   ")
+                : Loc.T("<color=#FF5555>MODO SEGURO · recargando ", "<color=#FF5555>SAFE MODE · recharging ") + $"{Mathf.Clamp01(s.Energy / (s.MaxEnergy * MissionState.SafeModeResumeFraction)) * 100f:0}%</color>   ";
+        if (s.DustStormActive) status += Loc.T("<color=#FFAA44>TORMENTA ", "<color=#FFAA44>DUST STORM ") + $"{mc.StormTimeLeft:0} s</color>   ";
         if (s.InShadow) status += s.Design.UsesSolar
-            ? $"<color=#8FB8FF>SOMBRA · sin Sol, frío -{s.ExtraDrainPerSecond:0.#}/s</color>   "
-            : $"<color=#8FB8FF>SOMBRA · frío -{s.ExtraDrainPerSecond:0.#}/s</color>   ";
+            ? Loc.T("<color=#8FB8FF>SOMBRA · sin Sol, frío -", "<color=#8FB8FF>SHADOW · no sunlight, cold -") + $"{s.ExtraDrainPerSecond:0.#}/s</color>   "
+            : Loc.T("<color=#8FB8FF>SOMBRA · frío -", "<color=#8FB8FF>SHADOW · cold -") + $"{s.ExtraDrainPerSecond:0.#}/s</color>   ";
         if (s.CommsDown) status += mc.CommsZoneActive
-            ? "<color=#9FA8FF>SIN SEÑAL · sal del cráter</color>   "
-            : $"<color=#9FA8FF>SIN SEÑAL {mc.BlackoutTimeLeft:0} s</color>   ";
-        if (mc.IsScanning) status += $"<color=#7FE8FF>ESCANEANDO {mc.ScanProgress * 100f:0}%</color>   ";
+            ? Loc.T("<color=#9FA8FF>SIN SEÑAL · sal del cráter</color>   ", "<color=#9FA8FF>NO SIGNAL · leave the crater</color>   ")
+            : Loc.T("<color=#9FA8FF>SIN SEÑAL ", "<color=#9FA8FF>NO SIGNAL ") + $"{mc.BlackoutTimeLeft:0} s</color>   ";
+        if (mc.IsScanning) status += Loc.T("<color=#7FE8FF>ESCANEANDO ", "<color=#7FE8FF>SCANNING ") + $"{mc.ScanProgress * 100f:0}%</color>   ";
         if (mc.IsFastForwarding) status += $"<color=#FFFFFF><b>>> x{mc.FastForwardSpeed:0}</b></color>";
-        else if (mc.IsWaiting) status += "\n<size=75%><color=#C8D2E6>Mantén ESPACIO (rover quieto) para adelantar el tiempo</color></size>";
+        else if (mc.IsWaiting) status += Loc.T("\n<size=75%><color=#C8D2E6>Mantén ESPACIO (rover quieto) para adelantar el tiempo</color></size>", "\n<size=75%><color=#C8D2E6>Hold SPACE (rover stopped) to fast-forward time</color></size>");
         if (statusText != null) statusText.text = status;
         UpdateStatusPanel(status);
         UpdateStatusIcon(s, th, status);
 
         if (statsText != null)
-            statsText.text = $"Energía: {s.Energy:0}/{s.MaxEnergy:0}\nTiempo: {secs / 60}:{secs % 60:00}\nPuntos: {s.Result.ScienceCount}/{s.Mission.Sites.Count}";
+            statsText.text = Loc.T($"Energía: {s.Energy:0}/{s.MaxEnergy:0}\nTiempo: {secs / 60}:{secs % 60:00}\nPuntos: {s.Result.ScienceCount}/{s.Mission.Sites.Count}", $"Energy: {s.Energy:0}/{s.MaxEnergy:0}\nTime: {secs / 60}:{secs % 60:00}\nSites: {s.Result.ScienceCount}/{s.Mission.Sites.Count}");
     }
 }
