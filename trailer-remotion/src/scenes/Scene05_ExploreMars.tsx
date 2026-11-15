@@ -20,25 +20,27 @@ export const Scene05_ExploreMars: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const camScale = interpolate(frame, [0, 180], [1.04, 1.18], {
+  const camScale = interpolate(frame, [0, 180], [1.04, 1.16], {
     extrapolateRight: "clamp",
   });
-  const camX = interpolate(frame, [0, 180], [80, -100], {
+  const camX = interpolate(frame, [0, 180], [70, -85], {
     extrapolateRight: "clamp",
   });
-  const camY = interpolate(frame, [0, 180], [20, -25], {
-    extrapolateRight: "clamp",
-  });
-
-  // Rover follows the stepped ancient river delta channel smoothly
-  const roverX = interpolate(frame, [0, 180], [380, 1180], {
-    extrapolateRight: "clamp",
-  });
-  const roverY = interpolate(frame, [0, 90, 180], [560, 510, 470], {
+  const camY = interpolate(frame, [0, 180], [15, -20], {
     extrapolateRight: "clamp",
   });
 
-  const driveIdx = Math.floor(frame / 3) % 4;
+  // Rover drives along the unobstructed sandy river channel (below science_point_delta at y=420)
+  // and stops cleanly in front of science_point_special_rock (x=1140, y=425) at x=985, y=465 to scan it without clipping!
+  const isDriving = frame < 115;
+  const roverX = interpolate(frame, [0, 115], [410, 985], {
+    extrapolateRight: "clamp",
+  });
+  const roverY = interpolate(frame, [0, 60, 115], [565, 515, 465], {
+    extrapolateRight: "clamp",
+  });
+
+  const driveIdx = isDriving ? Math.floor(frame / 3) % 4 : 0;
   const roverSprite = `game-assets/Sprites/Rover/DrivingV2/East/drive_east_00${driveIdx}.png`;
   const scanIdx = Math.floor(frame / 3) % 4;
 
@@ -60,7 +62,6 @@ export const Scene05_ExploreMars: React.FC = () => {
           transformOrigin: "center center",
         }}
       >
-        {/* Elaborated 25-tile Mars Jezero Crater Tilemap (Stepped Delta, Mud, Sand, Dunes, RockyZone) */}
         <MarsTilemap />
 
         {/* Grounded Cliffs, Mesas, Craters, Rocks & Minerals with Contact Shadows */}
@@ -79,7 +80,7 @@ export const Scene05_ExploreMars: React.FC = () => {
         <GroundedSprite
           src="game-assets/Sprites/Mars/Relief/meseta-alta.png"
           x={1040}
-          y={175}
+          y={170}
           size={255}
         />
         <GroundedSprite
@@ -91,15 +92,15 @@ export const Scene05_ExploreMars: React.FC = () => {
 
         <GroundedSprite
           src="game-assets/Sprites/Mars/Craters/crater-grande.png"
-          x={520}
-          y={340}
+          x={490}
+          y={315}
           size={175}
           shadowHeight={20}
         />
         <GroundedSprite
           src="game-assets/Sprites/Mars/Craters/crater-hondo.png"
           x={1380}
-          y={330}
+          y={315}
           size={165}
           shadowHeight={20}
         />
@@ -126,20 +127,20 @@ export const Scene05_ExploreMars: React.FC = () => {
         {/* Grounded Mars Lander Module */}
         <GroundedSprite
           src="game-assets/Sprites/Mars/Landing/landing_module.png"
-          x={220}
-          y={560}
+          x={210}
+          y={565}
           size={220}
           shadowWidth={160}
         />
 
-        {/* 3 Grounded Science Points */}
+        {/* 3 Grounded Science Points Positioned Along the Channel Bank so the Rover Scans Without Clipping */}
         <GroundedSprite
           src="game-assets/Sprites/Mars/SciencePoints/science_point_delta.png"
-          x={720}
-          y={520}
-          size={145}
+          x={680}
+          y={415}
+          size={140}
         >
-          <div style={{ position: "absolute", left: 46, top: -44 }}>
+          <div style={{ position: "absolute", left: 45, top: -42 }}>
             <PixelSprite
               src="game-assets/Sprites/Mars/Indicators/science_completed.png"
               size={50}
@@ -149,12 +150,12 @@ export const Scene05_ExploreMars: React.FC = () => {
 
         <GroundedSprite
           src="game-assets/Sprites/Mars/SciencePoints/science_point_special_rock.png"
-          x={1160}
-          y={455}
-          size={150}
+          x={1145}
+          y={435}
+          size={145}
         >
-          {frame >= 60 && (
-            <div style={{ position: "absolute", left: -18, top: -18 }}>
+          {frame >= 65 && (
+            <div style={{ position: "absolute", left: -20, top: -20 }}>
               <PixelSprite
                 src={`game-assets/Sprites/Mars/Effects/Scan/scan_00${scanIdx}.png`}
                 size={185}
@@ -166,10 +167,10 @@ export const Scene05_ExploreMars: React.FC = () => {
         <GroundedSprite
           src="game-assets/Sprites/Mars/SciencePoints/science_point_mineral.png"
           x={1520}
-          y={520}
+          y={490}
           size={145}
         >
-          <div style={{ position: "absolute", left: 46, top: -44 }}>
+          <div style={{ position: "absolute", left: 48, top: -44 }}>
             <PixelSprite
               src={`game-assets/Sprites/Mars/Indicators/Interaction/interaction_e_00${frame % 2}.png`}
               size={48}
@@ -212,16 +213,34 @@ export const Scene05_ExploreMars: React.FC = () => {
           left: 40,
           transform: `scale(${stampPop})`,
           padding: "12px 26px",
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
+          background:
+            "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
           border: "4px solid #f97316",
           boxShadow: "0 14px 36px rgba(0,0,0,0.85)",
           zIndex: 90,
         }}
       >
-        <div style={{ fontFamily: FONTS.title, fontSize: 50, color: "#fb923c", letterSpacing: 5, lineHeight: 1 }}>
+        <div
+          style={{
+            fontFamily: FONTS.title,
+            fontSize: 50,
+            color: "#fb923c",
+            letterSpacing: 5,
+            lineHeight: 1,
+          }}
+        >
           EXPLORA
         </div>
-        <div style={{ fontFamily: FONTS.body, fontSize: 17, fontWeight: 900, color: "#f8fafc", letterSpacing: 1.5, marginTop: 4 }}>
+        <div
+          style={{
+            fontFamily: FONTS.body,
+            fontSize: 17,
+            fontWeight: 900,
+            color: "#f8fafc",
+            letterSpacing: 1.5,
+            marginTop: 4,
+          }}
+        >
           04_MARS // CRÁTER JEZERO Y ANTIGUO DELTA FLUVIAL
         </div>
       </div>
@@ -233,7 +252,8 @@ export const Scene05_ExploreMars: React.FC = () => {
           top: 28,
           right: 40,
           padding: "12px 22px",
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
+          background:
+            "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
           border: `3px solid ${isStorm ? "#ef4444" : "#f59e0b"}`,
           display: "flex",
           alignItems: "center",
@@ -242,14 +262,32 @@ export const Scene05_ExploreMars: React.FC = () => {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <PixelSprite src="game-assets/Sprites/Icons/Resources/energy.png" size={28} />
-          <span style={{ fontFamily: FONTS.title, fontSize: 21, color: "#4ade80" }}>
+          <PixelSprite
+            src="game-assets/Sprites/Icons/Resources/energy.png"
+            size={28}
+          />
+          <span
+            style={{
+              fontFamily: FONTS.title,
+              fontSize: 21,
+              color: "#4ade80",
+            }}
+          >
             RTG 92 %
           </span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <PixelSprite src="game-assets/Sprites/Icons/Resources/science_data.png" size={28} />
-          <span style={{ fontFamily: FONTS.title, fontSize: 21, color: "#38bdf8" }}>
+          <PixelSprite
+            src="game-assets/Sprites/Icons/Resources/science_data.png"
+            size={28}
+          />
+          <span
+            style={{
+              fontFamily: FONTS.title,
+              fontSize: 21,
+              color: "#38bdf8",
+            }}
+          >
             2 / 3 PUNTOS
           </span>
         </div>
@@ -277,7 +315,8 @@ export const Scene05_ExploreMars: React.FC = () => {
           left: 140,
           right: 140,
           padding: "14px 26px",
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
+          background:
+            "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
           border: "3px solid #f59e0b",
           boxShadow: "0 16px 40px rgba(0,0,0,0.92)",
           display: "flex",
@@ -291,10 +330,24 @@ export const Scene05_ExploreMars: React.FC = () => {
           size={60}
         />
         <div>
-          <div style={{ fontFamily: FONTS.title, fontSize: 22, color: "#facc15" }}>
+          <div
+            style={{
+              fontFamily: FONTS.title,
+              fontSize: 22,
+              color: "#facc15",
+            }}
+          >
             DATO CIENTÍFICO NASA — DELTA DEL CRÁTER JEZERO
           </div>
-          <div style={{ fontFamily: FONTS.body, fontSize: 19, fontWeight: 800, color: "#f8fafc", marginTop: 2 }}>
+          <div
+            style={{
+              fontFamily: FONTS.body,
+              fontSize: 19,
+              fontWeight: 800,
+              color: "#f8fafc",
+              marginTop: 2,
+            }}
+          >
             Perseverance confirmó que el Cráter Jezero albergó un antiguo lago y un delta fluvial hace más de 3.500 millones de años.
           </div>
         </div>

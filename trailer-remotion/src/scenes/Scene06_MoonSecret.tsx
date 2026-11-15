@@ -19,21 +19,24 @@ export const Scene06_MoonSecret: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const camScale = interpolate(frame, [0, 150], [1.04, 1.18], {
+  const camScale = interpolate(frame, [0, 150], [1.04, 1.16], {
     extrapolateRight: "clamp",
   });
-  const camX = interpolate(frame, [0, 150], [80, -100], {
-    extrapolateRight: "clamp",
-  });
-
-  const roverX = interpolate(frame, [0, 150], [380, 1140], {
-    extrapolateRight: "clamp",
-  });
-  const roverY = interpolate(frame, [0, 150], [540, 495], {
+  const camX = interpolate(frame, [0, 150], [70, -85], {
     extrapolateRight: "clamp",
   });
 
-  const driveIdx = Math.floor(frame / 3) % 4;
+  // Rover drives from the sunlit lander ridge into the -240 C Cabeus shadow basin
+  // and stops cleanly at (1055, 500) so its headlight beam illuminates science_point_ice at (1285, 490) without overlapping!
+  const isDriving = frame < 105;
+  const roverX = interpolate(frame, [0, 105], [405, 1055], {
+    extrapolateRight: "clamp",
+  });
+  const roverY = interpolate(frame, [0, 105], [555, 500], {
+    extrapolateRight: "clamp",
+  });
+
+  const driveIdx = isDriving ? Math.floor(frame / 3) % 4 : 0;
   const roverSprite = `game-assets/Sprites/Rover/DrivingV2/East/drive_east_00${driveIdx}.png`;
   const scanIdx = Math.floor(frame / 3) % 4;
 
@@ -54,14 +57,13 @@ export const Scene06_MoonSecret: React.FC = () => {
           transformOrigin: "center center",
         }}
       >
-        {/* Elaborated 25-tile Lunar Tilemap with Stepped -240 C Shadow Basin */}
         <MoonTilemap />
 
         {/* Grounded Lunar Lander on the Sunlit Ridge */}
         <GroundedSprite
           src="game-assets/Sprites/Moon/Landing/landing_module_moon.png"
-          x={220}
-          y={510}
+          x={210}
+          y={530}
           size={220}
           shadowWidth={160}
         />
@@ -70,7 +72,7 @@ export const Scene06_MoonSecret: React.FC = () => {
         <GroundedSprite
           src="game-assets/Sprites/Moon/Rocks/rock_big_1.png"
           x={620}
-          y={250}
+          y={245}
           size={160}
         />
         <GroundedSprite
@@ -82,7 +84,7 @@ export const Scene06_MoonSecret: React.FC = () => {
         <GroundedSprite
           src="game-assets/Sprites/Moon/Rocks/rock_spike_1.png"
           x={1040}
-          y={230}
+          y={225}
           size={145}
         />
         <GroundedSprite
@@ -98,14 +100,14 @@ export const Scene06_MoonSecret: React.FC = () => {
           size={160}
         />
 
-        {/* 3 Grounded Lunar Science Points */}
+        {/* 3 Grounded Lunar Science Points (Positioned Clear of the Rover's Driving Path!) */}
         <GroundedSprite
           src="game-assets/Sprites/Moon/SciencePoints/science_point_regolith.png"
           x={560}
-          y={530}
-          size={145}
+          y={415}
+          size={140}
         >
-          <div style={{ position: "absolute", left: 45, top: -44 }}>
+          <div style={{ position: "absolute", left: 45, top: -42 }}>
             <PixelSprite
               src="game-assets/Sprites/Mars/Indicators/science_completed.png"
               size={50}
@@ -115,11 +117,11 @@ export const Scene06_MoonSecret: React.FC = () => {
 
         <GroundedSprite
           src="game-assets/Sprites/Moon/SciencePoints/science_point_rim_rock.png"
-          x={920}
-          y={380}
+          x={885}
+          y={360}
           size={145}
         >
-          <div style={{ position: "absolute", left: 45, top: -44 }}>
+          <div style={{ position: "absolute", left: 46, top: -42 }}>
             <PixelSprite
               src="game-assets/Sprites/Mars/Indicators/science_completed.png"
               size={50}
@@ -129,21 +131,21 @@ export const Scene06_MoonSecret: React.FC = () => {
 
         <GroundedSprite
           src="game-assets/Sprites/Moon/SciencePoints/science_point_ice.png"
-          x={1240}
+          x={1285}
           y={490}
-          size={165}
+          size={160}
         >
-          {frame >= 50 && (
-            <div style={{ position: "absolute", left: -16, top: -16 }}>
+          {frame >= 55 && (
+            <div style={{ position: "absolute", left: -18, top: -18 }}>
               <PixelSprite
                 src={`game-assets/Sprites/Mars/Effects/Scan/scan_00${scanIdx}.png`}
-                size={195}
+                size={196}
               />
             </div>
           )}
         </GroundedSprite>
 
-        {/* Grounded Rover Driving into the Shadow Basin with Headlight Beam */}
+        {/* Grounded Rover Driving into the Shadow Basin with Headlight Beam Aimed at the Ice Deposit */}
         <GroundedSprite
           src={roverSprite}
           x={roverX}
@@ -155,12 +157,12 @@ export const Scene06_MoonSecret: React.FC = () => {
           <div
             style={{
               position: "absolute",
-              left: 135,
-              top: 8,
-              width: 320,
-              height: 175,
+              left: 140,
+              top: 6,
+              width: 310,
+              height: 170,
               background:
-                "linear-gradient(90deg, rgba(56,189,248,0.55) 0%, rgba(56,189,248,0.14) 65%, transparent 100%)",
+                "linear-gradient(90deg, rgba(56,189,248,0.58) 0%, rgba(56,189,248,0.16) 68%, transparent 100%)",
               clipPath: "polygon(0% 38%, 100% 0%, 100% 100%, 0% 62%)",
               mixBlendMode: "screen",
             }}
@@ -176,16 +178,34 @@ export const Scene06_MoonSecret: React.FC = () => {
           left: 40,
           transform: `scale(${stampPop})`,
           padding: "12px 26px",
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
+          background:
+            "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
           border: "4px solid #38bdf8",
           boxShadow: "0 14px 36px rgba(0,0,0,0.85)",
           zIndex: 90,
         }}
       >
-        <div style={{ fontFamily: FONTS.title, fontSize: 50, color: "#38bdf8", letterSpacing: 5, lineHeight: 1 }}>
+        <div
+          style={{
+            fontFamily: FONTS.title,
+            fontSize: 50,
+            color: "#38bdf8",
+            letterSpacing: 5,
+            lineHeight: 1,
+          }}
+        >
           DESCUBRE
         </div>
-        <div style={{ fontFamily: FONTS.body, fontSize: 17, fontWeight: 900, color: "#f8fafc", letterSpacing: 1.5, marginTop: 4 }}>
+        <div
+          style={{
+            fontFamily: FONTS.body,
+            fontSize: 17,
+            fontWeight: 900,
+            color: "#f8fafc",
+            letterSpacing: 1.5,
+            marginTop: 4,
+          }}
+        >
           04_MOON // CRÁTER EN SOMBRA PERMANENTE (-240 °C)
         </div>
       </div>
@@ -197,7 +217,8 @@ export const Scene06_MoonSecret: React.FC = () => {
           top: 28,
           right: 40,
           padding: "12px 22px",
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
+          background:
+            "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
           border: "3px solid #38bdf8",
           display: "flex",
           alignItems: "center",
@@ -206,8 +227,17 @@ export const Scene06_MoonSecret: React.FC = () => {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <PixelSprite src="game-assets/Sprites/Icons/Resources/communications.png" size={28} />
-          <span style={{ fontFamily: FONTS.title, fontSize: 20, color: "#38bdf8" }}>
+          <PixelSprite
+            src="game-assets/Sprites/Icons/Resources/communications.png"
+            size={28}
+          />
+          <span
+            style={{
+              fontFamily: FONTS.title,
+              fontSize: 20,
+              color: "#38bdf8",
+            }}
+          >
             RELÉ ORBITAL ACTIVO
           </span>
         </div>
@@ -233,7 +263,8 @@ export const Scene06_MoonSecret: React.FC = () => {
           left: 140,
           right: 140,
           padding: "14px 26px",
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
+          background:
+            "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
           border: "3px solid #38bdf8",
           boxShadow: "0 16px 40px rgba(0,0,0,0.92)",
           display: "flex",
@@ -247,10 +278,24 @@ export const Scene06_MoonSecret: React.FC = () => {
           size={60}
         />
         <div>
-          <div style={{ fontFamily: FONTS.title, fontSize: 22, color: "#38bdf8" }}>
+          <div
+            style={{
+              fontFamily: FONTS.title,
+              fontSize: 22,
+              color: "#38bdf8",
+            }}
+          >
             HALLAZGO LUNAR — HIELO DE AGUA EN SOMBRA PERMANENTE (NASA LRO / LCROSS / VIPER)
           </div>
-          <div style={{ fontFamily: FONTS.body, fontSize: 19, fontWeight: 800, color: "#f8fafc", marginTop: 2 }}>
+          <div
+            style={{
+              fontFamily: FONTS.body,
+              fontSize: 19,
+              fontWeight: 800,
+              color: "#f8fafc",
+              marginTop: 2,
+            }}
+          >
             El taladro y el espectrómetro confirman depósitos de hielo polar conservados a -240 °C sin luz solar.
           </div>
         </div>

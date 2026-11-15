@@ -20,28 +20,35 @@ export const Scene02_MissionBegins: React.FC = () => {
   const { fps } = useVideoConfig();
 
   const isPart2 = frame >= 75;
-  const camScale = interpolate(frame, [0, 150], [1.04, 1.16], {
+  const camScale = interpolate(frame, [0, 150], [1.04, 1.15], {
     extrapolateRight: "clamp",
   });
-  const camX = interpolate(frame, [0, 150], [90, -80], {
+  const camX = interpolate(frame, [0, 150], [70, -60], {
     extrapolateRight: "clamp",
   });
 
   const vegaIdx = Math.floor(frame / 4) % 9;
   const vegaFrame = `game-assets/Sprites/Characters/DrElenaVega/Idle/South/vega-idle-south_00${vegaIdx}.png`;
 
+  // Commander and BIMO walk along the grated walkway (y=515) and stop cleanly in front of Dr. Vega (x=830) without overlapping her
+  const isWalking = frame < 115;
+  const runIdx = Math.floor(frame / 3) % 8;
+  const playerFrame = isWalking
+    ? `game-assets/Sprites/Characters/AstronautStocky/Running/East/frame_00${runIdx}.png`
+    : "game-assets/Sprites/Characters/AstronautStocky/Rotations/north.png";
+
   const bimoIdx = Math.floor(frame / 3) % 4;
-  const bimoFrame = `game-assets/Sprites/Characters/BIMO/Move/East/move_east_00${bimoIdx}.png`;
+  const bimoFrame = isWalking
+    ? `game-assets/Sprites/Characters/BIMO/Move/East/move_east_00${bimoIdx}.png`
+    : `game-assets/Sprites/Characters/BIMO/Idle/South/idle_south_00${bimoIdx}.png`;
 
   const mateoIdx = Math.floor(frame / 6) % 2;
   const lunaIdx = Math.floor(frame / 6) % 2;
-  const runIdx = Math.floor(frame / 3) % 8;
-  const playerFrame = `game-assets/Sprites/Characters/AstronautStocky/Running/East/frame_00${runIdx}.png`;
 
-  const playerX = interpolate(frame, [0, 150], [420, 1080], {
+  const playerX = interpolate(frame, [0, 115], [380, 835], {
     extrapolateRight: "clamp",
   });
-  const bimoX = interpolate(frame, [0, 150], [300, 950], {
+  const bimoX = interpolate(frame, [0, 115], [260, 710], {
     extrapolateRight: "clamp",
   });
 
@@ -62,7 +69,6 @@ export const Scene02_MissionBegins: React.FC = () => {
           transformOrigin: "center center",
         }}
       >
-        {/* Multi-tile 18-variant Hub Tilemap */}
         <HubTilemap variant="hub" />
 
         {/* Top Structural Wall with Real Hub Panels & Airlocks */}
@@ -105,67 +111,67 @@ export const Scene02_MissionBegins: React.FC = () => {
         <GroundedSprite
           src="game-assets/Sprites/Hub/Props/tanques-gemelos.png"
           x={250}
-          y={740}
+          y={730}
           size={150}
         />
 
         <GroundedSprite
           src="game-assets/Sprites/Hub/Interior/consola-control.png"
           x={780}
-          y={320}
+          y={315}
           size={200}
         />
         <GroundedSprite
           src="game-assets/Sprites/Hub/Interior/consola-investigacion.png"
-          x={1030}
-          y={320}
+          x={1040}
+          y={315}
           size={200}
         />
         <GroundedSprite
           src="game-assets/Sprites/Hub/Interior/mesa-laboratorio.png"
           x={900}
-          y={740}
+          y={730}
           size={175}
         />
 
         <GroundedSprite
           src="game-assets/Sprites/Hub/Interior/estacion-diagnostico.png"
           x={1370}
-          y={320}
+          y={315}
           size={200}
         />
         <GroundedSprite
           src="game-assets/Sprites/Hub/Interior/cultivo-hidroponico.png"
           x={1630}
-          y={330}
+          y={325}
           size={185}
         />
         <GroundedSprite
           src="game-assets/Sprites/Hub/Interior/consola-logistica.png"
           x={1480}
-          y={740}
+          y={730}
           size={180}
         />
 
         {/* Grounded Characters with Y-Sorting & Contact Shadows */}
         <GroundedSprite
           src={`game-assets/Sprites/Characters/Mateo/Idle/South/idle_south_00${mateoIdx}.png`}
-          x={520}
-          y={420}
+          x={540}
+          y={415}
           size={135}
           shadowWidth={64}
         />
         <GroundedSprite
           src={vegaFrame}
           x={910}
-          y={425}
+          y={415}
           size={140}
           shadowWidth={66}
         />
         <GroundedSprite
           src={`game-assets/Sprites/Characters/Luna/Idle/South/idle_south_00${lunaIdx}.png`}
-          x={1250}
-          y={430}
+          x={1240}
+          y={415}
           size={135}
           shadowWidth={64}
         />
@@ -173,14 +179,14 @@ export const Scene02_MissionBegins: React.FC = () => {
         <GroundedSprite
           src={playerFrame}
           x={playerX}
-          y={525}
+          y={520}
           size={142}
           shadowWidth={68}
         />
         <GroundedSprite
           src={bimoFrame}
           x={bimoX}
-          y={535 + Math.sin(frame * 0.3) * 5}
+          y={530 + Math.sin(frame * 0.3) * 4}
           size={112}
           shadowWidth={56}
         />
@@ -193,13 +199,21 @@ export const Scene02_MissionBegins: React.FC = () => {
           top: 28,
           left: 40,
           padding: "12px 26px",
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.94) 0%, rgba(5, 9, 20, 0.97) 100%)",
+          background:
+            "linear-gradient(180deg, rgba(11, 18, 36, 0.94) 0%, rgba(5, 9, 20, 0.97) 100%)",
           border: "3px solid #38bdf8",
           boxShadow: "0 12px 32px rgba(0,0,0,0.85)",
           zIndex: 90,
         }}
       >
-        <div style={{ fontFamily: FONTS.title, fontSize: 26, color: "#38bdf8", letterSpacing: 2 }}>
+        <div
+          style={{
+            fontFamily: FONTS.title,
+            fontSize: 26,
+            color: "#38bdf8",
+            letterSpacing: 2,
+          }}
+        >
           01_HUB // CENTRO ESPACIAL MARS CRAFTS
         </div>
       </div>
@@ -213,7 +227,8 @@ export const Scene02_MissionBegins: React.FC = () => {
           right: 130,
           height: 152,
           transform: `scale(${dialogPop})`,
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
+          background:
+            "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
           border: "3px solid #38bdf8",
           boxShadow: "0 18px 45px rgba(0,0,0,0.92)",
           display: "flex",
@@ -259,7 +274,15 @@ export const Scene02_MissionBegins: React.FC = () => {
               ? "DRA. ELENA VEGA — BRIEFING DE MISIÓN"
               : "BIMO & MATEO ROJAS — RUMBO AL TALLER DE INGENIERÍA"}
           </div>
-          <div style={{ fontFamily: FONTS.body, fontSize: 22, fontWeight: 800, color: "#f8fafc", lineHeight: 1.3 }}>
+          <div
+            style={{
+              fontFamily: FONTS.body,
+              fontSize: 22,
+              fontWeight: 800,
+              color: "#f8fafc",
+              lineHeight: 1.3,
+            }}
+          >
             {!isPart2
               ? "«Bienvenido, Comandante. Cada decisión de diseño determinará si nuestra misión logra sobrevivir en la Luna y Marte.»"
               : "«¡Esclusa abierta! Vamos a la bahía de ensamblaje para configurar la energía, ruedas e instrumentos del rover.»"}

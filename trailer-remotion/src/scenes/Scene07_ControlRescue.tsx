@@ -33,7 +33,8 @@ export const Scene07_ControlRescue: React.FC = () => {
     config: { damping: 12, stiffness: 170 },
   });
 
-  const driveIdx = Math.floor(frame / 3) % 4;
+  const isRoverMoving = frame < 165;
+  const driveIdx = isRoverMoving ? Math.floor(frame / 3) % 4 : 0;
   const scanIdx = Math.floor(frame / 3) % 4;
 
   return (
@@ -76,7 +77,7 @@ export const Scene07_ControlRescue: React.FC = () => {
       {/* SHOT 2: CLEAN SPLIT-SCREEN REAL GAME SCENARIOS (01_Hub Control Room <-> 04_Mars Rover Rescued!) */}
       {isRescue && (
         <AbsoluteFill style={{ display: "flex", flexDirection: "row" }}>
-          {/* LEFT HALF: Cohesive 01_Hub Mission Control Tilemap + Grounded Crew */}
+          {/* LEFT HALF: Cohesive 01_Hub Mission Control Tilemap + Top Structural Wall + Grounded Crew */}
           <div
             style={{
               width: "50%",
@@ -87,44 +88,65 @@ export const Scene07_ControlRescue: React.FC = () => {
             }}
           >
             <HubTilemap variant="hub" />
+            <div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                height: 195,
+                background: "linear-gradient(180deg, #0b1120 0%, #1e293b 100%)",
+                borderBottom: "8px solid #334155",
+                display: "flex",
+                alignItems: "flex-end",
+                justifyContent: "space-around",
+                padding: "0 30px",
+                zIndex: 10,
+              }}
+            >
+              <PixelSprite src="game-assets/Sprites/Hub/Structure/muro-panel-a.png" size={160} />
+              <PixelSprite src="game-assets/Sprites/Hub/Structure/esclusa-cian.png" size={185} />
+              <PixelSprite src="game-assets/Sprites/Hub/Structure/muro-panel-b.png" size={160} />
+            </div>
+
             <GroundedSprite
               src="game-assets/Sprites/Hub/Interior/consola-control.png"
-              x={240}
-              y={330}
-              size={205}
+              x={220}
+              y={315}
+              size={195}
             />
             <GroundedSprite
               src="game-assets/Sprites/Hub/Interior/estacion-diagnostico.png"
-              x={500}
-              y={330}
-              size={205}
+              x={480}
+              y={315}
+              size={195}
             />
             <GroundedSprite
               src="game-assets/Sprites/Hub/Interior/reactor-cian.png"
-              x={760}
-              y={330}
-              size={205}
+              x={740}
+              y={310}
+              size={200}
             />
 
             <GroundedSprite
-              src="game-assets/Sprites/Characters/Luna/Idle/South/idle_south_000.png"
-              x={240}
-              y={490}
-              size={140}
+              src={`game-assets/Sprites/Characters/Luna/Idle/South/idle_south_00${Math.floor(frame / 6) % 2}.png`}
+              x={220}
+              y={475}
+              size={136}
               shadowWidth={64}
             />
             <GroundedSprite
-              src="game-assets/Sprites/Characters/Mateo/Idle/South/idle_south_000.png"
-              x={500}
-              y={490}
-              size={140}
+              src={`game-assets/Sprites/Characters/Mateo/Idle/South/idle_south_00${Math.floor(frame / 6) % 2}.png`}
+              x={480}
+              y={475}
+              size={136}
               shadowWidth={64}
             />
             <GroundedSprite
-              src="game-assets/Sprites/Characters/DrElenaVega/Idle/South/vega-idle-south_000.png"
+              src={`game-assets/Sprites/Characters/DrElenaVega/Idle/South/vega-idle-south_00${Math.floor(frame / 4) % 9}.png`}
               x={740}
-              y={490}
-              size={140}
+              y={475}
+              size={138}
               shadowWidth={64}
             />
           </div>
@@ -141,30 +163,31 @@ export const Scene07_ControlRescue: React.FC = () => {
             <MarsTilemap />
             <GroundedSprite
               src="game-assets/Sprites/Mars/Relief/meseta-alta.png"
-              x={260}
-              y={240}
-              size={230}
+              x={240}
+              y={220}
+              size={225}
             />
             <GroundedSprite
               src="game-assets/Sprites/Mars/Rocks/roca-alta.png"
-              x={700}
-              y={280}
-              size={155}
+              x={720}
+              y={260}
+              size={150}
             />
 
+            {/* Target Science Point #3 at (665, 505) */}
             <GroundedSprite
               src="game-assets/Sprites/Mars/SciencePoints/science_point_delta.png"
-              x={640}
-              y={520}
-              size={155}
+              x={665}
+              y={505}
+              size={150}
             >
-              <div style={{ position: "absolute", left: -16, top: -16 }}>
+              <div style={{ position: "absolute", left: -19, top: -19 }}>
                 <PixelSprite
                   src={`game-assets/Sprites/Mars/Effects/Scan/scan_00${scanIdx}.png`}
                   size={188}
                 />
               </div>
-              <div style={{ position: "absolute", left: 50, top: -48 }}>
+              <div style={{ position: "absolute", left: 48, top: -46 }}>
                 <PixelSprite
                   src="game-assets/Sprites/Mars/Indicators/science_completed.png"
                   size={54}
@@ -172,14 +195,31 @@ export const Scene07_ControlRescue: React.FC = () => {
               </div>
             </GroundedSprite>
 
+            {/* Rescued Rover Stops Cleanly at x=465 (200px left of Science Point at x=665 — Zero Overlap!) */}
             <GroundedSprite
               src={`game-assets/Sprites/Rover/DrivingV2/East/drive_east_00${driveIdx}.png`}
-              x={interpolate(frame, [92, 210], [260, 470], { extrapolateRight: "clamp" })}
-              y={530}
-              size={190}
-              shadowWidth={142}
+              x={interpolate(frame, [92, 165], [220, 465], {
+                extrapolateRight: "clamp",
+              })}
+              y={525}
+              size={185}
+              shadowWidth={140}
               shadowHeight={38}
-            />
+            >
+              {/* Safe Mode / Telemetry Recovery Ring Around the Rover */}
+              <div
+                style={{
+                  position: "absolute",
+                  left: -16,
+                  bottom: 4,
+                  width: 216,
+                  height: 62,
+                  borderRadius: "50%",
+                  border: "3px solid #4ade80",
+                  boxShadow: "0 0 20px rgba(74, 222, 128, 0.75)",
+                }}
+              />
+            </GroundedSprite>
           </div>
         </AbsoluteFill>
       )}
@@ -192,7 +232,8 @@ export const Scene07_ControlRescue: React.FC = () => {
           right: 40,
           transform: `scale(${stampPop})`,
           padding: "12px 26px",
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
+          background:
+            "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
           border: `4px solid ${!isRescue ? "#ef4444" : "#22c55e"}`,
           boxShadow: "0 14px 36px rgba(0,0,0,0.85)",
           textAlign: "right",
@@ -210,7 +251,16 @@ export const Scene07_ControlRescue: React.FC = () => {
         >
           RESUELVE
         </div>
-        <div style={{ fontFamily: FONTS.body, fontSize: 17, fontWeight: 900, color: "#f8fafc", letterSpacing: 1.5, marginTop: 4 }}>
+        <div
+          style={{
+            fontFamily: FONTS.body,
+            fontSize: 17,
+            fontWeight: 900,
+            color: "#f8fafc",
+            letterSpacing: 1.5,
+            marginTop: 4,
+          }}
+        >
           {!isRescue
             ? "¡CRISIS EN MARTE: TORMENTA Y APAGÓN!"
             : "01_HUB ↔ 04_MARS // ¡RESCATE EN MODO SEGURO!"}
@@ -224,7 +274,8 @@ export const Scene07_ControlRescue: React.FC = () => {
           top: 28,
           left: 40,
           padding: "12px 22px",
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
+          background:
+            "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
           border: `3px solid ${!isRescue ? "#ef4444" : "#22c55e"}`,
           display: "flex",
           alignItems: "center",
@@ -261,7 +312,8 @@ export const Scene07_ControlRescue: React.FC = () => {
           left: 120,
           right: 120,
           height: 150,
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
+          background:
+            "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
           border: `3px solid ${!isRescue ? "#ef4444" : "#22c55e"}`,
           boxShadow: "0 18px 45px rgba(0,0,0,0.92)",
           display: "flex",
@@ -305,7 +357,15 @@ export const Scene07_ControlRescue: React.FC = () => {
               ? "BIMO — ¡ROVER AVERIADO EN LA TORMENTA DE ARENA!"
               : "LUNA TORRES & MATEO ROJAS — RESCATE DESDE EL CENTRO DE CONTROL"}
           </div>
-          <div style={{ fontFamily: FONTS.body, fontSize: 21, fontWeight: 800, color: "#f8fafc", lineHeight: 1.3 }}>
+          <div
+            style={{
+              fontFamily: FONTS.body,
+              fontSize: 21,
+              fontWeight: 800,
+              color: "#f8fafc",
+              lineHeight: 1.3,
+            }}
+          >
             {!isRescue
               ? "«¡Comandante! El polvo bloqueó los paneles y saltan chispas de la antena. ¡Activando Modo Seguro!»"
               : "«¡Enlace restablecido desde el Centro de Control! El rover recupera energía con su reserva y completa la misión 3/3.»"}

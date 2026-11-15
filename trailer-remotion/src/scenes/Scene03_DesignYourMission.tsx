@@ -70,14 +70,15 @@ export const Scene03_DesignYourMission: React.FC = () => {
     frame >= 116 ? 3 : frame >= 80 ? 2 : frame >= 44 ? 1 : 0;
   const activeStep = LOADOUT_STEPS[stepIdx];
 
-  // After frame 135 ("¡LANZAR!"), the configured rover drives out of the Hangar bay toward the right airlock!
+  // The 3x3 concrete assembly pad in HubTilemap(variant="workshop") is centered at x = 608, y = 544.
+  // After frame 135 ("¡LANZANDO!"), the rover rolls out cleanly along the unobstructed grated track (y = 544) from x = 608 to x = 1100!
   const isRollingOut = frame >= 135;
   const roverX = isRollingOut
-    ? interpolate(frame, [135, 180], [640, 1180], { extrapolateRight: "clamp" })
-    : 640;
+    ? interpolate(frame, [135, 180], [608, 1100], { extrapolateRight: "clamp" })
+    : 608;
   const driveIdx = isRollingOut ? Math.floor(frame / 3) % 4 : 0;
 
-  const camScale = interpolate(frame, [0, 180], [1.06, 1.15], {
+  const camScale = interpolate(frame, [0, 180], [1.04, 1.12], {
     extrapolateRight: "clamp",
   });
 
@@ -127,85 +128,85 @@ export const Scene03_DesignYourMission: React.FC = () => {
           <PixelSprite src="game-assets/Sprites/Hub/Structure/muro-panel-c.png" size={175} />
         </div>
 
-        {/* Hangar Engineering Stations, Crates, Tanks & Reactor Around the Assembly Pad */}
+        {/* Hangar Engineering Stations, Crates & Tanks Positioned Outside the 3x3 Pad and Rollout Track */}
         <GroundedSprite
           src="game-assets/Sprites/Hub/Interior/estacion-diagnostico.png"
-          x={380}
-          y={310}
+          x={350}
+          y={305}
           size={195}
         />
         <GroundedSprite
           src="game-assets/Sprites/Hub/Interior/mesa-laboratorio.png"
-          x={640}
-          y={305}
+          x={608}
+          y={300}
           size={190}
         />
         <GroundedSprite
           src="game-assets/Sprites/Hub/Interior/consola-logistica.png"
-          x={900}
-          y={310}
+          x={880}
+          y={305}
           size={190}
         />
 
         <GroundedSprite
           src="game-assets/Sprites/Hub/Props/contenedor-blanco.png"
           x={260}
-          y={520}
+          y={510}
           size={140}
         />
         <GroundedSprite
           src="game-assets/Sprites/Hub/Props/caja-naranja.png"
-          x={280}
+          x={275}
           y={660}
           size={125}
         />
         <GroundedSprite
           src="game-assets/Sprites/Hub/Props/tanques-gemelos.png"
-          x={980}
-          y={690}
+          x={960}
+          y={735}
           size={150}
         />
 
-        {/* Engineers Mateo Rojas, Commander & BIMO Working Around the Rover on the Grated Pad */}
+        {/* Mateo Rojas, Commander & BIMO Positioned Around the Perimeter Grate (Clear of the Pad & Rollout Track!) */}
         <GroundedSprite
           src={`game-assets/Sprites/Characters/Mateo/Idle/South/idle_south_00${Math.floor(frame / 6) % 2}.png`}
-          x={490}
-          y={455}
-          size={138}
+          x={455}
+          y={415}
+          size={136}
           shadowWidth={64}
         />
         <GroundedSprite
           src="game-assets/Sprites/Characters/AstronautStocky/Rotations/south.png"
-          x={790}
-          y={455}
-          size={138}
+          x={760}
+          y={415}
+          size={136}
           shadowWidth={64}
         />
         <GroundedSprite
           src={`game-assets/Sprites/Characters/BIMO/Idle/South/idle_south_00${Math.floor(frame / 4) % 4}.png`}
-          x={520}
-          y={635}
+          x={460}
+          y={675}
           size={115}
           shadowWidth={56}
         />
 
-        {/* THE ROVER ON THE CENTRAL HANGAR GRATE PAD (Same Top-Down Scale + Ground Shadow!) */}
+        {/* THE ROVER DEAD-CENTER ON THE 3x3 HANGAR PAD (x=608, y=544) */}
         <GroundedSprite
           src={`game-assets/Sprites/Rover/DrivingV2/East/drive_east_00${driveIdx}.png`}
           x={roverX}
-          y={545}
-          size={210}
-          shadowWidth={155}
-          shadowHeight={44}
+          y={544}
+          size={205}
+          shadowWidth={152}
+          shadowHeight={42}
         >
-          {/* Subtle Module Upgrade Ring on the Floor Around the Rover */}
+          {/* Centered Module Upgrade Ring on the Floor Around the Rover */}
           <div
             style={{
               position: "absolute",
-              left: -15,
+              left: -18,
               bottom: 6,
               width: 240,
-              height: 70,
+              height: 68,
               borderRadius: "50%",
               border: `3px solid ${activeStep.color}`,
               boxShadow: `0 0 22px ${activeStep.color}88`,
@@ -223,21 +224,39 @@ export const Scene03_DesignYourMission: React.FC = () => {
           left: 40,
           transform: `scale(${stampPop})`,
           padding: "12px 26px",
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
+          background:
+            "linear-gradient(180deg, rgba(11, 18, 36, 0.95) 0%, rgba(5, 9, 20, 0.98) 100%)",
           border: "4px solid #f59e0b",
           boxShadow: "0 14px 36px rgba(0,0,0,0.85)",
           zIndex: 90,
         }}
       >
-        <div style={{ fontFamily: FONTS.title, fontSize: 50, color: "#facc15", letterSpacing: 5, lineHeight: 1 }}>
+        <div
+          style={{
+            fontFamily: FONTS.title,
+            fontSize: 50,
+            color: "#facc15",
+            letterSpacing: 5,
+            lineHeight: 1,
+          }}
+        >
           DISEÑA
         </div>
-        <div style={{ fontFamily: FONTS.body, fontSize: 17, fontWeight: 900, color: "#f8fafc", letterSpacing: 1.5, marginTop: 4 }}>
+        <div
+          style={{
+            fontFamily: FONTS.body,
+            fontSize: 17,
+            fontWeight: 900,
+            color: "#f8fafc",
+            letterSpacing: 1.5,
+            marginTop: 4,
+          }}
+        >
           02_WORKSHOP // BAHÍA DE ENSAMBLAJE Y RECURSOS
         </div>
       </div>
 
-      {/* Right-Side Authentic Game Workshop Panel (Presupuesto, Masa, Componentes & Botón Lanzar) */}
+      {/* Right-Side Authentic Game Workshop Panel */}
       <div
         style={{
           position: "absolute",
@@ -246,7 +265,8 @@ export const Scene03_DesignYourMission: React.FC = () => {
           bottom: 28,
           width: 620,
           padding: "20px 24px",
-          background: "linear-gradient(180deg, rgba(11, 18, 36, 0.96) 0%, rgba(5, 9, 20, 0.98) 100%)",
+          background:
+            "linear-gradient(180deg, rgba(11, 18, 36, 0.96) 0%, rgba(5, 9, 20, 0.98) 100%)",
           border: "3px solid #38bdf8",
           boxShadow: "0 18px 45px rgba(0,0,0,0.92)",
           display: "flex",
@@ -255,28 +275,64 @@ export const Scene03_DesignYourMission: React.FC = () => {
           zIndex: 90,
         }}
       >
-        {/* Resource Bars Header */}
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-          <div style={{ fontFamily: FONTS.title, fontSize: 22, color: "#38bdf8", letterSpacing: 1.5 }}>
+          <div
+            style={{
+              fontFamily: FONTS.title,
+              fontSize: 22,
+              color: "#38bdf8",
+              letterSpacing: 1.5,
+            }}
+          >
             CONFIGURACIÓN DEL VEHÍCULO ESPACIAL
           </div>
 
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <PixelSprite src="game-assets/Sprites/Icons/Resources/budget.png" size={26} />
-              <span style={{ fontFamily: FONTS.title, fontSize: 19, color: "#facc15" }}>
+              <PixelSprite
+                src="game-assets/Sprites/Icons/Resources/budget.png"
+                size={26}
+              />
+              <span
+                style={{
+                  fontFamily: FONTS.title,
+                  fontSize: 19,
+                  color: "#facc15",
+                }}
+              >
                 PRESUPUESTO: {activeStep.budget} / 160 M$
               </span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <PixelSprite src="game-assets/Sprites/Icons/Resources/mass.png" size={26} />
-              <span style={{ fontFamily: FONTS.title, fontSize: 19, color: "#38bdf8" }}>
+              <PixelSprite
+                src="game-assets/Sprites/Icons/Resources/mass.png"
+                size={26}
+              />
+              <span
+                style={{
+                  fontFamily: FONTS.title,
+                  fontSize: 19,
+                  color: "#38bdf8",
+                }}
+              >
                 MASA: {activeStep.mass} / 110 kg
               </span>
             </div>
           </div>
 
-          <div style={{ height: 12, background: "#090d16", border: "2px solid #475569" }}>
+          <div
+            style={{
+              height: 12,
+              background: "#090d16",
+              border: "2px solid #475569",
+            }}
+          >
             <div
               style={{
                 width: `${(activeStep.mass / 110) * 100}%`,
@@ -287,7 +343,6 @@ export const Scene03_DesignYourMission: React.FC = () => {
           </div>
         </div>
 
-        {/* 4 Component Cards Stack */}
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           {LOADOUT_STEPS.map((st, idx) => {
             const isSelected = idx <= stepIdx;
@@ -297,8 +352,12 @@ export const Scene03_DesignYourMission: React.FC = () => {
                 key={idx}
                 style={{
                   padding: "12px 16px",
-                  background: isActive ? "rgba(30, 41, 59, 0.95)" : "rgba(15, 23, 42, 0.85)",
-                  border: `3px solid ${isActive ? st.color : isSelected ? "#475569" : "#1e293b"}`,
+                  background: isActive
+                    ? "rgba(30, 41, 59, 0.95)"
+                    : "rgba(15, 23, 42, 0.85)",
+                  border: `3px solid ${
+                    isActive ? st.color : isSelected ? "#475569" : "#1e293b"
+                  }`,
                   opacity: isSelected ? 1 : 0.45,
                   display: "flex",
                   alignItems: "center",
@@ -307,13 +366,32 @@ export const Scene03_DesignYourMission: React.FC = () => {
               >
                 <PixelSprite src={st.icon} size={56} />
                 <div style={{ flex: 1 }}>
-                  <div style={{ fontFamily: FONTS.title, fontSize: 14, color: st.color }}>
+                  <div
+                    style={{
+                      fontFamily: FONTS.title,
+                      fontSize: 14,
+                      color: st.color,
+                    }}
+                  >
                     {st.cat}
                   </div>
-                  <div style={{ fontFamily: FONTS.title, fontSize: 20, color: "#ffffff" }}>
+                  <div
+                    style={{
+                      fontFamily: FONTS.title,
+                      fontSize: 20,
+                      color: "#ffffff",
+                    }}
+                  >
                     {st.title}
                   </div>
-                  <div style={{ fontFamily: FONTS.body, fontSize: 15, fontWeight: 800, color: "#cbd5e1" }}>
+                  <div
+                    style={{
+                      fontFamily: FONTS.body,
+                      fontSize: 15,
+                      fontWeight: 800,
+                      color: "#cbd5e1",
+                    }}
+                  >
                     {st.desc}
                   </div>
                 </div>
@@ -328,11 +406,12 @@ export const Scene03_DesignYourMission: React.FC = () => {
           })}
         </div>
 
-        {/* BIMO Verification + Launch Button */}
         <div
           style={{
             padding: "12px 16px",
-            background: isRollingOut ? "rgba(22, 101, 52, 0.45)" : "rgba(15, 23, 42, 0.9)",
+            background: isRollingOut
+              ? "rgba(22, 101, 52, 0.45)"
+              : "rgba(15, 23, 42, 0.9)",
             border: `3px solid ${isRollingOut ? "#4ade80" : "#38bdf8"}`,
             display: "flex",
             alignItems: "center",
@@ -340,8 +419,18 @@ export const Scene03_DesignYourMission: React.FC = () => {
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <PixelSprite src="game-assets/Sprites/Portraits/BIMO/bimo_happy.png" size={48} />
-            <span style={{ fontFamily: FONTS.body, fontSize: 17, fontWeight: 800, color: "#f8fafc" }}>
+            <PixelSprite
+              src="game-assets/Sprites/Portraits/BIMO/bimo_happy.png"
+              size={48}
+            />
+            <span
+              style={{
+                fontFamily: FONTS.body,
+                fontSize: 17,
+                fontWeight: 800,
+                color: "#f8fafc",
+              }}
+            >
               {isRollingOut
                 ? "BIMO: «¡Todo verificado! Saliendo hacia la plataforma.»"
                 : "BIMO: «Masa y energía dentro del límite del Lanzador Pesado.»"}

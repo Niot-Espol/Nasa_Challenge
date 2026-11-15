@@ -113,14 +113,16 @@ export const HubTilemap: React.FC<{ variant?: "hub" | "workshop" }> = ({
             tile = "game-assets/Tilesets/Hub/LabTilesPNG/floor_panels.png";
           }
         } else {
-          if (c >= 8 && c <= 10 && r >= 8 && r <= 10) {
+          // Workshop Hangar Bay: connected 3x3 pavement pad under the Rover (cols 10..12, rows 8..10 -> center x=608, y=544)
+          // framed by a grate service perimeter (cols 9..13, rows 7..11) and rollout track to the right
+          if (c >= 10 && c <= 12 && r >= 8 && r <= 10) {
             const pr = r - 7; // 1..3
-            const pc = c - 7; // 1..3
+            const pc = c - 9; // 1..3
             tile = `game-assets/Tilesets/Hub/pavimento-${pr}-${pc}.png`;
           } else if (
-            (c >= 7 && c <= 11 && (r === 7 || r === 11)) ||
-            (r >= 7 && r <= 11 && (c === 7 || c === 11)) ||
-            ((r === 8 || r === 9) && c >= 11 && c <= 20)
+            (c >= 9 && c <= 13 && (r === 7 || r === 11)) ||
+            (r >= 7 && r <= 11 && (c === 9 || c === 13)) ||
+            ((r === 8 || r === 9) && c >= 13 && c <= 22)
           ) {
             tile = "game-assets/Tilesets/Hub/LabTilesPNG/floor_grate.png";
           } else if (h > 0.65) {
