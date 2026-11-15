@@ -1,0 +1,22 @@
+{
+  "tool": "image_gen.imagegen (integrada)",
+  "common": "Create ONE isolated production pixel-art GAME SPRITE, not a scene or a sprite sheet. Reference image is STYLE REFERENCE only. Match its exact sci-fi Mars-base visual language: chunky crisp pixel clusters, dark plum outlines, pale grey/ivory metal with orange safety stripes, small cyan indicators, restrained shadows, 3/4 top-down orthographic game perspective seen from above/front, light from upper left. No text, no labels, no backdrop, no floor patch, no gradients outside the object, no checkerboard. True transparent background alpha=0, object solid alpha=255. Center the complete sprite with generous transparent margin, no clipped tips. Output canvas 256x256, design at an apparent 64-96 pixel sprite resolution, hard pixel edges.",
+  "assets": [
+    {
+      "file": "cama-alpha.png",
+      "reference": "atlas-b-original.png",
+      "prompt_suffix": "Subject: one reusable Mars-habitat SINGLE sleeping pod / bunk bed, a horizontal compact bed in white-grey protective shell, dark blue mattress, pale pillow at the back, a neatly folded muted orange blanket and an orange stripe on the frame, small cyan bedside status panel. An ordinary crew bed with a clearly visible sleeping surface, no person. It must belong inside the habitat shown in the reference."
+    },
+    {
+      "file": "cultivo-alpha.png",
+      "reference": "atlas-a-original.png",
+      "prompt_suffix": "Subject: one reusable Mars-greenhouse HYDROPONIC PLANT BED, a rectangular grey-white metal trough with orange corner guards, three rows of lush small green crop plants in dark growing substrate, a short cyan irrigation reservoir at one end. Low open planter, NOT a greenhouse building, NOT a glass dome. Readable top surface. No floor patch."
+    },
+    {
+      "file": "mesa-alpha.png",
+      "reference": "atlas-b-original.png",
+      "prompt_suffix": "Subject: one reusable compact Mars-habitat MESS TABLE, a single rectangular grey metal table with orange edge trim, a small sealed silver ration tray and white cup on its top, two compact blue-grey built-in bench seats attached along its left and right sides. One cohesive table-and-attached-benches prop, no people, no floor patch. Compact functional habitat furniture."
+    }
+  ],
+  "notes": "Final prompt for each asset is common plus prompt_suffix. The generated canvases were 1280x1280; deliverable native sprites were trimmed, normalized to binary alpha, and scaled with nearest-neighbour sampling to match the existing assets. Full-size originals are retained here."
+}

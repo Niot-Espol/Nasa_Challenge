@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tileset version="1.10" tiledversion="1.11.2" name="Terreno Ares" tilewidth="32" tileheight="32" tilecount="49" columns="0">
+<grid orientation="orthogonal" width="1" height="1"/>
+<tile id="0"><properties><property name="nombre" value="Suelo 1.1"/></properties><image width="32" height="32" source="tiles32/suelo-1-1.png"/></tile>
+<tile id="1"><properties><property name="nombre" value="Suelo 1.2"/></properties><image width="32" height="32" source="tiles32/suelo-1-2.png"/></tile>
+<tile id="2"><properties><property name="nombre" value="Suelo 1.3"/></properties><image width="32" height="32" source="tiles32/suelo-1-3.png"/></tile>
+<tile id="3"><properties><property name="nombre" value="Suelo 1.4"/></properties><image width="32" height="32" source="tiles32/suelo-1-4.png"/></tile>
+<tile id="4"><properties><property name="nombre" value="Suelo 1.5"/></properties><image width="32" height="32" source="tiles32/suelo-1-5.png"/></tile>
+<tile id="5"><properties><property name="nombre" value="Suelo 1.6"/></properties><image width="32" height="32" source="tiles32/suelo-1-6.png"/></tile>
+<tile id="6"><properties><property name="nombre" value="Suelo 1.7"/></properties><image width="32" height="32" source="tiles32/suelo-1-7.png"/></tile>
+<tile id="7"><properties><property name="nombre" value="Suelo 1.8"/></properties><image width="32" height="32" source="tiles32/suelo-1-8.png"/></tile>
+<tile id="8"><properties><property name="nombre" value="Suelo 2.1"/></properties><image width="32" height="32" source="tiles32/suelo-2-1.png"/></tile>
+<tile id="9"><properties><property name="nombre" value="Suelo 2.2"/></properties><image width="32" height="32" source="tiles32/suelo-2-2.png"/></tile>
+<tile id="10"><properties><property name="nombre" value="Suelo 2.3"/></properties><image width="32" height="32" source="tiles32/suelo-2-3.png"/></tile>
+<tile id="11"><properties><property name="nombre" value="Suelo 2.4"/></properties><image width="32" height="32" source="tiles32/suelo-2-4.png"/></tile>
+<tile id="12"><properties><property name="nombre" value="Suelo 2.5"/></properties><image width="32" height="32" source="tiles32/suelo-2-5.png"/></tile>
+<tile id="13"><properties><property name="nombre" value="Suelo 2.6"/></properties><image width="32" height="32" source="tiles32/suelo-2-6.png"/></tile>
+<tile id="14"><properties><property name="nombre" value="Suelo 2.7"/></properties><image width="32" height="32" source="tiles32/suelo-2-7.png"/></tile>
+<tile id="15"><properties><property name="nombre" value="Suelo 2.8"/></properties><image width="32" height="32" source="tiles32/suelo-2-8.png"/></tile>
+<tile id="16"><properties><property name="nombre" value="Suelo 3.1"/></properties><image width="32" height="32" source="tiles32/suelo-3-1.png"/></tile>
+<tile id="17"><properties><property name="nombre" value="Suelo 3.2"/></properties><image width="32" height="32" source="tiles32/suelo-3-2.png"/></tile>
+<tile id="18"><properties><property name="nombre" value="Suelo 3.3"/></properties><image width="32" height="32" source="tiles32/suelo-3-3.png"/></tile>
+<tile id="19"><properties><property name="nombre" value="Suelo 3.4"/></properties><image width="32" height="32" source="tiles32/suelo-3-4.png"/></tile>
+<tile id="20"><properties><property name="nombre" value="Suelo 3.5"/></properties><image width="32" height="32" source="tiles32/suelo-3-5.png"/></tile>
+<tile id="21"><properties><property name="nombre" value="Suelo 3.6"/></properties><image width="32" height="32" source="tiles32/suelo-3-6.png"/></tile>
+<tile id="22"><properties><property name="nombre" value="Suelo 3.7"/></properties><image width="32" height="32" source="tiles32/suelo-3-7.png"/></tile>
+<tile id="23"><properties><property name="nombre" value="Suelo 3.8"/></properties><image width="32" height="32" source="tiles32/suelo-3-8.png"/></tile>
+<tile id="24"><properties><property name="nombre" value="Suelo 4.1"/></properties><image width="32" height="32" source="tiles32/suelo-4-1.png"/></tile>
+<tile id="25"><properties><property name="nombre" value="Suelo 4.2"/></properties><image width="32" height="32" source="tiles32/suelo-4-2.png"/></tile>
+<tile id="26"><properties><property name="nombre" value="Suelo 4.3"/></properties><image width="32" height="32" source="tiles32/suelo-4-3.png"/></tile>
+<tile id="27"><properties><property name="nombre" value="Suelo 4.4"/></properties><image width="32" height="32" source="tiles32/suelo-4-4.png"/></tile>
+<tile id="28"><properties><property name="nombre" value="Suelo 4.5"/></properties><image width="32" height="32" source="tiles32/suelo-4-5.png"/></tile>
+<tile id="29"><properties><property name="nombre" value="Suelo 4.6"/></properties><image width="32" height="32" source="tiles32/suelo-4-6.png"/></tile>
+<tile id="30"><properties><property name="nombre" value="Suelo 4.7"/></properties><image width="32" height="32" source="tiles32/suelo-4-7.png"/></tile>
+<tile id="31"><properties><property name="nombre" value="Suelo 4.8"/></properties><image width="32" height="32" source="tiles32/suelo-4-8.png"/></tile>
+<tile id="32"><properties><property name="nombre" value="Pavimento 1.1"/></properties><image width="32" height="32" source="tiles32/pavimento-1-1.png"/></tile>
+<tile id="33"><properties><property name="nombre" value="Pavimento 1.2"/></properties><image width="32" height="32" source="tiles32/pavimento-1-2.png"/></tile>
+<tile id="34"><properties><property name="nombre" value="Pavimento 1.3"/></properties><image width="32" height="32" source="tiles32/pavimento-1-3.png"/></tile>
+<tile id="35"><properties><property name="nombre" value="Pavimento 1.4"/></properties><image width="32" height="32" source="tiles32/pavimento-1-4.png"/></tile>
+<tile id="36"><properties><property name="nombre" value="Pavimento 1.5"/></properties><image width="32" height="32" source="tiles32/pavimento-1-5.png"/></tile>
+<tile id="37"><properties><property name="nombre" value="Pavimento 2.1"/></properties><image width="32" height="32" source="tiles32/pavimento-2-1.png"/></tile>
+<tile id="38"><properties><property name="nombre" value="Pavimento 2.2"/></properties><image width="32" height="32" source="tiles32/pavimento-2-2.png"/></tile>
+<tile id="39"><properties><property name="nombre" value="Pavimento 2.3"/></properties><image width="32" height="32" source="tiles32/pavimento-2-3.png"/></tile>
+<tile id="40"><properties><property name="nombre" value="Pavimento 2.4"/></properties><image width="32" height="32" source="tiles32/pavimento-2-4.png"/></tile>
+<tile id="41"><properties><property name="nombre" value="Pavimento 2.5"/></properties><image width="32" height="32" source="tiles32/pavimento-2-5.png"/></tile>
+<tile id="42"><properties><property name="nombre" value="Pavimento 3.1"/></properties><image width="32" height="32" source="tiles32/pavimento-3-1.png"/></tile>
+<tile id="43"><properties><property name="nombre" value="Pavimento 3.2"/></properties><image width="32" height="32" source="tiles32/pavimento-3-2.png"/></tile>
+<tile id="44"><properties><property name="nombre" value="Pavimento 3.3"/></properties><image width="32" height="32" source="tiles32/pavimento-3-3.png"/></tile>
+<tile id="45"><properties><property name="nombre" value="Pavimento 3.4"/></properties><image width="32" height="32" source="tiles32/pavimento-3-4.png"/></tile>
+<tile id="46"><properties><property name="nombre" value="Pavimento 3.5"/></properties><image width="32" height="32" source="tiles32/pavimento-3-5.png"/></tile>
+<tile id="47"><properties><property name="nombre" value="Arena clara"/></properties><image width="32" height="32" source="tiles32/arena-clara.png"/></tile>
+<tile id="48"><properties><property name="nombre" value="Suelo uniforme"/></properties><image width="32" height="32" source="tiles32/suelo-liso.png"/></tile>
+</tileset>

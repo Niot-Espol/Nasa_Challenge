@@ -1,0 +1,91 @@
+{
+  "assets": 182,
+  "interiors": [
+    {
+      "id": "laboratorio",
+      "title": "Laboratorio del domo",
+      "description": "Investigación, análisis de muestras y control ambiental del domo.",
+      "exterior": "domo-cientifico",
+      "cols": 20,
+      "rows": 18,
+      "objects": 17,
+      "files": [
+        "laboratorio.html",
+        "laboratorio.tmx",
+        "laboratorio.aseprite",
+        "laboratorio.mars.json",
+        "laboratorio.png"
+      ]
+    },
+    {
+      "id": "habitat",
+      "title": "Habitat de tripulacion",
+      "description": "Cuatro plazas de descanso, comedor, atención médica y terminal de misión.",
+      "exterior": "habitat-rectangular",
+      "cols": 20,
+      "rows": 16,
+      "objects": 20,
+      "files": [
+        "habitat.html",
+        "habitat.tmx",
+        "habitat.aseprite",
+        "habitat.mars.json",
+        "habitat.png"
+      ]
+    },
+    {
+      "id": "invernadero",
+      "title": "Invernadero hidroponico",
+      "description": "Seis bancales reutilizables, riego, reserva de agua y control de atmósfera.",
+      "exterior": "invernadero",
+      "cols": 24,
+      "rows": 16,
+      "objects": 26,
+      "files": [
+        "invernadero.html",
+        "invernadero.tmx",
+        "invernadero.aseprite",
+        "invernadero.mars.json",
+        "invernadero.png"
+      ]
+    },
+    {
+      "id": "taller",
+      "title": "Taller de mantenimiento",
+      "description": "Robótica, reparación del rover, energía, herramientas y almacén de carga.",
+      "exterior": "modulo-tecnico",
+      "cols": 20,
+      "rows": 18,
+      "objects": 21,
+      "files": [
+        "taller.html",
+        "taller.tmx",
+        "taller.aseprite",
+        "taller.mars.json",
+        "taller.png"
+      ]
+    },
+    {
+      "id": "modulo-vacio",
+      "title": "Plantilla de modulo vacio",
+      "description": "Suelo, estructura y esclusa listos para duplicar y equipar.",
+      "exterior": null,
+      "cols": 18,
+      "rows": 14,
+      "objects": 9,
+      "files": [
+        "modulo-vacio.html",
+        "modulo-vacio.tmx",
+        "modulo-vacio.aseprite",
+        "modulo-vacio.mars.json",
+        "modulo-vacio.png"
+      ]
+    }
+  ],
+  "links": {
+    "interior-domo": "interiores/laboratorio.tmx",
+    "interior-habitat-b": "interiores/habitat.tmx",
+    "interior-invernadero": "interiores/invernadero.tmx",
+    "interior-taller": "interiores/taller.tmx"
+  }
+}

@@ -1,0 +1,3090 @@
+[
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-1-1",
+    "label": "Suelo 1.1",
+    "rect": [
+      24,
+      27,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-1-1.png",
+    "aseprite": "elementos/terreno/suelo-1-1.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-1-2",
+    "label": "Suelo 1.2",
+    "rect": [
+      97,
+      27,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-1-2.png",
+    "aseprite": "elementos/terreno/suelo-1-2.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-1-3",
+    "label": "Suelo 1.3",
+    "rect": [
+      170,
+      27,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-1-3.png",
+    "aseprite": "elementos/terreno/suelo-1-3.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-1-4",
+    "label": "Suelo 1.4",
+    "rect": [
+      243,
+      27,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-1-4.png",
+    "aseprite": "elementos/terreno/suelo-1-4.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-1-5",
+    "label": "Suelo 1.5",
+    "rect": [
+      316,
+      27,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-1-5.png",
+    "aseprite": "elementos/terreno/suelo-1-5.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-1-6",
+    "label": "Suelo 1.6",
+    "rect": [
+      389,
+      27,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-1-6.png",
+    "aseprite": "elementos/terreno/suelo-1-6.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-1-7",
+    "label": "Suelo 1.7",
+    "rect": [
+      462,
+      27,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-1-7.png",
+    "aseprite": "elementos/terreno/suelo-1-7.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-1-8",
+    "label": "Suelo 1.8",
+    "rect": [
+      535,
+      27,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-1-8.png",
+    "aseprite": "elementos/terreno/suelo-1-8.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-2-1",
+    "label": "Suelo 2.1",
+    "rect": [
+      24,
+      103,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-2-1.png",
+    "aseprite": "elementos/terreno/suelo-2-1.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-2-2",
+    "label": "Suelo 2.2",
+    "rect": [
+      97,
+      103,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-2-2.png",
+    "aseprite": "elementos/terreno/suelo-2-2.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-2-3",
+    "label": "Suelo 2.3",
+    "rect": [
+      170,
+      103,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-2-3.png",
+    "aseprite": "elementos/terreno/suelo-2-3.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-2-4",
+    "label": "Suelo 2.4",
+    "rect": [
+      243,
+      103,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-2-4.png",
+    "aseprite": "elementos/terreno/suelo-2-4.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-2-5",
+    "label": "Suelo 2.5",
+    "rect": [
+      316,
+      103,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-2-5.png",
+    "aseprite": "elementos/terreno/suelo-2-5.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-2-6",
+    "label": "Suelo 2.6",
+    "rect": [
+      389,
+      103,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-2-6.png",
+    "aseprite": "elementos/terreno/suelo-2-6.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-2-7",
+    "label": "Suelo 2.7",
+    "rect": [
+      462,
+      103,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-2-7.png",
+    "aseprite": "elementos/terreno/suelo-2-7.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-2-8",
+    "label": "Suelo 2.8",
+    "rect": [
+      535,
+      103,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-2-8.png",
+    "aseprite": "elementos/terreno/suelo-2-8.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-3-1",
+    "label": "Suelo 3.1",
+    "rect": [
+      24,
+      179,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-3-1.png",
+    "aseprite": "elementos/terreno/suelo-3-1.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-3-2",
+    "label": "Suelo 3.2",
+    "rect": [
+      97,
+      179,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-3-2.png",
+    "aseprite": "elementos/terreno/suelo-3-2.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-3-3",
+    "label": "Suelo 3.3",
+    "rect": [
+      170,
+      179,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-3-3.png",
+    "aseprite": "elementos/terreno/suelo-3-3.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-3-4",
+    "label": "Suelo 3.4",
+    "rect": [
+      243,
+      179,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-3-4.png",
+    "aseprite": "elementos/terreno/suelo-3-4.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-3-5",
+    "label": "Suelo 3.5",
+    "rect": [
+      316,
+      179,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-3-5.png",
+    "aseprite": "elementos/terreno/suelo-3-5.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-3-6",
+    "label": "Suelo 3.6",
+    "rect": [
+      389,
+      179,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-3-6.png",
+    "aseprite": "elementos/terreno/suelo-3-6.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-3-7",
+    "label": "Suelo 3.7",
+    "rect": [
+      462,
+      179,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-3-7.png",
+    "aseprite": "elementos/terreno/suelo-3-7.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-3-8",
+    "label": "Suelo 3.8",
+    "rect": [
+      535,
+      179,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-3-8.png",
+    "aseprite": "elementos/terreno/suelo-3-8.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-4-1",
+    "label": "Suelo 4.1",
+    "rect": [
+      24,
+      255,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-4-1.png",
+    "aseprite": "elementos/terreno/suelo-4-1.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-4-2",
+    "label": "Suelo 4.2",
+    "rect": [
+      97,
+      255,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-4-2.png",
+    "aseprite": "elementos/terreno/suelo-4-2.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-4-3",
+    "label": "Suelo 4.3",
+    "rect": [
+      170,
+      255,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-4-3.png",
+    "aseprite": "elementos/terreno/suelo-4-3.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-4-4",
+    "label": "Suelo 4.4",
+    "rect": [
+      243,
+      255,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-4-4.png",
+    "aseprite": "elementos/terreno/suelo-4-4.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-4-5",
+    "label": "Suelo 4.5",
+    "rect": [
+      316,
+      255,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-4-5.png",
+    "aseprite": "elementos/terreno/suelo-4-5.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-4-6",
+    "label": "Suelo 4.6",
+    "rect": [
+      389,
+      255,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-4-6.png",
+    "aseprite": "elementos/terreno/suelo-4-6.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-4-7",
+    "label": "Suelo 4.7",
+    "rect": [
+      462,
+      255,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-4-7.png",
+    "aseprite": "elementos/terreno/suelo-4-7.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-4-8",
+    "label": "Suelo 4.8",
+    "rect": [
+      535,
+      255,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-4-8.png",
+    "aseprite": "elementos/terreno/suelo-4-8.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "pavimento",
+    "id": "pavimento-1-1",
+    "label": "Pavimento 1.1",
+    "rect": [
+      24,
+      355,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/pavimento/pavimento-1-1.png",
+    "aseprite": "elementos/pavimento/pavimento-1-1.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "pavimento",
+    "id": "pavimento-1-2",
+    "label": "Pavimento 1.2",
+    "rect": [
+      98,
+      355,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/pavimento/pavimento-1-2.png",
+    "aseprite": "elementos/pavimento/pavimento-1-2.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "pavimento",
+    "id": "pavimento-1-3",
+    "label": "Pavimento 1.3",
+    "rect": [
+      172,
+      355,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/pavimento/pavimento-1-3.png",
+    "aseprite": "elementos/pavimento/pavimento-1-3.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "pavimento",
+    "id": "pavimento-1-4",
+    "label": "Pavimento 1.4",
+    "rect": [
+      246,
+      355,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/pavimento/pavimento-1-4.png",
+    "aseprite": "elementos/pavimento/pavimento-1-4.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "pavimento",
+    "id": "pavimento-1-5",
+    "label": "Pavimento 1.5",
+    "rect": [
+      320,
+      355,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/pavimento/pavimento-1-5.png",
+    "aseprite": "elementos/pavimento/pavimento-1-5.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "pavimento",
+    "id": "pavimento-2-1",
+    "label": "Pavimento 2.1",
+    "rect": [
+      24,
+      431,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/pavimento/pavimento-2-1.png",
+    "aseprite": "elementos/pavimento/pavimento-2-1.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "pavimento",
+    "id": "pavimento-2-2",
+    "label": "Pavimento 2.2",
+    "rect": [
+      98,
+      431,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/pavimento/pavimento-2-2.png",
+    "aseprite": "elementos/pavimento/pavimento-2-2.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "pavimento",
+    "id": "pavimento-2-3",
+    "label": "Pavimento 2.3",
+    "rect": [
+      172,
+      431,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/pavimento/pavimento-2-3.png",
+    "aseprite": "elementos/pavimento/pavimento-2-3.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "pavimento",
+    "id": "pavimento-2-4",
+    "label": "Pavimento 2.4",
+    "rect": [
+      246,
+      431,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/pavimento/pavimento-2-4.png",
+    "aseprite": "elementos/pavimento/pavimento-2-4.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "pavimento",
+    "id": "pavimento-2-5",
+    "label": "Pavimento 2.5",
+    "rect": [
+      320,
+      431,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/pavimento/pavimento-2-5.png",
+    "aseprite": "elementos/pavimento/pavimento-2-5.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "pavimento",
+    "id": "pavimento-3-1",
+    "label": "Pavimento 3.1",
+    "rect": [
+      24,
+      507,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/pavimento/pavimento-3-1.png",
+    "aseprite": "elementos/pavimento/pavimento-3-1.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "pavimento",
+    "id": "pavimento-3-2",
+    "label": "Pavimento 3.2",
+    "rect": [
+      98,
+      507,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/pavimento/pavimento-3-2.png",
+    "aseprite": "elementos/pavimento/pavimento-3-2.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "pavimento",
+    "id": "pavimento-3-3",
+    "label": "Pavimento 3.3",
+    "rect": [
+      172,
+      507,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/pavimento/pavimento-3-3.png",
+    "aseprite": "elementos/pavimento/pavimento-3-3.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "pavimento",
+    "id": "pavimento-3-4",
+    "label": "Pavimento 3.4",
+    "rect": [
+      246,
+      507,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/pavimento/pavimento-3-4.png",
+    "aseprite": "elementos/pavimento/pavimento-3-4.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "pavimento",
+    "id": "pavimento-3-5",
+    "label": "Pavimento 3.5",
+    "rect": [
+      320,
+      507,
+      64,
+      64
+    ],
+    "tile": true,
+    "path": "elementos/pavimento/pavimento-3-5.png",
+    "aseprite": "elementos/pavimento/pavimento-3-5.aseprite",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "arena-clara",
+    "label": "Arena clara",
+    "rect": [
+      261,
+      204,
+      32,
+      32
+    ],
+    "tile": true,
+    "path": "elementos/terreno/arena-clara.png",
+    "aseprite": "elementos/terreno/arena-clara.aseprite",
+    "width": 32,
+    "height": 32
+  },
+  {
+    "source": "b",
+    "category": "terreno",
+    "id": "suelo-liso",
+    "label": "Suelo uniforme",
+    "rect": [
+      104,
+      35,
+      40,
+      40
+    ],
+    "tile": true,
+    "path": "elementos/terreno/suelo-liso.png",
+    "aseprite": "elementos/terreno/suelo-liso.aseprite",
+    "width": 40,
+    "height": 40
+  },
+  {
+    "source": "b",
+    "category": "relieve",
+    "id": "meseta-grande",
+    "label": "Meseta grande",
+    "rect": [
+      615,
+      13,
+      148,
+      135
+    ],
+    "solid": true,
+    "path": "elementos/relieve/meseta-grande.png",
+    "aseprite": "elementos/relieve/meseta-grande.aseprite",
+    "width": 144,
+    "height": 133
+  },
+  {
+    "source": "b",
+    "category": "relieve",
+    "id": "cantil-recto-a",
+    "label": "Cantil recto A",
+    "rect": [
+      769,
+      19,
+      71,
+      80
+    ],
+    "solid": true,
+    "path": "elementos/relieve/cantil-recto-a.png",
+    "aseprite": "elementos/relieve/cantil-recto-a.aseprite",
+    "width": 70,
+    "height": 76
+  },
+  {
+    "source": "b",
+    "category": "relieve",
+    "id": "cantil-recto-b",
+    "label": "Cantil recto B",
+    "rect": [
+      845,
+      19,
+      71,
+      80
+    ],
+    "solid": true,
+    "path": "elementos/relieve/cantil-recto-b.png",
+    "aseprite": "elementos/relieve/cantil-recto-b.aseprite",
+    "width": 68,
+    "height": 76
+  },
+  {
+    "source": "b",
+    "category": "relieve",
+    "id": "meseta-alta",
+    "label": "Meseta alta",
+    "rect": [
+      924,
+      15,
+      118,
+      109
+    ],
+    "solid": true,
+    "path": "elementos/relieve/meseta-alta.png",
+    "aseprite": "elementos/relieve/meseta-alta.aseprite",
+    "width": 114,
+    "height": 108
+  },
+  {
+    "source": "b",
+    "category": "relieve",
+    "id": "cantil-izquierdo",
+    "label": "Cantil izquierdo",
+    "rect": [
+      617,
+      133,
+      79,
+      90
+    ],
+    "solid": true,
+    "path": "elementos/relieve/cantil-izquierdo.png",
+    "aseprite": "elementos/relieve/cantil-izquierdo.aseprite",
+    "width": 74,
+    "height": 88
+  },
+  {
+    "source": "b",
+    "category": "relieve",
+    "id": "cantil-derecho",
+    "label": "Cantil derecho",
+    "rect": [
+      697,
+      104,
+      67,
+      119
+    ],
+    "solid": true,
+    "path": "elementos/relieve/cantil-derecho.png",
+    "aseprite": "elementos/relieve/cantil-derecho.aseprite",
+    "width": 67,
+    "height": 115
+  },
+  {
+    "source": "b",
+    "category": "relieve",
+    "id": "cantil-concavo",
+    "label": "Cantil concavo",
+    "rect": [
+      768,
+      103,
+      73,
+      120
+    ],
+    "solid": true,
+    "path": "elementos/relieve/cantil-concavo.png",
+    "aseprite": "elementos/relieve/cantil-concavo.aseprite",
+    "width": 71,
+    "height": 114
+  },
+  {
+    "source": "b",
+    "category": "relieve",
+    "id": "cantil-esquina",
+    "label": "Cantil esquina",
+    "rect": [
+      844,
+      103,
+      76,
+      120
+    ],
+    "solid": true,
+    "path": "elementos/relieve/cantil-esquina.png",
+    "aseprite": "elementos/relieve/cantil-esquina.aseprite",
+    "width": 73,
+    "height": 114
+  },
+  {
+    "source": "b",
+    "category": "relieve",
+    "id": "cantil-largo",
+    "label": "Cantil largo",
+    "rect": [
+      921,
+      115,
+      123,
+      128
+    ],
+    "solid": true,
+    "path": "elementos/relieve/cantil-largo.png",
+    "aseprite": "elementos/relieve/cantil-largo.aseprite",
+    "width": 114,
+    "height": 130
+  },
+  {
+    "source": "b",
+    "category": "relieve",
+    "id": "meseta-baja-a",
+    "label": "Meseta baja A",
+    "rect": [
+      616,
+      224,
+      79,
+      105
+    ],
+    "solid": true,
+    "path": "elementos/relieve/meseta-baja-a.png",
+    "aseprite": "elementos/relieve/meseta-baja-a.aseprite",
+    "width": 76,
+    "height": 100
+  },
+  {
+    "source": "b",
+    "category": "relieve",
+    "id": "meseta-baja-b",
+    "label": "Meseta baja B",
+    "rect": [
+      696,
+      224,
+      68,
+      105
+    ],
+    "solid": true,
+    "path": "elementos/relieve/meseta-baja-b.png",
+    "aseprite": "elementos/relieve/meseta-baja-b.aseprite",
+    "width": 64,
+    "height": 99
+  },
+  {
+    "source": "b",
+    "category": "relieve",
+    "id": "cantil-bajo-a",
+    "label": "Cantil bajo A",
+    "rect": [
+      769,
+      225,
+      72,
+      104
+    ],
+    "solid": true,
+    "path": "elementos/relieve/cantil-bajo-a.png",
+    "aseprite": "elementos/relieve/cantil-bajo-a.aseprite",
+    "width": 68,
+    "height": 100
+  },
+  {
+    "source": "b",
+    "category": "relieve",
+    "id": "cantil-bajo-b",
+    "label": "Cantil bajo B",
+    "rect": [
+      843,
+      225,
+      74,
+      104
+    ],
+    "solid": true,
+    "path": "elementos/relieve/cantil-bajo-b.png",
+    "aseprite": "elementos/relieve/cantil-bajo-b.aseprite",
+    "width": 73,
+    "height": 100
+  },
+  {
+    "source": "b",
+    "category": "relieve",
+    "id": "aguja-rocosa",
+    "label": "Aguja rocosa",
+    "rect": [
+      923,
+      223,
+      77,
+      106
+    ],
+    "solid": true,
+    "path": "elementos/relieve/aguja-rocosa.png",
+    "aseprite": "elementos/relieve/aguja-rocosa.aseprite",
+    "width": 72,
+    "height": 106
+  },
+  {
+    "source": "b",
+    "category": "rocas",
+    "id": "roca-alta",
+    "label": "Roca alta",
+    "rect": [
+      1054,
+      17,
+      80,
+      84
+    ],
+    "solid": true,
+    "path": "elementos/rocas/roca-alta.png",
+    "aseprite": "elementos/rocas/roca-alta.aseprite",
+    "width": 68,
+    "height": 79
+  },
+  {
+    "source": "b",
+    "category": "rocas",
+    "id": "roca-escalonada",
+    "label": "Roca escalonada",
+    "rect": [
+      1138,
+      16,
+      94,
+      86
+    ],
+    "solid": true,
+    "path": "elementos/rocas/roca-escalonada.png",
+    "aseprite": "elementos/rocas/roca-escalonada.aseprite",
+    "width": 91,
+    "height": 79
+  },
+  {
+    "source": "b",
+    "category": "rocas",
+    "id": "roca-plana",
+    "label": "Roca plana",
+    "rect": [
+      1248,
+      17,
+      100,
+      75
+    ],
+    "solid": true,
+    "path": "elementos/rocas/roca-plana.png",
+    "aseprite": "elementos/rocas/roca-plana.aseprite",
+    "width": 94,
+    "height": 73
+  },
+  {
+    "source": "b",
+    "category": "rocas",
+    "id": "roca-ancha",
+    "label": "Roca ancha",
+    "rect": [
+      1353,
+      17,
+      88,
+      72
+    ],
+    "solid": true,
+    "path": "elementos/rocas/roca-ancha.png",
+    "aseprite": "elementos/rocas/roca-ancha.aseprite",
+    "width": 81,
+    "height": 60
+  },
+  {
+    "source": "b",
+    "category": "rocas",
+    "id": "roca-pequena",
+    "label": "Roca pequena",
+    "rect": [
+      1446,
+      17,
+      77,
+      56
+    ],
+    "solid": true,
+    "path": "elementos/rocas/roca-pequena.png",
+    "aseprite": "elementos/rocas/roca-pequena.aseprite",
+    "width": 66,
+    "height": 48
+  },
+  {
+    "source": "b",
+    "category": "rocas",
+    "id": "roca-baja",
+    "label": "Roca baja",
+    "rect": [
+      1437,
+      94,
+      86,
+      54
+    ],
+    "solid": true,
+    "path": "elementos/rocas/roca-baja.png",
+    "aseprite": "elementos/rocas/roca-baja.aseprite",
+    "width": 74,
+    "height": 49
+  },
+  {
+    "source": "b",
+    "category": "rocas",
+    "id": "pilar-ancho",
+    "label": "Pilar ancho",
+    "rect": [
+      1056,
+      185,
+      100,
+      128
+    ],
+    "solid": true,
+    "path": "elementos/rocas/pilar-ancho.png",
+    "aseprite": "elementos/rocas/pilar-ancho.aseprite",
+    "width": 98,
+    "height": 123
+  },
+  {
+    "source": "b",
+    "category": "rocas",
+    "id": "pilar-delgado",
+    "label": "Pilar delgado",
+    "rect": [
+      1159,
+      185,
+      90,
+      129
+    ],
+    "solid": true,
+    "path": "elementos/rocas/pilar-delgado.png",
+    "aseprite": "elementos/rocas/pilar-delgado.aseprite",
+    "width": 83,
+    "height": 102
+  },
+  {
+    "source": "b",
+    "category": "rocas",
+    "id": "piedra-roja",
+    "label": "Piedra roja",
+    "rect": [
+      1005,
+      286,
+      53,
+      44
+    ],
+    "solid": true,
+    "path": "elementos/rocas/piedra-roja.png",
+    "aseprite": "elementos/rocas/piedra-roja.aseprite",
+    "width": 55,
+    "height": 42
+  },
+  {
+    "source": "b",
+    "category": "rocas",
+    "id": "piedra-mediana",
+    "label": "Piedra mediana",
+    "rect": [
+      1143,
+      294,
+      45,
+      32
+    ],
+    "solid": true,
+    "path": "elementos/rocas/piedra-mediana.png",
+    "aseprite": "elementos/rocas/piedra-mediana.aseprite",
+    "width": 42,
+    "height": 31
+  },
+  {
+    "source": "b",
+    "category": "rocas",
+    "id": "piedra-chica",
+    "label": "Piedra chica",
+    "rect": [
+      1191,
+      299,
+      33,
+      23
+    ],
+    "solid": true,
+    "path": "elementos/rocas/piedra-chica.png",
+    "aseprite": "elementos/rocas/piedra-chica.aseprite",
+    "width": 28,
+    "height": 21
+  },
+  {
+    "source": "b",
+    "category": "rocas",
+    "id": "escombros",
+    "label": "Escombros",
+    "rect": [
+      1387,
+      745,
+      123,
+      61
+    ],
+    "solid": true,
+    "path": "elementos/rocas/escombros.png",
+    "aseprite": "elementos/rocas/escombros.aseprite",
+    "width": 116,
+    "height": 55
+  },
+  {
+    "source": "b",
+    "category": "recursos",
+    "id": "mena-hierro",
+    "label": "Mena de hierro",
+    "rect": [
+      1051,
+      105,
+      106,
+      74
+    ],
+    "solid": true,
+    "path": "elementos/recursos/mena-hierro.png",
+    "aseprite": "elementos/recursos/mena-hierro.aseprite",
+    "width": 91,
+    "height": 67
+  },
+  {
+    "source": "b",
+    "category": "recursos",
+    "id": "mena-azufre",
+    "label": "Mena de azufre",
+    "rect": [
+      1157,
+      106,
+      95,
+      73
+    ],
+    "solid": true,
+    "path": "elementos/recursos/mena-azufre.png",
+    "aseprite": "elementos/recursos/mena-azufre.aseprite",
+    "width": 82,
+    "height": 67
+  },
+  {
+    "source": "b",
+    "category": "recursos",
+    "id": "cristal-grande",
+    "label": "Cristal grande",
+    "rect": [
+      1252,
+      92,
+      92,
+      87
+    ],
+    "solid": true,
+    "path": "elementos/recursos/cristal-grande.png",
+    "aseprite": "elementos/recursos/cristal-grande.aseprite",
+    "width": 79,
+    "height": 73
+  },
+  {
+    "source": "b",
+    "category": "recursos",
+    "id": "cristal-blanco",
+    "label": "Cristal blanco",
+    "rect": [
+      1351,
+      98,
+      45,
+      39
+    ],
+    "solid": true,
+    "path": "elementos/recursos/cristal-blanco.png",
+    "aseprite": "elementos/recursos/cristal-blanco.aseprite",
+    "width": 33,
+    "height": 35
+  },
+  {
+    "source": "b",
+    "category": "recursos",
+    "id": "cristal-chico",
+    "label": "Cristal pequeno",
+    "rect": [
+      1397,
+      97,
+      35,
+      40
+    ],
+    "solid": true,
+    "path": "elementos/recursos/cristal-chico.png",
+    "aseprite": "elementos/recursos/cristal-chico.aseprite",
+    "width": 29,
+    "height": 34
+  },
+  {
+    "source": "b",
+    "category": "recursos",
+    "id": "cristal-suelto",
+    "label": "Cristal suelto",
+    "rect": [
+      1360,
+      139,
+      43,
+      40
+    ],
+    "solid": true,
+    "path": "elementos/recursos/cristal-suelto.png",
+    "aseprite": "elementos/recursos/cristal-suelto.aseprite",
+    "width": 29,
+    "height": 34
+  },
+  {
+    "source": "b",
+    "category": "recursos",
+    "id": "deposito-cristal",
+    "label": "Deposito de cristal",
+    "rect": [
+      1055,
+      741,
+      97,
+      86
+    ],
+    "solid": true,
+    "path": "elementos/recursos/deposito-cristal.png",
+    "aseprite": "elementos/recursos/deposito-cristal.aseprite",
+    "width": 94,
+    "height": 79
+  },
+  {
+    "source": "b",
+    "category": "recursos",
+    "id": "deposito-rojo",
+    "label": "Deposito rojo",
+    "rect": [
+      1149,
+      745,
+      80,
+      74
+    ],
+    "solid": true,
+    "path": "elementos/recursos/deposito-rojo.png",
+    "aseprite": "elementos/recursos/deposito-rojo.aseprite",
+    "width": 67,
+    "height": 59
+  },
+  {
+    "source": "b",
+    "category": "recursos",
+    "id": "deposito-amarillo",
+    "label": "Deposito amarillo",
+    "rect": [
+      1229,
+      739,
+      83,
+      76
+    ],
+    "solid": true,
+    "path": "elementos/recursos/deposito-amarillo.png",
+    "aseprite": "elementos/recursos/deposito-amarillo.aseprite",
+    "width": 70,
+    "height": 61
+  },
+  {
+    "source": "b",
+    "category": "recursos",
+    "id": "deposito-oscuro",
+    "label": "Deposito oscuro",
+    "rect": [
+      1311,
+      748,
+      76,
+      62
+    ],
+    "solid": true,
+    "path": "elementos/recursos/deposito-oscuro.png",
+    "aseprite": "elementos/recursos/deposito-oscuro.aseprite",
+    "width": 60,
+    "height": 48
+  },
+  {
+    "source": "b",
+    "category": "crateres",
+    "id": "crater-grande",
+    "label": "Crater grande",
+    "rect": [
+      1247,
+      181,
+      173,
+      148
+    ],
+    "path": "elementos/crateres/crater-grande.png",
+    "aseprite": "elementos/crateres/crater-grande.aseprite",
+    "width": 168,
+    "height": 147
+  },
+  {
+    "source": "b",
+    "category": "crateres",
+    "id": "crater-mediano",
+    "label": "Crater mediano",
+    "rect": [
+      1421,
+      206,
+      82,
+      72
+    ],
+    "path": "elementos/crateres/crater-mediano.png",
+    "aseprite": "elementos/crateres/crater-mediano.aseprite",
+    "width": 68,
+    "height": 58
+  },
+  {
+    "source": "b",
+    "category": "crateres",
+    "id": "crater-pequeno",
+    "label": "Crater pequeno",
+    "rect": [
+      1410,
+      287,
+      43,
+      38
+    ],
+    "path": "elementos/crateres/crater-pequeno.png",
+    "aseprite": "elementos/crateres/crater-pequeno.aseprite",
+    "width": 42,
+    "height": 36
+  },
+  {
+    "source": "b",
+    "category": "crateres",
+    "id": "crater-hondo",
+    "label": "Crater hondo",
+    "rect": [
+      1463,
+      278,
+      48,
+      41
+    ],
+    "path": "elementos/crateres/crater-hondo.png",
+    "aseprite": "elementos/crateres/crater-hondo.aseprite",
+    "width": 37,
+    "height": 30
+  },
+  {
+    "source": "b",
+    "category": "crateres",
+    "id": "impacto-a",
+    "label": "Impacto A",
+    "rect": [
+      1409,
+      160,
+      48,
+      34
+    ],
+    "path": "elementos/crateres/impacto-a.png",
+    "aseprite": "elementos/crateres/impacto-a.aseprite",
+    "width": 36,
+    "height": 29
+  },
+  {
+    "source": "b",
+    "category": "crateres",
+    "id": "impacto-b",
+    "label": "Impacto B",
+    "rect": [
+      1461,
+      169,
+      44,
+      34
+    ],
+    "path": "elementos/crateres/impacto-b.png",
+    "aseprite": "elementos/crateres/impacto-b.aseprite",
+    "width": 35,
+    "height": 28
+  },
+  {
+    "source": "b",
+    "category": "edificios",
+    "id": "domo-cientifico",
+    "label": "Domo cientifico",
+    "rect": [
+      839,
+      342,
+      213,
+      208
+    ],
+    "solid": true,
+    "interior": "interior-domo",
+    "entrance": [
+      0.48,
+      0.95
+    ],
+    "path": "elementos/edificios/domo-cientifico.png",
+    "aseprite": "elementos/edificios/domo-cientifico.aseprite",
+    "width": 209,
+    "height": 201
+  },
+  {
+    "source": "b",
+    "category": "edificios",
+    "id": "habitat-circular",
+    "label": "Habitat circular",
+    "rect": [
+      1055,
+      340,
+      145,
+      168
+    ],
+    "solid": true,
+    "interior": "interior-habitat",
+    "entrance": [
+      0.5,
+      0.95
+    ],
+    "path": "elementos/edificios/habitat-circular.png",
+    "aseprite": "elementos/edificios/habitat-circular.aseprite",
+    "width": 141,
+    "height": 163
+  },
+  {
+    "source": "b",
+    "category": "edificios",
+    "id": "modulo-tecnico",
+    "label": "Modulo tecnico",
+    "rect": [
+      1204,
+      376,
+      114,
+      165
+    ],
+    "solid": true,
+    "interior": "interior-taller",
+    "entrance": [
+      0.53,
+      0.94
+    ],
+    "path": "elementos/edificios/modulo-tecnico.png",
+    "aseprite": "elementos/edificios/modulo-tecnico.aseprite",
+    "width": 114,
+    "height": 154
+  },
+  {
+    "source": "b",
+    "category": "edificios",
+    "id": "plataforma-aterrizaje",
+    "label": "Plataforma de aterrizaje",
+    "rect": [
+      1321,
+      340,
+      201,
+      197
+    ],
+    "path": "elementos/edificios/plataforma-aterrizaje.png",
+    "aseprite": "elementos/edificios/plataforma-aterrizaje.aseprite",
+    "width": 194,
+    "height": 192
+  },
+  {
+    "source": "a",
+    "category": "edificios",
+    "id": "invernadero",
+    "label": "Invernadero",
+    "rect": [
+      1086,
+      329,
+      205,
+      150
+    ],
+    "solid": true,
+    "interior": "interior-invernadero",
+    "entrance": [
+      0.52,
+      0.94
+    ],
+    "path": "elementos/edificios/invernadero.png",
+    "aseprite": "elementos/edificios/invernadero.aseprite",
+    "width": 190,
+    "height": 126
+  },
+  {
+    "source": "a",
+    "category": "edificios",
+    "id": "habitat-rectangular",
+    "label": "Habitat rectangular",
+    "rect": [
+      701,
+      307,
+      255,
+      184
+    ],
+    "solid": true,
+    "interior": "interior-habitat-b",
+    "entrance": [
+      0.62,
+      0.95
+    ],
+    "path": "elementos/edificios/habitat-rectangular.png",
+    "aseprite": "elementos/edificios/habitat-rectangular.aseprite",
+    "width": 240,
+    "height": 166
+  },
+  {
+    "source": "a",
+    "category": "edificios",
+    "id": "domo-observatorio",
+    "label": "Domo observatorio",
+    "rect": [
+      475,
+      330,
+      221,
+      166
+    ],
+    "solid": true,
+    "interior": "interior-observatorio",
+    "entrance": [
+      0.49,
+      0.95
+    ],
+    "path": "elementos/edificios/domo-observatorio.png",
+    "aseprite": "elementos/edificios/domo-observatorio.aseprite",
+    "width": 202,
+    "height": 145
+  },
+  {
+    "source": "a",
+    "category": "edificios",
+    "id": "deposito-vertical",
+    "label": "Deposito vertical",
+    "rect": [
+      956,
+      314,
+      118,
+      173
+    ],
+    "solid": true,
+    "path": "elementos/edificios/deposito-vertical.png",
+    "aseprite": "elementos/edificios/deposito-vertical.aseprite",
+    "width": 110,
+    "height": 151
+  },
+  {
+    "source": "b",
+    "category": "estructura",
+    "id": "muro-esquina-izq",
+    "label": "Muro esquina izquierda",
+    "rect": [
+      405,
+      345,
+      87,
+      103
+    ],
+    "solid": true,
+    "path": "elementos/estructura/muro-esquina-izq.png",
+    "aseprite": "elementos/estructura/muro-esquina-izq.aseprite",
+    "width": 84,
+    "height": 100
+  },
+  {
+    "source": "b",
+    "category": "estructura",
+    "id": "muro-panel-a",
+    "label": "Muro panel A",
+    "rect": [
+      494,
+      345,
+      85,
+      103
+    ],
+    "solid": true,
+    "path": "elementos/estructura/muro-panel-a.png",
+    "aseprite": "elementos/estructura/muro-panel-a.aseprite",
+    "width": 79,
+    "height": 87
+  },
+  {
+    "source": "b",
+    "category": "estructura",
+    "id": "muro-panel-b",
+    "label": "Muro panel B",
+    "rect": [
+      581,
+      345,
+      80,
+      103
+    ],
+    "solid": true,
+    "path": "elementos/estructura/muro-panel-b.png",
+    "aseprite": "elementos/estructura/muro-panel-b.aseprite",
+    "width": 69,
+    "height": 87
+  },
+  {
+    "source": "b",
+    "category": "estructura",
+    "id": "muro-panel-c",
+    "label": "Muro panel C",
+    "rect": [
+      663,
+      345,
+      78,
+      103
+    ],
+    "solid": true,
+    "path": "elementos/estructura/muro-panel-c.png",
+    "aseprite": "elementos/estructura/muro-panel-c.aseprite",
+    "width": 74,
+    "height": 88
+  },
+  {
+    "source": "b",
+    "category": "estructura",
+    "id": "muro-esquina-der",
+    "label": "Muro esquina derecha",
+    "rect": [
+      743,
+      345,
+      83,
+      109
+    ],
+    "solid": true,
+    "path": "elementos/estructura/muro-esquina-der.png",
+    "aseprite": "elementos/estructura/muro-esquina-der.aseprite",
+    "width": 77,
+    "height": 107
+  },
+  {
+    "source": "b",
+    "category": "estructura",
+    "id": "muro-retorno-izq",
+    "label": "Muro retorno izquierdo",
+    "rect": [
+      402,
+      467,
+      72,
+      112
+    ],
+    "solid": true,
+    "path": "elementos/estructura/muro-retorno-izq.png",
+    "aseprite": "elementos/estructura/muro-retorno-izq.aseprite",
+    "width": 63,
+    "height": 105
+  },
+  {
+    "source": "b",
+    "category": "estructura",
+    "id": "esclusa-roja",
+    "label": "Esclusa roja",
+    "rect": [
+      483,
+      451,
+      143,
+      109
+    ],
+    "solid": true,
+    "path": "elementos/estructura/esclusa-roja.png",
+    "aseprite": "elementos/estructura/esclusa-roja.aseprite",
+    "width": 134,
+    "height": 108
+  },
+  {
+    "source": "b",
+    "category": "estructura",
+    "id": "esclusa-cian",
+    "label": "Esclusa cian",
+    "rect": [
+      628,
+      449,
+      138,
+      114
+    ],
+    "solid": true,
+    "path": "elementos/estructura/esclusa-cian.png",
+    "aseprite": "elementos/estructura/esclusa-cian.aseprite",
+    "width": 135,
+    "height": 108
+  },
+  {
+    "source": "b",
+    "category": "estructura",
+    "id": "muro-retorno-der",
+    "label": "Muro retorno derecho",
+    "rect": [
+      768,
+      462,
+      58,
+      111
+    ],
+    "solid": true,
+    "path": "elementos/estructura/muro-retorno-der.png",
+    "aseprite": "elementos/estructura/muro-retorno-der.aseprite",
+    "width": 48,
+    "height": 104
+  },
+  {
+    "source": "a",
+    "category": "estructura",
+    "id": "pasarela-recta",
+    "label": "Pasarela recta",
+    "rect": [
+      480,
+      497,
+      116,
+      96
+    ],
+    "solid": true,
+    "path": "elementos/estructura/pasarela-recta.png",
+    "aseprite": "elementos/estructura/pasarela-recta.aseprite",
+    "width": 110,
+    "height": 84
+  },
+  {
+    "source": "a",
+    "category": "estructura",
+    "id": "pasarela-doble",
+    "label": "Pasarela doble",
+    "rect": [
+      601,
+      497,
+      119,
+      96
+    ],
+    "solid": true,
+    "path": "elementos/estructura/pasarela-doble.png",
+    "aseprite": "elementos/estructura/pasarela-doble.aseprite",
+    "width": 111,
+    "height": 81
+  },
+  {
+    "source": "a",
+    "category": "estructura",
+    "id": "pasarela-codo",
+    "label": "Pasarela codo",
+    "rect": [
+      725,
+      497,
+      47,
+      106
+    ],
+    "solid": true,
+    "path": "elementos/estructura/pasarela-codo.png",
+    "aseprite": "elementos/estructura/pasarela-codo.aseprite",
+    "width": 40,
+    "height": 97
+  },
+  {
+    "source": "a",
+    "category": "estructura",
+    "id": "pasarela-corta",
+    "label": "Pasarela corta",
+    "rect": [
+      777,
+      500,
+      78,
+      96
+    ],
+    "solid": true,
+    "path": "elementos/estructura/pasarela-corta.png",
+    "aseprite": "elementos/estructura/pasarela-corta.aseprite",
+    "width": 73,
+    "height": 75
+  },
+  {
+    "source": "a",
+    "category": "estructura",
+    "id": "pasarela-cruce",
+    "label": "Pasarela cruce",
+    "rect": [
+      855,
+      493,
+      149,
+      113
+    ],
+    "solid": true,
+    "path": "elementos/estructura/pasarela-cruce.png",
+    "aseprite": "elementos/estructura/pasarela-cruce.aseprite",
+    "width": 137,
+    "height": 100
+  },
+  {
+    "source": "a",
+    "category": "estructura",
+    "id": "esclusa-azul",
+    "label": "Esclusa azul",
+    "rect": [
+      1100,
+      498,
+      118,
+      110
+    ],
+    "solid": true,
+    "path": "elementos/estructura/esclusa-azul.png",
+    "aseprite": "elementos/estructura/esclusa-azul.aseprite",
+    "width": 114,
+    "height": 96
+  },
+  {
+    "source": "a",
+    "category": "estructura",
+    "id": "esclusa-naranja",
+    "label": "Esclusa naranja",
+    "rect": [
+      1224,
+      501,
+      104,
+      110
+    ],
+    "solid": true,
+    "path": "elementos/estructura/esclusa-naranja.png",
+    "aseprite": "elementos/estructura/esclusa-naranja.aseprite",
+    "width": 88,
+    "height": 87
+  },
+  {
+    "source": "b",
+    "category": "energia",
+    "id": "panel-solar-grande",
+    "label": "Panel solar grande",
+    "rect": [
+      1128,
+      581,
+      104,
+      119
+    ],
+    "solid": true,
+    "path": "elementos/energia/panel-solar-grande.png",
+    "aseprite": "elementos/energia/panel-solar-grande.aseprite",
+    "width": 102,
+    "height": 109
+  },
+  {
+    "source": "b",
+    "category": "energia",
+    "id": "panel-solar-mediano",
+    "label": "Panel solar mediano",
+    "rect": [
+      1227,
+      598,
+      75,
+      102
+    ],
+    "solid": true,
+    "path": "elementos/energia/panel-solar-mediano.png",
+    "aseprite": "elementos/energia/panel-solar-mediano.aseprite",
+    "width": 77,
+    "height": 93
+  },
+  {
+    "source": "b",
+    "category": "energia",
+    "id": "panel-solar-estrecho",
+    "label": "Panel solar estrecho",
+    "rect": [
+      1300,
+      584,
+      63,
+      116
+    ],
+    "solid": true,
+    "path": "elementos/energia/panel-solar-estrecho.png",
+    "aseprite": "elementos/energia/panel-solar-estrecho.aseprite",
+    "width": 62,
+    "height": 107
+  },
+  {
+    "source": "b",
+    "category": "energia",
+    "id": "aerogenerador",
+    "label": "Aerogenerador",
+    "rect": [
+      1426,
+      550,
+      97,
+      151
+    ],
+    "solid": true,
+    "path": "elementos/energia/aerogenerador.png",
+    "aseprite": "elementos/energia/aerogenerador.aseprite",
+    "width": 84,
+    "height": 144
+  },
+  {
+    "source": "b",
+    "category": "energia",
+    "id": "generador",
+    "label": "Generador",
+    "rect": [
+      579,
+      736,
+      126,
+      142
+    ],
+    "solid": true,
+    "path": "elementos/energia/generador.png",
+    "aseprite": "elementos/energia/generador.aseprite",
+    "width": 114,
+    "height": 126
+  },
+  {
+    "source": "a",
+    "category": "energia",
+    "id": "bateria-central",
+    "label": "Bateria central",
+    "rect": [
+      171,
+      714,
+      132,
+      117
+    ],
+    "solid": true,
+    "path": "elementos/energia/bateria-central.png",
+    "aseprite": "elementos/energia/bateria-central.aseprite",
+    "width": 124,
+    "height": 103
+  },
+  {
+    "source": "a",
+    "category": "energia",
+    "id": "bateria-alta",
+    "label": "Bateria alta",
+    "rect": [
+      309,
+      699,
+      68,
+      125
+    ],
+    "solid": true,
+    "path": "elementos/energia/bateria-alta.png",
+    "aseprite": "elementos/energia/bateria-alta.aseprite",
+    "width": 63,
+    "height": 111
+  },
+  {
+    "source": "a",
+    "category": "energia",
+    "id": "bateria-mediana",
+    "label": "Bateria mediana",
+    "rect": [
+      382,
+      710,
+      68,
+      113
+    ],
+    "solid": true,
+    "path": "elementos/energia/bateria-mediana.png",
+    "aseprite": "elementos/energia/bateria-mediana.aseprite",
+    "width": 60,
+    "height": 102
+  },
+  {
+    "source": "b",
+    "category": "comunicacion",
+    "id": "antena-parabolica",
+    "label": "Antena parabolica",
+    "rect": [
+      999,
+      579,
+      78,
+      125
+    ],
+    "solid": true,
+    "path": "elementos/comunicacion/antena-parabolica.png",
+    "aseprite": "elementos/comunicacion/antena-parabolica.aseprite",
+    "width": 71,
+    "height": 117
+  },
+  {
+    "source": "b",
+    "category": "comunicacion",
+    "id": "torre-radio",
+    "label": "Torre de radio",
+    "rect": [
+      930,
+      574,
+      65,
+      131
+    ],
+    "solid": true,
+    "path": "elementos/comunicacion/torre-radio.png",
+    "aseprite": "elementos/comunicacion/torre-radio.aseprite",
+    "width": 50,
+    "height": 119
+  },
+  {
+    "source": "a",
+    "category": "comunicacion",
+    "id": "antena-parabolica-b",
+    "label": "Antena parabolica B",
+    "rect": [
+      1305,
+      317,
+      126,
+      165
+    ],
+    "solid": true,
+    "path": "elementos/comunicacion/antena-parabolica-b.png",
+    "aseprite": "elementos/comunicacion/antena-parabolica-b.aseprite",
+    "width": 112,
+    "height": 146
+  },
+  {
+    "source": "a",
+    "category": "comunicacion",
+    "id": "baliza-radio",
+    "label": "Baliza de radio",
+    "rect": [
+      1447,
+      308,
+      70,
+      173
+    ],
+    "solid": true,
+    "path": "elementos/comunicacion/baliza-radio.png",
+    "aseprite": "elementos/comunicacion/baliza-radio.aseprite",
+    "width": 61,
+    "height": 161
+  },
+  {
+    "source": "b",
+    "category": "carga",
+    "id": "caja-grande",
+    "label": "Caja grande",
+    "rect": [
+      560,
+      583,
+      67,
+      66
+    ],
+    "solid": true,
+    "path": "elementos/carga/caja-grande.png",
+    "aseprite": "elementos/carga/caja-grande.aseprite",
+    "width": 64,
+    "height": 59
+  },
+  {
+    "source": "b",
+    "category": "carga",
+    "id": "caja-alta",
+    "label": "Caja alta",
+    "rect": [
+      636,
+      583,
+      81,
+      68
+    ],
+    "solid": true,
+    "path": "elementos/carga/caja-alta.png",
+    "aseprite": "elementos/carga/caja-alta.aseprite",
+    "width": 71,
+    "height": 59
+  },
+  {
+    "source": "b",
+    "category": "carga",
+    "id": "caja-pequena",
+    "label": "Caja pequena",
+    "rect": [
+      726,
+      605,
+      70,
+      52
+    ],
+    "solid": true,
+    "path": "elementos/carga/caja-pequena.png",
+    "aseprite": "elementos/carga/caja-pequena.aseprite",
+    "width": 61,
+    "height": 49
+  },
+  {
+    "source": "b",
+    "category": "carga",
+    "id": "contenedor-blanco",
+    "label": "Contenedor blanco",
+    "rect": [
+      564,
+      652,
+      74,
+      72
+    ],
+    "solid": true,
+    "path": "elementos/carga/contenedor-blanco.png",
+    "aseprite": "elementos/carga/contenedor-blanco.aseprite",
+    "width": 63,
+    "height": 56
+  },
+  {
+    "source": "b",
+    "category": "carga",
+    "id": "contenedor-hexagonal",
+    "label": "Contenedor hexagonal",
+    "rect": [
+      640,
+      655,
+      77,
+      68
+    ],
+    "solid": true,
+    "path": "elementos/carga/contenedor-hexagonal.png",
+    "aseprite": "elementos/carga/contenedor-hexagonal.aseprite",
+    "width": 56,
+    "height": 55
+  },
+  {
+    "source": "b",
+    "category": "carga",
+    "id": "barriles-dobles",
+    "label": "Barriles dobles",
+    "rect": [
+      726,
+      665,
+      67,
+      58
+    ],
+    "solid": true,
+    "path": "elementos/carga/barriles-dobles.png",
+    "aseprite": "elementos/carga/barriles-dobles.aseprite",
+    "width": 62,
+    "height": 51
+  },
+  {
+    "source": "a",
+    "category": "carga",
+    "id": "caja-metalica",
+    "label": "Caja metalica",
+    "rect": [
+      534,
+      741,
+      79,
+      74
+    ],
+    "solid": true,
+    "path": "elementos/carga/caja-metalica.png",
+    "aseprite": "elementos/carga/caja-metalica.aseprite",
+    "width": 72,
+    "height": 59
+  },
+  {
+    "source": "a",
+    "category": "carga",
+    "id": "caja-naranja",
+    "label": "Caja naranja",
+    "rect": [
+      616,
+      743,
+      61,
+      72
+    ],
+    "solid": true,
+    "path": "elementos/carga/caja-naranja.png",
+    "aseprite": "elementos/carga/caja-naranja.aseprite",
+    "width": 52,
+    "height": 59
+  },
+  {
+    "source": "a",
+    "category": "carga",
+    "id": "caja-azul",
+    "label": "Caja azul",
+    "rect": [
+      678,
+      743,
+      63,
+      72
+    ],
+    "solid": true,
+    "path": "elementos/carga/caja-azul.png",
+    "aseprite": "elementos/carga/caja-azul.aseprite",
+    "width": 53,
+    "height": 59
+  },
+  {
+    "source": "b",
+    "category": "equipamiento",
+    "id": "tanque-a",
+    "label": "Tanque A",
+    "rect": [
+      597,
+      892,
+      44,
+      92
+    ],
+    "solid": true,
+    "path": "elementos/equipamiento/tanque-a.png",
+    "aseprite": "elementos/equipamiento/tanque-a.aseprite",
+    "width": 43,
+    "height": 82
+  },
+  {
+    "source": "b",
+    "category": "equipamiento",
+    "id": "tanque-b",
+    "label": "Tanque B",
+    "rect": [
+      646,
+      892,
+      46,
+      92
+    ],
+    "solid": true,
+    "path": "elementos/equipamiento/tanque-b.png",
+    "aseprite": "elementos/equipamiento/tanque-b.aseprite",
+    "width": 43,
+    "height": 83
+  },
+  {
+    "source": "b",
+    "category": "equipamiento",
+    "id": "tanques-gemelos",
+    "label": "Tanques gemelos",
+    "rect": [
+      863,
+      878,
+      95,
+      106
+    ],
+    "solid": true,
+    "path": "elementos/equipamiento/tanques-gemelos.png",
+    "aseprite": "elementos/equipamiento/tanques-gemelos.aseprite",
+    "width": 81,
+    "height": 100
+  },
+  {
+    "source": "b",
+    "category": "equipamiento",
+    "id": "brazo-minero",
+    "label": "Brazo minero",
+    "rect": [
+      819,
+      731,
+      134,
+      122
+    ],
+    "solid": true,
+    "path": "elementos/equipamiento/brazo-minero.png",
+    "aseprite": "elementos/equipamiento/brazo-minero.aseprite",
+    "width": 122,
+    "height": 103
+  },
+  {
+    "source": "b",
+    "category": "equipamiento",
+    "id": "extractor",
+    "label": "Extractor",
+    "rect": [
+      711,
+      747,
+      95,
+      111
+    ],
+    "solid": true,
+    "path": "elementos/equipamiento/extractor.png",
+    "aseprite": "elementos/equipamiento/extractor.aseprite",
+    "width": 90,
+    "height": 100
+  },
+  {
+    "source": "b",
+    "category": "equipamiento",
+    "id": "poste-carga",
+    "label": "Poste de carga",
+    "rect": [
+      794,
+      856,
+      65,
+      128
+    ],
+    "solid": true,
+    "path": "elementos/equipamiento/poste-carga.png",
+    "aseprite": "elementos/equipamiento/poste-carga.aseprite",
+    "width": 57,
+    "height": 123
+  },
+  {
+    "source": "b",
+    "category": "equipamiento",
+    "id": "escalera-a",
+    "label": "Escalera A",
+    "rect": [
+      965,
+      878,
+      50,
+      106
+    ],
+    "path": "elementos/equipamiento/escalera-a.png",
+    "aseprite": "elementos/equipamiento/escalera-a.aseprite",
+    "width": 42,
+    "height": 95
+  },
+  {
+    "source": "b",
+    "category": "equipamiento",
+    "id": "escalera-b",
+    "label": "Escalera B",
+    "rect": [
+      1032,
+      869,
+      56,
+      113
+    ],
+    "path": "elementos/equipamiento/escalera-b.png",
+    "aseprite": "elementos/equipamiento/escalera-b.aseprite",
+    "width": 38,
+    "height": 107
+  },
+  {
+    "source": "b",
+    "category": "equipamiento",
+    "id": "poste-tecnico",
+    "label": "Poste tecnico",
+    "rect": [
+      1093,
+      859,
+      61,
+      123
+    ],
+    "solid": true,
+    "path": "elementos/equipamiento/poste-tecnico.png",
+    "aseprite": "elementos/equipamiento/poste-tecnico.aseprite",
+    "width": 42,
+    "height": 118
+  },
+  {
+    "source": "b",
+    "category": "iluminacion",
+    "id": "baliza-naranja",
+    "label": "Baliza naranja",
+    "rect": [
+      1085,
+      581,
+      43,
+      119
+    ],
+    "path": "elementos/iluminacion/baliza-naranja.png",
+    "aseprite": "elementos/iluminacion/baliza-naranja.aseprite",
+    "width": 24,
+    "height": 104
+  },
+  {
+    "source": "b",
+    "category": "iluminacion",
+    "id": "foco-alto",
+    "label": "Foco alto",
+    "rect": [
+      1370,
+      570,
+      54,
+      131
+    ],
+    "path": "elementos/iluminacion/foco-alto.png",
+    "aseprite": "elementos/iluminacion/foco-alto.aseprite",
+    "width": 40,
+    "height": 124
+  },
+  {
+    "source": "a",
+    "category": "iluminacion",
+    "id": "foco-simple",
+    "label": "Foco simple",
+    "rect": [
+      659,
+      845,
+      89,
+      117
+    ],
+    "path": "elementos/iluminacion/foco-simple.png",
+    "aseprite": "elementos/iluminacion/foco-simple.aseprite",
+    "width": 68,
+    "height": 104
+  },
+  {
+    "source": "a",
+    "category": "iluminacion",
+    "id": "foco-doble",
+    "label": "Foco doble",
+    "rect": [
+      749,
+      830,
+      86,
+      129
+    ],
+    "path": "elementos/iluminacion/foco-doble.png",
+    "aseprite": "elementos/iluminacion/foco-doble.aseprite",
+    "width": 58,
+    "height": 111
+  },
+  {
+    "source": "a",
+    "category": "iluminacion",
+    "id": "baliza-roja",
+    "label": "Baliza roja",
+    "rect": [
+      836,
+      834,
+      53,
+      126
+    ],
+    "path": "elementos/iluminacion/baliza-roja.png",
+    "aseprite": "elementos/iluminacion/baliza-roja.aseprite",
+    "width": 38,
+    "height": 106
+  },
+  {
+    "source": "a",
+    "category": "iluminacion",
+    "id": "sensor",
+    "label": "Sensor",
+    "rect": [
+      898,
+      833,
+      58,
+      127
+    ],
+    "path": "elementos/iluminacion/sensor.png",
+    "aseprite": "elementos/iluminacion/sensor.aseprite",
+    "width": 33,
+    "height": 109
+  },
+  {
+    "source": "a",
+    "category": "iluminacion",
+    "id": "manga-viento",
+    "label": "Manga de viento",
+    "rect": [
+      962,
+      832,
+      91,
+      132
+    ],
+    "path": "elementos/iluminacion/manga-viento.png",
+    "aseprite": "elementos/iluminacion/manga-viento.aseprite",
+    "width": 84,
+    "height": 108
+  },
+  {
+    "source": "b",
+    "category": "vehiculos",
+    "id": "rover-exploracion",
+    "label": "Rover de exploracion",
+    "rect": [
+      425,
+      737,
+      147,
+      140
+    ],
+    "solid": true,
+    "path": "elementos/vehiculos/rover-exploracion.png",
+    "aseprite": "elementos/vehiculos/rover-exploracion.aseprite",
+    "width": 130,
+    "height": 116
+  },
+  {
+    "source": "b",
+    "category": "vehiculos",
+    "id": "nave-accidentada",
+    "label": "Nave accidentada",
+    "rect": [
+      18,
+      709,
+      395,
+      200
+    ],
+    "solid": true,
+    "path": "elementos/vehiculos/nave-accidentada.png",
+    "aseprite": "elementos/vehiculos/nave-accidentada.aseprite",
+    "width": 329,
+    "height": 184
+  },
+  {
+    "source": "a",
+    "category": "vehiculos",
+    "id": "rover-transporte",
+    "label": "Rover de transporte",
+    "rect": [
+      1046,
+      832,
+      164,
+      132
+    ],
+    "solid": true,
+    "path": "elementos/vehiculos/rover-transporte.png",
+    "aseprite": "elementos/vehiculos/rover-transporte.aseprite",
+    "width": 143,
+    "height": 109
+  },
+  {
+    "source": "a",
+    "category": "vehiculos",
+    "id": "capsula-accidentada",
+    "label": "Capsula accidentada",
+    "rect": [
+      1228,
+      702,
+      301,
+      185
+    ],
+    "solid": true,
+    "path": "elementos/vehiculos/capsula-accidentada.png",
+    "aseprite": "elementos/vehiculos/capsula-accidentada.aseprite",
+    "width": 287,
+    "height": 167
+  },
+  {
+    "source": "b",
+    "category": "vallas",
+    "id": "valla-simple",
+    "label": "Valla simple",
+    "rect": [
+      19,
+      918,
+      102,
+      70
+    ],
+    "solid": true,
+    "path": "elementos/vallas/valla-simple.png",
+    "aseprite": "elementos/vallas/valla-simple.aseprite",
+    "width": 99,
+    "height": 59
+  },
+  {
+    "source": "b",
+    "category": "vallas",
+    "id": "valla-seguridad",
+    "label": "Valla de seguridad",
+    "rect": [
+      127,
+      918,
+      105,
+      70
+    ],
+    "solid": true,
+    "path": "elementos/vallas/valla-seguridad.png",
+    "aseprite": "elementos/vallas/valla-seguridad.aseprite",
+    "width": 97,
+    "height": 60
+  },
+  {
+    "source": "b",
+    "category": "vallas",
+    "id": "valla-doble",
+    "label": "Valla doble",
+    "rect": [
+      237,
+      918,
+      157,
+      70
+    ],
+    "solid": true,
+    "path": "elementos/vallas/valla-doble.png",
+    "aseprite": "elementos/vallas/valla-doble.aseprite",
+    "width": 149,
+    "height": 62
+  },
+  {
+    "source": "b",
+    "category": "vallas",
+    "id": "valla-reforzada",
+    "label": "Valla reforzada",
+    "rect": [
+      397,
+      918,
+      86,
+      70
+    ],
+    "solid": true,
+    "path": "elementos/vallas/valla-reforzada.png",
+    "aseprite": "elementos/vallas/valla-reforzada.aseprite",
+    "width": 78,
+    "height": 61
+  },
+  {
+    "source": "b",
+    "category": "vallas",
+    "id": "valla-corta",
+    "label": "Valla corta",
+    "rect": [
+      485,
+      918,
+      91,
+      70
+    ],
+    "solid": true,
+    "path": "elementos/vallas/valla-corta.png",
+    "aseprite": "elementos/vallas/valla-corta.aseprite",
+    "width": 81,
+    "height": 61
+  },
+  {
+    "source": "a",
+    "category": "tuberias",
+    "id": "tubo-corto",
+    "label": "Tubo corto",
+    "rect": [
+      21,
+      844,
+      70,
+      55
+    ],
+    "path": "elementos/tuberias/tubo-corto.png",
+    "aseprite": "elementos/tuberias/tubo-corto.aseprite",
+    "width": 64,
+    "height": 28
+  },
+  {
+    "source": "a",
+    "category": "tuberias",
+    "id": "tubo-t",
+    "label": "Tubo T",
+    "rect": [
+      99,
+      844,
+      91,
+      66
+    ],
+    "path": "elementos/tuberias/tubo-t.png",
+    "aseprite": "elementos/tuberias/tubo-t.aseprite",
+    "width": 81,
+    "height": 52
+  },
+  {
+    "source": "a",
+    "category": "tuberias",
+    "id": "tubo-cruce",
+    "label": "Tubo cruce",
+    "rect": [
+      192,
+      835,
+      76,
+      81
+    ],
+    "path": "elementos/tuberias/tubo-cruce.png",
+    "aseprite": "elementos/tuberias/tubo-cruce.aseprite",
+    "width": 66,
+    "height": 75
+  },
+  {
+    "source": "a",
+    "category": "tuberias",
+    "id": "tubo-codo",
+    "label": "Tubo codo",
+    "rect": [
+      270,
+      836,
+      72,
+      77
+    ],
+    "path": "elementos/tuberias/tubo-codo.png",
+    "aseprite": "elementos/tuberias/tubo-codo.aseprite",
+    "width": 64,
+    "height": 70
+  },
+  {
+    "source": "a",
+    "category": "tuberias",
+    "id": "tubo-largo",
+    "label": "Tubo largo",
+    "rect": [
+      18,
+      916,
+      105,
+      55
+    ],
+    "path": "elementos/tuberias/tubo-largo.png",
+    "aseprite": "elementos/tuberias/tubo-largo.aseprite",
+    "width": 95,
+    "height": 32
+  },
+  {
+    "source": "a",
+    "category": "tuberias",
+    "id": "tubo-bifurcacion",
+    "label": "Tubo bifurcacion",
+    "rect": [
+      126,
+      913,
+      88,
+      65
+    ],
+    "path": "elementos/tuberias/tubo-bifurcacion.png",
+    "aseprite": "elementos/tuberias/tubo-bifurcacion.aseprite",
+    "width": 74,
+    "height": 52
+  },
+  {
+    "source": "a",
+    "category": "tuberias",
+    "id": "tubo-esquina",
+    "label": "Tubo esquina",
+    "rect": [
+      216,
+      913,
+      79,
+      66
+    ],
+    "path": "elementos/tuberias/tubo-esquina.png",
+    "aseprite": "elementos/tuberias/tubo-esquina.aseprite",
+    "width": 74,
+    "height": 43
+  },
+  {
+    "source": "a",
+    "category": "tuberias",
+    "id": "tubo-remate",
+    "label": "Tubo remate",
+    "rect": [
+      291,
+      917,
+      55,
+      57
+    ],
+    "path": "elementos/tuberias/tubo-remate.png",
+    "aseprite": "elementos/tuberias/tubo-remate.aseprite",
+    "width": 48,
+    "height": 29
+  },
+  {
+    "source": "b",
+    "category": "interior",
+    "id": "consola-investigacion",
+    "label": "Consola de investigacion",
+    "rect": [
+      18,
+      596,
+      93,
+      103
+    ],
+    "solid": true,
+    "path": "elementos/interior/consola-investigacion.png",
+    "aseprite": "elementos/interior/consola-investigacion.aseprite",
+    "width": 84,
+    "height": 87
+  },
+  {
+    "source": "b",
+    "category": "interior",
+    "id": "consola-control",
+    "label": "Consola de control",
+    "rect": [
+      112,
+      597,
+      88,
+      100
+    ],
+    "solid": true,
+    "path": "elementos/interior/consola-control.png",
+    "aseprite": "elementos/interior/consola-control.aseprite",
+    "width": 76,
+    "height": 78
+  },
+  {
+    "source": "b",
+    "category": "interior",
+    "id": "terminal-pequeno",
+    "label": "Terminal pequeno",
+    "rect": [
+      203,
+      611,
+      47,
+      87
+    ],
+    "solid": true,
+    "path": "elementos/interior/terminal-pequeno.png",
+    "aseprite": "elementos/interior/terminal-pequeno.aseprite",
+    "width": 47,
+    "height": 67
+  },
+  {
+    "source": "b",
+    "category": "interior",
+    "id": "armario-medico",
+    "label": "Armario medico",
+    "rect": [
+      252,
+      594,
+      64,
+      112
+    ],
+    "solid": true,
+    "path": "elementos/interior/armario-medico.png",
+    "aseprite": "elementos/interior/armario-medico.aseprite",
+    "width": 49,
+    "height": 99
+  },
+  {
+    "source": "b",
+    "category": "interior",
+    "id": "terminal-vertical",
+    "label": "Terminal vertical",
+    "rect": [
+      315,
+      594,
+      53,
+      109
+    ],
+    "solid": true,
+    "path": "elementos/interior/terminal-vertical.png",
+    "aseprite": "elementos/interior/terminal-vertical.aseprite",
+    "width": 43,
+    "height": 93
+  },
+  {
+    "source": "b",
+    "category": "interior",
+    "id": "servidor",
+    "label": "Servidor",
+    "rect": [
+      373,
+      595,
+      70,
+      110
+    ],
+    "solid": true,
+    "path": "elementos/interior/servidor.png",
+    "aseprite": "elementos/interior/servidor.aseprite",
+    "width": 61,
+    "height": 92
+  },
+  {
+    "source": "b",
+    "category": "interior",
+    "id": "reactor-cian",
+    "label": "Reactor cian",
+    "rect": [
+      449,
+      582,
+      98,
+      125
+    ],
+    "solid": true,
+    "path": "elementos/interior/reactor-cian.png",
+    "aseprite": "elementos/interior/reactor-cian.aseprite",
+    "width": 95,
+    "height": 113
+  },
+  {
+    "source": "b",
+    "category": "interior",
+    "id": "mesa-laboratorio",
+    "label": "Mesa de laboratorio",
+    "rect": [
+      799,
+      579,
+      126,
+      127
+    ],
+    "solid": true,
+    "path": "elementos/interior/mesa-laboratorio.png",
+    "aseprite": "elementos/interior/mesa-laboratorio.aseprite",
+    "width": 111,
+    "height": 110
+  },
+  {
+    "source": "b",
+    "category": "interior",
+    "id": "estacion-diagnostico",
+    "label": "Estacion de diagnostico",
+    "rect": [
+      949,
+      745,
+      76,
+      112
+    ],
+    "solid": true,
+    "path": "elementos/interior/estacion-diagnostico.png",
+    "aseprite": "elementos/interior/estacion-diagnostico.aseprite",
+    "width": 75,
+    "height": 93
+  },
+  {
+    "source": "b",
+    "category": "interior",
+    "id": "consola-logistica",
+    "label": "Consola de logistica",
+    "rect": [
+      703,
+      878,
+      83,
+      105
+    ],
+    "solid": true,
+    "path": "elementos/interior/consola-logistica.png",
+    "aseprite": "elementos/interior/consola-logistica.aseprite",
+    "width": 78,
+    "height": 100
+  },
+  {
+    "source": "generated",
+    "category": "interior",
+    "id": "cama-tripulacion",
+    "label": "Cama de tripulacion",
+    "imageFile": "fuentes/cama-alpha.png",
+    "targetWidth": 104,
+    "solid": true,
+    "path": "elementos/interior/cama-tripulacion.png",
+    "aseprite": "elementos/interior/cama-tripulacion.aseprite",
+    "width": 104,
+    "height": 67
+  },
+  {
+    "source": "generated",
+    "category": "interior",
+    "id": "cultivo-hidroponico",
+    "label": "Cultivo hidroponico",
+    "imageFile": "fuentes/cultivo-alpha.png",
+    "targetWidth": 142,
+    "solid": true,
+    "path": "elementos/interior/cultivo-hidroponico.png",
+    "aseprite": "elementos/interior/cultivo-hidroponico.aseprite",
+    "width": 142,
+    "height": 81
+  },
+  {
+    "source": "generated",
+    "category": "interior",
+    "id": "mesa-comedor",
+    "label": "Mesa de comedor",
+    "imageFile": "fuentes/mesa-alpha.png",
+    "targetWidth": 116,
+    "solid": true,
+    "path": "elementos/interior/mesa-comedor.png",
+    "aseprite": "elementos/interior/mesa-comedor.aseprite",
+    "width": 116,
+    "height": 75
+  }
+]
