@@ -33,7 +33,7 @@
 | Input | **Solo el Input System nuevo** (`Keyboard.current`, Input Actions). `UnityEngine.Input` lanza una excepción. |
 | UI | UGUI + **TextMeshPro** (TMP Essentials importado). `EventSystem` con `InputSystemUIInputModule`. |
 | Física | Physics 2D. Usa `rb.linearVelocity`, no `velocity`. |
-| Pixel art | **16 px = 1 unidad** (tile de 16×16 = 1 unidad). Filtro Point, sin compresión. Personajes con el pivote en los pies. |
+| Pixel art | **32 px = 1 unidad** para todo (tiles de 32×32 = 1 celda, personajes 32×32, objetos a su tamaño nativo); el rover a 64 px = 1 unidad. Filtro Point, sin compresión. `PixelArtImporter` lo aplica según la carpeta. Orden por Y en las cámaras (`TransparencySortMode.CustomAxis` (0,1,0)). |
 | IA | **MCP for Unity** (`com.coplaydev.unity-mcp`). Con Unity abierto, sirve en `http://127.0.0.1:8080/mcp`. En Claude Code: `claude mcp add --transport http unityMCP http://127.0.0.1:8080/mcp`. |
 
 ## 3. Arquitectura (resumen; detalle en `docs/architecture/`)
@@ -83,7 +83,7 @@ Elementos visuales/                   zips originales de los personajes (fuente;
 
 ### Pendiente
 - [ ] Reemplazar placeholders por arte (tileset de Marte e interior, rover, puntos, UI, íconos, retratos, fuente pixel) y audio.
-- [ ] Tilemap de Marte con el tileset (mantener zonas y posiciones de los puntos).
+- [x] Arte de terreno integrado (entrega `Elementos visuales/Mars-Crafts-Terrenos`, generada con IA): Marte con Tilemap de suelo + arena (cauce/delta), mesetas en el borde, rocas, cráteres, escombros en la zona rocosa, sprites de los 3 puntos y del rover; Hub con piso metálico, paneles, consolas y esclusa como puerta. **No hay tiles de transición**: los bordes de arena son escalonados (decisión aceptada).
 - [ ] Verificar los datos NASA con su fuente (`docs/research/`) y rellenar `nasaFact` de los componentes.
 - [ ] Definir el "consumo base" de energía para la regla de verificación (TODO en `Verifier`).
 - [ ] Build final (Windows/Mac) y prueba completa en la build.
