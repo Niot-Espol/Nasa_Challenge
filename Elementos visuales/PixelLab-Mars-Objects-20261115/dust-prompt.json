@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "description": "A seamless repeating transparent pixel art Martian dust storm particle overlay, 64x64. Very sparse tiny airborne rusty orange muted ochre light terracotta pixel clusters and short directional wind streaks distributed irregularly across entire tile. At least 85 percent truly transparent empty space, individual dust particles 1 to 3 pixels, short streaks 2 to 4 pixels. Sparse crisp square pixel placement creates density variation, NOT smooth gradients. Limited 5 color dust palette. Repeatable horizontally and vertically with no visible grid or border. No solid background, no opaque clouds, no rocks, no scenery, no characters, no terrain, no realistic smoke, no text. This is an airy particles overlay, never a ground texture.",
+  "width": 64,
+  "height": 64,
+  "no_background": true,
+  "max_colors": 6,
+  "seed": 1115,
+  "style_image": null
+}

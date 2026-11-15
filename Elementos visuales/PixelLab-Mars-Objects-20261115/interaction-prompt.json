@@ -1,0 +1,19 @@
+{
+  "tool": "create_image_pro_flash",
+  "description": "ONE tiny square keyboard keycap displaying ONLY the uppercase letter E clearly centered. E must have one vertical stroke and three horizontal strokes, a simple readable 3x5 pixel uppercase E. Dark navy face, light gray metallic keycap border, tiny cyan tech accent. Clean 16-bit GBA sci-fi UI matching Mars Crafts, crisp square pixels and simple palette. Keycap occupies at most 12x11 pixels, centered within a transparent 16x16 canvas with at least 2px empty margin on all sides to allow gentle bobbing. No extra letters, no keyboard, no panel, no scenery, no shadow outside the key.",
+  "width": 16,
+  "height": 16,
+  "no_background": true,
+  "max_colors": 24,
+  "seed": 1115,
+  "style_image": {
+    "localReference": "ref-ui.png",
+    "usage_description": "Existing Mars Crafts art reference: preserve palette, clean pixel detail, outline, lighting and object identity as described. Do not reproduce reference subject if requesting a different prop."
+  },
+  "style_options": {
+    "color_palette": false,
+    "outline": true,
+    "detail": true,
+    "shading": true
+  }
+}

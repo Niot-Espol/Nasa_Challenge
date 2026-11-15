@@ -1,0 +1,13 @@
+{
+  "tool": "create_image_pro_flash",
+  "description": "A remarkable scientifically unique Martian geological rock for the final exploration objective in Mars Crafts. Preserve the existing reddish base and identifying cyan mineral accent of the reference but replace giant fantasy crystal spikes with a plausible naturally eroded curved sandstone specimen. Distinct sculptural arch-like or crescent-shaped eroded rock with a broken hollow section exposing pale mineral-rich interior, striking curved thin orange sediment bands, dark basalt inclusions and SMALL desaturated cyan mineral seams. Scientifically interesting natural geology, never magical or alien. Memorable silhouette unlike angular mineral outcrop or spreading sediment fan. Low top-down GBA RPG view, refined 16-bit pixel art, clean dark burgundy outline, light upper left, few colors and crisp pixels, readable at 32x32. Transparent background, centered within 2px margin, no ground patch, text, UI, glow or particles.",
+  "width": 32,
+  "height": 32,
+  "no_background": true,
+  "max_colors": 24,
+  "seed": 1115,
+  "style_image": {
+    "localReference": "ref-special.png",
+    "usage_description": "Existing Mars Crafts art reference: preserve palette, clean pixel detail, outline, lighting and object identity as described. Do not reproduce reference subject if requesting a different prop."
+  }
+}

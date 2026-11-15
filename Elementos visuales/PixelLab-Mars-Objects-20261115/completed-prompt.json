@@ -1,0 +1,19 @@
+{
+  "tool": "create_image_pro_flash",
+  "description": "A tiny completed scientific objective badge for Mars Crafts. ONE large clear bright cyan green check mark inside a compact dark navy sci-fi confirmation badge, tiny white metallic corner accents. The check is the dominant simple unambiguous shape. Extremely readable 16x16 GBA pixel art UI, 6 to 10 colors, clean dark outline, crisp square pixels. Centered isolated independent icon with 2px transparent margin all sides. Transparent background, no letters, no text, no other symbols, no environment, no big panel.",
+  "width": 16,
+  "height": 16,
+  "no_background": true,
+  "max_colors": 24,
+  "seed": 1115,
+  "style_image": {
+    "localReference": "ref-ui.png",
+    "usage_description": "Existing Mars Crafts art reference: preserve palette, clean pixel detail, outline, lighting and object identity as described. Do not reproduce reference subject if requesting a different prop."
+  },
+  "style_options": {
+    "color_palette": false,
+    "outline": true,
+    "detail": true,
+    "shading": true
+  }
+}

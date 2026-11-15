@@ -1,0 +1,19 @@
+{
+  "tool": "create_image_pro_flash",
+  "description": "A SMALL concentrated circular scientific scanning pulse for a Mars rover, initial animation frame. Thin cyan holographic ring centered on exact center of transparent 32x32 canvas, ring DIAMETER 10 pixels, hollow transparent center, four tiny segmented tech markings on ring and 2 pale cyan highlight pixels. Authentic crisp GBA 16-bit pixel art, dark blue cyan and light cyan only, no smooth gradients. Keep outer area transparent for future ring expansion. No object or rock or rover or text or ground or panel. One centered ring only.",
+  "width": 32,
+  "height": 32,
+  "no_background": true,
+  "max_colors": 24,
+  "seed": 1115,
+  "style_image": {
+    "localReference": "ref-ui.png",
+    "usage_description": "Existing Mars Crafts art reference: preserve palette, clean pixel detail, outline, lighting and object identity as described. Do not reproduce reference subject if requesting a different prop."
+  },
+  "style_options": {
+    "color_palette": false,
+    "outline": true,
+    "detail": true,
+    "shading": true
+  }
+}

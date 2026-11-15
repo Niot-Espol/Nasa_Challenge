@@ -1,0 +1,13 @@
+{
+  "tool": "create_image_pro_flash",
+  "description": "An isolated ancient Martian river delta sedimentary formation for Mars Crafts. Small LOW fan-shaped broad outcrop, gently spreading curved and horizontal sediment layers, pale ochre beige sandstone with rusty orange iron-rich strata and dark reddish brown shadows. Improve the supplied preliminary stepped orange rock into a low eroded sediment fan, preserve its warm palette and clean dark outline. Distinct open fan silhouette with visible thin strata, not a tall mountain or ordinary boulder. Low top-down GBA RPG perspective, authentic refined 16-bit pixel art, limited palette, lighting upper left, crisp square pixels. Transparent background, no ground patch, no terrain, no characters, no text, no UI, no glow, no fantasy. Single centered fully contained object with 2 pixel transparent margin on all sides, readable at 32x32.",
+  "width": 32,
+  "height": 32,
+  "no_background": true,
+  "max_colors": 24,
+  "seed": 1115,
+  "style_image": {
+    "localReference": "ref-delta.png",
+    "usage_description": "Existing Mars Crafts art reference: preserve palette, clean pixel detail, outline, lighting and object identity as described. Do not reproduce reference subject if requesting a different prop."
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "allChecksPassed": true,
+  "checks": {
+    "exactlyTwelveFinalPNGs": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_delta.png:dimensions": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_delta.png:binaryRealAlpha": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_delta.png:hash": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_delta.png:limitedPalette": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_delta.png:unclipped": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_delta.png:import": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_mineral.png:dimensions": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_mineral.png:binaryRealAlpha": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_mineral.png:hash": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_mineral.png:limitedPalette": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_mineral.png:unclipped": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_mineral.png:import": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_special_rock.png:dimensions": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_special_rock.png:binaryRealAlpha": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_special_rock.png:hash": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_special_rock.png:limitedPalette": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_special_rock.png:unclipped": true,
+    "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_special_rock.png:import": true,
+    "Assets/_Project/Art/Sprites/Mars/Landing/landing_module.png:dimensions": true,
+    "Assets/_Project/Art/Sprites/Mars/Landing/landing_module.png:binaryRealAlpha": true,
+    "Assets/_Project/Art/Sprites/Mars/Landing/landing_module.png:hash": true,
+    "Assets/_Project/Art/Sprites/Mars/Landing/landing_module.png:limitedPalette": true,
+    "Assets/_Project/Art/Sprites/Mars/Landing/landing_module.png:unclipped": true,
+    "Assets/_Project/Art/Sprites/Mars/Landing/landing_module.png:import": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/science_completed.png:dimensions": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/science_completed.png:binaryRealAlpha": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/science_completed.png:hash": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/science_completed.png:limitedPalette": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/science_completed.png:unclipped": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/science_completed.png:import": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/Interaction/interaction_e_000.png:dimensions": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/Interaction/interaction_e_000.png:binaryRealAlpha": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/Interaction/interaction_e_000.png:hash": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/Interaction/interaction_e_000.png:limitedPalette": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/Interaction/interaction_e_000.png:unclipped": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/Interaction/interaction_e_000.png:import": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/Interaction/interaction_e_001.png:dimensions": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/Interaction/interaction_e_001.png:binaryRealAlpha": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/Interaction/interaction_e_001.png:hash": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/Interaction/interaction_e_001.png:limitedPalette": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/Interaction/interaction_e_001.png:unclipped": true,
+    "Assets/_Project/Art/Sprites/Mars/Indicators/Interaction/interaction_e_001.png:import": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Dust/mars_dust_texture.png:dimensions": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Dust/mars_dust_texture.png:binaryRealAlpha": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Dust/mars_dust_texture.png:hash": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Dust/mars_dust_texture.png:limitedPalette": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Dust/mars_dust_texture.png:import": true,
+    "dustRepeatImport": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_000.png:dimensions": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_000.png:binaryRealAlpha": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_000.png:hash": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_000.png:limitedPalette": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_000.png:unclipped": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_000.png:import": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_001.png:dimensions": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_001.png:binaryRealAlpha": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_001.png:hash": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_001.png:limitedPalette": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_001.png:unclipped": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_001.png:import": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_002.png:dimensions": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_002.png:binaryRealAlpha": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_002.png:hash": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_002.png:limitedPalette": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_002.png:unclipped": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_002.png:import": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_003.png:dimensions": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_003.png:binaryRealAlpha": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_003.png:hash": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_003.png:limitedPalette": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_003.png:unclipped": true,
+    "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_003.png:import": true,
+    "interactionSamePixelsShiftedOneUp": true,
+    "uppercaseE3x5": true,
+    "scan0ClearCenter": true,
+    "scan1ClearCenter": true,
+    "scan2ClearCenter": true,
+    "scan3ClearCenter": true,
+    "scanOutwardExpansion": true,
+    "scanLastFrameSparseParticles": true,
+    "dustMostlyTransparent": true,
+    "dustOppositeEdgesMatch": true,
+    "onlyAllowedTrackedChanges": true,
+    "onlyAllowedNewFiles": true,
+    "allNewAssetsHaveMetadata": true,
+    "noCredentialsInChanges": true,
+    "newGuidsUnique": true,
+    "checklistOnlyEightTargetRows": true
+  },
+  "assets": [
+    {
+      "path": "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_delta.png",
+      "size": [
+        32,
+        32
+      ],
+      "colors": 14,
+      "transparentPercent": 62.6
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_mineral.png",
+      "size": [
+        32,
+        32
+      ],
+      "colors": 22,
+      "transparentPercent": 48.93
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_special_rock.png",
+      "size": [
+        32,
+        32
+      ],
+      "colors": 19,
+      "transparentPercent": 47.85
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Mars/Landing/landing_module.png",
+      "size": [
+        48,
+        48
+      ],
+      "colors": 24,
+      "transparentPercent": 43.19
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Mars/Indicators/science_completed.png",
+      "size": [
+        16,
+        16
+      ],
+      "colors": 24,
+      "transparentPercent": 25.39
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Mars/Indicators/Interaction/interaction_e_000.png",
+      "size": [
+        16,
+        16
+      ],
+      "colors": 16,
+      "transparentPercent": 40.62
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Mars/Indicators/Interaction/interaction_e_001.png",
+      "size": [
+        16,
+        16
+      ],
+      "colors": 16,
+      "transparentPercent": 40.62
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Mars/Effects/Dust/mars_dust_texture.png",
+      "size": [
+        64,
+        64
+      ],
+      "colors": 6,
+      "transparentPercent": 96.7
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_000.png",
+      "size": [
+        32,
+        32
+      ],
+      "colors": 21,
+      "transparentPercent": 93.07
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_001.png",
+      "size": [
+        32,
+        32
+      ],
+      "colors": 9,
+      "transparentPercent": 85.06
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_002.png",
+      "size": [
+        32,
+        32
+      ],
+      "colors": 11,
+      "transparentPercent": 75.2
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_003.png",
+      "size": [
+        32,
+        32
+      ],
+      "colors": 7,
+      "transparentPercent": 95.61
+    }
+  ],
+  "scanVisibleWidths": [
+    12,
+    20,
+    26,
+    28
+  ],
+  "changedTrackedFiles": [
+    "AGENTS.md",
+    "Assets/_Project/Art/GENERATED_ASSETS_REPORT.md",
+    "Assets/_Project/Scripts/Editor/PixelArtImporter.cs",
+    "docs/game-design/lista-arte-para-dibujar.md"
+  ],
+  "newFiles": 68,
+  "visualReview": {
+    "terrainAndRover": true,
+    "distinctScienceSilhouettes": true,
+    "readableCheckAndE": true,
+    "landerNoRoverInside": true,
+    "scanSequence": true,
+    "dust3x3AndTerrain": true
+  },
+  "unityPlayTested": false,
+  "webGLBuildTested": false,
+  "pushed": false
+}

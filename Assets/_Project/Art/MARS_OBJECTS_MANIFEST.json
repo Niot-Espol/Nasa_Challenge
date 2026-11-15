@@ -1,0 +1,369 @@
+{
+  "assets": [
+    {
+      "name": "delta",
+      "path": "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_delta.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "frame": null,
+      "bounds": [
+        1,
+        12,
+        31,
+        31
+      ],
+      "visibleColors": 14,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.626,
+      "sha256": "430fb82792570b94e3c7172b38ef893fff22163050390c4c01777f0f8f70684d",
+      "notes": "Native 32px output; translated to shared bottom baseline y=30, no palette edits."
+    },
+    {
+      "name": "mineral",
+      "path": "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_mineral.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "frame": null,
+      "bounds": [
+        2,
+        4,
+        30,
+        31
+      ],
+      "visibleColors": 22,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.4893,
+      "sha256": "31ebf8b419c02a6ce2e9c25fff0f232eb9d768130c84be85a4dd4b2a5e2012c8",
+      "notes": "Native 32px output; translated to shared bottom baseline y=30, no palette edits."
+    },
+    {
+      "name": "special",
+      "path": "Assets/_Project/Art/Sprites/Mars/SciencePoints/science_point_special_rock.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "frame": null,
+      "bounds": [
+        2,
+        4,
+        29,
+        31
+      ],
+      "visibleColors": 19,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.4785,
+      "sha256": "21f5cf7eff52685099603cbcb317226e90d62aa0a234763ebf4ccc9342ac82b4",
+      "notes": "Native 32px output; translated to shared bottom baseline y=30, no palette edits."
+    },
+    {
+      "name": "lander",
+      "path": "Assets/_Project/Art/Sprites/Mars/Landing/landing_module.png",
+      "dimensions": [
+        48,
+        48
+      ],
+      "frame": null,
+      "bounds": [
+        2,
+        5,
+        46,
+        46
+      ],
+      "visibleColors": 24,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.4319,
+      "sha256": "6f571b977486a9a4b7d1a829763aeb7987426f2a1309c70fa58c03d837654b17",
+      "notes": ""
+    },
+    {
+      "name": "completed",
+      "path": "Assets/_Project/Art/Sprites/Mars/Indicators/science_completed.png",
+      "dimensions": [
+        16,
+        16
+      ],
+      "frame": null,
+      "bounds": [
+        1,
+        1,
+        15,
+        15
+      ],
+      "visibleColors": 24,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.2539,
+      "sha256": "63320948b6fa4357992bd599e5d7290e8301dc35560f9f800933a954f4937e56",
+      "notes": ""
+    },
+    {
+      "name": "interaction",
+      "path": "Assets/_Project/Art/Sprites/Mars/Indicators/Interaction/interaction_e_000.png",
+      "dimensions": [
+        16,
+        16
+      ],
+      "frame": 0,
+      "bounds": [
+        1,
+        2,
+        14,
+        14
+      ],
+      "visibleColors": 16,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.4062,
+      "sha256": "8a068e3b31ea3deca62b6bf11cc8050ff723b3150ef4bb949e2ad8c17a03d479",
+      "notes": "Generated keycap preserved; defective closed E repaired to explicit 3x5 glyph. Frame 001 translated upward exactly 1 pixel, preserving glyph and design."
+    },
+    {
+      "name": "interaction",
+      "path": "Assets/_Project/Art/Sprites/Mars/Indicators/Interaction/interaction_e_001.png",
+      "dimensions": [
+        16,
+        16
+      ],
+      "frame": 1,
+      "bounds": [
+        1,
+        1,
+        14,
+        13
+      ],
+      "visibleColors": 16,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.4062,
+      "sha256": "78732223172415bc540ed25ec56ce9ece13ff992c059fa4f6763f591a13f29ce",
+      "notes": "Generated keycap preserved; defective closed E repaired to explicit 3x5 glyph. Frame 001 translated upward exactly 1 pixel, preserving glyph and design."
+    },
+    {
+      "name": "dust",
+      "path": "Assets/_Project/Art/Sprites/Mars/Effects/Dust/mars_dust_texture.png",
+      "dimensions": [
+        64,
+        64
+      ],
+      "frame": null,
+      "bounds": [
+        1,
+        1,
+        63,
+        63
+      ],
+      "visibleColors": 6,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.967,
+      "sha256": "1d91a3d4d120f954700a0e74049b54cb2b291e1d35d8123fd8160b85dcd35d29",
+      "notes": "Native 64px output; pale near-white sparkles changed to muted ochre. Sparse generated clusters preserved; all opposite boundary pixels match on transparent edges."
+    },
+    {
+      "name": "scan",
+      "path": "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_000.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "frame": 0,
+      "bounds": [
+        10,
+        10,
+        22,
+        22
+      ],
+      "visibleColors": 21,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.9307,
+      "sha256": "61ad6dc2675a227363b0591bc1e89f321fec0c9e9c1ca7377bc0735183faf79a",
+      "notes": "Actual MCP animation index 0; recentered and resized nearest-neighbor within a 12px square; no object or opaque center added."
+    },
+    {
+      "name": "scan",
+      "path": "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_001.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "frame": 1,
+      "bounds": [
+        6,
+        6,
+        26,
+        26
+      ],
+      "visibleColors": 9,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.8506,
+      "sha256": "51c6301de3896df01eb88dc55eb3819dd66ce9dbead9d784c562e9f268a9c5d7",
+      "notes": "Actual MCP animation index 2; recentered and resized nearest-neighbor within a 20px square; no object or opaque center added."
+    },
+    {
+      "name": "scan",
+      "path": "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_002.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "frame": 2,
+      "bounds": [
+        3,
+        3,
+        29,
+        28
+      ],
+      "visibleColors": 11,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.752,
+      "sha256": "dc0c2160d237843bfd1b20b95dbe2bec58292ed3aff72cd9a75f1136ea0d3a2d",
+      "notes": "Actual MCP animation index 3; recentered and resized nearest-neighbor within a 26px square; no object or opaque center added."
+    },
+    {
+      "name": "scan",
+      "path": "Assets/_Project/Art/Sprites/Mars/Effects/Scan/scan_003.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "frame": 3,
+      "bounds": [
+        2,
+        3,
+        30,
+        29
+      ],
+      "visibleColors": 7,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.9561,
+      "sha256": "f0dc4f222e27ecdb86f501359e67f77c9a97e7624e2869299f73521226b97128",
+      "notes": "Actual MCP animation index 4; recentered and resized nearest-neighbor within a 28px square; no object or opaque center added."
+    }
+  ],
+  "jobs": [
+    {
+      "name": "delta",
+      "job_id": "0fc6139f-ce77-4d75-acd1-561f66f3a3a7",
+      "source_image_id": "17b3e02a-a349-5af7-b48b-388443ab93e3",
+      "tool": "create_image_pro_flash"
+    },
+    {
+      "name": "mineral",
+      "job_id": "90daf0e9-d259-4906-af55-b470e28d888d",
+      "source_image_id": "7fae09a2-0709-5c85-957c-cbd2f2f33073",
+      "tool": "create_image_pro_flash"
+    },
+    {
+      "name": "special",
+      "job_id": "d120b480-b901-4bc7-bd5b-017b017eb136",
+      "source_image_id": "fccb3927-cf10-5236-ad2b-0045cefa41f7",
+      "tool": "create_image_pro_flash"
+    },
+    {
+      "name": "lander",
+      "job_id": "6c62ef2c-e6e8-4d90-9272-223e0ed3f1f8",
+      "source_image_id": "169ba3a3-3032-54a9-82b0-0d54b6b48331",
+      "tool": "create_image_pro_flash"
+    },
+    {
+      "name": "completed",
+      "job_id": "3ebe8e57-47da-436c-95f5-1e1b55e60d3e",
+      "source_image_id": "7069650c-ea1f-5fae-a681-e528279bda6f",
+      "tool": "create_image_pro_flash"
+    },
+    {
+      "name": "interaction",
+      "job_id": "263ce9eb-2786-4cc5-8a8b-10bc0510ceae",
+      "source_image_id": "e6649a3a-608a-5e6f-8cd8-daca4f1de8d5",
+      "tool": "create_image_pro_flash"
+    },
+    {
+      "name": "dust",
+      "job_id": "4501380d-83f5-4ea8-80df-cc4f7740de88",
+      "source_image_id": "f3805261-1a9c-5ff0-b0fc-455008d9e5a1",
+      "tool": "create_image_pro_flash"
+    },
+    {
+      "name": "scan",
+      "job_id": "4843da62-ec33-4fd8-a9b0-0b9e9b524900",
+      "source_image_id": "8c4d386d-17b8-55d9-88f5-f4469c932b9c",
+      "tool": "create_image_pro_flash"
+    },
+    {
+      "name": "scan-animation",
+      "job_id": "a7091468-09f6-4a0e-b2ea-8160980217a1",
+      "tool": "animate_image",
+      "generatedFrames": 4,
+      "returnedFramesIncludingInput": 5,
+      "selectedIndices": [
+        0,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "corrections": [],
+  "mcpEndpoint": "https://api.pixellab.ai/mcp",
+  "catalogueToolCount": 154,
+  "referencePreparation": "Native artwork inspected; references above canvas size were fitted with nearest-neighbor only, transparently padded. Original resources never changed.",
+  "references": {
+    "delta": "Assets/_Project/Art/Sprites/Mars/Rocks/roca-escalonada.png",
+    "mineral": "Assets/_Project/Art/Sprites/Mars/Resources/deposito-rojo.png",
+    "special": "Assets/_Project/Art/Sprites/Mars/Resources/deposito-cristal.png",
+    "lander": "Elementos visuales/Mars-Crafts-Terrenos/elementos/edificios/plataforma-aterrizaje.png",
+    "ui": "../assets/mars-crafts/hud-v1/pieces/icon-scan-normal.png",
+    "scaleSceneRover": "Assets/_Project/Art/Sprites/Mars/Vehicles/rover-exploracion.png",
+    "newRoverInspectedUnmodified": "Assets/_Project/Art/Sprites/Rover/TopDown/South/move_south_000.png"
+  },
+  "usage": {
+    "generationsConsumed": 41,
+    "remainingBefore": 1898,
+    "remainingAfter": 1857
+  },
+  "integration": {
+    "sceneChanged": false,
+    "prefabsChanged": false,
+    "runtimeLogicChanged": false,
+    "unityPlayTested": false,
+    "webGLBuildTested": false,
+    "pushed": false
+  }
+}

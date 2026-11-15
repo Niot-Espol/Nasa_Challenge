@@ -1,0 +1,13 @@
+{
+  "tool": "create_image_pro_flash",
+  "description": "An isolated scientifically valuable Martian mineral outcrop for Mars Crafts. Preserve the rusty red orange mineral identity of the supplied preliminary deposit, but refine it into an angular reddish brown basalt and sandstone outcrop with exposed pale cream metallic mineral VEINS, muted turquoise small inclusions, iron-rich orange deposits and naturally broken surfaces. Geologically plausible angular silhouette, not giant pointed crystals or magic gems. Clearly different from a fan-shaped delta. Low top-down GBA RPG perspective, authentic crisp 16-bit pixel art, clean selective dark burgundy outlines, upper left light, few shading levels, limited warm Martian palette with restrained mineral accents. Centered independent 32x32 sprite, transparent background and 2px margin, no ground patch, no text, no rover, no glow, no interface.",
+  "width": 32,
+  "height": 32,
+  "no_background": true,
+  "max_colors": 24,
+  "seed": 1115,
+  "style_image": {
+    "localReference": "ref-mineral.png",
+    "usage_description": "Existing Mars Crafts art reference: preserve palette, clean pixel detail, outline, lighting and object identity as described. Do not reproduce reference subject if requesting a different prop."
+  }
+}

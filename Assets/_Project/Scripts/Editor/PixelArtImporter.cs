@@ -24,6 +24,12 @@ public class PixelArtImporter : AssetPostprocessor
         else if (assetPath.StartsWith(ArtRoot + "Sprites/Mars/") || assetPath.StartsWith(ArtRoot + "Sprites/Hub/")) { ppu = 16; pivot = SpriteAlignment.BottomCenter; }
         else return;
 
+        // Los indicadores y efectos flotan alrededor de su origen; los sólidos conservan sus pies.
+        bool marsOverlay = assetPath.StartsWith(ArtRoot + "Sprites/Mars/Indicators/")
+            || assetPath.StartsWith(ArtRoot + "Sprites/Mars/Effects/");
+        bool repeatingDust = assetPath.StartsWith(ArtRoot + "Sprites/Mars/Effects/Dust/");
+        if (marsOverlay) pivot = SpriteAlignment.Center;
+
         var importer = (TextureImporter)assetImporter;
         importer.textureType = TextureImporterType.Sprite;
         importer.spriteImportMode = SpriteImportMode.Single;
@@ -32,7 +38,7 @@ public class PixelArtImporter : AssetPostprocessor
         importer.textureCompression = TextureImporterCompression.Uncompressed;
         importer.mipmapEnabled = false;
         importer.alphaIsTransparency = true;
-        importer.wrapMode = TextureWrapMode.Clamp;
+        importer.wrapMode = repeatingDust ? TextureWrapMode.Repeat : TextureWrapMode.Clamp;
 
         var settings = new TextureImporterSettings();
         importer.ReadTextureSettings(settings);

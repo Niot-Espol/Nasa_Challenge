@@ -1,0 +1,13 @@
+{
+  "tool": "create_image_pro_flash",
+  "description": "An isolated compact scientific robotic Mars landing module for Mars Crafts, built to deploy a small six wheeled rover. Preserve the broad square gray deployment platform and industrial orange edge markings of the supplied existing landing pad reference, improve it into a compact scientific deployer with four splayed legs. Match existing rover technology: ivory white and light gray metallic chassis, dark navy and charcoal components, industrial orange trim, restrained cyan lights. A LOW broad deployment platform with short access ramp toward viewer and four sturdy splayed landing legs with footpads clearly readable around the platform. Compact equipment boxes and small cables, no tall cabin or spaceship nose. Low top-down GBA RPG perspective same as the rover, upper left light, crisp selective dark outline, authentic refined 16-bit pixel art, limited palette. Single fully contained 48x48 sprite with 3px transparent margin on all sides. Transparent background, no surrounding soil, no rover aboard, no astronaut, no building, no crash damage, no flame, no smoke, no text or UI.",
+  "width": 48,
+  "height": 48,
+  "no_background": true,
+  "max_colors": 24,
+  "seed": 1115,
+  "style_image": {
+    "localReference": "ref-lander.png",
+    "usage_description": "Existing Mars Crafts art reference: preserve palette, clean pixel detail, outline, lighting and object identity as described. Do not reproduce reference subject if requesting a different prop."
+  }
+}

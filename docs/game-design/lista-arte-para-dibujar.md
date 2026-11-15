@@ -71,14 +71,14 @@ Hacer primero todo lo P1 (meta: sábado por la noche), después P2 y por último
 
 | ✓ | Prio | Asset | Tamaño | Notas | Quién |
 |---|---|---|---|---|---|
-| [ ] | P1 | **Punto científico 1: delta** | 32×32 | Formación del antiguo delta. Tiene que verse "interesante" y distinto de lo demás. | |
-| [ ] | P1 | **Punto científico 2: afloramiento mineral** | 32×32 | Roca con vetas o cristales de color. | |
-| [ ] | P1 | **Punto científico 3: roca especial** | 32×32 | El gran descubrimiento final. La más llamativa de las tres. | |
-| [ ] | P1 | **Marca de "punto completado"** | 16×16 | Banderita o check que aparece encima al terminar un punto. | |
-| [ ] | P1 | **Indicador de interacción** | 16×16, 2 frames | Tecla **"E"** flotando que rebota, sobre lo que se puede usar. | |
-| [ ] | P1 | **Módulo de aterrizaje** | 48×48 | Donde empieza el rover. Decorativo. | |
-| [ ] | P2 | Efecto de escaneo | 32×32, 4 frames | Onda o rayo cuando el rover analiza un punto. | |
-| [ ] | P2 | Partícula de polvo de la tormenta | 64×64, repetible | Textura de polvo que se pueda repetir en mosaico sobre la pantalla. | |
+| [x] | P1 | **Punto científico 1: delta** | 32×32 | Formación del antiguo delta. Tiene que verse "interesante" y distinto de lo demás. | PixelLab / Codex |
+| [x] | P1 | **Punto científico 2: afloramiento mineral** | 32×32 | Roca con vetas o cristales de color. | PixelLab / Codex |
+| [x] | P1 | **Punto científico 3: roca especial** | 32×32 | El gran descubrimiento final. La más llamativa de las tres. | PixelLab / Codex |
+| [x] | P1 | **Marca de "punto completado"** | 16×16 | Banderita o check que aparece encima al terminar un punto. | PixelLab / Codex |
+| [x] | P1 | **Indicador de interacción** | 16×16, 2 frames | Tecla **"E"** flotando que rebota, sobre lo que se puede usar. | PixelLab / Codex |
+| [x] | P1 | **Módulo de aterrizaje** | 48×48 | Donde empieza el rover. Decorativo. | PixelLab / Codex |
+| [x] | P2 | Efecto de escaneo | 32×32, 4 frames | Onda o rayo cuando el rover analiza un punto. | PixelLab / Codex |
+| [x] | P2 | Partícula de polvo de la tormenta | 64×64, repetible | Textura de polvo que se pueda repetir en mosaico sobre la pantalla. | PixelLab / Codex |
 
 ## 6. Centro espacial: tileset de interior (`Art/Tilesets/Hub/`)
 
