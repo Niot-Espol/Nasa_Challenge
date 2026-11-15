@@ -68,6 +68,7 @@ Elementos visuales/                   zips originales de los personajes (fuente;
 **El juego se puede jugar de principio a fin con placeholders.** Flujo: Título → Hub → Taller → Lanzamiento → Marte → Reporte → (Rediseñar → Taller | Terminar → Título).
 
 ### Hecho
+- **Pulido de UI (noche del 14 al 15 de nov):** arte de UI del equipo integrado (marcos 9-slice, botones, barras, estrellas, insignias, título); fuentes **Nunito** (textos) y **Pixelify Sans** (títulos) en `Art/Fonts` (OFL); carteles contextuales al acercarse (`InteractionTooltip`) en lugar de nombres flotantes; reporte rediseñado (barras, rover, comentario final de Vega); diálogos con letra más grande y retrato que no se encoge; nombre de zona como cartel de llegada (`ZoneBanner`) en Hub y Marte + etiqueta fija "Cráter Jezero"; sin textos de controles en pantalla; adelantar el tiempo (Espacio) solo en tormenta con paneles, apagón o modo seguro; orden por profundidad (Y) con `YSortCamera` + pivote.
 - **Rover de conducción según la referencia del usuario:** 12 frames de 80×64 para S/N/E (izquierda con flipX) en `Art/Sprites/Rover/DrivingV2`, con vista previa y comando de Editor para conectarlo a `04_Mars`. Conexión y prueba en Unity pendientes.
 - **Objetos del mapa de Marte (punto 5):** 12 PNG de puntos científicos, indicadores, módulo, escaneo y polvo repetible entregados localmente con `.meta`, hoja de revisión e informe. Ver `Assets/_Project/Art/MARS_OBJECTS_PREVIEW.html`; conexión y prueba en Unity pendientes, sin cambios de escena ni lógica y sin push.
 - **Arte NPCs/rover preparado localmente:** BIMO (idle + movimiento S/N/E y tres retratos), Mateo y Luna (idle + retrato) y rover (dos frames por S/N/E + perfil). Ver `Assets/_Project/Art/GENERATED_ASSETS_REPORT.md`; PNG completos y metadatos incluidos, integración en Unity pendiente, sin cambios en los protagonistas/Vega ni push.
@@ -90,7 +91,9 @@ Elementos visuales/                   zips originales de los personajes (fuente;
 - [x] Arte de terreno integrado (entrega `Elementos visuales/Mars-Crafts-Terrenos`, generada con IA): Marte con Tilemap de suelo + arena (cauce/delta), mesetas en el borde, rocas, cráteres, escombros en la zona rocosa, sprites de los 3 puntos y del rover; Hub con piso metálico, paneles, consolas y esclusa como puerta. **No hay tiles de transición**: los bordes de arena son escalonados (decisión aceptada).
 - [ ] Verificar los datos NASA con su fuente (`docs/research/`) y rellenar `nasaFact` de los componentes.
 - [ ] Definir el "consumo base" de energía para la regla de verificación (TODO en `Verifier`).
-- [ ] Build final (Windows/Mac) y prueba completa en la build.
+- [ ] **Build WebGL (objetivo de entrega)**: hacer una build de prueba temprano (el módulo WebGL está instalado; cambiar de plataforma reimporta todo y tarda). Probar en el navegador el flujo completo, audio (los navegadores lo activan tras el primer clic) y Esc (en el navegador sale de pantalla completa).
+- [ ] Integrar los sprites pedidos al compañero (íconos de componentes y recursos, lanzamiento, bordes del cauce/delta) cuando lleguen; revisarlos antes.
+- [ ] Confirmar licencias del audio (`docs/creditos.md`) y añadir las fuentes (OFL).
 - [ ] Opcional: mover escenas a `Scenes/Main/`, minijuego de aterrizaje, más retratos/expresiones.
 
 ## 6. Reglas para agentes (importante)
