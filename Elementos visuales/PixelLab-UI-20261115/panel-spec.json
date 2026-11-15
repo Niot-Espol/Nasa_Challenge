@@ -1,0 +1,9 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Square 48x48 reusable UI panel frame for Mars Crafts. Flat frontal panel, dark navy outline, blue gray metal border, light top left edges, shadow bottom right, four small reinforced square corner plates with tiny screw details. Completely clean flat deep navy center for text, uniform straight stretchable edges for 9-slice, no text, no symbols. Match reference industrial console color and detail. Crisp 16-bit Game Boy Advance pixel art UI, scientific industrial space center, flat frontal geometry, blue gray metal, dark navy outlines, upper left light, limited palette, no blur, no gradient, no invented text.",
+  "width": 48,
+  "height": 48,
+  "transparent": true,
+  "reference": "hub-ref.png",
+  "seed": 151126
+}

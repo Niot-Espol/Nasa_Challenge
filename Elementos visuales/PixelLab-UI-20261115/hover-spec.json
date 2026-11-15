@@ -1,0 +1,5 @@
+{
+  "tool": "edit_image_pro_flash",
+  "prompt": "Edit this exact Mars Crafts normal button into its focus state. Keep the exact 48x16 shape, alpha, borders and end caps. Slightly brighten the blue gray surface and add a thin restrained cyan inner highlight. Empty center, no text.",
+  "reference": "button-padded.png"
+}
