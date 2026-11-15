@@ -6,8 +6,8 @@
 **Prioridad:** **P1** = imprescindible para la demo · **P2** = importante · **P3** = solo si sobra tiempo.
 Hacer primero todo lo P1 (meta: sábado por la noche), después P2 y por último P3.
 
-> **Estado (domingo 15, madrugada):** ✅ personajes, retratos, tileset de Marte, tileset del laboratorio y rover de perfil ya están **dentro del juego**.
-> **Falta:** los **íconos** (componentes y recursos) y el **lanzamiento**. Ver "Qué falta" al final.
+> **Estado (domingo 15, mañana):** ✅ todo el arte de Marte (personajes, retratos, tilesets, rover, objetos, íconos, lanzamiento e interfaz) está **dentro del juego**.
+> **Nuevo: segunda misión, la Luna (sección 11).** Es lo que hay que generar ahora. Ver "Qué falta" al final.
 
 ---
 
@@ -140,7 +140,7 @@ Hacer primero todo lo P1 (meta: sábado por la noche), después P2 y por último
 
 ## 9. Lanzamiento y viaje (`Art/Sprites/Launch/`)
 
-> Arte generado y comprobado técnicamente; revisión visual e integración en Unity pendientes.
+> **En el juego** (15 nov).
 
 | ✓ | Prio | Asset | Tamaño | Notas | Quién |
 |---|---|---|---|---|---|
@@ -175,14 +175,40 @@ Hacer primero todo lo P1 (meta: sábado por la noche), después P2 y por último
 
 ---
 
+## 11. Misión 2: la Luna (`Art/Sprites/Moon/`)
+
+> **Contexto:** "El secreto de la Luna" (historia 1.65). El rover explora el **polo sur lunar** buscando **hielo de agua** (misiones de referencia: LRO y LCROSS).
+> Se juega como Marte (Taller → lanzamiento → 3 puntos → reporte), pero el mapa tiene **zonas iluminadas y zonas en sombra permanente** (frío, sin Sol) y un **cráter donde se pierde la señal**.
+> **Qué NO hay que dibujar:** rover, personajes, retratos, Hub, Taller, íconos, UI, cohete, humo, nave ni Tierra (se reutilizan).
+> El suelo, las rocas y los cráteres los puede sacar Danilo/IA **recoloreando a gris** el arte de Marte; el suelo propio (P2) solo mejora el resultado.
+> Las **sombras** se hacen por código: **no las dibujes** dentro de los sprites.
+
+**Paleta Luna:** grises neutros a gris azulado (regolito), negro azulado para lo que está en sombra, blanco frío para lo iluminado y **azul hielo / cian** solo para el hielo (que sea lo único con color fuerte del mapa).
+
+| ✓ | Prio | Asset | Tamaño | Notas | Carpeta | Quién |
+|---|---|---|---|---|---|---|
+| [ ] | **P1** | **Depósito de hielo** (punto científico estrella) | 48×48 | Cristales azul-blanco **semienterrados** en regolito oscuro, con algún destello. Es el clímax de la misión: tiene que verse especial incluso en la sombra. | `Moon/SciencePoints/science_point_ice.png` | |
+| [ ] | **P1** | **Roca del borde iluminado** (punto científico) | 32×32 | Afloramiento de roca clara (anortosita, casi blanca) con una cara muy iluminada. | `Moon/SciencePoints/science_point_rim_rock.png` | |
+| [ ] | **P1** | **Muestra de regolito** (punto científico) | 32×32 | Parche de polvo gris fino con pequeñas esferas de vidrio brillantes (vidrio de impacto). Distinto a las rocas normales. | `Moon/SciencePoints/science_point_regolith.png` | |
+| [ ] | **P1** | **Luna para el viaje** | 64×64 | Igual que `planet_earth`/`planet_mars`: gris con cráteres, vista desde el espacio. | `Launch/Planets/planet_moon.png` | |
+| [ ] | P2 | **Módulo de aterrizaje lunar** | 48×48 | Distinto al de Marte: patas largas, tanques dorados (estilo Apolo o lander comercial). | `Moon/Landing/landing_module_moon.png` | |
+| [ ] | P2 | **Suelo lunar** (3 variantes + 1 liso) | tiles 16×16 | Regolito gris fino, con microcráteres. Repetible sin costuras. Si no llega, se recolorea el de Marte. | `Tilesets/Moon/` | |
+| [ ] | P2 | **Cráteres lunares grandes** | 64×64 y 96×96 | Borde elevado claro y fondo más oscuro (sin sombra proyectada: la pone el juego). | `Moon/Craters/` | |
+| [ ] | P3 | **Pantalla grande del Hub con la Luna** | igual que la pantalla de Marte del laboratorio | Mismo marco, mostrando la Luna y el polo sur marcado. Para el briefing de Vega. | `Hub/` | |
+| [ ] | P3 | **Rocas lunares** (3–4) | 16–32 px | Grises, más angulosas que las de Marte. Si no llegan, se recolorean las de Marte. | `Moon/Rocks/` | |
+
+**Mínimo imprescindible para la demo:** las 4 piezas **P1**. Con eso la misión ya se ve distinta a Marte en el video.
+
+---
+
 ## Qué falta (en orden de impacto)
 
 | # | Bloque | Piezas | Por qué importa |
 |---|---|---|---|
-| 1 | **Íconos de componentes** (sección 7) | 14 | El Taller hoy es solo texto. |
-| 2 | **Íconos de recursos** (sección 8) | 6 (+2) | HUD de Marte y barras del Taller. |
-| 3 | **Lanzamiento** (sección 9) | 8 | Hoy son rectángulos de colores. |
-| 4 | Bordes de cauce/delta | P2 | Pulido. |
+| 1 | **Luna: 3 puntos científicos + Luna del viaje** (sección 11, P1) | 4 | Sin ellos la segunda misión parece Marte en gris. |
+| 2 | **Luna: módulo de aterrizaje y suelo** (sección 11, P2) | 2 bloques | Más identidad visual propia. |
+| 3 | Luna: cráteres, pantalla del Hub, rocas (P2/P3) | — | Pulido. |
+| 4 | Bordes de cauce/delta (Marte) | P2 | Pulido. |
 
 **Audio:** no entra en esta lista. Los efectos son P1 y la música P2, y se buscarán en bancos libres.
 
