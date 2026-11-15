@@ -85,7 +85,9 @@ public class WorkshopScreen : MonoBehaviour
         {
             var row = UIKit.NewRect("Row_" + cat, categoriesList);
             UIKit.VList(row.gameObject, 6);
-            UIKit.Size(UIKit.Text(row, "Title", title, 26, TextAlignmentOptions.Left, TextTone.Accent), -1, 34);
+            var catTitle = UIKit.Text(row, "Title", title, 26, TextAlignmentOptions.Left, TextTone.Accent);
+            catTitle.GetComponent<ThemedText>().title = true; catTitle.GetComponent<ThemedText>().Apply();
+            UIKit.Size(catTitle, -1, 34);
 
             var cardsRow = UIKit.NewRect("Cards", row);
             UIKit.HList(cardsRow.gameObject, 14);

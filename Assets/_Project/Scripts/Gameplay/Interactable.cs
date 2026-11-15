@@ -7,7 +7,12 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Collider2D))]
 public abstract class Interactable : MonoBehaviour
 {
-    [SerializeField] protected GameObject interactPrompt;   // indicador "E" (sprite cuando haya arte)
+    [SerializeField] protected GameObject interactPrompt;   // indicador "E" sobre el objeto
+    [SerializeField] protected string promptText = "Interactuar";   // texto del cartel al acercarse
+    [SerializeField] protected float tooltipHeight = 2.6f;          // altura del cartel sobre el objeto
+
+    public virtual string PromptText => promptText;
+    public Vector3 TooltipAnchor => transform.position + Vector3.up * tooltipHeight;
 
     protected bool playerInRange;
 
@@ -31,6 +36,7 @@ public abstract class Interactable : MonoBehaviour
         if (other.GetComponentInParent<TopDownMover>() == null) return;
         playerInRange = true;
         if (interactPrompt != null) interactPrompt.SetActive(true);
+        InteractionTooltip.Show(this);
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -38,5 +44,6 @@ public abstract class Interactable : MonoBehaviour
         if (other.GetComponentInParent<TopDownMover>() == null) return;
         playerInRange = false;
         if (interactPrompt != null) interactPrompt.SetActive(false);
+        InteractionTooltip.Hide(this);
     }
 }

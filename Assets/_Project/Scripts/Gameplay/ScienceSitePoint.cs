@@ -19,6 +19,21 @@ public class ScienceSitePoint : Interactable
 
     public ScienceSite Site => site;
 
+    public override string PromptText
+    {
+        get
+        {
+            var mc = MissionController.Instance;
+            string name = ReportBuilder.SiteName(site);
+            name = char.ToUpper(name[0]) + name.Substring(1);
+            if (mc == null) return "Escanear " + name;
+            var instr = MissionState.RequiredInstrument(site);
+            if (mc.State.Result.CompletedSites.Contains(site)) return name + "  ·  <color=#72C88B>estudiado</color>";
+            if (!mc.State.Design.HasInstrument(instr)) return name + "  ·  <color=#FF6B6B>necesita " + MissionState.InstrumentName(instr) + "</color>";
+            return "Escanear " + name + "  ·  " + mc.State.Design.ScanCosts[instr].ToString("0") + " de energía";
+        }
+    }
+
     protected override void Start()
     {
         base.Start();

@@ -11,6 +11,8 @@ public class HubDoor : Interactable
     [SerializeField] Color openColor = new Color(0.4f, 0.85f, 0.5f);
     [SerializeField] DialogueData lockedMessage;           // BIMO: "Primero habla con la Dra. Vega"
 
+    public override string PromptText => unlocked ? "Entrar al Taller" : "Taller  ·  primero habla con la Dra. Vega";
+
     protected override void Start()
     {
         base.Start();

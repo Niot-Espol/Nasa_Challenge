@@ -15,6 +15,13 @@ public class ReportScreen : MonoBehaviour
     [SerializeField] Transform linesList;
     [SerializeField] Transform comparisonList;
 
+    [Header("Diseño nuevo (opcionales)")]
+    [SerializeField] Image roverImage;
+    [SerializeField] ResourceBar budgetBar, massBar, timeBar, scienceBar;
+    [SerializeField] TMP_Text budgetText, massText, timeText, scienceText;
+    [SerializeField] Image vegaPortrait;
+    [SerializeField] TMP_Text vegaText;
+
     [SerializeField] float starSize = 72f;
 
     void Start()
@@ -91,8 +98,38 @@ public class ReportScreen : MonoBehaviour
                 $"Tiempo: {used / 60}:{used % 60:00} de {Mathf.RoundToInt(rep.TimeLimit) / 60}:{Mathf.RoundToInt(rep.TimeLimit) % 60:00}";
         }
 
+        // Recursos como barras
+        int tUsed = Mathf.RoundToInt(rep.TimeUsed), tLim = Mathf.RoundToInt(rep.TimeLimit);
+        SetBar(budgetBar, budgetText, rep.CostUsed, rep.Budget, $"Presupuesto  <b>{rep.CostUsed}</b> / {rep.Budget} créditos");
+        SetBar(massBar, massText, rep.MassUsed, rep.MassCapacity, $"Masa  <b>{rep.MassUsed}</b> / {rep.MassCapacity} kg");
+        SetBar(timeBar, timeText, rep.TimeUsed, rep.TimeLimit, $"Tiempo  <b>{tUsed / 60}:{tUsed % 60:00}</b> / {tLim / 60}:{tLim % 60:00}");
+        SetBar(scienceBar, scienceText, rep.Stars, 3, $"Puntos científicos  <b>{rep.Stars}</b> / 3");
+
+        if (roverImage != null && th != null) { roverImage.sprite = th.roverPreview; roverImage.enabled = th.roverPreview != null; roverImage.preserveAspect = true; }
+
+        // Comentario final de la Dra. Vega
+        if (vegaText != null)
+            vegaText.text = rep.Stars == 3
+                ? "¡Excelente trabajo, comandante! Con estos datos podemos reconstruir parte de la historia del agua en Jezero. Así se diseña una misión."
+                : rep.Stars == 2
+                ? "Buen trabajo. Obtuvimos datos valiosos, aunque nos faltó un punto. Revisa qué decisión lo causó y vuelve a intentarlo."
+                : rep.Stars == 1
+                ? "Conseguimos algo de ciencia, pero la misión se quedó corta. Cada problema tiene una causa en el diseño: ¡rediséñalo!"
+                : "Esta vez no obtuvimos datos... pero en las misiones reales también se aprende de los fallos. Revisa el reporte y prueba otro diseño.";
+        if (vegaPortrait != null)
+        {
+            var sp = DialogueData.Portrait(Speaker.Vega, rep.Stars >= 2 ? Expression.Happy : Expression.Worried);
+            vegaPortrait.sprite = sp; vegaPortrait.enabled = sp != null; vegaPortrait.preserveAspect = true;
+        }
+
         Fill(linesList, rep.Lines);
         Fill(comparisonList, rep.Comparison);
+    }
+
+    static void SetBar(ResourceBar bar, TMP_Text label, float value, float max, string text)
+    {
+        if (bar != null) { bar.useStateColors = false; bar.Set(value, max); }
+        if (label != null) label.text = text;
     }
 
     void AddBadge(Badge b, UITheme th)
@@ -104,9 +141,9 @@ public class ReportScreen : MonoBehaviour
 
         var row = UIKit.NewRect("Badge_" + b, badgesRow);
         UIKit.HList(row.gameObject, 8);
-        if (s != null) UIKit.Icon(row, "Icon", s, new Vector2(48, 48));
-        var t = UIKit.Text(row, "Name", ReportBuilder.BadgeName(b), 28, TextAlignmentOptions.Left, TextTone.Accent);
-        UIKit.Size(t, -1, 48);
+        if (s != null) UIKit.Icon(row, "Icon", s, new Vector2(64, 64));
+        var t = UIKit.Text(row, "Name", ReportBuilder.BadgeName(b), 26, TextAlignmentOptions.Left, TextTone.Accent);
+        UIKit.Size(t, -1, 64);
     }
 
     static void Fill(Transform list, System.Collections.Generic.List<ReportLine> lines)
@@ -119,7 +156,7 @@ public class ReportScreen : MonoBehaviour
             string mark = l.Tone == ReportTone.Good ? "<color=#73E67F><b>+</b></color>  "
                         : l.Tone == ReportTone.Bad ? "<color=#FF6B6B><b>x</b></color>  "
                         : "<color=#A6B3CC>-</color>  ";
-            var t = UIKit.Text(list, "Line", mark + l.Text, 26, TextAlignmentOptions.TopLeft);
+            var t = UIKit.Text(list, "Line", mark + l.Text, 22, TextAlignmentOptions.TopLeft);
             var fitter = t.gameObject.AddComponent<ContentSizeFitter>();
             fitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
         }

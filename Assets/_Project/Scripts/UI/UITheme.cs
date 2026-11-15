@@ -46,7 +46,8 @@ public class UITheme : ScriptableObject
     public Sprite buttonPressed;
 
     [Header("Texto")]
-    public TMP_FontAsset font;                  // fuente pixel cuando llegue (vacío = la de TMP por defecto)
+    public TMP_FontAsset font;                  // textos largos (Nunito)
+    public TMP_FontAsset titleFont;             // títulos y números cortos (Pixelify Sans)
     public Color textColor = new Color(0.95f, 0.95f, 0.95f);
     public Color textMuted = new Color(0.65f, 0.7f, 0.8f);
     public Color buttonText = new Color(0.06f, 0.09f, 0.15f);   // texto sobre botones claros

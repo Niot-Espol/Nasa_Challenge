@@ -10,6 +10,7 @@ public enum TextTone { Normal, Muted, Accent, Good, Warning, Error, Keep, OnButt
 public class ThemedText : MonoBehaviour
 {
     public TextTone tone = TextTone.Normal;
+    public bool title;   // usa la fuente de títulos (pixel)
 
     void OnEnable() => Apply();
 #if UNITY_EDITOR
@@ -21,7 +22,8 @@ public class ThemedText : MonoBehaviour
         var theme = UITheme.Current;
         var t = GetComponent<TMP_Text>();
         if (theme == null || t == null) return;
-        if (theme.font != null) t.font = theme.font;
+        var f = title && theme.titleFont != null ? theme.titleFont : theme.font;
+        if (f != null) t.font = f;
         if (tone != TextTone.Keep) t.color = ToneColor(theme, tone);
     }
 

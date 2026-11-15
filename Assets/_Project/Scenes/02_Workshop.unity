@@ -282,6 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 2
+  title: 1
 --- !u!114 &119673027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,8 +305,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "TALLER \xB7 Dise\xF1a tu rover"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7bf78934c2d8e426c8e0a94ba0d38def, type: 2}
+  m_sharedMaterial: {fileID: 4823526922669315554, guid: 7bf78934c2d8e426c8e0a94ba0d38def, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -546,6 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 0
+  title: 0
 --- !u!222 &212642869
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -576,8 +578,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1130,6 +1132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 1
+  title: 0
 --- !u!114 &505264537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1153,8 +1156,8 @@ MonoBehaviour:
   m_text: "Elige una opci\xF3n por categor\xEDa. Ninguna configuraci\xF3n es perfecta:
     decide qu\xE9 sacrificar."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1282,6 +1285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 7
+  title: 0
 --- !u!114 &648675791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1304,8 +1308,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\xA1LANZAR!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1601,6 +1605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 0
+  title: 0
 --- !u!222 &712290481
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1631,8 +1636,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Presupuesto
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2264,6 +2269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 1
+  title: 0
 --- !u!222 &1596904947
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2296,8 +2302,8 @@ MonoBehaviour:
 
     (arte pendiente)'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2438,6 +2444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 1
+  title: 0
 --- !u!222 &1625866369
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2468,8 +2475,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '-'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2832,6 +2839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 2
+  title: 0
 --- !u!114 &1713440958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2854,8 +2862,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: BIMO
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3162,6 +3170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 0
+  title: 0
 --- !u!222 &2094084064
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3192,8 +3201,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Masa
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
