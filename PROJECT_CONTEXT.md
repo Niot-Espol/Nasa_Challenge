@@ -1,4 +1,4 @@
-﻿# Mars Crafts — Contexto general del proyecto
+# Mars Crafts — Contexto general del proyecto
 
 > **Corte de esta transferencia: 15 de noviembre de 2026.** Documento descriptivo, no una autorización para ejecutar cambios. Verifica `git status`, rama, remoto y documentación antes de continuar: el repositorio puede haber avanzado. Responde al equipo en español.
 
@@ -118,7 +118,7 @@ Las imágenes finales de la entrega 7–9, las fuentes y solicitudes sin credenc
 - Comprobación documentada de la última tanda: 36 PNG legibles, dimensiones, transparencia binaria y márgenes de sprites, `.meta` presentes, bordes espaciales coincidentes y anclaje de llama igual. Resultado: sin errores automáticos en `docs/art-review/componentes-recursos-lanzamiento/validation.json`. Esto **no** sustituye revisión artística, importación real ni prueba de juego.
 - No se ejecutaron Unity Play ni build WebGL para la última entrega. Deben revisarse alineación del cohete/llama/humo en la escena, escala, visibilidad y comportamiento en el dispositivo/navegador.
 - Se documentan bordes de cauce y delta escalonados por falta de tiles de transición; depósitos sedimentarios pendientes. Confirmar licencias de audio/fuentes, fuentes NASA y el `nasaFact` de componentes; definir consumo base pendiente de `Verifier` si se solicita.
-- Documentación histórica contradictoria: `AGENTS.md`, lista de arte y reportes pueden reflejar momentos distintos; el texto «sin push» en notas anteriores no invalida el push posterior de la rama `eedfb40`. Tampoco prueba un merge a `main`. Verificar antes de intervenir.
+- Documentación histórica contradictoria: `AGENTS.md`, lista de arte y reportes pueden reflejar momentos distintos; el texto «sin push» en notas anteriores no invalida el push y la integraci?n posteriores de la rama `eedfb40` en `main`. Verificar antes de intervenir.
 - La información sobre fecha límite del evento y disponibilidad de Unity/WebGL en la nueva computadora no está confirmada. No afirmar que hubo una prueba nueva durante esta transferencia.
 
 ## 10. Plan de continuación
