@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one tiny 16x16 pixel art status icon representing active spacecraft safe mode in Mars Crafts.\n\nA compact protective shield symbol with a crisp dark navy outline, muted amber-yellow interior, small industrial metallic edge and a simple dark warning mark.\n\nThe shield should communicate that the rover is operating in a protective restricted state.\n\nMatch the existing Mars Crafts HUD and yellow industrial warning palette.\n\nAuthentic Game Boy Advance pixel art, readable simple silhouette, centered transparent background.\n\nNo achievement badge, no text, no letters, no numbers, no large frame, no glow.",
+  "size": [
+    16,
+    16
+  ],
+  "reference": "hud-ref.png",
+  "transparent": true
+}

@@ -86,6 +86,8 @@ Elementos visuales/                   zips originales de los personajes (fuente;
 - **05_Report:** estrellas, insignias, recursos, "qué pasó y por qué", comparación con Perseverance, Rediseñar/Terminar.
 - **Balance:** moverse cuesta **2/s** (el doc decía 1; con 1 los paneles nunca se vaciaban). Se cambia en `MissionController` (Inspector). Simulado: solar + batería pequeña → modo seguro en la tormenta; RTG + 2 instrumentos → 2 estrellas; batería grande → sin modo seguro.
 
+- **Arte de componentes, recursos y lanzamiento generado:** 36 PNG, sus `.meta`, fuentes y composiciones en `docs/art-review/componentes-recursos-lanzamiento/`; ver `Assets/_Project/Art/GENERATED_ASSETS_REPORT.md`. Revisión visual, asignación a escenas/datos y pruebas Unity/WebGL pendientes; sin push.
+
 ### Pendiente
 - [ ] Reemplazar placeholders por arte (tileset de Marte e interior, rover, puntos, UI, íconos, retratos, fuente pixel) y audio.
 - [x] Arte de terreno integrado (entrega `Elementos visuales/Mars-Crafts-Terrenos`, generada con IA): Marte con Tilemap de suelo + arena (cauce/delta), mesetas en el borde, rocas, cráteres, escombros en la zona rocosa, sprites de los 3 puntos y del rover; Hub con piso metálico, paneles, consolas y esclusa como puerta. **No hay tiles de transición**: los bordes de arena son escalonados (decisión aceptada).

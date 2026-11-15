@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one tiny 16x16 pixel art resource icon representing elapsed mission time and Martian sols in Mars Crafts.\n\nA compact stylized warm yellow-orange sun with a clearly readable circular center and short evenly distributed pixel rays.\n\nUse a crisp dark outline, restrained pale yellow highlight and burnt orange shading.\n\nThe icon must read as a sun or passage of mission time, clearly distinct from the golden budget coin icon.\n\nAuthentic Game Boy Advance style spacecraft HUD pixel art, centered transparent background, limited warm colors.\n\nNo text, no numbers, no clock digits, no frame, no glow.",
+  "size": [
+    16,
+    16
+  ],
+  "reference": "hud-ref.png",
+  "transparent": true
+}

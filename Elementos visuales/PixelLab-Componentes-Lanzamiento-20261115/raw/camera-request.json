@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one isolated 32x32 pixel art inventory icon of a scientific rover camera instrument for Mars Crafts.\n\nA compact rectangular white and light gray space-qualified camera housing with a prominent dark circular optical lens, subtle blue glass reflections, small metallic mounting bracket, tiny technical fasteners and restrained industrial orange details.\n\nThe device should resemble a simplified scientific navigation or imaging camera mounted on a planetary rover, not a consumer DSLR camera.\n\nUse a consistent three-quarter product presentation angle with the front lens clearly visible, upper-left lighting and crisp dark lower-right shading.\n\nAuthentic detailed 16-bit Game Boy Advance pixel art matching the existing spacecraft equipment icons and Mars Crafts rover.\n\nCentered complete item inside a transparent 32x32 canvas, no text, no background, no frame, no rover.",
+  "size": [
+    32,
+    32
+  ],
+  "reference": "solar-rover-ref.png",
+  "transparent": true
+}

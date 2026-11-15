@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pixflux",
+  "prompt": "Create a beautiful but visually restrained 320x180 pixel art background for the Mars Crafts rover engineering workshop interface.\n\nShow the interior of a compact industrial space research workshop, with dark blue-gray metallic wall panels, a few organized scientific tools, subtle equipment shelves, small technical consoles, restrained cyan status lights, white-gray machinery and small industrial orange accents.\n\nMatch the existing Mars Crafts laboratory tileset and industrial UI design.\n\nUse authentic 16-bit Game Boy Advance pixel art, crisp square pixels, layered metallic materials and limited colors.\n\nKeep the main interface areas dark, clean and low contrast so separate rover preview images, buttons, equipment icons and dynamic resource statistics remain clearly readable.\n\nCreate a background illustration rather than a playable top-down map.\n\nNo rover, no characters, no UI panels, no buttons, no text, no numbers, no bright distracting lights, no realistic gradients.\n\nWide 16:9 composition.",
+  "size": [
+    320,
+    180
+  ],
+  "reference": "background-palette-ref.png",
+  "transparent": false
+}

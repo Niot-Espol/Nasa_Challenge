@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one isolated 32x32 pixel art inventory icon of a compact articulated robotic sampling arm with a geological drill for Mars Crafts.\n\nShow a small mechanical mounting base, two connected white and light gray robotic arm segments, clearly visible circular joints, compact dark mechanical pistons and a recognizable short metal drilling bit at the end.\n\nThe arm is partially folded into a readable compact silhouette suitable for a rover workshop equipment icon.\n\nUse subtle industrial orange markings, clean dark outlines, upper-left metallic highlights and consistent blue-gray shadows.\n\nAuthentic refined 16-bit Game Boy Advance pixel art, matching the existing rover and equipment icon set.\n\nThree-quarter product presentation view, centered complete component, transparent 32x32 canvas.\n\nNo weapon, no rover, no rock being drilled, no environment, no frame, no text.",
+  "size": [
+    32,
+    32
+  ],
+  "reference": "solar-rover-ref.png",
+  "transparent": true
+}

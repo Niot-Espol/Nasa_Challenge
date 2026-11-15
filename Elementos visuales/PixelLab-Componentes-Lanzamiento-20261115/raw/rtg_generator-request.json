@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one isolated 32x32 pixel art inventory icon of a compact radioisotope thermoelectric generator, RTG, for a Mars exploration rover.\n\nShow a recognizable short industrial cylindrical generator with several clearly visible radial metallic heat-dissipation fins, dark gray internal sections, light steel circular end caps, small mounting brackets and a subtle amber engineering warning accent.\n\nThe device must look like a plausible simplified space mission power generator, not a battery, futuristic weapon or glowing reactor.\n\nUse the same three-quarter product presentation perspective, scale, lighting direction, crisp dark outlines and industrial palette as the supplied Mars Crafts solar panel equipment icon.\n\nRefined authentic 16-bit Game Boy Advance pixel art, centered complete object inside a 32x32 transparent canvas.\n\nNo radiation glow, no green radioactive liquid, no text, no frame, no rover, no environment, no antialiasing.",
+  "size": [
+    32,
+    32
+  ],
+  "reference": "solar-rover-ref.png",
+  "transparent": true
+}

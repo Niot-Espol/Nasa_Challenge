@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create a beautiful isolated 32x64 pixel art scientific orbital launch rocket for Mars Crafts, matching the supplied Mars Crafts launcher equipment icon family.\n\nShow one generic upright space exploration rocket in a clean true side profile, pointing vertically upward.\n\nUse a slender white and light gray industrial spacecraft body, a clearly defined pointed nose cone, two visually readable main stage sections, restrained orange mission markings, dark blue-gray mechanical separation bands, subtle technical panel details and a compact dark engine assembly with a clearly visible bottom nozzle.\n\nAuthentic refined 16-bit Game Boy Advance pixel art, crisp dark outlines, controlled metallic highlights from the upper left and darker shading on the right.\n\nThe rocket should look like a credible peaceful scientific launch vehicle, not a missile or military rocket.\n\nKeep the entire rocket centered inside the exact 32x64 transparent canvas with no clipping.\n\nNo flames, no exhaust, no smoke, no platform, no stars, no environment, no text, no real agency logo, no gradients, no photorealism.",
+  "size": [
+    32,
+    64
+  ],
+  "reference": "launcher_medium-result-0.png",
+  "transparent": true
+}

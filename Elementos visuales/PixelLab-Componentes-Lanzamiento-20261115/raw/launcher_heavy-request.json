@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create the heavy-lift scientific launch vehicle icon from the same Mars Crafts rocket family as the supplied light and medium launcher icons.\n\nShow a powerful but compact upright white and light gray orbital rocket with a noticeably wider central body, two recognizable side boosters or reinforced heavy-lift lower stages, industrial orange mission markings, dark clustered engine nozzles and strong mechanical proportions.\n\nPreserve the same visual family, lighting direction, pixel scale, materials and clean dark outlines as the other two launcher icons.\n\nThe heavy variant must clearly communicate greater payload capacity through its silhouette and construction, not merely a different color.\n\nAuthentic refined 16-bit Game Boy Advance pixel art, centered complete rocket within a 32x32 transparent canvas.\n\nNo exhaust, no smoke, no platform, no weapons, no text, no frame.",
+  "size": [
+    32,
+    32
+  ],
+  "reference": "launcher_light-result-0.png",
+  "transparent": true
+}

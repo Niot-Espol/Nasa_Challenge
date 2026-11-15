@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one tiny 16x16 pixel art energy resource icon for Mars Crafts.\n\nA strong recognizable angular lightning bolt in bright technological cyan, with a crisp dark navy outline, restrained pale cyan upper highlight and darker blue lower edge.\n\nThe symbol should communicate available electrical energy instantly.\n\nAuthentic Game Boy Advance pixel art matching the existing scientific spacecraft HUD, exact square pixels, limited palette, centered transparent background.\n\nNo text, no battery casing, no circle, no decorative frame, no glow, no particles.",
+  "size": [
+    16,
+    16
+  ],
+  "reference": "hud-ref.png",
+  "transparent": true
+}

@@ -99,53 +99,59 @@ Hacer primero todo lo P1 (meta: sábado por la noche), después P2 y por último
 
 ## 7. Taller: íconos de componentes (`Art/Sprites/Icons/Components/`)
 
+> Arte generado y comprobado técnicamente; revisión visual e integración en Unity pendientes.
+
 > **Íconos sueltos de 32×32**, todos con el mismo encuadre y estilo. Son botones de la interfaz y **no se pegan sobre el rover**.
 
 | ✓ | Prio | Ícono | Quién |
 |---|---|---|---|
-| [ ] | P1 | Paneles solares | |
-| [ ] | P1 | RTG (generador nuclear: cilindro con aletas) | |
-| [ ] | P1 | Batería pequeña | |
-| [ ] | P1 | Batería grande | |
-| [ ] | P1 | Cámara | |
-| [ ] | P1 | Espectrómetro | |
-| [ ] | P1 | Brazo con taladro | |
-| [ ] | P1 | Antena directa (parabólica) | |
-| [ ] | P1 | Relé vía orbitador (satélite pequeño) | |
-| [ ] | P1 | Ruedas estándar | |
-| [ ] | P1 | Ruedas todoterreno | |
-| [ ] | P1 | Lanzador ligero (cohete pequeño) | |
-| [ ] | P1 | Lanzador medio | |
-| [ ] | P1 | Lanzador pesado (cohete grande) | |
-| [ ] | P2 | Fondo del taller (320×180) | |
+| [x] | P1 | Paneles solares | |
+| [x] | P1 | RTG (generador nuclear: cilindro con aletas) | |
+| [x] | P1 | Batería pequeña | |
+| [x] | P1 | Batería grande | |
+| [x] | P1 | Cámara | |
+| [x] | P1 | Espectrómetro | |
+| [x] | P1 | Brazo con taladro | |
+| [x] | P1 | Antena directa (parabólica) | |
+| [x] | P1 | Relé vía orbitador (satélite pequeño) | |
+| [x] | P1 | Ruedas estándar | |
+| [x] | P1 | Ruedas todoterreno | |
+| [x] | P1 | Lanzador ligero (cohete pequeño) | |
+| [x] | P1 | Lanzador medio | |
+| [x] | P1 | Lanzador pesado (cohete grande) | |
+| [x] | P2 | Fondo del taller (320×180) | |
 
 ## 8. Íconos de recursos (`Art/Sprites/Icons/Resources/`)
+
+> Arte generado y comprobado técnicamente; revisión visual e integración en Unity pendientes.
 
 16×16, para las barras y el HUD.
 
 | ✓ | Prio | Ícono | Quién |
 |---|---|---|---|
-| [ ] | P1 | Presupuesto (moneda o créditos) | |
-| [ ] | P1 | Masa (pesa o kg) | |
-| [ ] | P1 | Energía (rayo) | |
-| [ ] | P1 | Tiempo / soles (sol o reloj) | |
-| [ ] | P1 | Comunicaciones (antena con ondas) | |
-| [ ] | P1 | Datos científicos (lupa o disco) | |
-| [ ] | P2 | Modo seguro (escudo o batería vacía) | |
-| [ ] | P2 | Sin señal (antena tachada) | |
+| [x] | P1 | Presupuesto (moneda o créditos) | |
+| [x] | P1 | Masa (pesa o kg) | |
+| [x] | P1 | Energía (rayo) | |
+| [x] | P1 | Tiempo / soles (sol o reloj) | |
+| [x] | P1 | Comunicaciones (antena con ondas) | |
+| [x] | P1 | Datos científicos (lupa o disco) | |
+| [x] | P2 | Modo seguro (escudo o batería vacía) | |
+| [x] | P2 | Sin señal (antena tachada) | |
 
 ## 9. Lanzamiento y viaje (`Art/Sprites/Launch/`)
 
+> Arte generado y comprobado técnicamente; revisión visual e integración en Unity pendientes.
+
 | ✓ | Prio | Asset | Tamaño | Notas | Quién |
 |---|---|---|---|---|---|
-| [ ] | P1 | **Cohete** | 32×64 | **Uno solo**, genérico, de perfil. | |
-| [ ] | P1 | **Llama del motor** | 16×32, 3 frames | Va debajo del cohete. | |
-| [ ] | P1 | **Humo** | 32×32, 3–4 frames | Nubes de humo en el despegue. | |
-| [ ] | P1 | **Fondo de la plataforma de lanzamiento** | 320×180 | Cielo, plataforma y torre. | |
-| [ ] | P1 | **Tierra** | 64×64 | Planeta visto desde el espacio. | |
-| [ ] | P1 | **Marte** | 64×64 | Planeta visto desde el espacio. | |
-| [ ] | P1 | **Nave en crucero** | 32×32 | La nave viajando entre planetas. | |
-| [ ] | P1 | **Fondo espacial** | 320×180 | Estrellas, repetible. | |
+| [x] | P1 | **Cohete** | 32×64 | **Uno solo**, genérico, de perfil. | |
+| [x] | P1 | **Llama del motor** | 16×32, 3 frames | Va debajo del cohete. | |
+| [x] | P1 | **Humo** | 32×32, 3–4 frames | Nubes de humo en el despegue. | |
+| [x] | P1 | **Fondo de la plataforma de lanzamiento** | 320×180 | Cielo, plataforma y torre. | |
+| [x] | P1 | **Tierra** | 64×64 | Planeta visto desde el espacio. | |
+| [x] | P1 | **Marte** | 64×64 | Planeta visto desde el espacio. | |
+| [x] | P1 | **Nave en crucero** | 32×32 | La nave viajando entre planetas. | |
+| [x] | P1 | **Fondo espacial** | 320×180 | Estrellas, repetible. | |
 
 ## 10. Interfaz (`Art/UI/`)
 

@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one isolated 32x32 pixel art scientific interplanetary cruise spacecraft for Mars Crafts.\n\nA compact peaceful exploration spacecraft designed for travel between Earth and Mars, with a recognizable forward-facing white and light gray central hull, restrained industrial orange mission markings, small attached scientific equipment modules, compact dark rear propulsion section, subtle cyan status lights and short solar panel structures if appropriate.\n\nThe spacecraft should resemble a simplified scientific transfer vehicle from the same technology family as the Mars Crafts launch rocket, rover and landing module.\n\nOrient the ship toward the right in a clear side profile or restrained three-quarter view suitable for a 2D horizontal space travel sequence.\n\nAuthentic refined 16-bit Game Boy Advance pixel art, crisp dark outlines, controlled metallic highlights, limited colors and a strong readable silhouette.\n\nCenter the complete spacecraft inside a transparent 32x32 canvas.\n\nNo weapons, no fighter aircraft styling, no alien saucer, no planet, no starfield, no permanent engine flame, no text, no UI frame.",
+  "size": [
+    32,
+    32
+  ],
+  "reference": "rocket-small-ref.png",
+  "transparent": true
+}

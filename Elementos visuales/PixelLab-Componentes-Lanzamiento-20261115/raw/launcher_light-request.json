@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one isolated 32x32 pixel art inventory icon of a lightweight scientific launch vehicle for Mars Crafts.\n\nA compact slender upright white and light gray orbital rocket with a simple pointed nose cone, narrow single main stage, small industrial orange mission markings, dark compact engine nozzle and restrained metallic details.\n\nThe rocket should clearly communicate a lightweight launch vehicle with limited carrying capacity.\n\nUse a clean upright side or slight three-quarter product presentation, consistent upper-left illumination, crisp dark outlines and authentic 16-bit Game Boy Advance pixel art matching the existing Mars Crafts equipment icons.\n\nCentered full rocket inside a transparent 32x32 canvas, no exhaust, no flame, no smoke, no launch platform, no text, no interface frame.",
+  "size": [
+    32,
+    32
+  ],
+  "reference": "solar-rover-ref.png",
+  "transparent": true
+}

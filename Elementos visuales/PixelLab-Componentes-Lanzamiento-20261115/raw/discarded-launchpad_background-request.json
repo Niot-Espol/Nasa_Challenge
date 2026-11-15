@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pixflux",
+  "prompt": "Create a beautiful 320x180 pixel art cinematic background of a peaceful scientific rocket launch facility on Earth for Mars Crafts.\n\nWide horizontal 16:9 composition, authentic detailed 16-bit Game Boy Advance style.\n\nShow a sturdy industrial launch platform in the lower portion of the scene, constructed from blue-gray metallic and concrete surfaces with restrained yellow-black safety markings.\n\nInclude a tall recognizable metal service tower positioned to one side of the intended rocket launch location, with clean structural supports, small access platforms and subtle industrial equipment.\n\nLeave a clearly defined empty vertical launch area where a separate 32x64 rocket sprite can be placed, with unobstructed open sky above it for the ascent animation.\n\nCreate a calm inspiring early morning or sunrise sky, restrained blue and warm golden tones, a few carefully arranged pixel art clouds and a subtle distant horizon.\n\nUse crisp dark outlines, carefully controlled metallic highlights, limited colors and believable industrial architecture matching the existing Mars Crafts space center.\n\nThe launch facility must communicate peaceful scientific exploration and engineering.\n\nNo rocket, no flames, no smoke, no astronauts, no text, no logo, no interface, no military objects, no realistic gradients, no photorealism.",
+  "size": [
+    320,
+    180
+  ],
+  "reference": "background-palette-ref.png",
+  "transparent": false
+}

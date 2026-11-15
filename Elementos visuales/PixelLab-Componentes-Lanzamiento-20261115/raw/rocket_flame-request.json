@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create an isolated 16x32 pixel art rocket engine exhaust flame effect for Mars Crafts.\n\nA vertical elongated high-energy rocket exhaust plume pointing downward, with a narrow bright attachment region at the top, pale white-yellow hot central core, warm golden-yellow inner flame, orange outer flame layers and a tapered irregular reddish-orange lower tip.\n\nUse crisp square pixel clusters, strong readable flame silhouette, authentic 16-bit Game Boy Advance pixel art and a limited warm color palette.\n\nThe effect should look like a powerful rocket engine exhaust plume rather than a campfire.\n\nCentered transparent background, exact 16x32 canvas.\n\nNo rocket, no engine nozzle, no smoke clouds, no environment, no text, no smooth gradients, no realistic glow.",
+  "size": [
+    16,
+    32
+  ],
+  "reference": "rocket-flame-ref.png",
+  "transparent": true
+}
