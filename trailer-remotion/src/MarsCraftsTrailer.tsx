@@ -15,65 +15,96 @@ export const MarsCraftsTrailer: React.FC = () => {
 
   return (
     <AbsoluteFill style={{ backgroundColor: '#05070D' }}>
-      {/* Banda sonora original de 45.0s sincronizada con las 8 escenas */}
-      <Audio src={staticFile('audio/mars_crafts_trailer_ost.wav')} volume={0.85} />
+      {/* Banda sonora original 16-bit Space Adventure (45.0s exactos, 120 BPM, estéreo) */}
+      <Audio src={staticFile('audio/mars_crafts_trailer_ost.mp3')} volume={0.88} />
 
       {/* Efectos de sonido reales del juego sincronizados al fotograma */}
-      {/* Escena 2: pasos y diálogo en el Hub */}
-      <Sequence from={198} durationInFrames={30} name="SFX_Hub_Dialogue">
-        <Audio src={staticFile('audio/dialogue_blip.mp3')} volume={0.55} />
+      {/* Escena 1: Aparición de las 3 tarjetas de misión */}
+      <Sequence from={74} durationInFrames={25} name="SFX_Mission_Cards">
+        <Audio src={staticFile('audio/star_ding.wav')} volume={0.45} />
       </Sequence>
 
-      {/* Escena 3: clics de ingeniería en el Taller */}
-      <Sequence from={278} durationInFrames={20} name="SFX_Workshop_Click1">
-        <Audio src={staticFile('audio/click.wav')} volume={0.6} />
+      {/* Escena 2: Diálogo en el Hub y apertura de esclusa al Taller */}
+      <Sequence from={128} durationInFrames={25} name="SFX_Hub_Dialogue">
+        <Audio src={staticFile('audio/dialogue_blip.mp3')} volume={0.5} />
       </Sequence>
-      <Sequence from={330} durationInFrames={30} name="SFX_Workshop_Error">
-        <Audio src={staticFile('audio/Generated/error_buzz.wav')} volume={0.55} />
-      </Sequence>
-      <Sequence from={390} durationInFrames={25} name="SFX_Workshop_Ready">
-        <Audio src={staticFile('audio/star_ding.wav')} volume={0.65} />
+      <Sequence from={195} durationInFrames={45} name="SFX_Hub_Airlock">
+        <Audio src={staticFile('audio/door_open.wav')} volume={0.42} />
       </Sequence>
 
-      {/* Escena 4: Cuenta regresiva y rugido de despegue */}
+      {/* Escena 3: Selección de los 4 componentes en el Taller y salida del Rover */}
+      <Sequence from={278} durationInFrames={18} name="SFX_Workshop_Step1">
+        <Audio src={staticFile('audio/click.wav')} volume={0.5} />
+      </Sequence>
+      <Sequence from={314} durationInFrames={18} name="SFX_Workshop_Step2">
+        <Audio src={staticFile('audio/click.wav')} volume={0.5} />
+      </Sequence>
+      <Sequence from={350} durationInFrames={18} name="SFX_Workshop_Step3">
+        <Audio src={staticFile('audio/click.wav')} volume={0.5} />
+      </Sequence>
+      <Sequence from={386} durationInFrames={18} name="SFX_Workshop_Step4">
+        <Audio src={staticFile('audio/click.wav')} volume={0.55} />
+      </Sequence>
+      <Sequence from={405} durationInFrames={35} name="SFX_Workshop_Verified">
+        <Audio src={staticFile('audio/star_ding.wav')} volume={0.55} />
+      </Sequence>
+      <Sequence from={405} durationInFrames={45} name="SFX_Workshop_Rollout">
+        <Audio src={staticFile('audio/rover_motor.wav')} volume={0.38} />
+      </Sequence>
+
+      {/* Escena 4: Cuenta regresiva, ignición, despegue y enlace del Satélite Terra */}
       <Sequence from={450} durationInFrames={12} name="SFX_Countdown_3">
-        <Audio src={staticFile('audio/countdown_beep.wav')} volume={0.65} />
+        <Audio src={staticFile('audio/countdown_beep.wav')} volume={0.55} />
       </Sequence>
       <Sequence from={462} durationInFrames={12} name="SFX_Countdown_2">
-        <Audio src={staticFile('audio/countdown_beep.wav')} volume={0.65} />
+        <Audio src={staticFile('audio/countdown_beep.wav')} volume={0.55} />
       </Sequence>
       <Sequence from={474} durationInFrames={12} name="SFX_Countdown_1">
-        <Audio src={staticFile('audio/countdown_beep.wav')} volume={0.75} />
+        <Audio src={staticFile('audio/countdown_beep.wav')} volume={0.65} />
       </Sequence>
-      <Sequence from={486} durationInFrames={130} name="SFX_Rocket_Roar">
-        <Audio src={staticFile('audio/rocket_roar.wav')} volume={0.8} />
+      <Sequence from={455} durationInFrames={120} name="SFX_Rocket_Roar">
+        <Audio src={staticFile('audio/rocket_roar.wav')} volume={0.62} />
       </Sequence>
-
-      {/* Escena 5: Escaneo en Marte y tormenta */}
-      <Sequence from={728} durationInFrames={45} name="SFX_Mars_Scan">
-        <Audio src={staticFile('audio/scan.wav')} volume={0.65} />
-      </Sequence>
-      <Sequence from={775} durationInFrames={35} name="SFX_Mars_Complete">
-        <Audio src={staticFile('audio/site_complete.wav')} volume={0.7} />
+      <Sequence from={578} durationInFrames={35} name="SFX_Terra_Telemetry">
+        <Audio src={staticFile('audio/Generated/comms_back.wav')} volume={0.55} />
       </Sequence>
 
-      {/* Escena 6: Descubrimiento de hielo en la Luna */}
-      <Sequence from={928} durationInFrames={45} name="SFX_Moon_Ice_Scan">
-        <Audio src={staticFile('audio/scan.wav')} volume={0.65} />
+      {/* Escena 5: Exploración y escaneo en Marte */}
+      <Sequence from={725} durationInFrames={45} name="SFX_Mars_Scan">
+        <Audio src={staticFile('audio/scan.wav')} volume={0.58} />
       </Sequence>
-      <Sequence from={968} durationInFrames={22} name="SFX_Moon_Complete">
-        <Audio src={staticFile('audio/site_complete.wav')} volume={0.75} />
+      <Sequence from={765} durationInFrames={35} name="SFX_Mars_Complete">
+        <Audio src={staticFile('audio/site_complete.wav')} volume={0.62} />
       </Sequence>
 
-      {/* Escena 7: Alerta de Modo Seguro -> Reconexión y 3 estrellas */}
-      <Sequence from={995} durationInFrames={45} name="SFX_Safe_Mode_Alert">
-        <Audio src={staticFile('audio/Generated/safe_mode.wav')} volume={0.7} />
+      {/* Escena 6: Descubrimiento de hielo en la Luna (-240 C) */}
+      <Sequence from={895} durationInFrames={45} name="SFX_Moon_Ice_Scan">
+        <Audio src={staticFile('audio/scan.wav')} volume={0.58} />
       </Sequence>
-      <Sequence from={1060} durationInFrames={35} name="SFX_Comms_Restored">
-        <Audio src={staticFile('audio/Generated/comms_back.wav')} volume={0.75} />
+      <Sequence from={945} durationInFrames={35} name="SFX_Moon_Complete">
+        <Audio src={staticFile('audio/site_complete.wav')} volume={0.65} />
       </Sequence>
-      <Sequence from={1135} durationInFrames={45} name="SFX_Rescue_Success">
-        <Audio src={staticFile('audio/star_ding.wav')} volume={0.8} />
+
+      {/* Escena 7: Alerta de Modo Seguro -> Reconexión y misión 3/3 */}
+      <Sequence from={992} durationInFrames={45} name="SFX_Safe_Mode_Alert">
+        <Audio src={staticFile('audio/Generated/safe_mode.wav')} volume={0.62} />
+      </Sequence>
+      <Sequence from={1082} durationInFrames={35} name="SFX_Comms_Restored">
+        <Audio src={staticFile('audio/Generated/comms_back.wav')} volume={0.65} />
+      </Sequence>
+      <Sequence from={1155} durationInFrames={40} name="SFX_Rescue_Success">
+        <Audio src={staticFile('audio/site_complete.wav')} volume={0.65} />
+      </Sequence>
+
+      {/* Escena 8: 3 estrellas doradas en el Gran Final */}
+      <Sequence from={1206} durationInFrames={25} name="SFX_Finale_Star1">
+        <Audio src={staticFile('audio/star_ding.wav')} volume={0.5} />
+      </Sequence>
+      <Sequence from={1213} durationInFrames={25} name="SFX_Finale_Star2">
+        <Audio src={staticFile('audio/star_ding.wav')} volume={0.55} />
+      </Sequence>
+      <Sequence from={1220} durationInFrames={35} name="SFX_Finale_Star3">
+        <Audio src={staticFile('audio/star_ding.wav')} volume={0.65} />
       </Sequence>
 
       {/* =================================================================== */}
