@@ -122,6 +122,7 @@ public class AudioManager : MonoBehaviour
             case SceneFlow.Launch: PlayMusic(Music.None); break;
             case SceneFlow.Mars: PlayMusic(Music.Mars); break;
             case "04_Moon": PlayMusic(Music.Mars); break;   // de momento, la misma música de exploración
+            case "06_Control": PlayMusic(Music.Hub); break;
             case SceneFlow.Report: PlayMusic(Music.Report); break;
         }
     }
