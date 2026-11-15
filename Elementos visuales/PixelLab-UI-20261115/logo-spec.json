@@ -1,0 +1,9 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "A memorable industrial pixel art game title logo. The EXACT readable text is MARS CRAFTS only, bold sturdy pixel lettering, MARS terracotta orange and CRAFTS steel gray white, crisp dark outlines, small geometric mechanical details, no slogan, no NASA mark, transparent background, centered composition. Crisp 16-bit Game Boy Advance pixel art UI, scientific industrial space center, flat frontal geometry, blue gray metal, dark navy outlines, upper left light, limited palette, no blur, no gradient, no invented text.",
+  "width": 192,
+  "height": 64,
+  "transparent": true,
+  "reference": null,
+  "seed": 151126
+}

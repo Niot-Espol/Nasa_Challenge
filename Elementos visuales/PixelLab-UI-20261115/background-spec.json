@@ -1,0 +1,9 @@
+{
+  "tool": "create_image_pixflux",
+  "prompt": "Cinematic quiet 16:9 Martian exploration RPG title background, natural rust red layered terrain and sedimentary rocks foreground, distant eroded hills, reddish violet sky with calm upper central region for separate logo and clear darker area for menu. A small white and orange scientific rover at bottom right, discreet scientific lander, peaceful optimistic scientific discovery; no people, no text, no UI, no logos, no crashed craft. Authentic crisp 16-bit GBA pixel art, limited palette, no gradients or realism.",
+  "width": 320,
+  "height": 180,
+  "transparent": false,
+  "reference": "background-reference.png",
+  "seed": 151126
+}

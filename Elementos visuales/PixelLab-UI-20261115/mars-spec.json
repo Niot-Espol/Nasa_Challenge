@@ -1,0 +1,9 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "64x64 mission planet thumbnail matching the supplied Earth card composition: same centered globe size and lighting, replace with rusty terracotta Mars with subtle canyons and craters, on same navy starfield background, no text or frame or UI. Crisp 16-bit Game Boy Advance pixel art UI, scientific industrial space center, flat frontal geometry, blue gray metal, dark navy outlines, upper left light, limited palette, no blur, no gradient, no invented text.",
+  "width": 64,
+  "height": 64,
+  "transparent": false,
+  "reference": "earth-result-0.png",
+  "seed": 151126
+}
