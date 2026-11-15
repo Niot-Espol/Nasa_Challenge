@@ -15,10 +15,14 @@ public static class MoonSceneBuilder
     const string Art = "Assets/_Project/Art/";
     const string ShadowSpritePath = Art + "Sprites/Moon/Effects/shadow_soft.png";
 
-    // Cráter en sombra (abajo a la derecha del mapa, donde está el hielo)
-    static readonly Vector2 CraterCenter = new Vector2(15.5f, -11f);
-    static readonly Rect ShadowRect = new Rect(8.6f, -18f, 14.4f, 13.4f);   // x, y, ancho, alto (mundo)
-    const float NoSignalRadius = 5f;
+    // Distribución propia de la Luna
+    static readonly Vector2 StartPos = new Vector2(0f, 12.6f);   // módulo arriba al centro
+    static readonly Vector2 IcePos = new Vector2(-14.6f, -10.0f); // centro del cráter (separado del borde del mapa)
+    static readonly Vector2 ShadowSize = new Vector2(13.6f, 12.4f);  // sombra alrededor del hielo
+    const float NoSignalRadius = 4.4f;                           // fondo del cráter (sin señal)
+    const float RingRadius = 5.0f;                               // anillo de rocas del cráter
+    const float RingGapAngle = 45f;                              // entrada del cráter (grados, 0 = derecha)
+    const float RingGapHalf = 30f;
 
     [MenuItem("Mars Crafts/Luna/Construir escena 04_Moon")]
     public static void BuildMenu() => Debug.Log("[Luna] " + Build());
@@ -112,10 +116,14 @@ public static class MoonSceneBuilder
         SetText("ZoneBanner", "Luna · Polo sur");
         SetText("ZoneTag", "Polo sur lunar");
 
-        // --- 4) Cráter en sombra + zona sin señal ---
+        // --- 4) Distribución distinta a Marte: espejo, salida arriba, anillo de rocas en el cráter ---
         var map = GameObject.Find("Map");
+        Vector2 ice = Relayout(map, log);
+        Rect ShadowRect = new Rect(ice - ShadowSize * 0.5f, ShadowSize);
+        Vector2 CraterCenter = ice;
+
+        // --- 5) Cráter en sombra + zona sin señal ---
         var zones = new GameObject("MoonZones");
-        if (map != null) zones.transform.SetParent(map.transform, false);
 
         var shadow = new GameObject("ShadowZone_Crater");
         shadow.transform.SetParent(zones.transform, false);
@@ -144,6 +152,91 @@ public static class MoonSceneBuilder
         EditorSceneManager.MarkSceneDirty(scene);
         EditorSceneManager.SaveScene(scene);
         return "04_Moon construida: " + string.Join(", ", log);
+    }
+
+    // Refleja el mapa (izquierda ↔ derecha), sube la salida al centro, quita las barreras de Marte
+    // y con sus rocas forma un anillo alrededor del cráter del hielo. Devuelve la posición del hielo.
+    static Vector2 Relayout(GameObject map, List<string> log)
+    {
+        // Tiles en espejo
+        foreach (var tm in map.GetComponentsInChildren<Tilemap>(true))
+        {
+            var cells = new List<KeyValuePair<Vector3Int, TileBase>>();
+            foreach (var c in tm.cellBounds.allPositionsWithin) { var t = tm.GetTile(c); if (t != null) cells.Add(new KeyValuePair<Vector3Int, TileBase>(c, t)); }
+            tm.ClearAllTiles();
+            foreach (var kv in cells) tm.SetTile(new Vector3Int(-kv.Key.x - 1, kv.Key.y, kv.Key.z), kv.Value);
+        }
+        // Objetos en espejo (grupos y sus hijos), y dibujos volteados para que no se reconozcan
+        foreach (Transform group in map.transform)
+        {
+            if (group.GetComponent<Grid>() != null) continue;
+            MirrorX(group);
+            bool decor = group.name == "CraterRim" || group.name == "Rocks" || group.name == "RockyZone" || group.name == "Ridge" || group.name == "BoulderWall";
+            foreach (Transform child in group)
+            {
+                MirrorX(child);
+                if (decor) { var sr = child.GetComponent<SpriteRenderer>(); if (sr != null) sr.flipX = !sr.flipX; }
+            }
+        }
+
+        // Salida arriba al centro: módulo y rover
+        var lander = GameObject.Find("Lander");
+        if (lander != null) lander.transform.position = StartPos;
+        var rover = GameObject.Find("Rover");
+        if (rover != null) rover.transform.position = StartPos + new Vector2(2.6f, -0.9f);
+
+        // Hielo (tras el espejo) = centro del cráter
+        Vector2 ice = IcePos;
+        foreach (var sp in map.GetComponentsInChildren<ScienceSitePoint>(true)) if (sp.Site == ScienceSite.Ice) sp.transform.position = IcePos;
+
+        // Barreras de Marte (cresta y muro) → anillo del cráter, con una entrada hacia arriba-derecha
+        var ringRocks = new List<Transform>();
+        foreach (var n in new[] { "Ridge", "BoulderWall" })
+        {
+            var g = map.transform.Find(n);
+            if (g == null) continue;
+            foreach (Transform t in g) ringRocks.Add(t);
+        }
+        var ring = new GameObject("CraterRing").transform;
+        ring.SetParent(map.transform, false);
+        var angles = new List<float>();
+        for (float a = 0; a < 360f; a += 360f / 26f)
+            if (Mathf.Abs(Mathf.DeltaAngle(a, RingGapAngle)) > RingGapHalf) angles.Add(a);
+        for (int i = 0; i < ringRocks.Count && i < angles.Count; i++)
+        {
+            int k = Mathf.RoundToInt(i * (angles.Count - 1f) / Mathf.Max(1, ringRocks.Count - 1));
+            float rad = angles[k] * Mathf.Deg2Rad;
+            ringRocks[i].SetParent(ring, true);
+            ringRocks[i].position = (Vector3)(ice + new Vector2(Mathf.Cos(rad), Mathf.Sin(rad) * 0.85f) * RingRadius);
+        }
+        foreach (var n in new[] { "Ridge", "BoulderWall" }) { var g = map.transform.Find(n); if (g != null) Object.DestroyImmediate(g.gameObject); }
+
+        // Despejar: nada de rocas sueltas encima de la salida ni dentro del cráter
+        int removed = 0;
+        var rocks = map.transform.Find("Rocks");
+        if (rocks != null)
+            for (int i = rocks.childCount - 1; i >= 0; i--)
+            {
+                Vector2 p = rocks.GetChild(i).position;
+                if (Vector2.Distance(p, StartPos) < 4.2f || Vector2.Distance(p, ice) < RingRadius + 0.8f) { Object.DestroyImmediate(rocks.GetChild(i).gameObject); removed++; }
+            }
+        log.Add("mapa en espejo, salida arriba, anillo de " + Mathf.Min(ringRocks.Count, angles.Count) + " rocas, " + removed + " rocas despejadas");
+        return ice;
+    }
+
+    static void MirrorX(Transform t)
+    {
+        var p = t.localPosition; p.x = -p.x; t.localPosition = p;
+        foreach (var bc in t.GetComponents<BoxCollider2D>()) { var o = bc.offset; o.x = -o.x; bc.offset = o; }
+        foreach (var cc in t.GetComponents<CircleCollider2D>()) { var o = cc.offset; o.x = -o.x; cc.offset = o; }
+        foreach (var pc in t.GetComponents<PolygonCollider2D>())
+            for (int i = 0; i < pc.pathCount; i++)
+            {
+                var path = pc.GetPath(i);
+                for (int j = 0; j < path.Length; j++) path[j].x = -path[j].x;
+                System.Array.Reverse(path);
+                pc.SetPath(i, path);
+            }
     }
 
     static void SetKind(EnvironmentZone z, EnvironmentZone.Kind kind, float drain)
