@@ -7,7 +7,7 @@
 Hacer primero todo lo P1 (meta: sábado por la noche), después P2 y por último P3.
 
 > **Estado (domingo 15, madrugada):** ✅ personajes, retratos, tileset de Marte, tileset del laboratorio y rover de perfil ya están **dentro del juego**.
-> **Falta:** la **interfaz**, los **íconos** (componentes y recursos) y el **lanzamiento**. Ver "Qué falta" al final.
+> **Falta:** los **íconos** (componentes y recursos) y el **lanzamiento**. Ver "Qué falta" al final.
 
 ---
 
@@ -151,19 +151,19 @@ Hacer primero todo lo P1 (meta: sábado por la noche), después P2 y por último
 
 | ✓ | Prio | Asset | Tamaño | Notas | Quién |
 |---|---|---|---|---|---|
-| [ ] | P1 | **Marco de panel** | 48×48 | 9-slice: esquinas de 16×16 que se estiran. Estilo consola de nave. | |
-| [ ] | P1 | **Caja de diálogo** | 48×48 (9-slice) | Con espacio a la izquierda para el retrato. | |
-| [ ] | P1 | **Botón** | 48×16 (9-slice) × 3 estados | Normal, encima (hover) y presionado. | |
-| [ ] | P1 | **Barra** (marco + relleno) | 64×8 | Para energía y tiempo. El relleno es un color plano que se estira. | |
-| [ ] | P1 | **Popup de dato NASA** | 48×48 (9-slice) | Para los datos que da BIMO. Diferente del diálogo (más "pantalla científica"). | |
-| [ ] | P1 | **Estrella** llena y vacía | 16×16 | Calificación del reporte (0–3). | |
-| [ ] | P1 | **Insignia Comandante Mars Crafts** | 64×64 | Premio final. | |
-| [ ] | P1 | **Candado** | 16×16 | Para las misiones bloqueadas (Tierra, Luna). | |
-| [ ] | P1 | **Tarjetas de misión**: Tierra, Luna y Marte | 64×64 c/u | Para el menú del título. | |
-| [ ] | P1 | **Logo "Mars Crafts"** | ~192×64 | Para la pantalla de título. | |
-| [ ] | P1 | **Fondo de la pantalla de título** | 320×180 | Paisaje marciano o el centro espacial. | |
-| [ ] | P1 | Ícono de **aviso de BIMO** | 16×16 | Signo de alerta para cuando algo no cumple en el taller. | |
-| [ ] | P2 | Insignias "Eficiente" y "Sin modo seguro" | 32×32 | Premios extra del reporte. | |
+| [x] | P1 | **Marco de panel** | 48×48 | **En el juego.** | PixelLab / Codex |
+| [x] | P1 | **Caja de diálogo** | 48×48 (9-slice) | **En el juego.** | PixelLab / Codex |
+| [x] | P1 | **Botón** | 48×16 (9-slice) × 3 estados | **En el juego.** | PixelLab / Codex |
+| [x] | P1 | **Barra** (marco + relleno) | 64×8 | **En el juego.** | PixelLab / Codex |
+| [x] | P1 | **Popup de dato NASA** | 48×48 (9-slice) | **En el juego.** | PixelLab / Codex |
+| [x] | P1 | **Estrella** llena y vacía | 16×16 | **En el juego.** | PixelLab / Codex |
+| [x] | P1 | **Insignia Comandante Mars Crafts** | 64×64 | **En el juego.** | PixelLab / Codex |
+| [x] | P1 | **Candado** | 16×16 | **En el juego.** | PixelLab / Codex |
+| [x] | P1 | **Tarjetas de misión**: Tierra, Luna y Marte | 64×64 c/u | **En el juego.** | PixelLab / Codex |
+| [x] | P1 | **Logo "Mars Crafts"** | ~192×64 | **En el juego.** | PixelLab / Codex |
+| [x] | P1 | **Fondo de la pantalla de título** | 320×180 | **En el juego.** | PixelLab / Codex |
+| [x] | P1 | Ícono de **aviso de BIMO** | 16×16 | **En el juego.** | PixelLab / Codex |
+| [x] | P2 | Insignias "Eficiente" y "Sin modo seguro" | 32×32 | **En el juego.** | PixelLab / Codex |
 
 > **Fuente:** no se dibuja. Se usará una fuente pixel gratuita (por ejemplo, de Google Fonts o itch.io con licencia libre).
 
@@ -173,11 +173,10 @@ Hacer primero todo lo P1 (meta: sábado por la noche), después P2 y por último
 
 | # | Bloque | Piezas | Por qué importa |
 |---|---|---|---|
-| 1 | **Interfaz** (sección 10) | ~13 piezas | Marcos, botones, barras y caja de diálogo: es lo que más cambia la sensación de "juego terminado". |
-| 2 | **Íconos de componentes** (sección 7) | 14 | El Taller hoy es solo texto. |
-| 3 | **Íconos de recursos** (sección 8) | 6 (+2) | HUD de Marte y barras del Taller. |
-| 4 | **Lanzamiento** (sección 9) | 8 | Hoy son rectángulos de colores. |
-| 5 | Bordes de cauce/delta | P2 | Pulido. |
+| 1 | **Íconos de componentes** (sección 7) | 14 | El Taller hoy es solo texto. |
+| 2 | **Íconos de recursos** (sección 8) | 6 (+2) | HUD de Marte y barras del Taller. |
+| 3 | **Lanzamiento** (sección 9) | 8 | Hoy son rectángulos de colores. |
+| 4 | Bordes de cauce/delta | P2 | Pulido. |
 
 **Audio:** no entra en esta lista. Los efectos son P1 y la música P2, y se buscarán en bancos libres.
 

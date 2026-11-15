@@ -82,6 +82,7 @@ public class MissionHUD : MonoBehaviour
     {
         if (img == null) return;
         img.sprite = s;
+        img.enabled = s != null;
         img.gameObject.SetActive(s != null);
     }
 
@@ -118,7 +119,9 @@ public class MissionHUD : MonoBehaviour
                 : $"<color=#FF5555>MODO SEGURO · recargando {Mathf.Clamp01(s.Energy / (s.MaxEnergy * MissionState.SafeModeResumeFraction)) * 100f:0}%</color>   ";
         if (s.DustStormActive) status += $"<color=#FFAA44>TORMENTA {mc.StormTimeLeft:0} s</color>   ";
         if (s.CommsDown) status += $"<color=#9FA8FF>SIN SEÑAL {mc.BlackoutTimeLeft:0} s</color>   ";
-        if (mc.IsScanning) status += $"<color=#7FE8FF>ESCANEANDO {mc.ScanProgress * 100f:0}%</color>";
+        if (mc.IsScanning) status += $"<color=#7FE8FF>ESCANEANDO {mc.ScanProgress * 100f:0}%</color>   ";
+        if (mc.IsFastForwarding) status += $"<color=#FFFFFF><b>>> x{mc.FastForwardSpeed:0}</b></color>";
+        else if (mc.IsWaiting) status += "\n<size=75%><color=#C8D2E6>Mantén ESPACIO (rover quieto) para adelantar el tiempo</color></size>";
         if (statusText != null) statusText.text = status;
 
         if (statsText != null)

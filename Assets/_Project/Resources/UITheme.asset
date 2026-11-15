@@ -14,49 +14,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UITheme
   elements:
   - element: 0
-    sprite: {fileID: 0}
-    color: {r: 0.1, g: 0.13, b: 0.2, a: 0.96}
+    sprite: {fileID: 21300000, guid: 915bb7222d11b4b4083089f6d9e20b5a, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
     slice: 1
+    borderThinness: 2
   - element: 1
-    sprite: {fileID: 0}
-    color: {r: 0.06, g: 0.08, b: 0.13, a: 0.92}
+    sprite: {fileID: 21300000, guid: 915bb7222d11b4b4083089f6d9e20b5a, type: 3}
+    color: {r: 0.85, g: 0.88, b: 0.95, a: 0.95}
     slice: 1
+    borderThinness: 3
   - element: 2
-    sprite: {fileID: 0}
-    color: {r: 0.22, g: 0.28, b: 0.4, a: 1}
+    sprite: {fileID: 21300000, guid: e56257fec5ab646b19f768957c336144, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
     slice: 1
+    borderThinness: 1.5
   - element: 3
-    sprite: {fileID: 0}
-    color: {r: 0.93, g: 0.5, b: 0.13, a: 1}
+    sprite: {fileID: 21300000, guid: e56257fec5ab646b19f768957c336144, type: 3}
+    color: {r: 1, g: 0.72, b: 0.45, a: 1}
     slice: 1
+    borderThinness: 1.5
   - element: 4
-    sprite: {fileID: 0}
-    color: {r: 0.08, g: 0.1, b: 0.16, a: 0.96}
+    sprite: {fileID: 21300000, guid: 7b4665ffa99264426ab182aaeb5e662c, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
     slice: 1
+    borderThinness: 2
   - element: 5
-    sprite: {fileID: 0}
-    color: {r: 0.06, g: 0.17, b: 0.23, a: 0.97}
+    sprite: {fileID: 21300000, guid: 44cab57bb8d3c4fc5bd93fb16690febd, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
     slice: 1
+    borderThinness: 2
   - element: 6
-    sprite: {fileID: 0}
-    color: {r: 0.16, g: 0.2, b: 0.3, a: 1}
+    sprite: {fileID: 21300000, guid: 915bb7222d11b4b4083089f6d9e20b5a, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
     slice: 1
+    borderThinness: 4
   - element: 7
-    sprite: {fileID: 0}
-    color: {r: 0.8, g: 0.42, b: 0.12, a: 1}
+    sprite: {fileID: 21300000, guid: 44cab57bb8d3c4fc5bd93fb16690febd, type: 3}
+    color: {r: 1, g: 0.68, b: 0.38, a: 1}
     slice: 1
+    borderThinness: 4
   - element: 8
-    sprite: {fileID: 0}
-    color: {r: 0.04, g: 0.05, b: 0.09, a: 1}
+    sprite: {fileID: 21300000, guid: b1dd1a6d95062449ab01b4b09e525e6b, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
     slice: 1
+    borderThinness: 2
   - element: 9
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 79b35ca93e815422fa1ae3ca9ed531e4, type: 3}
     color: {r: 0.45, g: 0.9, b: 0.5, a: 1}
     slice: 1
+    borderThinness: 1
   - element: 10
     sprite: {fileID: 0}
     color: {r: 0, g: 0, b: 0, a: 0.65}
     slice: 1
+    borderThinness: 1
+  buttonHover: {fileID: 21300000, guid: d232dd53885f04705bf72ce310302e72, type: 3}
+  buttonPressed: {fileID: 21300000, guid: 69770291e36484589a06a46e2dbfe46e, type: 3}
   font: {fileID: 0}
   textColor: {r: 0.95, g: 0.95, b: 0.95, a: 1}
   textMuted: {r: 0.65, g: 0.7, b: 0.8, a: 1}
@@ -70,18 +83,18 @@ MonoBehaviour:
   iconTime: {fileID: 0}
   iconComms: {fileID: 0}
   iconScience: {fileID: 0}
-  iconWarning: {fileID: 0}
-  iconLock: {fileID: 0}
-  starFull: {fileID: 0}
-  starEmpty: {fileID: 0}
-  badgeCommander: {fileID: 0}
-  badgeEfficient: {fileID: 0}
-  badgeNoSafeMode: {fileID: 0}
-  logo: {fileID: 0}
-  titleBackground: {fileID: 0}
-  missionEarth: {fileID: 0}
-  missionMoon: {fileID: 0}
-  missionMars: {fileID: 0}
+  iconWarning: {fileID: 21300000, guid: c651bb19ee54f4c4c94f336406bf2912, type: 3}
+  iconLock: {fileID: 21300000, guid: a193d59cc20d1413abaa4da7b9b5130b, type: 3}
+  starFull: {fileID: 21300000, guid: e3b73a990005d4400af54a22eb6b2e33, type: 3}
+  starEmpty: {fileID: 21300000, guid: 55474c02aa83e469281e71614ca2e5cc, type: 3}
+  badgeCommander: {fileID: 21300000, guid: 2c27d41a5c7db40b09c98e7a74bde863, type: 3}
+  badgeEfficient: {fileID: 21300000, guid: f18f92ce52f0141ceb3f6bb5d2526d43, type: 3}
+  badgeNoSafeMode: {fileID: 21300000, guid: c5cde987b227a41d6a4e45765142cbad, type: 3}
+  logo: {fileID: 21300000, guid: e56edb1f1655b46dabd1791f39f0baeb, type: 3}
+  titleBackground: {fileID: 21300000, guid: 40670a676e1154739a4a1a25d47a2132, type: 3}
+  missionEarth: {fileID: 21300000, guid: bd934b8161a0849b490987f1e8948a2b, type: 3}
+  missionMoon: {fileID: 21300000, guid: 4c1ee16e36bc549f5a5eee44c9cac830, type: 3}
+  missionMars: {fileID: 21300000, guid: 3ff2b19dac0b54d0ca40eda3f1dc5596, type: 3}
   launchBackground: {fileID: 0}
   spaceBackground: {fileID: 0}
   rocket: {fileID: 0}

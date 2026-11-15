@@ -29,6 +29,8 @@ public class UIElementStyle
     public Sprite sprite;                       // vacío = color plano
     public Color color = Color.white;           // tinte (o color plano si no hay sprite)
     public Image9Slice slice = Image9Slice.Sliced;
+    [Tooltip("Grosor del borde 9-slice: 1 = píxeles a ×4, 2 = ×2, 4 = ×1 (más alto = borde más fino).")]
+    public float borderThinness = 1f;
 }
 
 public enum Image9Slice { Simple, Sliced, Tiled }
@@ -39,10 +41,15 @@ public class UITheme : ScriptableObject
     [Header("Elementos (sprite 9-slice + color)")]
     public UIElementStyle[] elements;
 
+    [Header("Botones (estados)")]
+    public Sprite buttonHover;
+    public Sprite buttonPressed;
+
     [Header("Texto")]
     public TMP_FontAsset font;                  // fuente pixel cuando llegue (vacío = la de TMP por defecto)
     public Color textColor = new Color(0.95f, 0.95f, 0.95f);
     public Color textMuted = new Color(0.65f, 0.7f, 0.8f);
+    public Color buttonText = new Color(0.06f, 0.09f, 0.15f);   // texto sobre botones claros
 
     [Header("Colores de estado")]
     public Color accent = new Color(1f, 0.55f, 0.15f);   // naranja del traje del protagonista

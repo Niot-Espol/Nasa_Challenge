@@ -3,7 +3,7 @@
 using TMPro;
 using UnityEngine;
 
-public enum TextTone { Normal, Muted, Accent, Good, Warning, Error, Keep }
+public enum TextTone { Normal, Muted, Accent, Good, Warning, Error, Keep, OnButton }
 
 [ExecuteAlways]
 [RequireComponent(typeof(TMP_Text))]
@@ -34,6 +34,7 @@ public class ThemedText : MonoBehaviour
             case TextTone.Good: return theme.good;
             case TextTone.Warning: return theme.warning;
             case TextTone.Error: return theme.error;
+            case TextTone.OnButton: return theme.buttonText;
             default: return theme.textColor;
         }
     }

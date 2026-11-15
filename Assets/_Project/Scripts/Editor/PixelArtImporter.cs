@@ -16,6 +16,7 @@ public class PixelArtImporter : AssetPostprocessor
     void OnPreprocessTexture()
     {
         if (!assetPath.StartsWith(ArtRoot)) return;
+        if (assetPath.StartsWith(ArtRoot + "UI/")) { ImportUI(); return; }
 
         int ppu; SpriteAlignment pivot;
         if (assetPath.StartsWith(ArtRoot + "Sprites/Characters/")) { ppu = 16; pivot = SpriteAlignment.BottomCenter; }
@@ -45,6 +46,32 @@ public class PixelArtImporter : AssetPostprocessor
         importer.ReadTextureSettings(settings);
         if (importer.spriteImportMode == SpriteImportMode.Multiple) { importer.SetTextureSettings(settings); return; }
         settings.spriteAlignment = (int)pivot;
+        settings.spriteMeshType = SpriteMeshType.FullRect;
+        importer.SetTextureSettings(settings);
+    }
+
+    // Interfaz: 25 px = 1 unidad de UI → en un Canvas de referencia 100 PPU se ve a ×4 (bordes gruesos y nítidos).
+    // Los marcos llevan bordes 9-slice para estirarse sin deformar las esquinas.
+    void ImportUI()
+    {
+        var importer = (TextureImporter)assetImporter;
+        importer.textureType = TextureImporterType.Sprite;
+        importer.spriteImportMode = SpriteImportMode.Single;
+        importer.spritePixelsPerUnit = 25;
+        importer.filterMode = FilterMode.Point;
+        importer.textureCompression = TextureImporterCompression.Uncompressed;
+        importer.mipmapEnabled = false;
+        importer.alphaIsTransparency = true;
+        importer.wrapMode = TextureWrapMode.Clamp;
+        string name = System.IO.Path.GetFileNameWithoutExtension(assetPath);
+        Vector4 border = Vector4.zero;   // (izq, abajo, der, arriba)
+        if (name.EndsWith("_frame") && !name.StartsWith("resource_bar")) border = new Vector4(16, 16, 16, 16);
+        else if (name.StartsWith("button_")) border = new Vector4(8, 3, 8, 3);
+        else if (name == "resource_bar_frame") border = new Vector4(4, 2, 4, 2);
+        importer.spriteBorder = border;
+        var settings = new TextureImporterSettings();
+        importer.ReadTextureSettings(settings);
+        settings.spriteAlignment = (int)SpriteAlignment.Center;
         settings.spriteMeshType = SpriteMeshType.FullRect;
         importer.SetTextureSettings(settings);
     }

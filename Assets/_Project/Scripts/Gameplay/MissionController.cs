@@ -10,6 +10,7 @@ public class MissionController : MonoBehaviour
     [SerializeField] float timeLimit = MissionState.DefaultTimeLimit;
     [SerializeField] float moveCostPerSecond = MissionState.DefaultMoveCostPerSecond;
     [SerializeField] float scanDuration = 2.5f;     // segundos detenido escaneando
+    [SerializeField] float fastForwardSpeed = 4f;   // Espacio con el rover detenido: el tiempo pasa más rápido
     [SerializeField] string reportScene = "05_Report";
 
     [SerializeField] DialogueData intro;          // BIMO al aterrizar (opcional)
@@ -55,7 +56,33 @@ public class MissionController : MonoBehaviour
         if (intro != null && DialogueBox.Instance != null) DialogueBox.Instance.Show(intro);
     }
 
-    void OnDestroy() { if (Instance == this) Instance = null; }
+    void OnDestroy()
+    {
+        if (Instance == this) Instance = null;
+        if (IsFastForwarding) Time.timeScale = 1f;
+    }
+
+    // --- Adelantar el tiempo (mantener Espacio con el rover detenido) ---
+    public bool IsFastForwarding { get; private set; }
+    public float FastForwardSpeed => fastForwardSpeed;
+    const string FastForwardTip = "Consejo: mientras esperas, mantén presionada la barra ESPACIO (con el rover quieto) para adelantar el tiempo.";
+
+    // ¿Está el jugador en una situación en la que solo puede esperar? (solo aquí se permite adelantar el tiempo)
+    // Modo seguro, apagón de comunicación o tormenta con paneles solares (no recargan).
+    public bool IsWaiting =>
+        !State.IsOver && (State.InSafeMode || State.CommsDown || (State.DustStormActive && State.Design.UsesSolar));
+
+    void UpdateFastForward()
+    {
+        // Diálogos y pausa controlan el tiempo (lo ponen en 0): no interferir
+        if (DialogueBox.IsOpen || Time.timeScale == 0f) { IsFastForwarding = false; return; }
+        var k = UnityEngine.InputSystem.Keyboard.current;
+        bool held = k != null && k.spaceKey.isPressed;
+        bool stopped = rover == null || !rover.IsMoving;
+        bool ff = held && stopped && IsWaiting && DialogueBox.InputFree;
+        IsFastForwarding = ff;
+        Time.timeScale = ff ? fastForwardSpeed : 1f;
+    }
 
     void Update()
     {
@@ -66,6 +93,7 @@ public class MissionController : MonoBehaviour
 
         UpdateEvents();
         UpdateAudio();
+        UpdateFastForward();
     }
 
     void UpdateEvents()
@@ -80,7 +108,8 @@ public class MissionController : MonoBehaviour
             if (storm) Explain(State.Design.UsesSolar
                 ? new[] {
                     "¡Tormenta de polvo! El polvo tapa el Sol: nuestros paneles solares NO van a recargar durante unos " + dustStormDuration.ToString("0") + " segundos.",
-                    "Si la energía llega a cero, el rover se detendrá hasta que pase la tormenta. ¡Muévete solo lo necesario!" }
+                    "Si la energía llega a cero, el rover se detendrá hasta que pase la tormenta. ¡Muévete solo lo necesario!",
+                    FastForwardTip }
                 : new[] { "¡Tormenta de polvo! Por suerte nuestro RTG no depende del Sol: seguimos recargando con normalidad." });
             CameraShake.SetContinuous(storm ? 0.06f : 0f);
             if (storm) Post(State.Design.UsesSolar
@@ -98,7 +127,8 @@ public class MissionController : MonoBehaviour
             if (down) CameraShake.Shake(0.1f, 0.3f);
             if (down) Explain(State.Design.BlackoutSeconds > 20f
                 ? new[] { "¡Perdimos la comunicación con la Tierra! Durante " + State.Design.BlackoutSeconds.ToString("0") + " segundos no podremos escanear.",
-                          "Con un relé vía orbitador en vez de la antena directa, el apagón duraría solo 10 segundos." }
+                          "Con un relé vía orbitador en vez de la antena directa, el apagón duraría solo 10 segundos.",
+                          FastForwardTip }
                 : new[] { "Perdimos la comunicación, pero gracias al relé vía orbitador volverá en unos " + State.Design.BlackoutSeconds.ToString("0") + " segundos." });
             Post(down
                 ? $"¡Perdimos la comunicación con la Tierra! ({State.Design.BlackoutSeconds:0} s sin poder escanear)"
@@ -170,6 +200,7 @@ public class MissionController : MonoBehaviour
         GameSession.Result = State.Result;
         if (rover != null) rover.CanMove = false;
         AudioManager.SetLoopLevel(Loop.RoverMotor, 0f, 1f);
+        IsFastForwarding = false; Time.timeScale = 1f;
         AudioManager.SetLoop(Loop.Wind, false);
         AudioManager.SetLoop(Loop.Static, false);
         CameraShake.SetContinuous(0f);
@@ -200,7 +231,8 @@ public class MissionController : MonoBehaviour
         if (stormBlocks)
             Explain(new[] {
                 "¡Nos quedamos sin energía y la tormenta sigue tapando el Sol! Los paneles no recargan: hay que esperar unos " + StormTimeLeft.ToString("0") + " segundos a que pase.",
-                "Con un RTG en lugar de paneles solares, esto no habría pasado: el RTG recarga aunque no haya Sol. Lo anotaré para el reporte." });
+                "Con un RTG en lugar de paneles solares, esto no habría pasado: el RTG recarga aunque no haya Sol. Lo anotaré para el reporte.",
+                FastForwardTip });
         else
         {
             float secs = State.CurrentRecharge > 0 ? State.MaxEnergy * MissionState.SafeModeResumeFraction / State.CurrentRecharge : 0f;
@@ -208,7 +240,8 @@ public class MissionController : MonoBehaviour
                 "¡Sin energía! Modo seguro: el rover se detiene hasta recargar el 30 % (unos " + secs.ToString("0") + " segundos).",
                 State.Design.BatteryCapacity < 100f
                     ? "Moverse y escanear gastan energía. Con la batería grande tendríamos más margen."
-                    : "Moverse y escanear gastan energía: conviene parar a recargar antes de llegar a cero." });
+                    : "Moverse y escanear gastan energía: conviene parar a recargar antes de llegar a cero.",
+                FastForwardTip });
         }
     }
 

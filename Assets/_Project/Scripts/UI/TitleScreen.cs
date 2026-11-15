@@ -32,6 +32,7 @@ public class TitleScreen : MonoBehaviour
     {
         if (img == null) return;
         img.sprite = s;
+        img.enabled = s != null;
         img.gameObject.SetActive(s != null);
     }
 }

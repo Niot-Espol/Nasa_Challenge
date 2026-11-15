@@ -69,7 +69,8 @@ public static class UIKit
         colors.pressedColor = new Color(0.8f, 0.8f, 0.8f, 1f);
         colors.disabledColor = new Color(0.5f, 0.5f, 0.5f, 0.5f);
         btn.colors = colors;
-        var txt = Text(img.transform, "Label", label, fontSize, TextAlignmentOptions.Center);
+        var txt = Text(img.transform, "Label", label, fontSize, TextAlignmentOptions.Center,
+                       element == UIElement.Button || element == UIElement.ButtonPrimary ? TextTone.OnButton : TextTone.Normal);
         Fill(txt.rectTransform, 8, 4, 8, 4);
         if (onClick != null) btn.onClick.AddListener(onClick);
         return btn;
