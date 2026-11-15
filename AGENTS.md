@@ -15,7 +15,7 @@
 - [`docs/game-design/alcance-mision-marte.md`](docs/game-design/alcance-mision-marte.md): **alcance acordado** (solo Marte), flujo, qué entra y qué se recorta, y cronograma.
 - [`docs/game-design/sistema-recursos-y-assets.md`](docs/game-design/sistema-recursos-y-assets.md): recursos, valores de los componentes, diseños objetivo, eventos, puntuación y lista de assets.
 - [`docs/game-design/lista-arte-para-dibujar.md`](docs/game-design/lista-arte-para-dibujar.md): **lista de arte para el equipo** (tamaños, frames, prioridades). Sin capas: el rover es un solo dibujo y los componentes son íconos sueltos.
-- [`docs/architecture/arquitectura-unity.md`](docs/architecture/arquitectura-unity.md): escenas y sus dueños, `GameSession`, `ComponentData` y prefabs.
+- [`docs/architecture/arquitectura-unity.md`](docs/architecture/arquitectura-unity.md): escenas, `GameSession`, `ComponentData` y prefabs.
 - [`docs/game-design/historia-mars-crafts.md`](docs/game-design/historia-mars-crafts.md): historia del equipo. La versión vigente es la **1.65**; la 1.0 está descartada. Las tres misiones son la visión, pero **solo se construye Marte**: la Tierra y la Luna aparecen bloqueadas en el menú.
 
 ### Resumen del juego
@@ -36,7 +36,7 @@
 | IA | **MCP for Unity** (`com.coplaydev.unity-mcp`). Con Unity abierto, sirve en `http://127.0.0.1:8080/mcp`. En Claude Code: `claude mcp add --transport http unityMCP http://127.0.0.1:8080/mcp`. |
 
 ## 3. Arquitectura (resumen; detalle en `docs/architecture/`)
-- Una escena por etapa, cada una con **un solo dueño**. Las piezas compartidas son prefabs que también tienen dueño.
+- Una escena por etapa. Las piezas que se repiten entre escenas se hacen como prefabs.
 - `Scripts/Core/`: `GameSession` (estático, con `Design` y `Result`) y el flujo de escenas (`SceneFlow`).
 - `Scripts/Model/`: C# puro, **sin `using UnityEngine`** (`RoverDesign`, `Verifier`, `MissionState`, `ReportBuilder`).
 - `Scripts/Gameplay/`, `Scripts/UI/`, `Scripts/Data/` (ScriptableObjects como `ComponentData`).
@@ -44,11 +44,8 @@
 - No desactives el Domain Reload en *Enter Play Mode Options*: los estáticos no se reiniciarían.
 - Movimiento: `TopDownMover`, que lo usan tanto el astronauta (Hub) como el rover (Mars).
 
-### Dueños de escena
-| Escena | Dueño |
-|---|---|
-| `00_Title`, `02_Workshop`, `05_Report` | Persona de UI (`00_Title` es de Danilo mientras no se asigne) |
-| `01_Hub`, `03_Launch`, `04_Mars` | Danilo |
+### Escenas: sin dueños fijos
+**Cualquier escena se puede modificar**, también la IA con el MCP. Para no pisarse, avisa al equipo antes de trabajar en una escena y haz commit y push pronto: dos personas editando la **misma** `.unity` a la vez generan conflictos de merge difíciles de resolver.
 
 ## 4. Estructura del repo
 ```text
@@ -92,7 +89,7 @@ Elementos visuales/                   zips originales de los personajes (fuente;
 
 ## 6. Reglas para agentes (importante)
 1. **No edites `.unity`, `.prefab` ni `.asset` como texto.** Haz los cambios de escena, prefab o Inspector con el MCP de Unity, con un script de editor, o explícaselos a Danilo.
-2. Antes de modificar una escena con el MCP, confirma que es de Danilo (sección 3).
+2. Se puede modificar cualquier escena. Antes de editar una, haz `git pull` para partir de lo último, y al terminar haz commit y push enseguida para evitar conflictos en los `.unity`.
 3. **No toques `ProjectSettings/` ni `Packages/`** sin que te lo pidan explícitamente.
 4. Assets nuevos o movidos siempre con su `.meta`. Mover o renombrar, solo desde Unity (o con `AssetDatabase.MoveAsset`).
 5. Cambios pequeños y verificables. Después de cada paso, di cómo probarlo en Play.

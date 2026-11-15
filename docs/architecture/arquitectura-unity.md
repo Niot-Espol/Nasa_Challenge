@@ -1,17 +1,17 @@
 # Arquitectura en Unity — Mars Crafts
 
 ## Escenas (una por etapa, en Build Settings en este orden)
-| Escena | Contenido | Dueño |
-|---|---|---|
-| `00_Title` | Título y menú de misiones (Tierra/Luna bloqueadas) | Persona de UI |
-| `01_Hub` | Centro espacial, briefing con la Dra. Vega y BIMO | Danilo |
-| `02_Workshop` | Constructor (UI), verificación, lanzador | Persona de UI |
-| `03_Launch` | Animación de lanzamiento y viaje | Danilo o arte con guía |
-| `04_Mars` | Exploración, rover, puntos, eventos, HUD | Danilo |
-| `05_Report` | Reporte, Rediseñar y Terminar | Persona de UI |
-| (`035_Landing`) | Opcional | — |
+| Escena | Contenido |
+|---|---|
+| `00_Title` | Título y menú de misiones (Tierra/Luna bloqueadas) |
+| `01_Hub` | Centro espacial, briefing con la Dra. Vega y BIMO |
+| `02_Workshop` | Constructor (UI), verificación, lanzador |
+| `03_Launch` | Animación de lanzamiento y viaje |
+| `04_Mars` | Exploración, rover, puntos, eventos, HUD |
+| `05_Report` | Reporte, Rediseñar y Terminar |
+| (`035_Landing`) | Opcional |
 
-Una escena tiene un solo dueño. Los demás aportan prefabs. Las escenas Sandbox siguen para experimentar.
+Las escenas no tienen dueño fijo: cualquiera del equipo (o la IA con el MCP) puede modificarlas. Para evitar conflictos de merge en los `.unity`, avisa antes de editar una escena, haz `git pull` antes de empezar y commit + push al terminar. Las escenas Sandbox siguen para experimentar.
 
 ## Estado compartido
 ```csharp
@@ -66,8 +66,7 @@ public class ComponentData : ScriptableObject
 `Scripts/Gameplay/TopDownMover.cs`: Rigidbody2D (gravedad 0, Freeze Rotation Z, Interpolate). Lee el teclado en `Update` con `Keyboard.current` y aplica `rb.linearVelocity` en `FixedUpdate`. Expone `Facing`, `IsMoving` y `CanMove` para animación, consumo de energía y bloqueo durante diálogos, el apagón o el modo seguro. Lo usan el astronauta (Hub) y el rover (Mars).
 
 ## Prefabs compartidos
-- `DialogueBox`, `FactPopup`, barras de recursos: persona de UI.
-- `SceneFader`: Danilo.
+- `DialogueBox`, `FactPopup`, barras de recursos, `SceneFader` (los puede hacer cualquiera).
 
 ## Carpetas
 - `Scenes/Main/` y `Scenes/Sandbox/<Nombre>.unity`.
