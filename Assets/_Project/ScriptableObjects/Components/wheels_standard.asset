@@ -24,7 +24,7 @@ MonoBehaviour:
   scanCost: 0
   blackoutSeconds: 0
   crossesRockyZone: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 619e6109a7df4e3fa8d0a5f5f59231e3, type: 3}
   description: Incluidas. No pueden cruzar la zona rocosa.
   nasaFact: 
   nasaSourceUrl: 

@@ -24,7 +24,7 @@ MonoBehaviour:
   scanCost: 0
   blackoutSeconds: 10
   crossesRockyZone: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: c104a17c4e634dfda50998f4ae3bdfce, type: 3}
   description: "Env\xEDa los datos a trav\xE9s de un sat\xE9lite. El apag\xF3n dura
     solo 10 s."
   nasaFact: 

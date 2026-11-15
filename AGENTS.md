@@ -86,7 +86,7 @@ Elementos visuales/                   zips originales de los personajes (fuente;
 - **05_Report:** estrellas, insignias, recursos, "qué pasó y por qué", comparación con Perseverance, Rediseñar/Terminar.
 - **Balance:** moverse cuesta **2/s** (el doc decía 1; con 1 los paneles nunca se vaciaban). Se cambia en `MissionController` (Inspector). Simulado: solar + batería pequeña → modo seguro en la tormenta; RTG + 2 instrumentos → 2 estrellas; batería grande → sin modo seguro.
 
-- **Arte de componentes, recursos y lanzamiento generado:** 36 PNG, sus `.meta`, fuentes y composiciones en `docs/art-review/componentes-recursos-lanzamiento/`; ver `Assets/_Project/Art/GENERATED_ASSETS_REPORT.md`. Revisión visual, asignación a escenas/datos y pruebas Unity/WebGL pendientes; sin push.
+- **Arte de componentes, recursos y lanzamiento integrado (15 nov):** 14 íconos en `ComponentData.icon` (tarjetas del Taller), íconos de recursos en `UITheme` (HUD de Marte, presupuesto/masa del Taller, escudo/sin señal junto al estado), fondo del Taller, y `03_Launch` con plataforma, cohete, llama y humo animados (`LaunchSequence`), fondo espacial, planetas y nave. Fuentes en `docs/art-review/componentes-recursos-lanzamiento/`.
 
 ### Pendiente
 - [ ] Reemplazar placeholders por arte (tileset de Marte e interior, rover, puntos, UI, íconos, retratos, fuente pixel) y audio.
@@ -94,7 +94,7 @@ Elementos visuales/                   zips originales de los personajes (fuente;
 - [ ] Verificar los datos NASA con su fuente (`docs/research/`) y rellenar `nasaFact` de los componentes.
 - [ ] Definir el "consumo base" de energía para la regla de verificación (TODO en `Verifier`).
 - [ ] **Build WebGL (objetivo de entrega)**: hacer una build de prueba temprano (el módulo WebGL está instalado; cambiar de plataforma reimporta todo y tarda). Probar en el navegador el flujo completo, audio (los navegadores lo activan tras el primer clic) y Esc (en el navegador sale de pantalla completa).
-- [ ] Integrar los sprites pedidos al compañero (íconos de componentes y recursos, lanzamiento, bordes del cauce/delta) cuando lleguen; revisarlos antes.
+- [ ] Bordes del cauce/delta (único arte pedido que falta); revisarlo antes de integrarlo.
 - [ ] Confirmar licencias del audio (`docs/creditos.md`) y añadir las fuentes (OFL).
 - [ ] Opcional: mover escenas a `Scenes/Main/`, minijuego de aterrizaje, más retratos/expresiones.
 

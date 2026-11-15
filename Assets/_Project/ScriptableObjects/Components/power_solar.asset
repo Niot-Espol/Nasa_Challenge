@@ -24,7 +24,7 @@ MonoBehaviour:
   scanCost: 0
   blackoutSeconds: 0
   crossesRockyZone: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: fba7578747704a75b028892dd7395e76, type: 3}
   description: "Ligeros y baratos. Recargan r\xE1pido, pero no funcionan durante
     una tormenta de polvo."
   nasaFact: 

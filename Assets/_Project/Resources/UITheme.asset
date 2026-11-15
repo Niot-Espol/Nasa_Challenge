@@ -79,13 +79,15 @@ MonoBehaviour:
   good: {r: 0.45, g: 0.9, b: 0.5, a: 1}
   warning: {r: 1, g: 0.8, b: 0.3, a: 1}
   error: {r: 1, g: 0.4, b: 0.4, a: 1}
-  iconBudget: {fileID: 0}
-  iconMass: {fileID: 0}
-  iconEnergy: {fileID: 0}
-  iconTime: {fileID: 0}
-  iconComms: {fileID: 0}
-  iconScience: {fileID: 0}
+  iconBudget: {fileID: 21300000, guid: 0a65493b254e4be78bc52a9581f2d713, type: 3}
+  iconMass: {fileID: 21300000, guid: d12011bbf4354ecd8a90a4169ff23ce1, type: 3}
+  iconEnergy: {fileID: 21300000, guid: e55bd6c019d94e41831103ecd5876c5b, type: 3}
+  iconTime: {fileID: 21300000, guid: 3ab691199c4a461bbe99fb12e07d5d56, type: 3}
+  iconComms: {fileID: 21300000, guid: 4785e2fc8230429cba4ebc95ca1f288a, type: 3}
+  iconScience: {fileID: 21300000, guid: f5ec76f166204bdd976da9c9bf825198, type: 3}
   iconWarning: {fileID: 21300000, guid: c651bb19ee54f4c4c94f336406bf2912, type: 3}
+  iconSafeMode: {fileID: 21300000, guid: 3138c25033d746f68cb5cc575e733693, type: 3}
+  iconNoSignal: {fileID: 21300000, guid: 941e5f4f73994bda9d473fddaf25b1b7, type: 3}
   iconLock: {fileID: 21300000, guid: a193d59cc20d1413abaa4da7b9b5130b, type: 3}
   starFull: {fileID: 21300000, guid: e3b73a990005d4400af54a22eb6b2e33, type: 3}
   starEmpty: {fileID: 21300000, guid: 55474c02aa83e469281e71614ca2e5cc, type: 3}
@@ -94,16 +96,25 @@ MonoBehaviour:
   badgeNoSafeMode: {fileID: 21300000, guid: c5cde987b227a41d6a4e45765142cbad, type: 3}
   logo: {fileID: 21300000, guid: e56edb1f1655b46dabd1791f39f0baeb, type: 3}
   titleBackground: {fileID: 21300000, guid: 40670a676e1154739a4a1a25d47a2132, type: 3}
+  workshopBackground: {fileID: 21300000, guid: 7b0d012f42de4b5c830fbbbd31625827, type: 3}
   missionEarth: {fileID: 21300000, guid: bd934b8161a0849b490987f1e8948a2b, type: 3}
   missionMoon: {fileID: 21300000, guid: 4c1ee16e36bc549f5a5eee44c9cac830, type: 3}
   missionMars: {fileID: 21300000, guid: 3ff2b19dac0b54d0ca40eda3f1dc5596, type: 3}
-  launchBackground: {fileID: 0}
-  spaceBackground: {fileID: 0}
-  rocket: {fileID: 0}
-  rocketFlame: []
-  earth: {fileID: 0}
-  mars: {fileID: 0}
-  cruiseShip: {fileID: 0}
+  launchBackground: {fileID: 21300000, guid: a9f94e30a2234469a13d020ff77879fb, type: 3}
+  spaceBackground: {fileID: 21300000, guid: a8924dd3273345a8bbcb3e89c5670fab, type: 3}
+  rocket: {fileID: 21300000, guid: ef457c30e4a34defa330f61d3ccdb369, type: 3}
+  rocketFlame:
+  - {fileID: 21300000, guid: 829e7faae9744ce5b905f697d0454db7, type: 3}
+  - {fileID: 21300000, guid: ed005c08d1264345aad743bf11000d54, type: 3}
+  - {fileID: 21300000, guid: 4fdb973844b043c2bccc340b3ab91a05, type: 3}
+  launchSmoke:
+  - {fileID: 21300000, guid: d532e65ff86a4290807d44887ec39b59, type: 3}
+  - {fileID: 21300000, guid: 70b9edcbbf47416a8243179aa067ce16, type: 3}
+  - {fileID: 21300000, guid: e1a142f7cb894973aa7e4a9676456532, type: 3}
+  - {fileID: 21300000, guid: 6e4f60f93a224bdb9af06eab4d85212b, type: 3}
+  earth: {fileID: 21300000, guid: a3013055e1814056bbfdd50153ad82cf, type: 3}
+  mars: {fileID: 21300000, guid: 41698cf6fa8044eabb41afc372c462d9, type: 3}
+  cruiseShip: {fileID: 21300000, guid: 6ab918c7a56a44d6882a42d90cb12a9d, type: 3}
   roverPreview: {fileID: 21300000, guid: 329054c98039456d9939c1693c89a5bd, type: 3}
   portraitVega: {fileID: 21300000, guid: 80eb514c123a4364a9ca1afbbe98e5c4, type: 3}
   portraitVegaHappy: {fileID: 21300000, guid: 268270ac09664440b55524f8958758e2, type: 3}

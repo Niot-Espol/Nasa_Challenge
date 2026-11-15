@@ -24,7 +24,7 @@ MonoBehaviour:
   scanCost: 10
   blackoutSeconds: 0
   crossesRockyZone: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: f45144cbf25f47a8a402822fe4f87281, type: 3}
   description: "Necesaria para estudiar el delta. Escanear cuesta 10 de energ\xEDa."
   nasaFact: 
   nasaSourceUrl: 
