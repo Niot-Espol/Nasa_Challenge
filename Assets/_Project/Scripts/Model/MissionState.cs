@@ -1,5 +1,5 @@
 // Assets/_Project/Scripts/Model/MissionState.cs
-// C# puro: el estado EN VIVO de la exploración en Marte (energía, tiempo, eventos, puntos).
+// C# puro: el estado EN VIVO de la exploración (energía, tiempo, eventos, puntos). Sirve para cualquier misión.
 // MissionController (Unity) lo avanza cada frame con Tick() y al final entrega Result.
 using System;
 
@@ -22,6 +22,7 @@ public class MissionState
     public const float DefaultTimeLimit = 150f;          // 2.5 minutos reales
 
     public readonly RoverDesign Design;
+    public readonly MissionDefinition Mission;
     public readonly MissionResult Result = new MissionResult();
 
     public float Energy { get; private set; }
@@ -33,11 +34,14 @@ public class MissionState
 
     public bool InSafeMode { get; private set; }
     public bool DustStormActive { get; private set; }
+    public bool InShadow { get; set; }               // zona sin Sol (Luna): los paneles no recargan
+    public float ExtraDrainPerSecond { get; set; }   // gasto extra fijo (p. ej. frío en la sombra)
+    public bool SunBlocked => DustStormActive || InShadow;
     public bool CommsDown { get; private set; }
     public bool IsOver { get; private set; }
 
     // Recarga actual: los paneles no recargan durante la tormenta.
-    public float CurrentRecharge => (DustStormActive && Design.UsesSolar) ? 0f : Design.RechargePerSecond;
+    public float CurrentRecharge => (SunBlocked && Design.UsesSolar) ? 0f : Design.RechargePerSecond;
 
     // Avisos para la UI / efectos (no son obligatorios de escuchar).
     public event Action<bool> SafeModeChanged;
@@ -47,9 +51,10 @@ public class MissionState
     MissionIncident safeModeIncident, stormIncident, blackoutIncident;
 
     public MissionState(RoverDesign design, float timeLimit = DefaultTimeLimit,
-                        float moveCostPerSecond = DefaultMoveCostPerSecond)
+                        float moveCostPerSecond = DefaultMoveCostPerSecond, MissionDefinition mission = null)
     {
         Design = design;
+        Mission = mission ?? MissionCatalog.Mars;
         TimeLimit = timeLimit;
         MoveCostPerSecond = moveCostPerSecond;
         Energy = design.BatteryCapacity;   // empieza con la batería llena
@@ -57,14 +62,11 @@ public class MissionState
     }
 
     // Instrumento que exige cada punto científico.
+    // Instrumento que exige cada punto científico (lo define la misión a la que pertenece el punto).
     public static Instrument RequiredInstrument(ScienceSite site)
     {
-        switch (site)
-        {
-            case ScienceSite.Delta: return Instrument.Camera;
-            case ScienceSite.MineralOutcrop: return Instrument.Spectrometer;
-            default: return Instrument.Drill;
-        }
+        var info = MissionCatalog.Site(site);
+        return info != null ? info.Instrument : Instrument.Drill;
     }
 
     public void Tick(float dt, bool isMoving)
@@ -75,6 +77,7 @@ public class MissionState
         Result.TimeUsedSeconds = Time;
 
         float spent = (isMoving && !InSafeMode) ? MoveCostPerSecond * dt : 0f;
+        if (ExtraDrainPerSecond > 0f && !InSafeMode) spent += ExtraDrainPerSecond * dt;
         Result.EnergyConsumed += spent;
         Energy = Clamp(Energy - spent + CurrentRecharge * dt);
 
@@ -149,7 +152,7 @@ public class MissionState
     {
         switch (status)
         {
-            case ScanStatus.Ok: return $"¡Datos obtenidos! Punto completado ({Result.ScienceCount}/3).";
+            case ScanStatus.Ok: return $"¡Datos obtenidos! Punto completado ({Result.ScienceCount}/{Mission.Sites.Count}).";
             case ScanStatus.AlreadyDone: return "Ya estudiamos este punto, comandante.";
             case ScanStatus.MissingInstrument: return $"No traemos {InstrumentName(RequiredInstrument(site))}. No podemos estudiar este punto.";
             case ScanStatus.NotEnoughEnergy: return $"Necesitamos {Design.ScanCosts[RequiredInstrument(site)]:0} de energía para escanear. Esperemos a recargar.";

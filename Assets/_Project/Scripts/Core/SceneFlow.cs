@@ -23,12 +23,18 @@ public class SceneFlow : MonoBehaviour
 
     public void LoadScene(string sceneName) => Go(sceneName);
 
-    // Nueva partida: limpia la sesión y va al centro espacial.
-    public void NewGame()
+    // Nueva partida de Marte: limpia la sesión y va al centro espacial.
+    public void NewGame() => StartMission("mars");
+
+    // Nueva partida de la misión indicada (id de MissionCatalog: "mars", "moon"...).
+    public void StartMission(string missionId)
     {
-        GameSession.Reset();
+        GameSession.StartMission(MissionCatalog.Get(missionId));
         Go(Hub);
     }
+
+    // Escena de exploración de la misión activa.
+    public static string MissionScene => GameSession.EnsureMission().SceneName;
 
     // Rediseñar: vuelve al taller conservando GameSession.Design.
     public void Redesign()

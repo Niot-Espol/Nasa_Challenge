@@ -21,6 +21,7 @@ public class ReportScreen : MonoBehaviour
     [SerializeField] TMP_Text budgetText, massText, timeText, scienceText;
     [SerializeField] Image vegaPortrait;
     [SerializeField] TMP_Text vegaText;
+    [SerializeField] TMP_Text compareTitle;
 
     [SerializeField] float starSize = 72f;
 
@@ -28,7 +29,9 @@ public class ReportScreen : MonoBehaviour
     {
         var design = GameSession.EnsureDesign();
         var result = GameSession.EnsureResult();
-        var rep = ReportBuilder.Build(design, result);
+        var mission = GameSession.EnsureMission();
+        var rep = ReportBuilder.Build(design, result, mission);
+        if (compareTitle != null) compareTitle.text = mission.ComparisonTitle;
         Show(rep);
         StartCoroutine(RevealStars(rep.Stars));
     }
@@ -109,13 +112,7 @@ public class ReportScreen : MonoBehaviour
 
         // Comentario final de la Dra. Vega
         if (vegaText != null)
-            vegaText.text = rep.Stars == 3
-                ? "¡Excelente trabajo, comandante! Con estos datos podemos reconstruir parte de la historia del agua en Jezero. Así se diseña una misión."
-                : rep.Stars == 2
-                ? "Buen trabajo. Obtuvimos datos valiosos, aunque nos faltó un punto. Revisa qué decisión lo causó y vuelve a intentarlo."
-                : rep.Stars == 1
-                ? "Conseguimos algo de ciencia, pero la misión se quedó corta. Cada problema tiene una causa en el diseño: ¡rediséñalo!"
-                : "Esta vez no obtuvimos datos... pero en las misiones reales también se aprende de los fallos. Revisa el reporte y prueba otro diseño.";
+            vegaText.text = GameSession.EnsureMission().VegaClosing(rep.Stars);
         if (vegaPortrait != null)
         {
             var sp = DialogueData.Portrait(Speaker.Vega, rep.Stars >= 2 ? Expression.Happy : Expression.Worried);

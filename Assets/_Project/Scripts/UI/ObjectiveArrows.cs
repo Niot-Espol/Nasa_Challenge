@@ -16,11 +16,22 @@ public class ObjectiveArrows : MonoBehaviour
     readonly List<Marker> markers = new List<Marker>();
     Camera cam;
 
-    static string ShortName(ScienceSite s) =>
-        s == ScienceSite.Delta ? "Delta" : s == ScienceSite.MineralOutcrop ? "Mineral" : "Roca especial";
+    static string ShortName(ScienceSite s)
+    {
+        var info = MissionCatalog.Site(s);
+        return info != null ? info.ShortName : s.ToString();
+    }
 
-    static Color SiteColor(ScienceSite s) =>
-        s == ScienceSite.Delta ? new Color(0.45f, 0.7f, 1f) : s == ScienceSite.MineralOutcrop ? new Color(1f, 0.45f, 0.4f) : new Color(0.4f, 0.95f, 1f);
+    // Color por instrumento: cámara azul, espectrómetro rojo, taladro cian
+    static Color SiteColor(ScienceSite s)
+    {
+        switch (MissionState.RequiredInstrument(s))
+        {
+            case Instrument.Camera: return new Color(0.45f, 0.7f, 1f);
+            case Instrument.Spectrometer: return new Color(1f, 0.45f, 0.4f);
+            default: return new Color(0.4f, 0.95f, 1f);
+        }
+    }
 
     void Start()
     {

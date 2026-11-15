@@ -1,6 +1,7 @@
 // Assets/_Project/Scripts/Model/ReportBuilder.cs
 // C# puro: convierte Design + Result en el contenido del Reporte.
 // Lo importante: cada problema se explica con la DECISIÓN del Taller que lo causó.
+// Lo común a todas las misiones está aquí; lo propio (eventos, terreno, comparación) en MissionDefinition.
 using System.Collections.Generic;
 
 public enum ReportTone { Good, Bad, Info }
@@ -20,7 +21,7 @@ public class ReportData
     public string Grade;              // titular ("¡Misión cumplida!")
     public List<Badge> Badges = new List<Badge>();
     public List<ReportLine> Lines = new List<ReportLine>();          // qué pasó y por qué
-    public List<ReportLine> Comparison = new List<ReportLine>();     // tu rover vs Perseverance
+    public List<ReportLine> Comparison = new List<ReportLine>();     // tu rover vs la misión real de referencia
 
     // Resumen de recursos
     public int CostUsed, Budget, MassUsed, MassCapacity;
@@ -29,8 +30,10 @@ public class ReportData
 
 public static class ReportBuilder
 {
-    public static ReportData Build(RoverDesign d, MissionResult r)
+    // mission = null → Marte (compatibilidad con el código anterior)
+    public static ReportData Build(RoverDesign d, MissionResult r, MissionDefinition mission = null)
     {
+        mission = mission ?? MissionCatalog.Mars;
         var rep = new ReportData
         {
             Stars = r.Stars,
@@ -50,40 +53,23 @@ public static class ReportBuilder
         if (r.NeverEnteredSafeMode) rep.Badges.Add(Badge.NoSafeMode);
 
         // --- Puntos científicos: logrados y no logrados, con su causa ---
-        foreach (ScienceSite site in new[] { ScienceSite.Delta, ScienceSite.MineralOutcrop, ScienceSite.SpecialRock })
+        foreach (var info in mission.Sites)
         {
-            var instr = MissionState.RequiredInstrument(site);
+            var site = info.Site;
+            var instr = info.Instrument;
             if (r.CompletedSites.Contains(site))
                 rep.Lines.Add(new ReportLine(ReportTone.Good,
-                    $"Estudiaste {SiteName(site)} con {MissionState.InstrumentName(instr)}."));
+                    $"Estudiaste {info.Name} con {MissionState.InstrumentName(instr)}."));
             else if (!d.HasInstrument(instr))
                 rep.Lines.Add(new ReportLine(ReportTone.Bad,
-                    $"No llevabas {MissionState.InstrumentName(instr)}: no pudiste estudiar {SiteName(site)}."));
+                    $"No llevabas {MissionState.InstrumentName(instr)}: no pudiste estudiar {info.Name}."));
             else
                 rep.Lines.Add(new ReportLine(ReportTone.Bad,
-                    $"Llevabas {MissionState.InstrumentName(instr)}, pero no llegaste a estudiar {SiteName(site)} a tiempo."));
+                    $"Llevabas {MissionState.InstrumentName(instr)}, pero no llegaste a estudiar {info.Name} a tiempo."));
         }
 
-        // --- Energía: tormenta y modo seguro ---
-        int safeModes = r.CountOf(IncidentType.SafeMode);
-        bool storm = r.CountOf(IncidentType.DustStorm) > 0;
-        bool safeDuringStorm = SafeModeDuringStorm(r);
-
-        if (d.UsesSolar && safeDuringStorm)
-            rep.Lines.Add(new ReportLine(ReportTone.Bad,
-                "Elegiste paneles solares: la tormenta de polvo tapó el Sol, cortó la recarga y el rover quedó detenido en modo seguro. Con un RTG habría seguido recargando."));
-        else if (d.UsesSolar && storm)
-            rep.Lines.Add(new ReportLine(ReportTone.Good,
-                "La tormenta apagó tus paneles solares, pero tu batería aguantó hasta que pasó."));
-        else if (d.Power == PowerSource.RTG && storm)
-            rep.Lines.Add(new ReportLine(ReportTone.Good,
-                "Tu RTG siguió dando energía durante la tormenta de polvo."));
-
-        if (safeModes > 0 && !(d.UsesSolar && safeDuringStorm))
-            rep.Lines.Add(new ReportLine(ReportTone.Bad,
-                $"Te quedaste sin energía {Times(safeModes)}. " +
-                (d.BatteryCapacity < 100 ? "Con una batería más grande habrías tenido más margen."
-                                         : "Moverse y escanear gastan energía: planifica la ruta.")));
+        // --- Energía (propia de cada misión: tormenta, sombra...) ---
+        mission.AddEnergyLines(rep, d, r);
 
         // --- Comunicaciones ---
         var blackout = Find(r, IncidentType.CommsBlackout);
@@ -94,12 +80,8 @@ public static class ReportBuilder
                 : new ReportLine(ReportTone.Good,
                     $"El relé vía orbitador redujo la pérdida de comunicación a solo {d.BlackoutSeconds:0} s."));
 
-        // --- Ruedas ---
-        if (r.CountOf(IncidentType.RockyZoneBlocked) > 0)
-            rep.Lines.Add(new ReportLine(ReportTone.Bad,
-                "Con ruedas estándar no pudiste cruzar la zona rocosa y tuviste que rodearla. Las ruedas todoterreno abren ese atajo."));
-        else if (d.AllTerrainWheels)
-            rep.Lines.Add(new ReportLine(ReportTone.Info, "Tus ruedas todoterreno te permitían cruzar la zona rocosa."));
+        // --- Terreno (propio de cada misión) ---
+        mission.AddTerrainLines(rep, d, r);
 
         // --- Presupuesto ---
         rep.Lines.Add(d.RemainingBudget >= 10
@@ -109,29 +91,16 @@ public static class ReportBuilder
         if (r.CountOf(IncidentType.TimeOut) > 0 && r.Stars < 3)
             rep.Lines.Add(new ReportLine(ReportTone.Info, "Se acabó el tiempo de la misión antes de completar todos los puntos."));
 
-        // --- Comparación con Perseverance (datos NASA: verificar en docs/research) ---
-        rep.Comparison.Add(new ReportLine(d.Power == PowerSource.RTG ? ReportTone.Good : ReportTone.Info,
-            d.Power == PowerSource.RTG
-                ? "Energía: igual que Perseverance, usaste un generador de radioisótopos (Perseverance lleva un MMRTG)."
-                : "Energía: tú usaste paneles solares, como Spirit y Opportunity. Perseverance usa un MMRTG para no depender del Sol."));
-        rep.Comparison.Add(new ReportLine(ReportTone.Info,
-            $"Masa: tu rover pesó {d.TotalMass} kg (unidades del juego). Perseverance pesa unos 1.025 kg."));
-        rep.Comparison.Add(new ReportLine(ReportTone.Info,
-            $"Instrumentos: llevaste {d.InstrumentCount} de 3. Perseverance lleva 7, entre ellos Mastcam-Z, SuperCam, PIXL y SHERLOC, y un taladro para sacar muestras."));
-        rep.Comparison.Add(new ReportLine(ReportTone.Info,
-            "Comunicaciones: la mayoría de los datos de Perseverance llegan a la Tierra a través de orbitadores de relé."));
+        // --- Comparación con la misión real de referencia ---
+        mission.AddComparison(rep, d, r);
 
         return rep;
     }
 
     public static string SiteName(ScienceSite s)
     {
-        switch (s)
-        {
-            case ScienceSite.Delta: return "el delta del antiguo río";
-            case ScienceSite.MineralOutcrop: return "el afloramiento mineral";
-            default: return "la roca especial";
-        }
+        var info = MissionCatalog.Site(s);
+        return info != null ? info.Name : s.ToString();
     }
 
     public static string BadgeName(Badge b)
@@ -144,23 +113,9 @@ public static class ReportBuilder
         }
     }
 
-    static string Times(int n) => n == 1 ? "una vez" : n + " veces";
-
     static MissionIncident Find(MissionResult r, IncidentType t)
     {
         foreach (var i in r.Incidents) if (i.Type == t) return i;
         return null;
-    }
-
-    static bool SafeModeDuringStorm(MissionResult r)
-    {
-        foreach (var s in r.Incidents)
-        {
-            if (s.Type != IncidentType.DustStorm) continue;
-            float end = s.Time + (s.Duration > 0 ? s.Duration : 30f);
-            foreach (var m in r.Incidents)
-                if (m.Type == IncidentType.SafeMode && m.Time >= s.Time && m.Time <= end + 1f) return true;
-        }
-        return false;
     }
 }

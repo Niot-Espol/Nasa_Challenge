@@ -163,7 +163,7 @@ public class MissionHUD : MonoBehaviour
         }
         if (timeText != null) timeText.text = $"Tiempo {secs / 60}:{secs % 60:00}";
 
-        if (scienceText != null) scienceText.text = $"Puntos científicos: {s.Result.ScienceCount}/3";
+        if (scienceText != null) scienceText.text = $"Puntos científicos: {s.Result.ScienceCount}/{s.Mission.Sites.Count}";
 
         string status = "";
         if (s.InSafeMode)
@@ -180,6 +180,6 @@ public class MissionHUD : MonoBehaviour
         UpdateStatusIcon(s, th, status);
 
         if (statsText != null)
-            statsText.text = $"Energía: {s.Energy:0}/{s.MaxEnergy:0}\nTiempo: {secs / 60}:{secs % 60:00}\nPuntos: {s.Result.ScienceCount}/3";
+            statsText.text = $"Energía: {s.Energy:0}/{s.MaxEnergy:0}\nTiempo: {secs / 60}:{secs % 60:00}\nPuntos: {s.Result.ScienceCount}/{s.Mission.Sites.Count}";
     }
 }

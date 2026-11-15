@@ -15,7 +15,9 @@ public class MissionController : MonoBehaviour
 
     [SerializeField] DialogueData intro;          // BIMO al aterrizar (opcional)
 
-    [Header("Eventos (segundos desde el inicio)")]
+    [Header("Eventos programados (Marte). En otras misiones se desactivan y los eventos vienen del mapa")]
+    [SerializeField] bool timedDustStorm = true;
+    [SerializeField] bool timedBlackout = true;
     [SerializeField] float dustStormAt = 35f;
     [SerializeField] float dustStormDuration = 35f;
     [SerializeField] float blackoutAt = 75f;   // lo más pronto que puede empezar; la duración la decide la antena
@@ -46,7 +48,7 @@ public class MissionController : MonoBehaviour
     {
         Instance = this;
         // Play directo en 04_Mars: si no hay diseño, usa el de prueba.
-        State = new MissionState(GameSession.EnsureDesign(), timeLimit, moveCostPerSecond);
+        State = new MissionState(GameSession.EnsureDesign(), timeLimit, moveCostPerSecond, GameSession.EnsureMission());
         State.SafeModeChanged += on => { if (on) { AudioManager.Play(Sfx.SafeMode); CameraShake.Shake(0.15f, 0.5f); } };
         State.SafeModeChanged += on =>
         {
@@ -105,7 +107,7 @@ public class MissionController : MonoBehaviour
     {
         float t = State.Time;
 
-        bool storm = t >= dustStormAt && t < dustStormAt + dustStormDuration;
+        bool storm = timedDustStorm && t >= dustStormAt && t < dustStormAt + dustStormDuration;
         if (storm != State.DustStormActive)
         {
             State.SetDustStorm(storm);
@@ -125,7 +127,7 @@ public class MissionController : MonoBehaviour
 
         // El apagón nunca llega justo después de otra espera: necesita minFreeGap segundos de juego libre.
         if (State.InSafeMode || (State.DustStormActive && State.Design.UsesSolar)) lastWaitEnd = t;
-        if (blackoutStart < 0f && t >= blackoutAt && t - lastWaitEnd >= minFreeGap && t <= timeLimit - blackoutLatest)
+        if (timedBlackout && blackoutStart < 0f && t >= blackoutAt && t - lastWaitEnd >= minFreeGap && t <= timeLimit - blackoutLatest)
             blackoutStart = t;
         bool down = blackoutStart >= 0f && t < blackoutStart + State.Design.BlackoutSeconds;
         if (down != State.CommsDown)
@@ -190,7 +192,7 @@ public class MissionController : MonoBehaviour
         var status = State.TryScan(site);
         if (status != ScanStatus.Ok) AudioManager.Play(Sfx.ScanFail);
         Post(State.ScanMessage(status, site));
-        if (status == ScanStatus.Ok && State.Result.ScienceCount == 3)
+        if (status == ScanStatus.Ok && State.Result.ScienceCount >= State.Mission.Sites.Count)
         {
             Post("¡Los 3 puntos completados! Transmitiendo los datos a la Tierra...");
             Invoke(nameof(FinishMission), 2.5f);   // tiempo escalado: espera a que se cierre el popup

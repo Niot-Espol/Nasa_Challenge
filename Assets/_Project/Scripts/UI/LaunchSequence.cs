@@ -1,5 +1,5 @@
 // Assets/_Project/Scripts/UI/LaunchSequence.cs
-// 03_Launch: cuenta regresiva, despegue y viaje Tierra → Marte (~7 meses), luego pasa a Marte.
+// 03_Launch: cuenta regresiva, despegue y viaje al destino de la misión activa, luego pasa a su escena.
 // Todo es UI; los sprites salen del UITheme (rocket, earth, mars, cruiseShip...). Espacio/clic salta.
 using System.Collections;
 using TMPro;
@@ -109,13 +109,12 @@ public class LaunchSequence : MonoBehaviour
             Vector2 ahead = Bezier(a, ctrl, b, Mathf.Min(1, u + 0.01f));
             ship.localRotation = Quaternion.Euler(0, 0, Mathf.Atan2(ahead.y - p.y, ahead.x - p.x) * Mathf.Rad2Deg + shipAngleOffset);
             if (u >= nextDot) { Dot(p); nextDot += 0.04f; }
-            int month = Mathf.Clamp(1 + (int)(u * 7f), 1, 7);
-            cruiseText.text = $"Viaje Tierra → Marte · mes {month} de unos 7";
+            cruiseText.text = GameSession.EnsureMission().TravelLabel(u);
             yield return null;
         }
-        cruiseText.text = "Llegando a Marte: entrada, descenso y aterrizaje...";
+        cruiseText.text = GameSession.EnsureMission().ArrivalText;
         yield return Wait(1.3f);
-        SceneFlow.Go(SceneFlow.Mars);
+        SceneFlow.Go(SceneFlow.MissionScene);
     }
 
     // Llama: recorre los frames del tema y "respira" un poco
