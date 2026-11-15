@@ -3,13 +3,15 @@
 // lo avanza cada frame, bloquea al rover en modo seguro, dispara los eventos
 // y al terminar guarda el resultado en GameSession y pasa al Reporte.
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MissionController : MonoBehaviour
 {
     [SerializeField] TopDownMover rover;
     [SerializeField] float timeLimit = MissionState.DefaultTimeLimit;
+    [SerializeField] float moveCostPerSecond = MissionState.DefaultMoveCostPerSecond;
     [SerializeField] string reportScene = "05_Report";
+
+    [SerializeField] DialogueData intro;          // BIMO al aterrizar (opcional)
 
     [Header("Eventos (segundos desde el inicio)")]
     [SerializeField] float dustStormAt = 70f;
@@ -20,7 +22,7 @@ public class MissionController : MonoBehaviour
     public static MissionController Instance { get; private set; }
 
     // Último mensaje de BIMO para el HUD (escaneos, eventos).
-    public string LastMessage { get; private set; } = "Explora y estudia los 3 puntos científicos. Acércate y presiona E.";
+    public string LastMessage { get; private set; } = "Estudia los 3 puntos científicos: acércate y presiona E.";
     public event System.Action<string> MessagePosted;
 
     bool ended;
@@ -29,11 +31,16 @@ public class MissionController : MonoBehaviour
     {
         Instance = this;
         // Play directo en 04_Mars: si no hay diseño, usa el de prueba.
-        State = new MissionState(GameSession.EnsureDesign(), timeLimit);
+        State = new MissionState(GameSession.EnsureDesign(), timeLimit, moveCostPerSecond);
         State.SafeModeChanged += on => Post(on
             ? "¡Sin energía! Modo seguro: el rover se detiene hasta recargar el 30 %."
             : "Energía recuperada. Podemos seguir.");
         State.MissionEnded += OnMissionEnded;
+    }
+
+    void Start()
+    {
+        if (intro != null && DialogueBox.Instance != null) DialogueBox.Instance.Show(intro);
     }
 
     void OnDestroy() { if (Instance == this) Instance = null; }
@@ -96,6 +103,8 @@ public class MissionController : MonoBehaviour
     }
 
     void GoToReport() => SceneFlow.Go(reportScene);
+
+    public void PostMessage(string msg) => Post(msg);
 
     void Post(string msg)
     {

@@ -17,7 +17,7 @@ public enum ScanStatus
 public class MissionState
 {
     // Reglas de exploración (unidades de juego, ver docs/game-design/sistema-recursos-y-assets.md)
-    public const float MoveCostPerSecond = 1f;
+    public const float DefaultMoveCostPerSecond = 2f;   // doc decía 1; con 1 los paneles (3/s) nunca se vacían
     public const float SafeModeResumeFraction = 0.3f;   // sale del modo seguro al recargar 30 %
     public const float DefaultTimeLimit = 240f;          // 4 minutos reales
 
@@ -28,6 +28,7 @@ public class MissionState
     public float MaxEnergy => Design.BatteryCapacity;
     public float Time { get; private set; }
     public float TimeLimit { get; }
+    public float MoveCostPerSecond { get; }
     public float TimeLeft => Math.Max(0f, TimeLimit - Time);
 
     public bool InSafeMode { get; private set; }
@@ -45,10 +46,12 @@ public class MissionState
 
     MissionIncident safeModeIncident, stormIncident, blackoutIncident;
 
-    public MissionState(RoverDesign design, float timeLimit = DefaultTimeLimit)
+    public MissionState(RoverDesign design, float timeLimit = DefaultTimeLimit,
+                        float moveCostPerSecond = DefaultMoveCostPerSecond)
     {
         Design = design;
         TimeLimit = timeLimit;
+        MoveCostPerSecond = moveCostPerSecond;
         Energy = design.BatteryCapacity;   // empieza con la batería llena
         Result.TimeLimitSeconds = timeLimit;
     }

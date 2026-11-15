@@ -1,26 +1,27 @@
 // Assets/_Project/Scripts/Gameplay/ScienceSitePoint.cs
-// Un punto científico del mapa. Cuando el rover entra en su zona (trigger),
-// muestra el indicador "E"; al presionar E intenta escanearlo.
+// Un punto científico del mapa. Con el rover cerca, E intenta escanearlo.
+// Si el escaneo sale bien, BIMO muestra un dato real con su fuente NASA.
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Collider2D))]
-public class ScienceSitePoint : MonoBehaviour
+public class ScienceSitePoint : Interactable
 {
     [SerializeField] ScienceSite site;
-    [SerializeField] GameObject interactPrompt;   // indicador "E" (se muestra con el rover cerca)
-    [SerializeField] SpriteRenderer body;         // se aclara al completar el punto
+    [SerializeField] SpriteRenderer body;          // se aclara al completar el punto
+    [SerializeField] Sprite completedSprite;       // arte pendiente (opcional)
     [SerializeField] Color completedTint = new Color(0.55f, 1f, 0.55f);
+    [SerializeField] GameObject completedMarker;   // banderita "completado" (opcional)
 
-    bool roverInRange;
+    [Header("Dato NASA (se muestra al completar)")]
+    [SerializeField] string factTitle = "Dato NASA";
+    [SerializeField, TextArea(3, 6)] string fact;
+    [SerializeField] string factSource;
 
     public ScienceSite Site => site;
 
-    void Reset() => GetComponent<Collider2D>().isTrigger = true;
-
-    void Start()
+    protected override void Start()
     {
-        if (interactPrompt != null) interactPrompt.SetActive(false);
+        base.Start();
+        if (completedMarker != null) completedMarker.SetActive(false);
         var mc = MissionController.Instance;
         if (mc != null) mc.State.SiteCompleted += OnSiteCompleted;
     }
@@ -31,30 +32,23 @@ public class ScienceSitePoint : MonoBehaviour
         if (mc != null) mc.State.SiteCompleted -= OnSiteCompleted;
     }
 
-    void Update()
+    protected override void Interact()
     {
-        if (!roverInRange || Keyboard.current == null) return;
-        if (Keyboard.current.eKey.wasPressedThisFrame && MissionController.Instance != null)
-            MissionController.Instance.Scan(site);
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.GetComponentInParent<TopDownMover>() == null) return;
-        roverInRange = true;
-        if (interactPrompt != null) interactPrompt.SetActive(true);
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.GetComponentInParent<TopDownMover>() == null) return;
-        roverInRange = false;
-        if (interactPrompt != null) interactPrompt.SetActive(false);
+        var mc = MissionController.Instance;
+        if (mc == null) return;
+        var status = mc.Scan(site);
+        if (status == ScanStatus.Ok && !string.IsNullOrEmpty(fact) && DialogueBox.Instance != null)
+            DialogueBox.Instance.ShowFact(factTitle, fact, factSource);
     }
 
     void OnSiteCompleted(ScienceSite s)
     {
-        if (s != site || body == null) return;
-        body.color = completedTint;
+        if (s != site) return;
+        if (body != null)
+        {
+            if (completedSprite != null) body.sprite = completedSprite;
+            else body.color = completedTint;
+        }
+        if (completedMarker != null) completedMarker.SetActive(true);
     }
 }
