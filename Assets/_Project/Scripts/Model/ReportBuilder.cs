@@ -72,13 +72,7 @@ public static class ReportBuilder
         mission.AddEnergyLines(rep, d, r);
 
         // --- Comunicaciones ---
-        var blackout = Find(r, IncidentType.CommsBlackout);
-        if (blackout != null)
-            rep.Lines.Add(d.BlackoutSeconds > 20f
-                ? new ReportLine(ReportTone.Bad,
-                    $"Con la antena directa perdiste la comunicación {d.BlackoutSeconds:0} s y no pudiste escanear. Un relé vía orbitador lo reduce a 10 s.")
-                : new ReportLine(ReportTone.Good,
-                    $"El relé vía orbitador redujo la pérdida de comunicación a solo {d.BlackoutSeconds:0} s."));
+        mission.AddCommsLines(rep, d, r);
 
         // --- Terreno (propio de cada misión) ---
         mission.AddTerrainLines(rep, d, r);
@@ -113,7 +107,7 @@ public static class ReportBuilder
         }
     }
 
-    static MissionIncident Find(MissionResult r, IncidentType t)
+    public static MissionIncident Find(MissionResult r, IncidentType t)
     {
         foreach (var i in r.Incidents) if (i.Type == t) return i;
         return null;

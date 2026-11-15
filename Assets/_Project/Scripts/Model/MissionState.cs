@@ -34,21 +34,29 @@ public class MissionState
 
     public bool InSafeMode { get; private set; }
     public bool DustStormActive { get; private set; }
-    public bool InShadow { get; set; }               // zona sin Sol (Luna): los paneles no recargan
+    public bool InShadow { get; private set; }       // zona sin Sol (Luna): los paneles no recargan
     public float ExtraDrainPerSecond { get; set; }   // gasto extra fijo (p. ej. frío en la sombra)
     public bool SunBlocked => DustStormActive || InShadow;
     public bool CommsDown { get; private set; }
     public bool IsOver { get; private set; }
 
     // Recarga actual: los paneles no recargan durante la tormenta.
-    public float CurrentRecharge => (SunBlocked && Design.UsesSolar) ? 0f : Design.RechargePerSecond;
+    public float CurrentRecharge
+    {
+        get
+        {
+            float r = (SunBlocked && Design.UsesSolar) ? 0f : Design.RechargePerSecond;
+            if (InSafeMode && r < Mission.SafeModeMinRecharge) r = Mission.SafeModeMinRecharge;
+            return r;
+        }
+    }
 
     // Avisos para la UI / efectos (no son obligatorios de escuchar).
     public event Action<bool> SafeModeChanged;
     public event Action<ScienceSite> SiteCompleted;
     public event Action MissionEnded;
 
-    MissionIncident safeModeIncident, stormIncident, blackoutIncident;
+    MissionIncident safeModeIncident, stormIncident, blackoutIncident, shadowIncident;
 
     public MissionState(RoverDesign design, float timeLimit = DefaultTimeLimit,
                         float moveCostPerSecond = DefaultMoveCostPerSecond, MissionDefinition mission = null)
@@ -121,6 +129,16 @@ public class MissionState
         else if (stormIncident != null) stormIncident.Duration = Time - stormIncident.Time;
     }
 
+    // Zona en sombra (Luna): sin Sol para los paneles y frío que gasta energía.
+    public void SetInShadow(bool shadow, float coldDrainPerSecond = 0f)
+    {
+        if (shadow == InShadow || IsOver) return;
+        InShadow = shadow;
+        ExtraDrainPerSecond = shadow ? coldDrainPerSecond : 0f;
+        if (shadow) { shadowIncident = new MissionIncident(IncidentType.Shadow, Time); Result.Incidents.Add(shadowIncident); }
+        else if (shadowIncident != null) shadowIncident.Duration = Time - shadowIncident.Time;
+    }
+
     public void SetCommsDown(bool down)
     {
         if (down == CommsDown || IsOver) return;
@@ -140,6 +158,7 @@ public class MissionState
         if (IsOver) return;
         if (InSafeMode) ExitSafeMode();
         SetDustStorm(false);
+        if (InShadow) SetInShadow(false);
         if (CommsDown) SetCommsDown(false);
         if (timedOut) Result.Incidents.Add(new MissionIncident(IncidentType.TimeOut, Time));
         Result.DataTransmitted = Result.ScienceCount > 0;

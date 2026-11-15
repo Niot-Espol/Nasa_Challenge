@@ -38,7 +38,7 @@ public class MarsMission : MissionDefinition
     {
         int safeModes = r.CountOf(IncidentType.SafeMode);
         bool storm = r.CountOf(IncidentType.DustStorm) > 0;
-        bool safeDuringStorm = SafeModeDuringStorm(r);
+        bool safeDuringStorm = SafeModeDuring(r, IncidentType.DustStorm, 30f);
 
         if (d.UsesSolar && safeDuringStorm)
             rep.Lines.Add(new ReportLine(ReportTone.Bad,
@@ -80,17 +80,5 @@ public class MarsMission : MissionDefinition
             $"Instrumentos: llevaste {d.InstrumentCount} de 3. Perseverance lleva 7, entre ellos Mastcam-Z, SuperCam, PIXL y SHERLOC, y un taladro para sacar muestras."));
         rep.Comparison.Add(new ReportLine(ReportTone.Info,
             "Comunicaciones: la mayoría de los datos de Perseverance llegan a la Tierra a través de orbitadores de relé."));
-    }
-
-    static bool SafeModeDuringStorm(MissionResult r)
-    {
-        foreach (var s in r.Incidents)
-        {
-            if (s.Type != IncidentType.DustStorm) continue;
-            float end = s.Time + (s.Duration > 0 ? s.Duration : 30f);
-            foreach (var m in r.Incidents)
-                if (m.Type == IncidentType.SafeMode && m.Time >= s.Time && m.Time <= end + 1f) return true;
-        }
-        return false;
     }
 }

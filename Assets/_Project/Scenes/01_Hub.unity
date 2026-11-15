@@ -3342,6 +3342,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  perMission:
+  - missionId: moon
+    firstTime: {fileID: 11400000, guid: 5d1f9908079d94918b1fff29f7aee98f, type: 2}
+    repeat: {fileID: 0}
 --- !u!58 &1010665420
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5876,6 +5880,10 @@ MonoBehaviour:
   onFirstDialogueDone:
     m_PersistentCalls:
       m_Calls: []
+  perMission:
+  - missionId: moon
+    firstTime: {fileID: 11400000, guid: 7b4851203c03446ccad1715c18f0a885, type: 2}
+    repeat: {fileID: 0}
 --- !u!58 &2075618016
 CircleCollider2D:
   m_ObjectHideFlags: 0

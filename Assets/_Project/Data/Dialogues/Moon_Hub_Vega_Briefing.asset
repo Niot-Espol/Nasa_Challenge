@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c3e562645bb4c13bba240885e23578, type: 3}
+  m_Name: Moon_Hub_Vega_Briefing
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speaker: 0
+    expression: 1
+    text: "Bienvenido de nuevo, comandante. Hoy viajamos mucho m\xE1s cerca: a la
+      Luna, a solo unos 384.400 kil\xF3metros."
+    highlight: 
+  - speaker: 0
+    expression: 0
+    text: "La NASA ha encontrado evidencias de hielo de agua en el polo sur lunar,
+      dentro de cr\xE1teres donde la luz del Sol nunca llega."
+    highlight: 
+  - speaker: 0
+    expression: 0
+    text: "Nuestra pregunta cient\xEDfica: \xBFhay hielo en esos cr\xE1teres en sombra
+      permanente, y podr\xEDa servir para futuras misiones?"
+    highlight: 
+  - speaker: 0
+    expression: 0
+    text: "Estudiar\xE1s tres puntos: una roca del borde iluminado, el regolito y,
+      en el fondo de un cr\xE1ter, el hielo. Cada uno necesita un instrumento distinto."
+    highlight: 
+  - speaker: 0
+    expression: 2
+    text: "Cuidado: en la sombra no hay Sol para los paneles y el fr\xEDo gasta energ\xEDa.
+      Y desde el fondo del cr\xE1ter no se ve la Tierra: sin un rel\xE9, perder\xE1s
+      la se\xF1al."
+    highlight: 
+  - speaker: 1
+    expression: 1
+    text: "\xBFAgua en la Luna? \xA1Excelente! \xA1Preparar\xE9 mi flotador espacial!"
+    highlight: 
+  - speaker: 0
+    expression: 0
+    text: "BIMO, no vamos de vacaciones. Necesitamos un rover que sobreviva al fr\xEDo
+      y a la oscuridad."
+    highlight: 
+  - speaker: 0
+    expression: 1
+    text: "Dise\xF1a bien tu rover en el taller. Cuando est\xE9s listo, entra por
+      la puerta del fondo."
+    highlight: 

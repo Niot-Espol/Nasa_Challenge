@@ -114,6 +114,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6e4f60f93a224bdb9af06eab4d85212b, type: 3}
   earth: {fileID: 21300000, guid: a3013055e1814056bbfdd50153ad82cf, type: 3}
   mars: {fileID: 21300000, guid: 41698cf6fa8044eabb41afc372c462d9, type: 3}
+  moon: {fileID: 21300000, guid: 452d616d79c8846a8b456db99485d63a, type: 3}
   cruiseShip: {fileID: 21300000, guid: 6ab918c7a56a44d6882a42d90cb12a9d, type: 3}
   roverPreview: {fileID: 21300000, guid: 329054c98039456d9939c1693c89a5bd, type: 3}
   portraitVega: {fileID: 21300000, guid: 80eb514c123a4364a9ca1afbbe98e5c4, type: 3}

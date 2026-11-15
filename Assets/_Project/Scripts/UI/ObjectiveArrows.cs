@@ -42,7 +42,7 @@ public class ObjectiveArrows : MonoBehaviour
         {
             var m = new Marker { site = site, name = ShortName(site.Site) };
             m.root = UIKit.NewRect("Arrow_" + m.name, container);
-            m.root.sizeDelta = new Vector2(160, 90);
+            m.root.sizeDelta = new Vector2(240, 90);   // ancho para nombres largos ("Borde iluminado")
             var a = UIKit.NewRect("Arrow", m.root);
             a.sizeDelta = new Vector2(46, 46);
             var img = a.gameObject.AddComponent<Image>();

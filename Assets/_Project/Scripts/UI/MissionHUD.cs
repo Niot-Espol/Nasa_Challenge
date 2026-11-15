@@ -171,7 +171,12 @@ public class MissionHUD : MonoBehaviour
                 ? $"<color=#FF5555>MODO SEGURO · sin Sol, espera {mc.StormTimeLeft:0} s</color>   "
                 : $"<color=#FF5555>MODO SEGURO · recargando {Mathf.Clamp01(s.Energy / (s.MaxEnergy * MissionState.SafeModeResumeFraction)) * 100f:0}%</color>   ";
         if (s.DustStormActive) status += $"<color=#FFAA44>TORMENTA {mc.StormTimeLeft:0} s</color>   ";
-        if (s.CommsDown) status += $"<color=#9FA8FF>SIN SEÑAL {mc.BlackoutTimeLeft:0} s</color>   ";
+        if (s.InShadow) status += s.Design.UsesSolar
+            ? $"<color=#8FB8FF>SOMBRA · sin Sol, frío -{s.ExtraDrainPerSecond:0.#}/s</color>   "
+            : $"<color=#8FB8FF>SOMBRA · frío -{s.ExtraDrainPerSecond:0.#}/s</color>   ";
+        if (s.CommsDown) status += mc.CommsZoneActive
+            ? "<color=#9FA8FF>SIN SEÑAL · sal del cráter</color>   "
+            : $"<color=#9FA8FF>SIN SEÑAL {mc.BlackoutTimeLeft:0} s</color>   ";
         if (mc.IsScanning) status += $"<color=#7FE8FF>ESCANEANDO {mc.ScanProgress * 100f:0}%</color>   ";
         if (mc.IsFastForwarding) status += $"<color=#FFFFFF><b>>> x{mc.FastForwardSpeed:0}</b></color>";
         else if (mc.IsWaiting) status += "\n<size=75%><color=#C8D2E6>Mantén ESPACIO (rover quieto) para adelantar el tiempo</color></size>";

@@ -14,6 +14,7 @@ public class MissionController : MonoBehaviour
     [SerializeField] string reportScene = "05_Report";
 
     [SerializeField] DialogueData intro;          // BIMO al aterrizar (opcional)
+    [SerializeField] string missionId = "mars";    // misión de esta escena (para dar Play directo en ella)
 
     [Header("Eventos programados (Marte). En otras misiones se desactivan y los eventos vienen del mapa")]
     [SerializeField] bool timedDustStorm = true;
@@ -48,7 +49,10 @@ public class MissionController : MonoBehaviour
     {
         Instance = this;
         // Play directo en 04_Mars: si no hay diseño, usa el de prueba.
-        State = new MissionState(GameSession.EnsureDesign(), timeLimit, moveCostPerSecond, GameSession.EnsureMission());
+        // Play directo en la escena (sin pasar por el título): la misión es la de esta escena
+        if (GameSession.Mission == null || GameSession.Mission.SceneName != gameObject.scene.name)
+            GameSession.Mission = MissionCatalog.Get(missionId);
+        State = new MissionState(GameSession.EnsureDesign(), timeLimit, moveCostPerSecond, GameSession.Mission);
         State.SafeModeChanged += on => { if (on) { AudioManager.Play(Sfx.SafeMode); CameraShake.Shake(0.15f, 0.5f); } };
         State.SafeModeChanged += on =>
         {
@@ -76,8 +80,12 @@ public class MissionController : MonoBehaviour
 
     // ¿Está el jugador en una situación en la que solo puede esperar? (solo aquí se permite adelantar el tiempo)
     // Modo seguro, apagón de comunicación o tormenta con paneles solares (no recargan).
+    // (Una zona sin señal NO cuenta: ahí lo que toca es salir del cráter, no esperar.)
     public bool IsWaiting =>
-        !State.IsOver && (State.InSafeMode || State.CommsDown || (State.DustStormActive && State.Design.UsesSolar));
+        !State.IsOver && (State.InSafeMode || (State.CommsDown && !CommsZoneActive) || (State.DustStormActive && State.Design.UsesSolar));
+
+    // Zonas del mapa (Luna): las controla EnvironmentZone
+    public bool CommsZoneActive { get; set; }
 
     void UpdateFastForward()
     {
@@ -130,7 +138,7 @@ public class MissionController : MonoBehaviour
         if (timedBlackout && blackoutStart < 0f && t >= blackoutAt && t - lastWaitEnd >= minFreeGap && t <= timeLimit - blackoutLatest)
             blackoutStart = t;
         bool down = blackoutStart >= 0f && t < blackoutStart + State.Design.BlackoutSeconds;
-        if (down != State.CommsDown)
+        if (timedBlackout && down != State.CommsDown)
         {
             State.SetCommsDown(down);
             AudioManager.Play(down ? Sfx.CommsLost : Sfx.CommsBack);
@@ -223,7 +231,7 @@ public class MissionController : MonoBehaviour
     public void PostMessage(string msg) => Post(msg);
 
     // Explicación importante: abre el cuadro de diálogo de BIMO (pausa el juego) y deja el mensaje en el HUD.
-    void Explain(string[] lines)
+    public void Explain(string[] lines)
     {
         Post(lines[0]);
         if (DialogueBox.Instance == null) return;

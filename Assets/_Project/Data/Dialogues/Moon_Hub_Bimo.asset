@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c3e562645bb4c13bba240885e23578, type: 3}
+  m_Name: Moon_Hub_Bimo
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speaker: 1
+    expression: 2
+    text: "Comandante... \xBFsab\xEDas que en los cr\xE1teres en sombra hace unos
+      -240 \xB0C? Mis circuitos tiemblan solo de pensarlo."
+    highlight: 
+  - speaker: 1
+    expression: 0
+    text: "Un consejo: los paneles solares no sirven en la oscuridad, y el fr\xEDo
+      nos va a gastar energ\xEDa. Un RTG o una bater\xEDa grande nos dar\xEDan margen."
+    highlight: 
+  - speaker: 1
+    expression: 1
+    text: "Y si queremos escanear dentro del cr\xE1ter, necesitaremos el rel\xE9
+      v\xEDa orbitador. \xA1La antena directa no ve la Tierra desde ah\xED abajo!"
+    highlight: 
