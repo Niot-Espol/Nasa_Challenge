@@ -177,27 +177,44 @@ Hacer primero todo lo P1 (meta: sábado por la noche), después P2 y por último
 
 ## 11. Misión 2: la Luna (`Art/Sprites/Moon/`)
 
-> **Contexto:** "El secreto de la Luna" (historia 1.65). El rover explora el **polo sur lunar** buscando **hielo de agua** (misiones de referencia: LRO y LCROSS).
-> Se juega como Marte (Taller → lanzamiento → 3 puntos → reporte), pero el mapa tiene **zonas iluminadas y zonas en sombra permanente** (frío, sin Sol) y un **cráter donde se pierde la señal**.
-> **Qué NO hay que dibujar:** rover, personajes, retratos, Hub, Taller, íconos, UI, cohete, humo, nave ni Tierra (se reutilizan).
-> El suelo, las rocas y los cráteres los puede sacar Danilo/IA **recoloreando a gris** el arte de Marte; el suelo propio (P2) solo mejora el resultado.
-> Las **sombras** se hacen por código: **no las dibujes** dentro de los sprites.
+> **Estado:** la misión **ya funciona en el juego** con arte **provisional** (el arte de Marte recoloreado a gris por un script).
+> Tu trabajo es **sustituir esos provisionales** por arte propio. Como el juego ya apunta a esos archivos, **en cuanto reemplaces un PNG se ve en el juego**, sin tocar nada en Unity.
 
-**Paleta Luna:** grises neutros a gris azulado (regolito), negro azulado para lo que está en sombra, blanco frío para lo iluminado y **azul hielo / cian** solo para el hielo (que sea lo único con color fuerte del mapa).
+### Contexto (para los prompts)
+"El secreto de la Luna" (historia 1.65): un rover explora el **polo sur lunar** buscando **hielo de agua** en un cráter en **sombra permanente** (misiones de referencia de la NASA: LRO, LCROSS y el rover VIPER).
+El mapa tiene **suelo gris**, rocas, un **borde iluminado** y un **cráter oscuro** donde está el hielo. Las **sombras las pone el juego**: no las dibujes dentro de los sprites.
 
-| ✓ | Prio | Asset | Tamaño | Notas | Carpeta | Quién |
-|---|---|---|---|---|---|---|
-| [ ] | **P1** | **Depósito de hielo** (punto científico estrella) | 48×48 | Cristales azul-blanco **semienterrados** en regolito oscuro, con algún destello. Es el clímax de la misión: tiene que verse especial incluso en la sombra. | `Moon/SciencePoints/science_point_ice.png` | |
-| [ ] | **P1** | **Roca del borde iluminado** (punto científico) | 32×32 | Afloramiento de roca clara (anortosita, casi blanca) con una cara muy iluminada. | `Moon/SciencePoints/science_point_rim_rock.png` | |
-| [ ] | **P1** | **Muestra de regolito** (punto científico) | 32×32 | Parche de polvo gris fino con pequeñas esferas de vidrio brillantes (vidrio de impacto). Distinto a las rocas normales. | `Moon/SciencePoints/science_point_regolith.png` | |
-| [ ] | **P1** | **Luna para el viaje** | 64×64 | Igual que `planet_earth`/`planet_mars`: gris con cráteres, vista desde el espacio. | `Launch/Planets/planet_moon.png` | |
-| [ ] | P2 | **Módulo de aterrizaje lunar** | 48×48 | Distinto al de Marte: patas largas, tanques dorados (estilo Apolo o lander comercial). | `Moon/Landing/landing_module_moon.png` | |
-| [ ] | P2 | **Suelo lunar** (3 variantes + 1 liso) | tiles 16×16 | Regolito gris fino, con microcráteres. Repetible sin costuras. Si no llega, se recolorea el de Marte. | `Tilesets/Moon/` | |
-| [ ] | P2 | **Cráteres lunares grandes** | 64×64 y 96×96 | Borde elevado claro y fondo más oscuro (sin sombra proyectada: la pone el juego). | `Moon/Craters/` | |
-| [ ] | P3 | **Pantalla grande del Hub con la Luna** | igual que la pantalla de Marte del laboratorio | Mismo marco, mostrando la Luna y el polo sur marcado. Para el briefing de Vega. | `Hub/` | |
-| [ ] | P3 | **Rocas lunares** (3–4) | 16–32 px | Grises, más angulosas que las de Marte. Si no llegan, se recolorean las de Marte. | `Moon/Rocks/` | |
+### Reglas para que encaje sin tocar Unity
+1. **Mismo nombre y misma carpeta** que el provisional. **Sobrescribe solo el `.png`** y **NO borres ni regeneres el `.meta`** (es lo que conecta el archivo con el juego). Si subes por la web de GitHub, sube el `.png` encima del existente.
+2. **Mismo tamaño** que indica la tabla (si cambias el tamaño, el objeto se verá más grande o más pequeño en el mapa).
+3. **Vista top-down baja** (como el rover y las rocas de Marte), **pixel art sin antialiasing**, contorno oscuro, fondo **transparente**.
+4. Objetos del mapa: el **pie/base del objeto toca el borde inferior** del lienzo (el juego ordena delante/detrás por la base).
+5. Paleta Luna:
+   - Regolito: `#0B0E16` `#262B36` `#4E5562` `#858B96` `#C4C8CF` `#EEF0F3` (grises fríos, sin marrones).
+   - Hielo (solo el punto de hielo): `#0A1830` `#1C4E7A` `#3FA3D6` `#8FE3F7` `#E8FBFF`.
+   - Acentos permitidos: dorado/naranja de las mantas térmicas del módulo y del rover.
 
-**Mínimo imprescindible para la demo:** las 4 piezas **P1**. Con eso la misión ya se ve distinta a Marte en el video.
+### Piezas (en orden de prioridad)
+
+| ✓ | Prio | Archivo a sustituir (ruta exacta) | Tamaño | Qué dibujar | Prompt sugerido (inglés, para PixelLab) |
+|---|---|---|---|---|---|
+| [ ] | **P1** | `Assets/_Project/Art/Sprites/Moon/SciencePoints/science_point_ice.png` | 32×32 | **Depósito de hielo de agua**: cristales azul-blanco semienterrados en regolito oscuro, con 1–2 destellos. Es el clímax de la misión: lo único con color fuerte del mapa. | `top-down pixel art, small deposit of water ice crystals half buried in dark grey lunar regolith, icy blue and white, tiny sparkles, dark outline, transparent background, 32x32` |
+| [ ] | **P1** | `Assets/_Project/Art/Sprites/Moon/SciencePoints/science_point_rim_rock.png` | 32×32 | **Roca del borde iluminado**: afloramiento de roca casi blanca (anortosita), con una cara muy iluminada y la otra en gris. | `top-down pixel art, bright white anorthosite rock outcrop on the Moon, strong sunlight on one side, grey shading, dark outline, transparent background, 32x32` |
+| [ ] | **P1** | `Assets/_Project/Art/Sprites/Moon/SciencePoints/science_point_regolith.png` | 32×32 | **Muestra de regolito**: parche de polvo gris fino con pequeñas **esferas de vidrio** brillantes (naranjas o verdosas, como las de Apolo 17). | `top-down pixel art, patch of fine grey lunar soil with tiny shiny glass beads (orange and green), small footprint-like marks, dark outline, transparent background, 32x32` |
+| [ ] | **P1** | `Assets/_Project/Art/Sprites/Launch/Planets/planet_moon.png` | 64×64 | **La Luna vista desde el espacio**, mismo estilo que `planet_earth.png` y `planet_mars.png` (gris con cráteres y mares oscuros). | `pixel art Moon seen from space, grey with dark maria and craters, same style as a 64x64 pixel planet sprite, dark outline, transparent background` |
+| [ ] | P2 | `Assets/_Project/Art/Sprites/Moon/Landing/landing_module_moon.png` | 48×48 | **Módulo de aterrizaje lunar** (distinto al de Marte): patas largas, manta térmica **dorada**, tanques. | `top-down pixel art lunar lander, four long legs, gold thermal foil, white and grey body, dark outline, transparent background, 48x48` |
+| [ ] | P2 | `Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/sand_a.png` … `sand_d.png` | 16×16 c/u | **Suelo lunar** (4 variantes que se repiten sin costuras): regolito gris claro con microcráteres. Sustituye al suelo principal del mapa. | `seamless 16x16 pixel art tile, light grey lunar regolith ground, tiny micro craters, subtle texture, top-down` |
+| [ ] | P3 | `Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/crater_a.png` … `crater_e.png` | 16×16 c/u | Cráteres pequeños en el suelo (como los de Marte, en gris). | — |
+| [ ] | P3 | `Assets/_Project/Art/Sprites/Moon/Rocks/rock_*.png` y `pebbles_*.png` (38 archivos) | el tamaño de cada provisional (16–23 px) | Rocas lunares: grises, más angulosas que las de Marte. Puedes sustituir solo algunas. | `top-down pixel art grey angular moon rock, dark outline, transparent background` |
+
+> Los tiles `mud_*` (zona de basalto oscuro), `rubble`/`rocky_ground` (campo de bloques) también son provisionales en `Tilesets/Moon/MoonTilesPNG/`; sustitúyelos solo si sobra tiempo.
+
+**Mínimo imprescindible para la demo:** las 4 piezas **P1**.
+
+### Cómo comprobarlo
+- Abre `Assets/_Project/Scenes/04_Moon.unity` y dale Play (o en el título elige **"El secreto de la Luna"**).
+- Si algo se ve mal colocado (flotando o hundido), revisa que la base del objeto toque el borde inferior del PNG.
+- **Si se borró un `.meta` por error:** en Unity, menú *Mars Crafts › Luna › Construir escena 04_Moon* vuelve a conectar todo (los PNG que ya existan **no** se sobrescriben).
 
 ---
 
@@ -205,9 +222,9 @@ Hacer primero todo lo P1 (meta: sábado por la noche), después P2 y por último
 
 | # | Bloque | Piezas | Por qué importa |
 |---|---|---|---|
-| 1 | **Luna: 3 puntos científicos + Luna del viaje** (sección 11, P1) | 4 | Sin ellos la segunda misión parece Marte en gris. |
-| 2 | **Luna: módulo de aterrizaje y suelo** (sección 11, P2) | 2 bloques | Más identidad visual propia. |
-| 3 | Luna: cráteres, pantalla del Hub, rocas (P2/P3) | — | Pulido. |
+| 1 | **Luna: 3 puntos científicos + Luna del viaje** (sección 11, P1) | 4 | La misión ya funciona con provisionales; sin estos parece Marte en gris. |
+| 2 | **Luna: módulo de aterrizaje y suelo** (sección 11, P2) | 1 + 4 tiles | Más identidad visual propia. |
+| 3 | Luna: cráteres y rocas (P3) | — | Pulido. |
 | 4 | Bordes de cauce/delta (Marte) | P2 | Pulido. |
 
 **Audio:** no entra en esta lista. Los efectos son P1 y la música P2, y se buscarán en bancos libres.

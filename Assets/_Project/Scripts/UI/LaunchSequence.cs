@@ -183,7 +183,12 @@ public class LaunchSequence : MonoBehaviour
         SetSprite(rocketImage, th.rocket);
         if (flame != null && th.rocketFlame != null && th.rocketFlame.Length > 0) flame.sprite = th.rocketFlame[0];
         SetSprite(earth.GetComponent<Image>(), th.earth);
-        SetSprite(mars.GetComponent<Image>(), th.mars);
+        // Destino según la misión activa (el objeto se llama "Mars" por historia, pero es el destino)
+        var mission = GameSession.EnsureMission();
+        SetSprite(mars.GetComponent<Image>(), mission.Id == "moon" && th.moon != null ? th.moon : th.mars);
+        var destLabel = mars.GetComponentInChildren<TMPro.TMP_Text>(true);
+        if (destLabel != null) destLabel.text = mission.Id == "moon" ? "Luna" : "Marte";
+        if (mission.Id == "moon") mars.sizeDelta *= 0.8f;   // la Luna se ve más pequeña
         SetSprite(ship.GetComponent<Image>(), th.cruiseShip);
     }
 

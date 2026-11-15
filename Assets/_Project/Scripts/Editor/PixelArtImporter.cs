@@ -6,7 +6,8 @@ using UnityEngine;
 //   Todo el mundo usa 16 px = 1 unidad (misma densidad de píxel en personajes, suelo y objetos):
 //   Art/Sprites/Characters/   → 16 px = 1 unidad, pivote en los pies   (astronautas 32x32 = 2 unidades)
 //   Art/Tilesets/             → 16 px = 1 unidad, pivote al centro     (tiles de 16x16 = 1 celda)
-//   Art/Sprites/Mars|Hub/     → 16 px = 1 unidad, pivote abajo-centro  (objetos: rocas, consolas...)
+//   Art/Sprites/Mars|Moon|Hub/ → 16 px = 1 unidad, pivote abajo-centro (objetos: rocas, consolas...)
+//   Art/UI, Sprites/Icons, Sprites/Launch → interfaz (25 px = 1 unidad de UI)
 //   Art/Sprites/Mars/Vehicles → 32 px = 1 unidad, pivote al centro     (rover de 65 px ≈ 2 unidades)
 // El arte de la entrega de terrenos (IA) se "repixeliza" antes (Repixelizer: ÷2 y paleta reducida).
 public class PixelArtImporter : AssetPostprocessor
@@ -16,18 +17,22 @@ public class PixelArtImporter : AssetPostprocessor
     void OnPreprocessTexture()
     {
         if (!assetPath.StartsWith(ArtRoot)) return;
-        if (assetPath.StartsWith(ArtRoot + "UI/")) { ImportUI(); return; }
+        // Interfaz, íconos y lanzamiento se muestran en la UI (25 px = 1 unidad, ×4 en pantalla)
+        if (assetPath.StartsWith(ArtRoot + "UI/") || assetPath.StartsWith(ArtRoot + "Sprites/Icons/")
+            || assetPath.StartsWith(ArtRoot + "Sprites/Launch/")) { ImportUI(); return; }
 
         int ppu; SpriteAlignment pivot;
         if (assetPath.StartsWith(ArtRoot + "Sprites/Characters/")) { ppu = 16; pivot = SpriteAlignment.BottomCenter; }
         else if (assetPath.StartsWith(ArtRoot + "Tilesets/")) { ppu = 16; pivot = SpriteAlignment.Center; }
         else if (assetPath.StartsWith(ArtRoot + "Sprites/Mars/Vehicles/")) { ppu = 32; pivot = SpriteAlignment.Center; }
-        else if (assetPath.StartsWith(ArtRoot + "Sprites/Mars/") || assetPath.StartsWith(ArtRoot + "Sprites/Hub/")) { ppu = 16; pivot = SpriteAlignment.BottomCenter; }
+        else if (assetPath.StartsWith(ArtRoot + "Sprites/Mars/") || assetPath.StartsWith(ArtRoot + "Sprites/Moon/")
+              || assetPath.StartsWith(ArtRoot + "Sprites/Hub/")) { ppu = 16; pivot = SpriteAlignment.BottomCenter; }
         else return;
 
         // Los indicadores y efectos flotan alrededor de su origen; los sólidos conservan sus pies.
         bool marsOverlay = assetPath.StartsWith(ArtRoot + "Sprites/Mars/Indicators/")
-            || assetPath.StartsWith(ArtRoot + "Sprites/Mars/Effects/");
+            || assetPath.StartsWith(ArtRoot + "Sprites/Mars/Effects/")
+            || assetPath.StartsWith(ArtRoot + "Sprites/Moon/Effects/");
         bool repeatingDust = assetPath.StartsWith(ArtRoot + "Sprites/Mars/Effects/Dust/");
         if (marsOverlay) pivot = SpriteAlignment.Center;
 

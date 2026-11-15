@@ -93,6 +93,7 @@ public class UITheme : ScriptableObject
     public Sprite[] launchSmoke;                 // frames del humo del despegue
     public Sprite earth;                         // 64x64
     public Sprite mars;                          // 64x64
+    public Sprite moon;                          // 64x64 (misión de la Luna)
     public Sprite cruiseShip;                    // 32x32
 
     [Header("Taller")]

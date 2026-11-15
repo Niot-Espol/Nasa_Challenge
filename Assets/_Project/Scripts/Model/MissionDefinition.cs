@@ -24,6 +24,10 @@ public abstract class MissionDefinition
     public abstract string DestinationName { get; }  // "Marte"
     public abstract string PlaceName { get; }        // "Cráter Jezero"
     public abstract string SceneName { get; }        // escena de exploración
+
+    // Recarga mínima en modo seguro (reserva de emergencia). 0 = solo la fuente normal.
+    // En la Luna evita quedarse atrapado para siempre en la sombra con paneles solares.
+    public virtual float SafeModeMinRecharge => 0f;
     public abstract List<SiteInfo> Sites { get; }
 
     // Viaje (03_Launch)
@@ -37,6 +41,31 @@ public abstract class MissionDefinition
     // Líneas propias del entorno (tormenta, sombra...) y del terreno; van en este orden en el reporte.
     public virtual void AddEnergyLines(ReportData rep, RoverDesign d, MissionResult r) { }
     public virtual void AddTerrainLines(ReportData rep, RoverDesign d, MissionResult r) { }
+
+    // Comunicaciones: por defecto, apagón programado y su duración según la antena (Marte).
+    public virtual void AddCommsLines(ReportData rep, RoverDesign d, MissionResult r)
+    {
+        var blackout = ReportBuilder.Find(r, IncidentType.CommsBlackout);
+        if (blackout != null)
+            rep.Lines.Add(d.BlackoutSeconds > 20f
+                ? new ReportLine(ReportTone.Bad,
+                    $"Con la antena directa perdiste la comunicación {d.BlackoutSeconds:0} s y no pudiste escanear. Un relé vía orbitador lo reduce a 10 s.")
+                : new ReportLine(ReportTone.Good,
+                    $"El relé vía orbitador redujo la pérdida de comunicación a solo {d.BlackoutSeconds:0} s."));
+    }
+
+    // ¿Hubo modo seguro mientras duraba un incidente de este tipo (tormenta, sombra...)?
+    protected static bool SafeModeDuring(MissionResult r, IncidentType type, float defaultDuration)
+    {
+        foreach (var s in r.Incidents)
+        {
+            if (s.Type != type) continue;
+            float end = s.Time + (s.Duration > 0 ? s.Duration : defaultDuration);
+            foreach (var m in r.Incidents)
+                if (m.Type == IncidentType.SafeMode && m.Time >= s.Time && m.Time <= end + 1f) return true;
+        }
+        return false;
+    }
     public abstract void AddComparison(ReportData rep, RoverDesign d, MissionResult r);
 
     public SiteInfo Find(ScienceSite s)
@@ -52,8 +81,9 @@ public abstract class MissionDefinition
 public static class MissionCatalog
 {
     public static readonly MissionDefinition Mars = new MarsMission();
+    public static readonly MissionDefinition Moon = new MoonMission();
 
-    static readonly List<MissionDefinition> all = new List<MissionDefinition> { Mars };
+    static readonly List<MissionDefinition> all = new List<MissionDefinition> { Mars, Moon };
     public static IReadOnlyList<MissionDefinition> All => all;
 
     public static MissionDefinition Get(string id)

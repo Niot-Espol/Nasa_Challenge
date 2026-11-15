@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c3e562645bb4c13bba240885e23578, type: 3}
+  m_Name: Moon_Intro
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speaker: 1
+    expression: 1
+    text: "\xA1Aterrizamos en el polo sur de la Luna, comandante! Mira qu\xE9 gris
+      es todo... y qu\xE9 oscuro est\xE1 ese cr\xE1ter."
+    highlight: 
+  - speaker: 1
+    expression: 0
+    text: "Esta es nuestra energ\xEDa. Moverse y escanear la gastan. En las zonas
+      en sombra, adem\xE1s, el fr\xEDo la consume y los paneles no recargan."
+    highlight: energy
+  - speaker: 1
+    expression: 0
+    text: "Tenemos dos minutos y medio de operaci\xF3n. Planifica la ruta: entra
+      al cr\xE1ter solo cuando est\xE9s listo."
+    highlight: time
+  - speaker: 1
+    expression: 1
+    text: "Hay tres puntos cient\xEDficos. El m\xE1s importante es el hielo, en el
+      fondo del cr\xE1ter en sombra. \xA1Vamos a buscarlo!"
+    highlight: science

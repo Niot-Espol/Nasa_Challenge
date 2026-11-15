@@ -1,9 +1,10 @@
 // Assets/_Project/Scripts/Model/MissionResult.cs
-// C# puro: lo que pasó en Marte. Lo escribe 04_Mars al terminar, lo lee 05_Report.
+// C# puro: lo que pasó en la exploración. Lo escribe la escena de la misión al terminar, lo lee 05_Report.
 using System.Collections.Generic;
 
-// Los tres puntos científicos del mapa (cada uno exige un instrumento).
-public enum ScienceSite { Delta, MineralOutcrop, SpecialRock }
+// Puntos científicos de todas las misiones (cada uno pertenece a una misión y exige un instrumento).
+// Marte: Delta, MineralOutcrop, SpecialRock · Luna: RimRock, Regolith, Ice. No cambiar el orden (se guarda en escenas).
+public enum ScienceSite { Delta, MineralOutcrop, SpecialRock, RimRock, Regolith, Ice }
 
 // Cosas que pasaron durante la exploración y que el Reporte relaciona con una decisión del Taller.
 public enum IncidentType
@@ -14,6 +15,7 @@ public enum IncidentType
     MissingInstrument,  // llegó a un punto sin el instrumento necesario
     RockyZoneBlocked,   // no pudo cruzar la zona rocosa (ruedas estándar)
     TimeOut,            // se acabó el tiempo de la misión
+    Shadow,             // entró en una zona en sombra (Luna: sin Sol y con frío)
 }
 
 public class MissionIncident

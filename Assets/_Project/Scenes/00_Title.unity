@@ -266,6 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 6
+  title: 0
 --- !u!114 &115007141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,8 +291,8 @@ MonoBehaviour:
     educativo independiente basado en informaci\xF3n p\xFAblica de la NASA. No est\xE1
     afiliado, patrocinado ni respaldado por la NASA."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 1408116509}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 1408116509}
   m_fontMaterials: []
@@ -409,8 +410,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: <b>MARS CRAFTS</b>
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -492,6 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 2
+  title: 0
 --- !u!222 &139041077
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -656,6 +658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 1
+  title: 0
 --- !u!114 &217514414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -678,8 +681,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Pr\xF3ximamente"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -987,6 +990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 0
+  title: 0
 --- !u!114 &480258563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1009,8 +1013,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Guardianes de la Tierra
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1159,6 +1163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 0
+  title: 0
 --- !u!114 &534254516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1181,8 +1186,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Marte: huellas del pasado'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1426,7 +1431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad03cbcbc48dd4f61966f75b148dc10c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
-  tone: 1
+  tone: 0
+  title: 0
 --- !u!114 &912603540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1447,17 +1453,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pr\xF3ximamente"
+  m_text: "\xA1Empezar misi\xF3n!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4291605158
-  m_fontColor: {r: 0.65, g: 0.7, b: 0.8, a: 1}
+  m_fontColor: {r: 0.95, g: 0.95, b: 0.95, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1541,6 +1547,8 @@ GameObject:
   - component: {fileID: 981696287}
   - component: {fileID: 981696286}
   - component: {fileID: 981696285}
+  - component: {fileID: 981696291}
+  - component: {fileID: 981696290}
   m_Layer: 5
   m_Name: Card_Moon
   m_TagString: Untagged
@@ -1628,7 +1636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a83a9997b11484c8ae225c7acf4fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedImage
-  element: 6
+  element: 7
 --- !u!114 &981696288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1642,14 +1650,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.68, b: 0.38, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 915bb7222d11b4b4083089f6d9e20b5a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 44cab57bb8d3c4fc5bd93fb16690febd, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1667,6 +1675,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981696283}
   m_CullTransparentMesh: 1
+--- !u!114 &981696290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981696283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7914d3a3344854ce6b994a2f07805d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
+  sound: 0
+--- !u!114 &981696291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981696283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.85}
+    m_PressedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 981696288}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1174083984}
+        m_TargetAssemblyTypeName: SceneFlow, Assembly-CSharp
+        m_MethodName: StartMission
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: moon
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1109284674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,6 +1795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 0
+  title: 0
 --- !u!114 &1109284677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1740,8 +1818,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Dise\xF1a, lanza y explora tu propia misi\xF3n a Marte"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 342718682}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 342718682}
   m_fontMaterials: []
@@ -1880,7 +1958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1176994285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2030,6 +2108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 0
+  title: 0
 --- !u!114 &1268889486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2052,8 +2131,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: El secreto de la Luna
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2489,6 +2568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedText
   tone: 0
+  title: 0
 --- !u!114 &1375687473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2511,8 +2591,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\xA1Empezar misi\xF3n!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
+  m_sharedMaterial: {fileID: -9072231062129111222, guid: a63e2953fb7fe417c89c1b7f6f61e93e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3283,7 +3363,7 @@ MonoBehaviour:
   moonIcon: {fileID: 1361342596}
   marsIcon: {fileID: 41043625}
   earthLock: {fileID: 1619253798}
-  moonLock: {fileID: 1176994285}
+  moonLock: {fileID: 0}
 --- !u!1 &1769113959
 GameObject:
   m_ObjectHideFlags: 0

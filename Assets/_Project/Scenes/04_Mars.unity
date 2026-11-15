@@ -1991,6 +1991,8 @@ MonoBehaviour:
   id: time
   scaleAmount: 0.12
   speed: 6
+  dimOthers: 1
+  dimAlpha: 0.8
 --- !u!1 &200184003
 GameObject:
   m_ObjectHideFlags: 0
@@ -4872,6 +4874,8 @@ MonoBehaviour:
   id: energy
   scaleAmount: 0.12
   speed: 6
+  dimOthers: 1
+  dimAlpha: 0.8
 --- !u!1 &392568112
 GameObject:
   m_ObjectHideFlags: 0
@@ -7741,6 +7745,8 @@ MonoBehaviour:
   id: energy
   scaleAmount: 0.12
   speed: 6
+  dimOthers: 1
+  dimAlpha: 0.8
 --- !u!1 &568859737
 GameObject:
   m_ObjectHideFlags: 0
@@ -14007,6 +14013,8 @@ MonoBehaviour:
   id: time
   scaleAmount: 0.12
   speed: 6
+  dimOthers: 1
+  dimAlpha: 0.8
 --- !u!1 &1017963871
 GameObject:
   m_ObjectHideFlags: 0
@@ -40760,6 +40768,8 @@ MonoBehaviour:
   id: science
   scaleAmount: 0.12
   speed: 6
+  dimOthers: 1
+  dimAlpha: 0.8
 --- !u!1 &2099861180
 GameObject:
   m_ObjectHideFlags: 0
