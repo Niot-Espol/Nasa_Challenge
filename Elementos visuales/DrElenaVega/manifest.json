@@ -1,0 +1,260 @@
+{
+  "character": "Dr. Elena Vega",
+  "date": "2026-11-15",
+  "status": "Supplied assets stored; scene and animation integration pending",
+  "source": "User-supplied PixelLab generations",
+  "originalAnimationName": "Standing_still_with_subtle_breathing_movement_very",
+  "frameRate": null,
+  "originalZipSha256": "e5864e1943f607994fd93e89ff0f43b5b5dabbf3bea325a9d8050d273544fe6b",
+  "assets": [
+    {
+      "kind": "portrait",
+      "original": "pixellab-Pixel-art-dialogue-portrait-of-1794720173333.png",
+      "path": "Assets/_Project/Art/Sprites/Portraits/DrElenaVega/vega-portrait-neutral.png",
+      "localPath": "portraits/vega-portrait-neutral.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "9b8e7463af2957d09545c950db5944fd0fb75ee9e78743eeecdd620e715f7cfb",
+      "expression": "neutral"
+    },
+    {
+      "kind": "portrait",
+      "original": "pixellab-Pixel-art-dialogue-portrait-of-1794720223730.png",
+      "path": "Assets/_Project/Art/Sprites/Portraits/DrElenaVega/vega-portrait-happy.png",
+      "localPath": "portraits/vega-portrait-happy.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "16ef4e43656b253483409b51bf644319f7cd5bfa9692a2ad97091c171026b2d2",
+      "expression": "happy"
+    },
+    {
+      "kind": "portrait",
+      "original": "pixellab-Pixel-art-dialogue-portrait-of-1794720272515.png",
+      "path": "Assets/_Project/Art/Sprites/Portraits/DrElenaVega/vega-portrait-worried.png",
+      "localPath": "portraits/vega-portrait-worried.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "661d195523c99e1affaee468729e53c31842be010e4d42274643d5692551156f",
+      "expression": "worried"
+    },
+    {
+      "kind": "rotation",
+      "original": "A_small_pixel_art_female.zip/Idle/rotations/south.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Rotations/vega-idle-south.png",
+      "localPath": "rotations/vega-idle-south.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "b09eee362e7e76adc48c29b56f5586317ce1596509f3486c6d4ecbc574744f60",
+      "direction": "south"
+    },
+    {
+      "kind": "rotation",
+      "original": "A_small_pixel_art_female.zip/Idle/rotations/south-east.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Rotations/vega-idle-south-east.png",
+      "localPath": "rotations/vega-idle-south-east.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "6ae93d6c0d2cf359c345415805813803442e1a2ceb62d5d85a8ef7f5bae874d0",
+      "direction": "south-east"
+    },
+    {
+      "kind": "rotation",
+      "original": "A_small_pixel_art_female.zip/Idle/rotations/east.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Rotations/vega-idle-east.png",
+      "localPath": "rotations/vega-idle-east.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "63638fdc002901d7dd0ab114868aff5966f0da39170ea7b384e40f0a94b69261",
+      "direction": "east"
+    },
+    {
+      "kind": "rotation",
+      "original": "A_small_pixel_art_female.zip/Idle/rotations/north-east.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Rotations/vega-idle-north-east.png",
+      "localPath": "rotations/vega-idle-north-east.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "6aa34c8b0666f4c54527e469edba7dea3be1c2487856f4b54b0926ce72e1a8db",
+      "direction": "north-east"
+    },
+    {
+      "kind": "rotation",
+      "original": "A_small_pixel_art_female.zip/Idle/rotations/north.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Rotations/vega-idle-north.png",
+      "localPath": "rotations/vega-idle-north.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "ea31103abf4e3ee357f0a58ee92971a5b847dbb2ff010b1ead1d7b84ba6a8539",
+      "direction": "north"
+    },
+    {
+      "kind": "rotation",
+      "original": "A_small_pixel_art_female.zip/Idle/rotations/north-west.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Rotations/vega-idle-north-west.png",
+      "localPath": "rotations/vega-idle-north-west.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "026180c334b7add9ed8901900d9a9839e5f4dc9729b2e6bf6a773726b3d8fb5e",
+      "direction": "north-west"
+    },
+    {
+      "kind": "rotation",
+      "original": "A_small_pixel_art_female.zip/Idle/rotations/west.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Rotations/vega-idle-west.png",
+      "localPath": "rotations/vega-idle-west.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "0ea5812b9df7ebcb51b07331ab688df2e12b7325f153e1007fc9faddcaa57482",
+      "direction": "west"
+    },
+    {
+      "kind": "rotation",
+      "original": "A_small_pixel_art_female.zip/Idle/rotations/south-west.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Rotations/vega-idle-south-west.png",
+      "localPath": "rotations/vega-idle-south-west.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "db497ac51c4f8222afee2fed8efbe7c9a67fbf8b5e8211eb7b15fb007e25d1a4",
+      "direction": "south-west"
+    },
+    {
+      "kind": "idle-frame",
+      "original": "A_small_pixel_art_female.zip/Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_000.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Idle/South/vega-idle-south_000.png",
+      "localPath": "idle/south/vega-idle-south_000.png",
+      "size": [
+        44,
+        44
+      ],
+      "sha256": "bb003ef4783cd2c6a3a752e1850ad39183a9904c67fae001986a63e493d5a4f1",
+      "direction": "south",
+      "frame": 0
+    },
+    {
+      "kind": "idle-frame",
+      "original": "A_small_pixel_art_female.zip/Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_001.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Idle/South/vega-idle-south_001.png",
+      "localPath": "idle/south/vega-idle-south_001.png",
+      "size": [
+        44,
+        44
+      ],
+      "sha256": "d0e52be212b4221595548c76b1e057db1801ee1e32ca4c03a71b8098fb7d6d2c",
+      "direction": "south",
+      "frame": 1
+    },
+    {
+      "kind": "idle-frame",
+      "original": "A_small_pixel_art_female.zip/Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_002.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Idle/South/vega-idle-south_002.png",
+      "localPath": "idle/south/vega-idle-south_002.png",
+      "size": [
+        44,
+        44
+      ],
+      "sha256": "9581a5399ce5a070a22fab8ebbeb9c9832c910a3baa1c5c2c8ff1637f810bcc1",
+      "direction": "south",
+      "frame": 2
+    },
+    {
+      "kind": "idle-frame",
+      "original": "A_small_pixel_art_female.zip/Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_003.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Idle/South/vega-idle-south_003.png",
+      "localPath": "idle/south/vega-idle-south_003.png",
+      "size": [
+        44,
+        44
+      ],
+      "sha256": "8ecff1cb91d24257c97035589af3c355e74cdbf7a10d5f5a341d3dbbc5a62840",
+      "direction": "south",
+      "frame": 3
+    },
+    {
+      "kind": "idle-frame",
+      "original": "A_small_pixel_art_female.zip/Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_004.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Idle/South/vega-idle-south_004.png",
+      "localPath": "idle/south/vega-idle-south_004.png",
+      "size": [
+        44,
+        44
+      ],
+      "sha256": "c142c86f6e768ff539446d46fcdf167671b840245db98a6430593096a032a92c",
+      "direction": "south",
+      "frame": 4
+    },
+    {
+      "kind": "idle-frame",
+      "original": "A_small_pixel_art_female.zip/Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_005.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Idle/South/vega-idle-south_005.png",
+      "localPath": "idle/south/vega-idle-south_005.png",
+      "size": [
+        44,
+        44
+      ],
+      "sha256": "a159d66dce434a6d0e496c4c1639bcefbf42b70474af3d51c2826cd549e94671",
+      "direction": "south",
+      "frame": 5
+    },
+    {
+      "kind": "idle-frame",
+      "original": "A_small_pixel_art_female.zip/Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_006.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Idle/South/vega-idle-south_006.png",
+      "localPath": "idle/south/vega-idle-south_006.png",
+      "size": [
+        44,
+        44
+      ],
+      "sha256": "7bdfe5d74b5d9731d9bf9241c2d9d97824fc7ef64a033dd2062af53a06b5eaef",
+      "direction": "south",
+      "frame": 6
+    },
+    {
+      "kind": "idle-frame",
+      "original": "A_small_pixel_art_female.zip/Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_007.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Idle/South/vega-idle-south_007.png",
+      "localPath": "idle/south/vega-idle-south_007.png",
+      "size": [
+        44,
+        44
+      ],
+      "sha256": "913bb30d5d114e133dc90f31f5734153ea355c6e936c12e28222d1c741267345",
+      "direction": "south",
+      "frame": 7
+    },
+    {
+      "kind": "idle-frame",
+      "original": "A_small_pixel_art_female.zip/Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_008.png",
+      "path": "Assets/_Project/Art/Sprites/Characters/DrElenaVega/Idle/South/vega-idle-south_008.png",
+      "localPath": "idle/south/vega-idle-south_008.png",
+      "size": [
+        44,
+        44
+      ],
+      "sha256": "bafd6c8b814693273b77da59eabcf2bcad02d6d108e4e577d0d521171ed83ea0",
+      "direction": "south",
+      "frame": 8
+    }
+  ]
+}

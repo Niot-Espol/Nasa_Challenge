@@ -1,0 +1,50 @@
+{
+  "group_id": "9f4617df-5a30-4f86-b68f-0382434c27c1",
+  "states": [
+    {
+      "character": {
+        "id": "16471ea0-6617-4ef2-8f03-54a7b233e0c2",
+        "name": "Idle",
+        "prompt": "A small pixel art female scientist character for a 2D Game Boy Advance style space game. Dr. Elena Vega, a scientific director, wearing a clean futuristic space-center uniform or light lab coat adapted for a Mars mission, with subtle orange and blue accents, practical boots, tidy dark or brown hair, intelligent and calm appearance. Low top-down perspective, clean dark outline, limited color palette, cozy sci-fi pixel art, readable 32x32 sprite, transparent background.",
+        "size": {
+          "width": 32,
+          "height": 32
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-11-15T05:02:22.004399+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {
+          "Standing_still_with_subtle_breathing_movement_very": {
+            "south": [
+              "Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_000.png",
+              "Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_001.png",
+              "Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_002.png",
+              "Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_003.png",
+              "Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_004.png",
+              "Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_005.png",
+              "Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_006.png",
+              "Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_007.png",
+              "Idle/animations/Standing_still_with_subtle_breathing_movement_very/south/frame_008.png"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-11-15T05:33:38.488258"
+}

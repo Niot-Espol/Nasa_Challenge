@@ -68,6 +68,7 @@ Elementos visuales/                   zips originales de los personajes (fuente;
 **El juego se puede jugar de principio a fin con placeholders.** Flujo: Título → Hub → Taller → Lanzamiento → Marte → Reporte → (Rediseñar → Taller | Terminar → Título).
 
 ### Hecho
+- **Dra. Elena Vega: recursos aportados guardados:** ocho orientaciones y nueve frames de idle en `Art/Sprites/Characters/DrElenaVega/`; retratos neutral, feliz y preocupada (128×128) en `Art/Sprites/Portraits/DrElenaVega/`, todos con `.meta`. Fuentes y manifiesto en `Elementos visuales/DrElenaVega/`. Pendiente conectar a escenas, diálogos y animación.
 - **Fuentes de terrenos entregadas:** `Elementos visuales/Mars-Crafts-Terrenos/` contiene la biblioteca de 182 piezas, tiles de 32 px, exterior, interiores, catálogo y editables; ver su README para la diferencia con la escala de 16 px del juego. Entrega de fuentes; la integración del Tilemap sigue pendiente.
 - **Base:** 6 escenas en Build Settings, en orden. `SceneFlow` navega por nombre (`Go`, `NewGame`, `Redesign`, `BackToTitle`). `SceneFader` (fundido) y `PauseMenu` (Esc) se crean solos. `AudioManager` + `Resources/AudioLibrary.asset` con todos los sonidos y músicas ya llamados desde el código.
 - **UI con tema:** `Resources/UITheme.asset` define sprites y colores de toda la UI. `ThemedImage`/`ThemedText` aplican el tema; `UIKit` crea elementos ya tematizados; `ResourceBar` para barras. Cambiar el arte = rellenar el tema (ver `docs/architecture/como-reemplazar-arte-y-audio.md`).
