@@ -1,0 +1,26 @@
+{
+  "result": "passed",
+  "pngCount": 12,
+  "directions": [
+    "South",
+    "North",
+    "East"
+  ],
+  "framesPerDirection": 4,
+  "size": [
+    80,
+    64
+  ],
+  "sourceEastFrameMatchesUserVisiblePixels": true,
+  "validRGBA": true,
+  "binaryAlpha": true,
+  "maxPaletteColors": 51,
+  "allMetaPointNoCompressionNoMipmaps32PPU": true,
+  "previewVisualReview": true,
+  "sourceAndFiveReturnedFramesPreservedPerDirection": true,
+  "unityEditorCommandAdded": true,
+  "sceneIntegrated": false,
+  "unityPlayTested": false,
+  "webGLBuildTested": false,
+  "pushed": false
+}

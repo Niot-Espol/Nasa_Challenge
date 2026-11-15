@@ -199,3 +199,14 @@ No se modifican escenarios, colliders, identificadores, datos científicos, camp
 Abrir `MARS_OBJECTS_PREVIEW.html` para animaciones y `MARS_OBJECTS_PREVIEW.png` para la hoja de comparación sobre el suelo actual, con rover a su proporción física. `MARS_OBJECTS_MANIFEST.json` registra tamaños, hashes, transparencia, frames, trabajos y referencias; `MARS_OBJECTS_VERIFICATION.json` contiene las comprobaciones técnicas.
 
 Los ocho ítems de arte están completos. **Pendiente: conectar y validar en Unity Play y en build WebGL.** La revisión de sprites y la hoja no equivalen a una prueba de ejecución del juego. No se hizo push automático.
+
+
+## Rover de conducción — referencia del usuario (15 noviembre 2026)
+
+El usuario eligió el rover de seis ruedas que se ve en su captura de `04_Mars` y proporcionó su PNG original de 96×96. La figura ocupa 76×58 px. Se recortó solo el margen transparente y se centró en lienzos de **80×64 px** para preservar su tamaño visible en el juego, en lugar de los 32×32 px de la propuesta anterior. El frame `East/drive_east_000.png` contiene exactamente los píxeles visibles de la referencia del usuario.
+
+PixelLab MCP `edit_image_pro_flash` generó las vistas hacia abajo (`South`) y arriba (`North`) a partir de ese diseño. `animate_image` generó cuatro frames de conducción para cada dirección: movimiento de ruedas y rebote leve. La izquierda la cubre el `flipX` existente de `DirectionalSpriteAnimator` al usar `East`. El proceso devolvió cinco imágenes por animación (base más cuatro generadas); se eligieron las primeras cuatro para ciclos cortos y se conservaron todas las respuestas originales en `Elementos visuales/PixelLab-Rover-Driving-20261115/raw/`.
+
+Archivos finales: `Assets/_Project/Art/Sprites/Rover/DrivingV2/{South,North,East}/drive_{south,north,east}_{000..003}.png`, **12 PNG** de 80×64, RGBA transparente, Point, sin compresión ni mipmaps, pivote central y 32 PPU para igualar el rover ya asignado en `04_Mars`. Las versiones anteriores permanecen disponibles. Jobs MCP: South `a7865b6f-9678-402a-8f49-514addb40bed`, North `a938cc77-d4e0-4dc3-9178-ba98c00fd97e`, animación East `5fad21bd-f6a3-4445-bab9-b3000a1cc122`, South `928754a0-5084-4519-b729-07346c703916`, North `c30c00bd-01de-4970-99a4-2f77fff897e8`.
+
+`ROVER_DRIVING_PREVIEW.html` reproduce las cuatro direcciones y `ROVER_DRIVING_PREVIEW.png` las muestra sobre el suelo existente. Para asignar los frames al rover de la escena se agregó el comando del Editor **Mars Crafts → Art → Aplicar animación del rover a Marte**. Ejecutarlo en Unity abre `04_Mars`, rellena las tres listas del `DirectionalSpriteAnimator` y guarda la escena conservando controlador, posición, collider y movimiento. No se ejecutó aquí porque Unity no está instalado en este entorno; la prueba en Play y WebGL queda pendiente. En Play: mover con WASD/flechas hacia los cuatro lados y detenerse; las ruedas deben animarse al mover y volver al frame 000 en reposo.

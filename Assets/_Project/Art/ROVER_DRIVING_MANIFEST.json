@@ -1,0 +1,251 @@
+{
+  "userReference": "Elementos visuales/PixelLab-Rover-Driving-20261115/rover-user-reference.png",
+  "jobs": {
+    "east": {
+      "base": "user supplied reference",
+      "animation": "5fad21bd-f6a3-4445-bab9-b3000a1cc122"
+    },
+    "south": {
+      "direction": "a7865b6f-9678-402a-8f49-514addb40bed",
+      "animation": "928754a0-5084-4519-b729-07346c703916"
+    },
+    "north": {
+      "direction": "a938cc77-d4e0-4dc3-9178-ba98c00fd97e",
+      "animation": "c30c00bd-01de-4970-99a4-2f77fff897e8"
+    }
+  },
+  "assets": [
+    {
+      "path": "Assets/_Project/Art/Sprites/Rover/DrivingV2/South/drive_south_000.png",
+      "size": [
+        80,
+        64
+      ],
+      "frame": 0,
+      "direction": "south",
+      "bounds": [
+        5,
+        3,
+        67,
+        62
+      ],
+      "colors": 39,
+      "transparentPercent": 55.37,
+      "sha256": "68b0d4f8b6dde12d9045efb069b649cb42bbddce6c71ef5cfea3d2828fb0cc92"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Rover/DrivingV2/South/drive_south_001.png",
+      "size": [
+        80,
+        64
+      ],
+      "frame": 1,
+      "direction": "south",
+      "bounds": [
+        5,
+        3,
+        67,
+        62
+      ],
+      "colors": 44,
+      "transparentPercent": 55.41,
+      "sha256": "0a2d4379425ea6889904480127c3d3c3f204a3805b7c58d7e952b26a121cebc4"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Rover/DrivingV2/South/drive_south_002.png",
+      "size": [
+        80,
+        64
+      ],
+      "frame": 2,
+      "direction": "south",
+      "bounds": [
+        5,
+        2,
+        67,
+        61
+      ],
+      "colors": 44,
+      "transparentPercent": 55.8,
+      "sha256": "9932d44b4e15554b2fb152b4ee22481090dffdc7eb0f44a359697e555336458a"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Rover/DrivingV2/South/drive_south_003.png",
+      "size": [
+        80,
+        64
+      ],
+      "frame": 3,
+      "direction": "south",
+      "bounds": [
+        5,
+        1,
+        67,
+        61
+      ],
+      "colors": 44,
+      "transparentPercent": 55.59,
+      "sha256": "e17e2f025454625cb29ef92adb0cdef2423975377d69a3ac757461775f51e17a"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Rover/DrivingV2/North/drive_north_000.png",
+      "size": [
+        80,
+        64
+      ],
+      "frame": 0,
+      "direction": "north",
+      "bounds": [
+        11,
+        3,
+        67,
+        62
+      ],
+      "colors": 23,
+      "transparentPercent": 57.11,
+      "sha256": "78332f5811d0ef90e6ac84edf447c3311f1c2413071cb862e174f11c78feb07f"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Rover/DrivingV2/North/drive_north_001.png",
+      "size": [
+        80,
+        64
+      ],
+      "frame": 1,
+      "direction": "north",
+      "bounds": [
+        11,
+        3,
+        67,
+        62
+      ],
+      "colors": 31,
+      "transparentPercent": 58.48,
+      "sha256": "7201845be94b450892383ab4cb4de00c3339cf946f216d2c002657b9dd9aea5c"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Rover/DrivingV2/North/drive_north_002.png",
+      "size": [
+        80,
+        64
+      ],
+      "frame": 2,
+      "direction": "north",
+      "bounds": [
+        11,
+        2,
+        67,
+        62
+      ],
+      "colors": 31,
+      "transparentPercent": 57.87,
+      "sha256": "4f8d94450709331b8ab34fcff1c83d92f65ed3b81cda3d286379f27d2fca7b0d"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Rover/DrivingV2/North/drive_north_003.png",
+      "size": [
+        80,
+        64
+      ],
+      "frame": 3,
+      "direction": "north",
+      "bounds": [
+        11,
+        2,
+        67,
+        62
+      ],
+      "colors": 32,
+      "transparentPercent": 58.16,
+      "sha256": "c53cfb067e3bc441bd2cf32fe4ce403ed99b3e974a11627a19a72fa315150e92"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Rover/DrivingV2/East/drive_east_000.png",
+      "size": [
+        80,
+        64
+      ],
+      "frame": 0,
+      "direction": "east",
+      "bounds": [
+        2,
+        4,
+        78,
+        62
+      ],
+      "colors": 37,
+      "transparentPercent": 44.71,
+      "sha256": "b75a2a404d074ed85a7f36b1c51b559addd02b38c239add1b138d914781d9fc6"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Rover/DrivingV2/East/drive_east_001.png",
+      "size": [
+        80,
+        64
+      ],
+      "frame": 1,
+      "direction": "east",
+      "bounds": [
+        2,
+        3,
+        78,
+        62
+      ],
+      "colors": 48,
+      "transparentPercent": 45.14,
+      "sha256": "60e6e6dc36ee0a66df38d0bf11476dddc899cbac71382020a426c65031a885c1"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Rover/DrivingV2/East/drive_east_002.png",
+      "size": [
+        80,
+        64
+      ],
+      "frame": 2,
+      "direction": "east",
+      "bounds": [
+        2,
+        2,
+        78,
+        62
+      ],
+      "colors": 49,
+      "transparentPercent": 44.47,
+      "sha256": "bb709c13b6843a89a4ef5cefa3911186667c2c4d83d08026c417537f9359497b"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Rover/DrivingV2/East/drive_east_003.png",
+      "size": [
+        80,
+        64
+      ],
+      "frame": 3,
+      "direction": "east",
+      "bounds": [
+        2,
+        2,
+        78,
+        62
+      ],
+      "colors": 51,
+      "transparentPercent": 44.51,
+      "sha256": "55944d91399d0327f2a7d7e8f47da433f4dc0290f5941eb1b86e43151ad03e2d"
+    }
+  ],
+  "framesPerDirection": 4,
+  "directions": [
+    "South",
+    "North",
+    "East"
+  ],
+  "left": "Unity DirectionalSpriteAnimator flipX of East",
+  "canvas": [
+    80,
+    64
+  ],
+  "pixelsPerUnit": 32,
+  "previous32pxFramesPreserved": true,
+  "sceneIntegrated": false,
+  "unityPlayTested": false,
+  "push": false
+}

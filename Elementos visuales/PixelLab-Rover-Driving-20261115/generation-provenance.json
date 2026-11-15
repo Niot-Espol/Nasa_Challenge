@@ -1,0 +1,23 @@
+{
+  "reference": "Elementos visuales/PixelLab-Rover-Driving-20261115/rover-user-reference.png",
+  "jobs": {
+    "east": {
+      "base": "user supplied reference",
+      "animation": "5fad21bd-f6a3-4445-bab9-b3000a1cc122"
+    },
+    "south": {
+      "direction": "a7865b6f-9678-402a-8f49-514addb40bed",
+      "animation": "928754a0-5084-4519-b729-07346c703916"
+    },
+    "north": {
+      "direction": "a938cc77-d4e0-4dc3-9178-ba98c00fd97e",
+      "animation": "c30c00bd-01de-4970-99a4-2f77fff897e8"
+    }
+  },
+  "frames": 12,
+  "tool": [
+    "edit_image_pro_flash",
+    "animate_image"
+  ],
+  "notes": "The east frame 000 is identical to the cropped and centered user reference. PixelLab produced north/south and four-frame drives. Original five-frame returns retained in raw."
+}
