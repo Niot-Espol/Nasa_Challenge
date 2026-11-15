@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mars Crafts — Revisión de Arte: Sección 11 (Misión 2: la Luna)</title>
+  <style>
+    body {
+      background: #0b0e16;
+      color: #eef0f3;
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 24px 32px;
+    }
+    h1, h2 { color: #9de2ff; margin-bottom: 8px; }
+    p { color: #c4c8cf; line-height: 1.5; }
+    .preview-banner {
+      background: #141926;
+      border: 1px solid #262b36;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0 28px 0;
+      text-align: center;
+    }
+    .preview-banner img {
+      image-rendering: pixelated;
+      max-width: 100%;
+      border: 2px solid #4e5562;
+      border-radius: 4px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .card {
+      background: #141926;
+      border: 1px solid #262b36;
+      border-radius: 8px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .stage {
+      background: #858b96;
+      border: 1px solid #4e5562;
+      border-radius: 4px;
+      padding: 16px;
+      margin: 10px 0;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      justify-content: center;
+      min-height: 96px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .stage.space { background: #0b0e16; }
+    .stage.shadow { background: #141824; }
+    img.px1 { image-rendering: pixelated; }
+    img.px4 { image-rendering: pixelated; transform: scale(3); margin: 24px; }
+    code {
+      font-size: 12px;
+      color: #9de2ff;
+      background: #0b0e16;
+      padding: 2px 6px;
+      border-radius: 4px;
+      word-break: break-all;
+    }
+    .meta {
+      font-size: 12px;
+      color: #858b96;
+      margin-top: 6px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mars Crafts — Sección 11: Misión 2 (La Luna · Polo Sur)</h1>
+  <p>Vista previa pixel-perfect (1× y 3×/4×) de los recursos visuales generados con PixelLab MCP para la Misión 2 (Luna), validados sobre el terreno de regolito lunar y dentro del cráter en sombra permanente.</p>
+
+  <div class="preview-banner">
+    <h2>Composición 4× en escena (Terreno iluminado + Cráter en sombra permanente + Planeta)</h2>
+    <img src="MOON_ASSETS_PREVIEW.png" alt="Moon Assets Preview 4x" />
+  </div>
+
+  <h2>Prioridad 1 — Puntos científicos lunares (32×32) y Planeta Luna (64×64)</h2>
+  <div class="grid">
+    <div class="card">
+      <strong>Hielo en cráter oscuro</strong>
+      <div class="stage shadow">
+        <img class="px1" src="../../../Assets/_Project/Art/Sprites/Moon/SciencePoints/science_point_ice.png" />
+        <img class="px4" src="../../../Assets/_Project/Art/Sprites/Moon/SciencePoints/science_point_ice.png" />
+      </div>
+      <code>Assets/_Project/Art/Sprites/Moon/SciencePoints/science_point_ice.png</code>
+      <div class="meta">32×32 px · PPU 16 · Alfa binario · Job 951b9579</div>
+    </div>
+
+    <div class="card">
+      <strong>Roca del borde iluminado (Anortosita)</strong>
+      <div class="stage">
+        <img class="px1" src="../../../Assets/_Project/Art/Sprites/Moon/SciencePoints/science_point_rim_rock.png" />
+        <img class="px4" src="../../../Assets/_Project/Art/Sprites/Moon/SciencePoints/science_point_rim_rock.png" />
+      </div>
+      <code>Assets/_Project/Art/Sprites/Moon/SciencePoints/science_point_rim_rock.png</code>
+      <div class="meta">32×32 px · PPU 16 · Alfa binario · Job 0c73e045</div>
+    </div>
+
+    <div class="card">
+      <strong>Muestra de regolito y vidrio de impacto</strong>
+      <div class="stage">
+        <img class="px1" src="../../../Assets/_Project/Art/Sprites/Moon/SciencePoints/science_point_regolith.png" />
+        <img class="px4" src="../../../Assets/_Project/Art/Sprites/Moon/SciencePoints/science_point_regolith.png" />
+      </div>
+      <code>Assets/_Project/Art/Sprites/Moon/SciencePoints/science_point_regolith.png</code>
+      <div class="meta">32×32 px · PPU 16 · Alfa binario · Job 29247db9</div>
+    </div>
+
+    <div class="card">
+      <strong>Planeta Luna (03_Launch)</strong>
+      <div class="stage space">
+        <img class="px1" src="../../../Assets/_Project/Art/Sprites/Launch/Planets/planet_moon.png" />
+        <img class="px1" style="width:128px;height:128px;" src="../../../Assets/_Project/Art/Sprites/Launch/Planets/planet_moon.png" />
+      </div>
+      <code>Assets/_Project/Art/Sprites/Launch/Planets/planet_moon.png</code>
+      <div class="meta">64×64 px (esfera 58×58) · PPU 25 · Job 2daffec7</div>
+    </div>
+  </div>
+
+  <h2>Prioridad 2 — Módulo de alunizaje (48×48) y Suelo de regolito (sand_a..d)</h2>
+  <div class="grid">
+    <div class="card">
+      <strong>Módulo de alunizaje</strong>
+      <div class="stage">
+        <img class="px1" src="../../../Assets/_Project/Art/Sprites/Moon/Landing/landing_module_moon.png" />
+        <img class="px1" style="width:96px;height:96px;" src="../../../Assets/_Project/Art/Sprites/Moon/Landing/landing_module_moon.png" />
+      </div>
+      <code>Assets/_Project/Art/Sprites/Moon/Landing/landing_module_moon.png</code>
+      <div class="meta">48×48 px · PPU 16 · MLI dorado + aluminio · Job d7c69057</div>
+    </div>
+
+    <div class="card">
+      <strong>Tiles de regolito (sand_a..d)</strong>
+      <div class="stage space">
+        <img class="px4" src="../../../Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/sand_a.png" />
+        <img class="px4" src="../../../Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/sand_b.png" />
+        <img class="px4" src="../../../Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/sand_c.png" />
+        <img class="px4" src="../../../Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/sand_d.png" />
+      </div>
+      <code>Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/sand_a..d.png</code>
+      <div class="meta">22×22 px en Unity (+ 16×16 nativo en archivo) · Opaco 100%</div>
+    </div>
+  </div>
+
+  <h2>Prioridad 3 — Cráteres lunares (crater_a..e) y Rocas angulares (rock_1..4)</h2>
+  <div class="grid">
+    <div class="card">
+      <strong>Cráteres de impacto (crater_a..e)</strong>
+      <div class="stage space">
+        <img class="px4" src="../../../Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/crater_a.png" />
+        <img class="px4" src="../../../Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/crater_b.png" />
+        <img class="px4" src="../../../Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/crater_c.png" />
+        <img class="px4" src="../../../Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/crater_d.png" />
+        <img class="px4" src="../../../Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/crater_e.png" />
+      </div>
+      <code>Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/crater_a..e.png</code>
+      <div class="meta">22×22 px en Unity (+ 16×16 nativo en archivo) · Sombra dura NO</div>
+    </div>
+
+    <div class="card">
+      <strong>Rocas lunares angulares (rock_1..4)</strong>
+      <div class="stage">
+        <img class="px4" src="../../../Assets/_Project/Art/Sprites/Moon/Rocks/rock_1.png" />
+        <img class="px4" src="../../../Assets/_Project/Art/Sprites/Moon/Rocks/rock_2.png" />
+        <img class="px4" src="../../../Assets/_Project/Art/Sprites/Moon/Rocks/rock_3.png" />
+        <img class="px4" src="../../../Assets/_Project/Art/Sprites/Moon/Rocks/rock_4.png" />
+      </div>
+      <code>Assets/_Project/Art/Sprites/Moon/Rocks/rock_1..4.png</code>
+      <div class="meta">Sin erosión eólica · Aristas vivas · Alfa binario</div>
+    </div>
+  </div>
+</body>
+</html>

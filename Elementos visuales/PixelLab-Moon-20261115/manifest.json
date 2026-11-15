@@ -1,0 +1,359 @@
+{
+  "section": "Sección 11 — Misión 2: la Luna",
+  "generatedAt": "2026-11-15",
+  "generator": "PixelLab MCP (create_image_pro_flash)",
+  "allChecksPassed": true,
+  "assets": [
+    {
+      "path": "Assets/_Project/Art/Sprites/Moon/SciencePoints/science_point_ice.png",
+      "priority": "P1",
+      "pixellab_job_id": "951b9579-33bd-496f-abfd-4f98a8e6479d",
+      "width": 32,
+      "height": 32,
+      "bounds": [
+        1,
+        11,
+        31,
+        31
+      ],
+      "visibleColors": 9,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "1dd341534d9d26c6fd4cc58cf5d6e0fe718d3138ab92f97786366b003001d67f"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Moon/SciencePoints/science_point_rim_rock.png",
+      "priority": "P1",
+      "pixellab_job_id": "0c73e045-a449-49c0-bb65-a74987eb8be0",
+      "width": 32,
+      "height": 32,
+      "bounds": [
+        1,
+        5,
+        30,
+        31
+      ],
+      "visibleColors": 6,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "dc04ea16882f2ddc680faee2f2118647be5c20ca987e19d392980e3f6e005898"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Moon/SciencePoints/science_point_regolith.png",
+      "priority": "P1",
+      "pixellab_job_id": "29247db9-b6ee-4007-b882-5179cd69515b",
+      "width": 32,
+      "height": 32,
+      "bounds": [
+        1,
+        5,
+        31,
+        31
+      ],
+      "visibleColors": 9,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "12cf0cdeeb0bfbebb66736955976f0a964f95c516164f8f89e8de0b02df00c38"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Launch/Planets/planet_moon.png",
+      "priority": "P1",
+      "pixellab_job_id": "2daffec7-4518-4f4b-955c-4de1e78055e0",
+      "width": 64,
+      "height": 64,
+      "bounds": [
+        3,
+        3,
+        61,
+        61
+      ],
+      "visibleColors": 6,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "474d83ef13c0bdcc8a369c3c26f4accd8a5f95b99b5412e70b37f1f01bbd9de3"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Moon/Landing/landing_module_moon.png",
+      "priority": "P2",
+      "pixellab_job_id": "d7c69057-20f5-46c5-9e15-6cc401a300bd",
+      "width": 48,
+      "height": 48,
+      "bounds": [
+        2,
+        4,
+        46,
+        46
+      ],
+      "visibleColors": 8,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "977cfb96fc6ff002b63896466647900786e1d9d66f4a0a79dfb7a22a873399bd"
+    },
+    {
+      "path": "Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/sand_a.png",
+      "priority": "P2",
+      "pixellab_job_id": "f8bfd6b0-a626-4c09-9f51-81453a0529b4",
+      "width": 22,
+      "height": 22,
+      "bounds": [
+        0,
+        0,
+        22,
+        22
+      ],
+      "visibleColors": 3,
+      "alphaValues": [
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "f3db417415886e364450236e3aa587710e823521251deca786b5663df9322e9e"
+    },
+    {
+      "path": "Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/sand_b.png",
+      "priority": "P2",
+      "pixellab_job_id": "45788ad8-2d03-4cf7-a8f3-217b20cfc17a",
+      "width": 22,
+      "height": 22,
+      "bounds": [
+        0,
+        0,
+        22,
+        22
+      ],
+      "visibleColors": 4,
+      "alphaValues": [
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "1c87ce7b255cae05464d76724f0b813ec70d185864f4e1162cf11e7d6228f160"
+    },
+    {
+      "path": "Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/sand_c.png",
+      "priority": "P2",
+      "pixellab_job_id": "dc93bce9-ae19-484d-acef-996e80f9387a",
+      "width": 22,
+      "height": 22,
+      "bounds": [
+        0,
+        0,
+        22,
+        22
+      ],
+      "visibleColors": 4,
+      "alphaValues": [
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "967d35af9e25d15bb81af8ab2f7a46d61ff0ee24d7acf8692c735de754bb2921"
+    },
+    {
+      "path": "Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/sand_d.png",
+      "priority": "P2",
+      "pixellab_job_id": "a8daaeed-5c51-42c1-93a6-f8023e24cd65",
+      "width": 22,
+      "height": 22,
+      "bounds": [
+        0,
+        0,
+        22,
+        22
+      ],
+      "visibleColors": 4,
+      "alphaValues": [
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "8c2a4c1391b21c2bbdf73cdded326f147eb22f3ffa2310e29e825c80ab78a728"
+    },
+    {
+      "path": "Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/crater_a.png",
+      "priority": "P3",
+      "pixellab_job_id": "210dba7d-3a6a-4c33-a3af-37776e96c6ad",
+      "width": 22,
+      "height": 22,
+      "bounds": [
+        0,
+        0,
+        22,
+        22
+      ],
+      "visibleColors": 5,
+      "alphaValues": [
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "2d0654034841422e586232852b8ebb92b10d6f0b109d097e1ac4a60f774e2c02"
+    },
+    {
+      "path": "Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/crater_b.png",
+      "priority": "P3",
+      "pixellab_job_id": "b053571e-504a-49a7-a0c5-034155283f44",
+      "width": 22,
+      "height": 22,
+      "bounds": [
+        0,
+        0,
+        22,
+        22
+      ],
+      "visibleColors": 5,
+      "alphaValues": [
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "c81c8b5a946118ba7cfb60fd5af1537debb5293ff2642a6be5e8cd22b8eb8f67"
+    },
+    {
+      "path": "Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/crater_c.png",
+      "priority": "P3",
+      "pixellab_job_id": "cc1e4d3a-5659-4577-b70b-e6e2b2183d51",
+      "width": 22,
+      "height": 22,
+      "bounds": [
+        0,
+        0,
+        22,
+        22
+      ],
+      "visibleColors": 5,
+      "alphaValues": [
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "04c76588090dc1dcb160274160e46de149d55df2db627e69f89ce2c09501af31"
+    },
+    {
+      "path": "Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/crater_d.png",
+      "priority": "P3",
+      "pixellab_job_id": "f025413f-db9d-4926-bdd8-eb1a19ef3c79",
+      "width": 22,
+      "height": 22,
+      "bounds": [
+        0,
+        0,
+        22,
+        22
+      ],
+      "visibleColors": 5,
+      "alphaValues": [
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "9b92bc4fb1caf45ab60d1029ee3ae31c25728093aa85e020588a14b3aa664df4"
+    },
+    {
+      "path": "Assets/_Project/Art/Tilesets/Moon/MoonTilesPNG/crater_e.png",
+      "priority": "P3",
+      "pixellab_job_id": "1a942302-6563-4870-ab05-4de02c797607",
+      "width": 22,
+      "height": 22,
+      "bounds": [
+        0,
+        0,
+        22,
+        22
+      ],
+      "visibleColors": 6,
+      "alphaValues": [
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "8ece9e7fcb4a9f1bc47f1f60bd32ff11984f4574d07b3ca4a5f76276f877322c"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Moon/Rocks/rock_1.png",
+      "priority": "P3",
+      "pixellab_job_id": "2c40a0c5-f36f-4a89-9ff9-13c99d7a76e8",
+      "width": 20,
+      "height": 18,
+      "bounds": [
+        1,
+        1,
+        19,
+        17
+      ],
+      "visibleColors": 5,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "aec33fced7aa0e6e4d4832066284a6db834e0c10e97eb2acc36b5aa2a689c968"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Moon/Rocks/rock_2.png",
+      "priority": "P3",
+      "pixellab_job_id": "b04fec55-08fd-43ac-8462-6bcaafa13620",
+      "width": 20,
+      "height": 20,
+      "bounds": [
+        1,
+        1,
+        19,
+        19
+      ],
+      "visibleColors": 5,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "4cf20542688009b81a34a9bd16d037d3d2042b85b8b3661239e0b5842631da91"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Moon/Rocks/rock_3.png",
+      "priority": "P3",
+      "pixellab_job_id": "a22b8cdc-8aba-4e07-b1b1-f376725221ac",
+      "width": 20,
+      "height": 19,
+      "bounds": [
+        2,
+        2,
+        18,
+        18
+      ],
+      "visibleColors": 5,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "aee6b32bc0ee360bd40c2572b6a88797851ac5f3d83b75e81b929c40319b0157"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Moon/Rocks/rock_4.png",
+      "priority": "P3",
+      "pixellab_job_id": "193e9a3b-5797-42f8-824e-31d802ea1aa6",
+      "width": 16,
+      "height": 20,
+      "bounds": [
+        1,
+        3,
+        15,
+        18
+      ],
+      "visibleColors": 6,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "clippedByUnityMetaRectPixels": 0,
+      "sha256": "c6727027743832f548a672e3b96574aae58f18bc1f2d3a2a6d6147282974ea44"
+    }
+  ]
+}
