@@ -82,6 +82,7 @@ public class DialogueBox : MonoBehaviour
 
     void ShowLine()
     {
+        AudioManager.Play(Sfx.Dialogue);
         var l = lines[index];
         if (nameText != null) nameText.text = DialogueData.SpeakerName(l.speaker);
         SetPortrait(l.speaker);

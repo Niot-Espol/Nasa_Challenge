@@ -15,6 +15,7 @@
 - [`docs/game-design/alcance-mision-marte.md`](docs/game-design/alcance-mision-marte.md): **alcance acordado** (solo Marte), flujo, qué entra y qué se recorta, y cronograma.
 - [`docs/game-design/sistema-recursos-y-assets.md`](docs/game-design/sistema-recursos-y-assets.md): recursos, valores de los componentes, diseños objetivo, eventos, puntuación y lista de assets.
 - [`docs/game-design/lista-arte-para-dibujar.md`](docs/game-design/lista-arte-para-dibujar.md): **lista de arte para el equipo** (tamaños, frames, prioridades). Sin capas: el rover es un solo dibujo y los componentes son íconos sueltos.
+- [`docs/architecture/como-reemplazar-arte-y-audio.md`](docs/architecture/como-reemplazar-arte-y-audio.md): **dónde se conecta cada sprite, sonido y texto** cuando llegue el arte.
 - [`docs/architecture/arquitectura-unity.md`](docs/architecture/arquitectura-unity.md): escenas, `GameSession`, `ComponentData` y prefabs.
 - [`docs/game-design/historia-mars-crafts.md`](docs/game-design/historia-mars-crafts.md): historia del equipo. La versión vigente es la **1.65**; la 1.0 está descartada. Las tres misiones son la visión, pero **solo se construye Marte**: la Tierra y la Luna aparecen bloqueadas en el menú.
 
@@ -55,37 +56,37 @@ Assets/_Project/
     Animations/Characters/            Astronaut.controller (base) + <Personaje>/ clips y override
   Audio/ Data/ Prefabs/ ScriptableObjects/ Settings/ Tests/
   Scenes/                             00_Title … 05_Report  (el doc pide Scenes/Main/ y Scenes/Sandbox/: pendiente de mover)
-  Scripts/Core|Gameplay|UI|Editor/    (+ Model/ y Data/ cuando se creen)
+  Scripts/Core|Model|Data|Gameplay|UI|Editor/
+  Resources/                          UITheme.asset y AudioLibrary.asset (arte y audio centralizados)
+  Data/Dialogues/                     diálogos editables
   TextMesh Pro/                       (no modificar)
 docs/game-design/ docs/architecture/ docs/research/
 Elementos visuales/                   zips originales de los personajes (fuente; no los usa Unity)
 ```
 
 ## 5. Estado actual — checklist (actualízalo al avanzar)
-- [x] Esqueleto: 6 escenas en Build Settings, en orden, cada una con Canvas, título TMP y botón "Siguiente" → `SceneFlow.Next()`. *(Falta moverlas a `Scenes/Main/`.)*
-- [x] `04_Mars` en greybox: rover (cuadrado) con `TopDownMover` (`Rigidbody2D` con gravedad 0, rotación congelada, Interpolate) y 6 rocas con `BoxCollider2D`, fondo rojizo y botón en la esquina. Cámara: **Cinemachine 3.1.7**, con `CM Rover Camera` (`CinemachineCamera` + `CinemachinePositionComposer`, ortho size 6) siguiendo al rover y `CinemachineBrain` en la Main Camera. *(Pendiente: `CinemachineConfiner2D` cuando exista el mapa con Tilemap.)*
-- [x] Sprites de 3 astronautas importados (`AstronautStocky`, `AstronautAgile`, `AstronautCute`; 32×32, 8 direcciones idle, carrera en 4 direcciones).
-- [x] Animaciones de los astronautas: 6 clips por personaje (`Idle_Down/Up/Side`, `Run_Down/Up/Side`, 10 fps). `Astronaut.controller` usa blend trees 2D con los parámetros `FacingX`, `FacingY` e `IsMoving`, y hay override controllers para Agile y Cute. Para ir a la izquierda se usa el clip *Side* con `SpriteRenderer.flipX`.
-- [x] **Protagonista: `AstronautStocky`.** Las otras dos variantes quedan disponibles cambiando el controller del Animator por su override.
-- [x] Prefab `Assets/_Project/Prefabs/Player.prefab`: en la raíz tiene `Rigidbody2D`, un `BoxCollider2D` solo en los pies, `TopDownMover` y `CharacterAnimator`; el hijo `Sprite` tiene `SpriteRenderer` y `Animator`. `CharacterAnimator` pasa `Facing` e `IsMoving` al Animator, decide la dirección dominante y aplica `flipX` a la izquierda. Está colocado en `01_Hub` sobre un fondo greybox gris azulado.
-- [x] `04_Mars` jugable (greybox):
-  - `Mission` con `MissionController`: avanza el estado, bloquea al rover en modo seguro y dispara los eventos (tormenta en t=70 s durante 30 s; apagón en t=150 s con la duración de la antena).
-  - 3 `ScienceSitePoint` (Delta azul, Mineral morado, Roca especial dorada) con trigger, indicador "[E]" y color al completarse.
-  - HUD **provisional** de texto (`MissionHUD`) con energía, tiempo, puntos, estados y mensaje de BIMO.
-  - Botón "Terminar misión" → `FinishMission()`: guarda `GameSession.Result` y carga `05_Report`. Al acabarse el tiempo también termina.
-- [x] Contrato del modelo:
-  - `Scripts/Model/` (C# puro): `RoverDesign`, `Verifier` (con `VerificationResult` y `VerificationIssue`, mensajes de BIMO) y `MissionResult` (`ScienceSite`, `MissionIncident`).
-  - `Scripts/Core/GameSession.cs`, con `EnsureDesign()`, `EnsureResult()` y `Reset()`.
-  - `Scripts/Data/`: `ComponentData` (ScriptableObject) y `RoverDesignBuilder`.
-  - 14 assets en `ScriptableObjects/Components/`.
-  - Verificado: los diseños objetivo del doc de recursos dan exactamente 470/99, 500/106, 455/108 y 480/97 (✓), y "Lo quiero todo" da 550/129 (✗).
-  - **Pendiente de diseño:** definir el "consumo base" de energía (regla de verificación) y los `nasaFact` con fuente de cada componente.
-- [x] `MissionState` (`Scripts/Model/`, C# puro): estado en vivo de Marte.
-  - Energía: moverse gasta 1/s, escanear lo que cueste el instrumento, la fuente recarga; los paneles no recargan durante la tormenta.
-  - Tiempo de 240 s y modo seguro (energía en 0 → detenido hasta el 30 %).
-  - Escaneo con `ScanStatus` y mensajes de BIMO; va registrando incidentes en `Result`.
-- [ ] `ReportBuilder` (textos del reporte a partir de `Design` + `Result`) y pantalla de Reporte que los muestre.
-- [ ] Primera build de principio a fin con placeholders (meta: sábado ~20:00).
+**El juego se puede jugar de principio a fin con placeholders.** Flujo: Título → Hub → Taller → Lanzamiento → Marte → Reporte → (Rediseñar → Taller | Terminar → Título).
+
+### Hecho
+- **Base:** 6 escenas en Build Settings, en orden. `SceneFlow` navega por nombre (`Go`, `NewGame`, `Redesign`, `BackToTitle`). `SceneFader` (fundido) y `PauseMenu` (Esc) se crean solos. `AudioManager` + `Resources/AudioLibrary.asset` con todos los sonidos y músicas ya llamados desde el código.
+- **UI con tema:** `Resources/UITheme.asset` define sprites y colores de toda la UI. `ThemedImage`/`ThemedText` aplican el tema; `UIKit` crea elementos ya tematizados; `ResourceBar` para barras. Cambiar el arte = rellenar el tema (ver `docs/architecture/como-reemplazar-arte-y-audio.md`).
+- **Modelo (C# puro, `Scripts/Model/`):** `RoverDesign`, `Verifier` (mensajes de BIMO), `MissionState` (energía, recarga, tiempo, modo seguro, tormenta, apagón, escaneos), `MissionResult` (puntos + incidentes), `ReportBuilder` (estrellas, insignias, causa → decisión, comparación con Perseverance). `GameSession` con datos de depuración en cada escena.
+- **Datos:** 14 `ComponentData` en `ScriptableObjects/Components/` (valores del doc de recursos); diálogos como `DialogueData` en `Data/Dialogues/`.
+- **00_Title:** logo (texto provisional), tarjetas Tierra/Luna bloqueadas y Marte → nueva partida; aviso de no afiliación a la NASA.
+- **01_Hub:** sala greybox con paredes, pantalla, consolas; Dra. Vega (sprite provisional: AstronautAgile) con briefing; BIMO con diálogo; puerta al Taller bloqueada hasta el briefing. Protagonista `Player.prefab` (AstronautStocky) animado.
+- **02_Workshop:** tarjetas generadas desde `ComponentData` (una por categoría; instrumentos múltiples), barras de presupuesto y masa, resumen del rover, avisos del `Verifier` como BIMO, botón Lanzar solo si es válido. Rediseñar precarga el diseño anterior.
+- **03_Launch:** cuenta regresiva, despegue y viaje Tierra → Marte animado (~7 meses); Espacio/clic salta.
+- **04_Mars:** mapa greybox 40×30 (cauce, delta, sedimentos, zona rocosa, muralla, rocas, borde del cráter, módulo de aterrizaje), cámara Cinemachine con confiner, intro de BIMO, 3 puntos científicos con popup de dato NASA y fuente, `RockyZone` (solo con ruedas todoterreno), HUD con barras. Eventos: tormenta en t=45 s (30 s) y apagón en t=100 s (duración según antena). Al completar los 3 puntos se termina sola; también por tiempo (240 s) o botón.
+- **05_Report:** estrellas, insignias, recursos, "qué pasó y por qué", comparación con Perseverance, Rediseñar/Terminar.
+- **Balance:** moverse cuesta **2/s** (el doc decía 1; con 1 los paneles nunca se vaciaban). Se cambia en `MissionController` (Inspector). Simulado: solar + batería pequeña → modo seguro en la tormenta; RTG + 2 instrumentos → 2 estrellas; batería grande → sin modo seguro.
+
+### Pendiente
+- [ ] Reemplazar placeholders por arte (tileset de Marte e interior, rover, puntos, UI, íconos, retratos, fuente pixel) y audio.
+- [ ] Tilemap de Marte con el tileset (mantener zonas y posiciones de los puntos).
+- [ ] Verificar los datos NASA con su fuente (`docs/research/`) y rellenar `nasaFact` de los componentes.
+- [ ] Definir el "consumo base" de energía para la regla de verificación (TODO en `Verifier`).
+- [ ] Build final (Windows/Mac) y prueba completa en la build.
+- [ ] Opcional: mover escenas a `Scenes/Main/`, minijuego de aterrizaje, más retratos/expresiones.
 
 ## 6. Reglas para agentes (importante)
 1. **No edites `.unity`, `.prefab` ni `.asset` como texto.** Haz los cambios de escena, prefab o Inspector con el MCP de Unity, con un script de editor, o explícaselos a Danilo.

@@ -94,6 +94,13 @@ public static class ReportBuilder
                 : new ReportLine(ReportTone.Good,
                     $"El relé vía orbitador redujo la pérdida de comunicación a solo {d.BlackoutSeconds:0} s."));
 
+        // --- Ruedas ---
+        if (r.CountOf(IncidentType.RockyZoneBlocked) > 0)
+            rep.Lines.Add(new ReportLine(ReportTone.Bad,
+                "Con ruedas estándar no pudiste cruzar la zona rocosa y tuviste que rodearla. Las ruedas todoterreno abren ese atajo."));
+        else if (d.AllTerrainWheels)
+            rep.Lines.Add(new ReportLine(ReportTone.Info, "Tus ruedas todoterreno te permitían cruzar la zona rocosa."));
+
         // --- Presupuesto ---
         rep.Lines.Add(d.RemainingBudget >= 10
             ? new ReportLine(ReportTone.Good, $"Gastaste {d.TotalCost} de {RoverDesign.Budget} créditos: te sobraron {d.RemainingBudget}.")

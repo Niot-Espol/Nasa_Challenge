@@ -63,6 +63,7 @@ public static class UIKit
         var img = Panel(parent, name, element);
         var btn = img.gameObject.AddComponent<Button>();
         btn.targetGraphic = img;
+        btn.gameObject.AddComponent<ButtonSound>();
         var colors = btn.colors;
         colors.highlightedColor = new Color(1f, 1f, 1f, 0.85f);
         colors.pressedColor = new Color(0.8f, 0.8f, 0.8f, 1f);

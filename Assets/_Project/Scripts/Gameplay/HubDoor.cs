@@ -25,8 +25,12 @@ public class HubDoor : Interactable
 
     protected override void Interact()
     {
-        if (unlocked) SceneFlow.Go(SceneFlow.Workshop);
-        else if (DialogueBox.Instance != null) DialogueBox.Instance.Show(lockedMessage);
+        if (unlocked) { AudioManager.Play(Sfx.DoorOpen); SceneFlow.Go(SceneFlow.Workshop); }
+        else
+        {
+            AudioManager.Play(Sfx.Error);
+            if (DialogueBox.Instance != null) DialogueBox.Instance.Show(lockedMessage);
+        }
     }
 
     void ApplyVisual()

@@ -14,9 +14,9 @@ public class MissionController : MonoBehaviour
     [SerializeField] DialogueData intro;          // BIMO al aterrizar (opcional)
 
     [Header("Eventos (segundos desde el inicio)")]
-    [SerializeField] float dustStormAt = 70f;
+    [SerializeField] float dustStormAt = 45f;
     [SerializeField] float dustStormDuration = 30f;
-    [SerializeField] float blackoutAt = 150f;   // la duración la decide la antena del diseño
+    [SerializeField] float blackoutAt = 100f;   // la duración la decide la antena del diseño
 
     public MissionState State { get; private set; }
     public static MissionController Instance { get; private set; }
@@ -32,6 +32,7 @@ public class MissionController : MonoBehaviour
         Instance = this;
         // Play directo en 04_Mars: si no hay diseño, usa el de prueba.
         State = new MissionState(GameSession.EnsureDesign(), timeLimit, moveCostPerSecond);
+        State.SafeModeChanged += on => { if (on) AudioManager.Play(Sfx.SafeMode); };
         State.SafeModeChanged += on => Post(on
             ? "¡Sin energía! Modo seguro: el rover se detiene hasta recargar el 30 %."
             : "Energía recuperada. Podemos seguir.");
@@ -63,6 +64,7 @@ public class MissionController : MonoBehaviour
         if (storm != State.DustStormActive)
         {
             State.SetDustStorm(storm);
+            if (storm) AudioManager.Play(Sfx.DustStorm);
             if (storm) Post(State.Design.UsesSolar
                 ? "¡Tormenta de polvo! Los paneles solares no recargan mientras dure."
                 : "Tormenta de polvo. El RTG sigue dando energía sin problema.");
@@ -74,6 +76,7 @@ public class MissionController : MonoBehaviour
         if (down != State.CommsDown)
         {
             State.SetCommsDown(down);
+            AudioManager.Play(down ? Sfx.CommsLost : Sfx.CommsBack);
             Post(down
                 ? $"¡Perdimos la comunicación con la Tierra! ({State.Design.BlackoutSeconds:0} s sin poder escanear)"
                 : "Comunicación restablecida.");
@@ -83,9 +86,13 @@ public class MissionController : MonoBehaviour
     public ScanStatus Scan(ScienceSite site)
     {
         var status = State.TryScan(site);
+        AudioManager.Play(status == ScanStatus.Ok ? Sfx.SiteComplete : Sfx.ScanFail);
         Post(State.ScanMessage(status, site));
         if (status == ScanStatus.Ok && State.Result.ScienceCount == 3)
-            Post("¡Los 3 puntos completados! Pulsa el botón para transmitir y terminar la misión.");
+        {
+            Post("¡Los 3 puntos completados! Transmitiendo los datos a la Tierra...");
+            Invoke(nameof(FinishMission), 2.5f);   // tiempo escalado: espera a que se cierre el popup
+        }
         return status;
     }
 

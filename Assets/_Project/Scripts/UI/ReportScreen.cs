@@ -21,7 +21,9 @@ public class ReportScreen : MonoBehaviour
     {
         var design = GameSession.EnsureDesign();
         var result = GameSession.EnsureResult();
-        Show(ReportBuilder.Build(design, result));
+        var rep = ReportBuilder.Build(design, result);
+        Show(rep);
+        if (rep.Stars > 0) AudioManager.Play(Sfx.Success);
     }
 
     public void Show(ReportData rep)

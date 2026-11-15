@@ -101,6 +101,7 @@ public class WorkshopScreen : MonoBehaviour
         var btn = UIKit.Button(parent, "Card_" + c.id, "", 1, UIElement.Slot);
         UIKit.Size(btn, cardWidth, cardHeight);
         Destroy(btn.transform.Find("Label").gameObject);
+        Destroy(btn.GetComponent<ButtonSound>());
 
         var content = UIKit.NewRect("Content", btn.transform);
         UIKit.Fill(content, 12, 8, 12, 8);
@@ -131,6 +132,7 @@ public class WorkshopScreen : MonoBehaviour
             selected.Add(c);
         }
         infoOverride = $"<b>{c.displayName}</b>: {c.description}";
+        AudioManager.Play(Sfx.Select);
         Refresh();
     }
 
@@ -189,7 +191,7 @@ public class WorkshopScreen : MonoBehaviour
 
     void Launch()
     {
-        if (!verification.CanLaunch) return;
+        if (!verification.CanLaunch) { AudioManager.Play(Sfx.Error); return; }
         GameSession.Design = design;
         GameSession.Result = null;
         SceneFlow.Go(SceneFlow.Launch);

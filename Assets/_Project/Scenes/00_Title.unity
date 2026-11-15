@@ -2537,6 +2537,7 @@ GameObject:
   - component: {fileID: 1399705064}
   - component: {fileID: 1399705063}
   - component: {fileID: 1399705062}
+  - component: {fileID: 1399705068}
   m_Layer: 5
   m_Name: Card_Mars
   m_TagString: Untagged
@@ -2719,6 +2720,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399705060}
   m_CullTransparentMesh: 1
+--- !u!114 &1399705068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399705060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7914d3a3344854ce6b994a2f07805d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
+  sound: 0
 --- !u!1 &1539408197
 GameObject:
   m_ObjectHideFlags: 0
