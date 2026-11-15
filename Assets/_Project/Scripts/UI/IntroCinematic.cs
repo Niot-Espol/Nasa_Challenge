@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 public class IntroCinematic : MonoBehaviour
 {
-    [SerializeField] float charsPerSecond = 38f;
+    [SerializeField] float charsPerSecond = 60f;
 
     RectTransform stage;          // contenedor de cada plano
     Image fade;                   // negro para fundidos
@@ -45,38 +45,38 @@ public class IntroCinematic : MonoBehaviour
         Clear();
         var bg = Img(th.spaceBackground, Vector2.zero, new Vector2(1920, 1080), stretch: true);
         var earth = Img(th.earth, new Vector2(-420, 40), new Vector2(300, 300));
-        StartCoroutine(Zoom(bg.rectTransform, 1f, 1.08f, 9f));
-        StartCoroutine(Drift(earth.rectTransform, new Vector2(-420, 40), new Vector2(-380, 50), 9f));
-        yield return Fade(1, 0, 1.2f);
-        yield return Say("Durante décadas, la humanidad ha enviado satélites, sondas y robots para entender nuestro sistema solar.", 2.2f);
+        StartCoroutine(Zoom(bg.rectTransform, 1f, 1.08f, 6f));
+        StartCoroutine(Drift(earth.rectTransform, new Vector2(-420, 40), new Vector2(-380, 50), 6f));
+        yield return Fade(1, 0, 0.6f);
+        yield return Say("La humanidad lleva décadas explorando el sistema solar.", 1.1f);
 
         // 2) Hacia la Luna
         var moon = Img(th.moon != null ? th.moon : th.earth, new Vector2(460, 120), new Vector2(170, 170));
         moon.color = new Color(1, 1, 1, 0);
-        StartCoroutine(FadeImg(moon, 0, 1, 1f));
+        StartCoroutine(FadeImg(moon, 0, 1, 0.6f));
         var ship = Img(th.cruiseShip, new Vector2(-260, 40), new Vector2(110, 110));
-        StartCoroutine(Fly(ship.rectTransform, new Vector2(-260, 40), new Vector2(380, 120), 4.5f));
-        yield return Say("Estudiamos la Tierra desde la órbita. Buscamos hielo de agua en los cráteres de la Luna.", 2.0f);
-        yield return Fade(0, 1, 0.8f);
+        StartCoroutine(Fly(ship.rectTransform, new Vector2(-260, 40), new Vector2(380, 120), 2.6f));
+        yield return Say("Observamos la Tierra. Buscamos hielo en la Luna.", 1.2f);
+        yield return Fade(0, 1, 0.45f);
 
         // 3) Marte crece en pantalla
         Clear();
         bg = Img(th.spaceBackground, Vector2.zero, new Vector2(1920, 1080), stretch: true);
         var mars = Img(th.mars, new Vector2(0, 40), new Vector2(180, 180));
-        StartCoroutine(Grow(mars.rectTransform, 180f, 620f, 7f));
-        yield return Fade(1, 0, 0.8f);
-        yield return Say("Y en Marte... hace miles de millones de años, hubo ríos y lagos. ¿Qué secretos guardan sus rocas?", 2.4f);
-        yield return Fade(0, 1, 0.8f);
+        StartCoroutine(Grow(mars.rectTransform, 180f, 620f, 3.6f));
+        yield return Fade(1, 0, 0.45f);
+        yield return Say("Y en Marte hubo ríos y lagos. ¿Qué guardan sus rocas?", 1.3f);
+        yield return Fade(0, 1, 0.45f);
 
         // 4) Superficie: el rover cruza el paisaje
         Clear();
         bg = Img(th.titleBackground != null ? th.titleBackground : th.spaceBackground, Vector2.zero, new Vector2(1920, 1080), stretch: true);
-        StartCoroutine(Zoom(bg.rectTransform, 1.05f, 1f, 7f));
+        StartCoroutine(Zoom(bg.rectTransform, 1.05f, 1f, 4f));
         var rover = Img(th.roverPreview, new Vector2(-1100, -250), new Vector2(330, 330));
-        StartCoroutine(Fly(rover.rectTransform, new Vector2(-1100, -250), new Vector2(150, -250), 5.5f, bob: true));
-        yield return Fade(1, 0, 0.8f);
-        yield return Say("Para descubrirlo, la NASA diseña misiones con presupuesto, masa y energía limitados. Cada decisión cuenta.", 2.2f);
-        yield return Fade(0, 1, 0.8f);
+        StartCoroutine(Fly(rover.rectTransform, new Vector2(-1100, -250), new Vector2(150, -250), 3.4f, bob: true));
+        yield return Fade(1, 0, 0.45f);
+        yield return Say("Cada misión se diseña con presupuesto, masa y energía limitados.", 1.3f);
+        yield return Fade(0, 1, 0.45f);
 
         // 5) El centro espacial: Vega y BIMO
         Clear();
@@ -87,11 +87,11 @@ public class IntroCinematic : MonoBehaviour
         var vega = Img(DialogueData.Portrait(Speaker.Vega, Expression.Happy), new Vector2(-480, 50), new Vector2(380, 380));
         var bimo = Img(DialogueData.Portrait(Speaker.Bimo, Expression.Happy), new Vector2(480, 50), new Vector2(340, 340));
         vega.color = bimo.color = new Color(1, 1, 1, 0.35f);
-        yield return Fade(1, 0, 0.6f);
-        yield return Talk(vega, bimo, "Dra. Elena Vega", "Bienvenido al centro espacial Mars Crafts, comandante. Te estábamos esperando.");
+        yield return Fade(1, 0, 0.4f);
+        yield return Talk(vega, bimo, "Dra. Elena Vega", "Bienvenido a Mars Crafts, comandante. Te estábamos esperando.");
         yield return Talk(bimo, vega, "BIMO", "¡Por fin! Llevo tres horas cargado al 100 %... y dos revisando que no exploto.");
-        yield return Talk(vega, bimo, "Dra. Elena Vega", "Aquí diseñarás, lanzarás y operarás tus propias misiones. ¿Listo para empezar?");
-        yield return Fade(0, 1, 0.7f);
+        yield return Talk(vega, bimo, "Dra. Elena Vega", "Aquí diseñarás y lanzarás tus propias misiones. ¿Listo?");
+        yield return Fade(0, 1, 0.45f);
 
         // 6) Logo
         Clear();
@@ -99,11 +99,11 @@ public class IntroCinematic : MonoBehaviour
         bg.color = new Color(0.6f, 0.6f, 0.7f);
         var logo = Img(th.logo, new Vector2(0, 80), new Vector2(900, 300));
         caption.text = "";
-        yield return Fade(1, 0, 0.5f);
+        yield return Fade(1, 0, 0.35f);
         AudioManager.Play(Sfx.StarDing);
         yield return Pop(logo.rectTransform, 0.6f);
         caption.text = "<size=80%>Presiona cualquier tecla</size>";
-        for (float t = 0; t < 3.5f; t += Time.deltaTime) { caption.alpha = 0.5f + 0.5f * Mathf.Sin(t * 4f); yield return null; }
+        for (float t = 0; t < 2f; t += Time.deltaTime) { caption.alpha = 0.5f + 0.5f * Mathf.Sin(t * 4f); yield return null; }
         skipping = true;
         SceneFlow.Go(SceneFlow.Title);
     }
@@ -173,7 +173,7 @@ public class IntroCinematic : MonoBehaviour
     {
         speaker.color = Color.white; other.color = new Color(1, 1, 1, 0.35f);
         StartCoroutine(Pop(speaker.rectTransform, 0.25f, 1.06f));
-        yield return Say($"<color=#FF9A3C>{name}:</color> {text}", 1.6f);
+        yield return Say($"<color=#FF9A3C>{name}:</color> {text}", 1.4f);
     }
 
     IEnumerator Zoom(RectTransform rt, float a, float b, float secs)
