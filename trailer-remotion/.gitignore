@@ -1,0 +1,5 @@
+node_modules/
+.remotion/
+public/game-assets/
+public/audio/
+out/

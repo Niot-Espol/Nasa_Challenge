@@ -1,0 +1,27 @@
+{
+  "name": "mars-crafts-trailer",
+  "version": "1.0.0",
+  "description": "Tr\u00e1iler cinematogr\u00e1fico oficial de 45 segundos para Mars Crafts (NASA Space Apps Challenge 2026)",
+  "private": true,
+  "scripts": {
+    "start": "remotion studio",
+    "studio": "remotion studio",
+    "render": "remotion render MarsCraftsTrailer out/MarsCrafts_Official_Trailer_1080p.mp4 --codec=h264",
+    "check": "tsc --noEmit",
+    "setup": "node node_modules/esbuild/install.js && node sync-assets.mjs",
+    "prestart": "node sync-assets.mjs",
+    "prerender": "node sync-assets.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.270",
+    "@remotion/player": "4.0.270",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.270"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "typescript": "5.6.3"
+  }
+}
