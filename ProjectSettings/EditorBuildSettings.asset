@@ -25,7 +25,7 @@ EditorBuildSettings:
     guid: b890ab55aa45940cc9e102f48e230ec6
   - enabled: 1
     path: Assets/_Project/Scenes/04_Moon.unity
-    guid: ac51020573ddd413795c2eacfb5698f5
+    guid: 85de30e5504d54ed8b99e0ecf9fd171b
   - enabled: 1
     path: Assets/_Project/Scenes/05_Report.unity
     guid: 5542d2b85b23c477998166d054c24a47

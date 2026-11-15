@@ -33,8 +33,10 @@ public static class MoonSceneBuilder
         MoonArtGenerator.Generate();
         MakeShadowSprite();
 
-        AssetDatabase.DeleteAsset(MoonScene);
-        AssetDatabase.CopyAsset(MarsScene, MoonScene);
+        // Copia el contenido de Marte SIN cambiar el identificador (GUID) de 04_Moon si ya existe,
+        // para no romper la lista de escenas de la build ni otras referencias.
+        if (AssetDatabase.LoadAssetAtPath<SceneAsset>(MoonScene) == null) AssetDatabase.CopyAsset(MarsScene, MoonScene);
+        else { System.IO.File.Copy(MarsScene, MoonScene, true); AssetDatabase.ImportAsset(MoonScene, ImportAssetOptions.ForceUpdate); }
         var scene = EditorSceneManager.OpenScene(MoonScene, OpenSceneMode.Single);
         var log = new List<string>();
 
