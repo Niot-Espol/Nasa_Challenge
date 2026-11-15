@@ -66,6 +66,8 @@ public class UITheme : ScriptableObject
     public Sprite iconComms;
     public Sprite iconScience;
     public Sprite iconWarning;                   // aviso de BIMO
+    public Sprite iconSafeMode;
+    public Sprite iconNoSignal;
     public Sprite iconLock;                      // misiones bloqueadas
 
     [Header("Reporte")]
@@ -78,6 +80,7 @@ public class UITheme : ScriptableObject
     [Header("Título")]
     public Sprite logo;                          // ~192x64
     public Sprite titleBackground;               // 320x180
+    public Sprite workshopBackground;            // fondo del Taller 320x180
     public Sprite missionEarth;                  // tarjetas 64x64
     public Sprite missionMoon;
     public Sprite missionMars;
@@ -86,7 +89,8 @@ public class UITheme : ScriptableObject
     public Sprite launchBackground;              // plataforma 320x180
     public Sprite spaceBackground;               // estrellas 320x180
     public Sprite rocket;                        // 32x64
-    public Sprite[] rocketFlame;                 // 3 frames 16x32
+    public Sprite[] rocketFlame;                 // frames de la llama (se animan en bucle)
+    public Sprite[] launchSmoke;                 // frames del humo del despegue
     public Sprite earth;                         // 64x64
     public Sprite mars;                          // 64x64
     public Sprite cruiseShip;                    // 32x32

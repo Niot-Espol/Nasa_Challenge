@@ -24,7 +24,7 @@ MonoBehaviour:
   scanCost: 35
   blackoutSeconds: 0
   crossesRockyZone: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 841f7d7413b540189af77aed6f9372b9, type: 3}
   description: "Necesario para la roca especial. Escanear cuesta 35 de energ\xEDa."
   nasaFact: 
   nasaSourceUrl: 

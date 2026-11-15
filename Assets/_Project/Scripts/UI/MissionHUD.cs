@@ -78,6 +78,59 @@ public class MissionHUD : MonoBehaviour
         }
     }
 
+    // Panel oscuro detrás del estado (sin señal, tormenta, modo seguro...) para leerlo sobre la arena
+    Image statusPanel;
+    void UpdateStatusPanel(string status)
+    {
+        if (statusText == null) return;
+        bool show = !string.IsNullOrEmpty(status);
+        if (statusPanel == null)
+        {
+            if (!show) return;
+            statusPanel = UIKit.Panel(statusText.transform.parent, "StatusPanel", UIElement.PanelDark);
+            statusPanel.raycastTarget = false;
+            statusPanel.transform.SetSiblingIndex(statusText.transform.GetSiblingIndex());   // justo detrás del texto
+            var prt = statusPanel.rectTransform;
+            prt.anchorMin = prt.anchorMax = statusText.rectTransform.anchorMin;
+            prt.pivot = new Vector2(0.5f, 1f);
+        }
+        statusPanel.gameObject.SetActive(show);
+        if (!show) return;
+        Vector2 size = statusText.GetPreferredValues(status, statusText.rectTransform.rect.width, 0);
+        bool icon = statusIcon != null && statusIcon.enabled;
+        float iconW = icon ? 58f : 0f;
+        var pos = statusText.rectTransform.anchoredPosition;
+        statusPanel.rectTransform.sizeDelta = new Vector2(size.x + iconW + 56f, size.y + 24f);
+        statusPanel.rectTransform.anchoredPosition = new Vector2(pos.x - iconW * 0.5f, pos.y + 12f);
+    }
+
+    // Ícono a la izquierda del estado: escudo en modo seguro, antena tachada sin señal
+    Image statusIcon;
+    void UpdateStatusIcon(MissionState s, UITheme th, string status)
+    {
+        if (statusText == null || th == null) return;
+        Sprite sp = s.InSafeMode ? th.iconSafeMode : s.CommsDown ? th.iconNoSignal : null;
+        if (statusIcon == null)
+        {
+            if (sp == null) return;
+            statusIcon = UIKit.Icon(statusText.transform.parent, "StatusIcon", sp, new Vector2(48, 48));
+            statusIcon.preserveAspect = true;
+            statusIcon.raycastTarget = false;
+            var srt = statusText.rectTransform;
+            var irt = statusIcon.rectTransform;
+            irt.anchorMin = irt.anchorMax = srt.anchorMin;
+            irt.pivot = new Vector2(1f, 1f);
+        }
+        statusIcon.enabled = sp != null;
+        statusIcon.gameObject.SetActive(sp != null);
+        if (sp == null) return;
+        statusIcon.sprite = sp;
+        string first = status.Split('\n')[0];
+        float w = statusText.GetPreferredValues(first).x;
+        var pos = statusText.rectTransform.anchoredPosition;
+        statusIcon.rectTransform.anchoredPosition = new Vector2(pos.x - w * 0.5f - 10f, pos.y + 2f);
+    }
+
     static void SetIcon(Image img, Sprite s)
     {
         if (img == null) return;
@@ -123,6 +176,8 @@ public class MissionHUD : MonoBehaviour
         if (mc.IsFastForwarding) status += $"<color=#FFFFFF><b>>> x{mc.FastForwardSpeed:0}</b></color>";
         else if (mc.IsWaiting) status += "\n<size=75%><color=#C8D2E6>Mantén ESPACIO (rover quieto) para adelantar el tiempo</color></size>";
         if (statusText != null) statusText.text = status;
+        UpdateStatusPanel(status);
+        UpdateStatusIcon(s, th, status);
 
         if (statsText != null)
             statsText.text = $"Energía: {s.Energy:0}/{s.MaxEnergy:0}\nTiempo: {secs / 60}:{secs % 60:00}\nPuntos: {s.Result.ScienceCount}/3";

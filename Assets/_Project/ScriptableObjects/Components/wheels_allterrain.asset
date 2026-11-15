@@ -24,7 +24,7 @@ MonoBehaviour:
   scanCost: 0
   blackoutSeconds: 0
   crossesRockyZone: 1
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: b5b71a19dcc94da88c1c06c50bf74618, type: 3}
   description: 'Cruzan la zona rocosa: abren un atajo en el mapa.'
   nasaFact: 
   nasaSourceUrl: 

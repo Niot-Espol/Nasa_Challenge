@@ -24,7 +24,7 @@ MonoBehaviour:
   scanCost: 25
   blackoutSeconds: 0
   crossesRockyZone: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: eb637b700970468792359b9b5831a5e9, type: 3}
   description: "Necesario para el afloramiento mineral. Escanear cuesta 25 de energ\xEDa."
   nasaFact: 
   nasaSourceUrl: 

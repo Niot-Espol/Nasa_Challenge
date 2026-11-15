@@ -24,7 +24,7 @@ MonoBehaviour:
   scanCost: 0
   blackoutSeconds: 0
   crossesRockyZone: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 55746bcec11c4935a0377fec96cab079, type: 3}
   description: Lleva hasta 900 kg, pero es muy caro.
   nasaFact: 
   nasaSourceUrl: 

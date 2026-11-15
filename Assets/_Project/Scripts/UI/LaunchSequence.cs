@@ -17,6 +17,8 @@ public class LaunchSequence : MonoBehaviour
     [SerializeField] Image flame;
     [SerializeField] TMP_Text countdownText;
     [SerializeField] TMP_Text designText;
+    [SerializeField] Image[] smoke;                 // nubes de humo en la base (se animan con UITheme.launchSmoke)
+    [SerializeField] float flameFps = 14f;
 
     [Header("Viaje")]
     [SerializeField] CanvasGroup cruiseGroup;
@@ -29,6 +31,7 @@ public class LaunchSequence : MonoBehaviour
     [SerializeField] TMP_Text skipHint;
 
     [SerializeField] float cruiseSeconds = 5f;
+    [SerializeField] float shipAngleOffset = 0f;    // 0 = el sprite de la nave mira a la derecha; -90 = mira arriba
 
     bool skip;
 
@@ -53,6 +56,7 @@ public class LaunchSequence : MonoBehaviour
     {
         launchGroup.alpha = 1; cruiseGroup.alpha = 0;
         if (flame != null) flame.enabled = false;
+        SetSmoke(0f, 0f);
 
         // 1) Cuenta regresiva
         for (int i = 3; i >= 1 && !skip; i--)
@@ -70,13 +74,22 @@ public class LaunchSequence : MonoBehaviour
         // 2) Despegue
         if (flame != null) flame.enabled = true;
         Vector2 start = rocket.anchoredPosition;
-        for (float t = 0; t < 2.2f && !skip; t += Time.deltaTime)
+        // Encendido: humo y llama antes de que el cohete se mueva
+        for (float t = 0; t < 0.8f && !skip; t += Time.deltaTime)
+        {
+            AnimateFlame(t, 0.45f);   // en la plataforma la llama es corta (el humo la tapa)
+            SetSmoke(t / 0.8f, t);
+            rocket.anchoredPosition = start + new Vector2(Random.Range(-2f, 2f), 0f);
+            yield return null;
+        }
+        for (float t = 0; t < 2.6f && !skip; t += Time.deltaTime)
         {
             float e = t * t * 0.5f;                                  // acelera
             rocket.anchoredPosition = start + new Vector2(Random.Range(-3f, 3f), e * 420f);
-            float k = Mathf.Lerp(14f, 3f, t / 2.2f);   // sacudida de pantalla que se va calmando
+            float k = Mathf.Lerp(14f, 3f, t / 2.6f);   // sacudida de pantalla que se va calmando
             shakeTarget.anchoredPosition = groupStart + new Vector2(Random.Range(-k, k), Random.Range(-k, k));
-            if (flame != null) flame.transform.localScale = new Vector3(1, Random.Range(0.8f, 1.25f), 1);
+            AnimateFlame(t, Mathf.Lerp(0.45f, 1f, t / 0.6f));
+            SetSmoke(1f - t / 2.6f * 0.6f, 0.8f + t);
             yield return null;
         }
 
@@ -94,15 +107,46 @@ public class LaunchSequence : MonoBehaviour
             Vector2 p = Bezier(a, ctrl, b, u);
             ship.anchoredPosition = p;
             Vector2 ahead = Bezier(a, ctrl, b, Mathf.Min(1, u + 0.01f));
-            ship.localRotation = Quaternion.Euler(0, 0, Mathf.Atan2(ahead.y - p.y, ahead.x - p.x) * Mathf.Rad2Deg - 90f);
+            ship.localRotation = Quaternion.Euler(0, 0, Mathf.Atan2(ahead.y - p.y, ahead.x - p.x) * Mathf.Rad2Deg + shipAngleOffset);
             if (u >= nextDot) { Dot(p); nextDot += 0.04f; }
             int month = Mathf.Clamp(1 + (int)(u * 7f), 1, 7);
-            cruiseText.text = $"Viaje Tierra → Marte · mes {month} de ~7";
+            cruiseText.text = $"Viaje Tierra → Marte · mes {month} de unos 7";
             yield return null;
         }
         cruiseText.text = "Llegando a Marte: entrada, descenso y aterrizaje...";
         yield return Wait(1.3f);
         SceneFlow.Go(SceneFlow.Mars);
+    }
+
+    // Llama: recorre los frames del tema y "respira" un poco
+    void AnimateFlame(float t, float size = 1f)
+    {
+        if (flame == null) return;
+        var th = UITheme.Current;
+        if (th != null && th.rocketFlame != null && th.rocketFlame.Length > 0)
+            flame.sprite = th.rocketFlame[(int)(t * flameFps) % th.rocketFlame.Length];
+        flame.transform.localScale = new Vector3(size, size * Random.Range(0.9f, 1.15f), 1);
+    }
+
+    // Humo: frames del tema, crece y se expande hacia los lados; alpha = intensidad
+    void SetSmoke(float alpha, float t)
+    {
+        if (smoke == null) return;
+        var th = UITheme.Current;
+        var frames = th != null ? th.launchSmoke : null;
+        for (int i = 0; i < smoke.Length; i++)
+        {
+            var img = smoke[i];
+            if (img == null) continue;
+            img.enabled = alpha > 0.01f && frames != null && frames.Length > 0;
+            if (!img.enabled) continue;
+            img.sprite = frames[Mathf.Min(frames.Length - 1, (int)(t * 3f) + (i % 2))];
+            img.color = new Color(1, 1, 1, Mathf.Clamp01(alpha));
+            float side = smoke.Length == 1 ? 0f : (i / (float)(smoke.Length - 1) - 0.5f) * 2f;   // -1..1
+            float grow = 1f + Mathf.Min(t, 2f) * 0.35f;
+            img.rectTransform.localScale = Vector3.one * grow;
+            img.rectTransform.anchoredPosition = new Vector2(side * (60f + t * 70f), 0f);
+        }
     }
 
     IEnumerator Wait(float s)

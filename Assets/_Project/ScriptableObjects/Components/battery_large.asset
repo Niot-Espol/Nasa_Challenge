@@ -24,7 +24,7 @@ MonoBehaviour:
   scanCost: 0
   blackoutSeconds: 0
   crossesRockyZone: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: ba765457c08d44e2bafdb403fc89116d, type: 3}
   description: "Guarda hasta 120 de energ\xEDa."
   nasaFact: 
   nasaSourceUrl: 

@@ -18,7 +18,12 @@ public class MissionController : MonoBehaviour
     [Header("Eventos (segundos desde el inicio)")]
     [SerializeField] float dustStormAt = 35f;
     [SerializeField] float dustStormDuration = 35f;
-    [SerializeField] float blackoutAt = 75f;   // la duración la decide la antena del diseño
+    [SerializeField] float blackoutAt = 75f;   // lo más pronto que puede empezar; la duración la decide la antena
+    [SerializeField] float minFreeGap = 25f;   // segundos de juego libre entre dos esperas (tormenta/modo seguro → apagón)
+    [SerializeField] float blackoutLatest = 25f; // no empieza si quedan menos de estos segundos de misión
+
+    float blackoutStart = -1f;   // < 0: aún no ha ocurrido
+    float lastWaitEnd;           // último instante en que el jugador estaba esperando (tormenta con paneles o modo seguro)
 
     public MissionState State { get; private set; }
     public static MissionController Instance { get; private set; }
@@ -118,8 +123,11 @@ public class MissionController : MonoBehaviour
             else Post("La tormenta pasó. Los paneles vuelven a recargar.");
         }
 
-        float blackoutEnd = blackoutAt + State.Design.BlackoutSeconds;
-        bool down = t >= blackoutAt && t < blackoutEnd;
+        // El apagón nunca llega justo después de otra espera: necesita minFreeGap segundos de juego libre.
+        if (State.InSafeMode || (State.DustStormActive && State.Design.UsesSolar)) lastWaitEnd = t;
+        if (blackoutStart < 0f && t >= blackoutAt && t - lastWaitEnd >= minFreeGap && t <= timeLimit - blackoutLatest)
+            blackoutStart = t;
+        bool down = blackoutStart >= 0f && t < blackoutStart + State.Design.BlackoutSeconds;
         if (down != State.CommsDown)
         {
             State.SetCommsDown(down);
@@ -223,7 +231,7 @@ public class MissionController : MonoBehaviour
     }
 
     public float StormTimeLeft => State.DustStormActive ? Mathf.Max(0f, dustStormAt + dustStormDuration - State.Time) : 0f;
-    public float BlackoutTimeLeft => State.CommsDown ? Mathf.Max(0f, blackoutAt + State.Design.BlackoutSeconds - State.Time) : 0f;
+    public float BlackoutTimeLeft => State.CommsDown ? Mathf.Max(0f, blackoutStart + State.Design.BlackoutSeconds - State.Time) : 0f;
 
     void OnSafeModeEntered()
     {
