@@ -1,0 +1,2348 @@
+fileFormatVersion: 2
+guid: 87f8424782a5545bcbad8d8a54645a05
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8860165176069553695
+    second: Tileset para Marte_0
+  - first:
+      213: 1371388263749706157
+    second: Tileset para Marte_1
+  - first:
+      213: 8195892167123294207
+    second: Tileset para Marte_2
+  - first:
+      213: -859993118933479067
+    second: Tileset para Marte_3
+  - first:
+      213: 8118514915877557819
+    second: Tileset para Marte_4
+  - first:
+      213: 726282302009174309
+    second: Tileset para Marte_5
+  - first:
+      213: 2161193808621365870
+    second: Tileset para Marte_6
+  - first:
+      213: -4404392246277613927
+    second: Tileset para Marte_7
+  - first:
+      213: -1767851192284183052
+    second: Tileset para Marte_8
+  - first:
+      213: -3964059132327636234
+    second: Tileset para Marte_9
+  - first:
+      213: 6114204592086842225
+    second: Tileset para Marte_10
+  - first:
+      213: 6728026485363940808
+    second: Tileset para Marte_11
+  - first:
+      213: 5821762929126249255
+    second: Tileset para Marte_12
+  - first:
+      213: 3377933273439690835
+    second: Tileset para Marte_13
+  - first:
+      213: -7621950105081211240
+    second: Tileset para Marte_14
+  - first:
+      213: -3525300743729802899
+    second: Tileset para Marte_15
+  - first:
+      213: 532995559796192510
+    second: Tileset para Marte_16
+  - first:
+      213: 2702269119769885244
+    second: Tileset para Marte_17
+  - first:
+      213: 2844776156938479299
+    second: Tileset para Marte_18
+  - first:
+      213: 4830613679907401498
+    second: Tileset para Marte_19
+  - first:
+      213: -2070732855920007037
+    second: Tileset para Marte_20
+  - first:
+      213: 7634789252443544563
+    second: Tileset para Marte_21
+  - first:
+      213: 4754495010608812456
+    second: Tileset para Marte_22
+  - first:
+      213: 2176697827176081818
+    second: Tileset para Marte_23
+  - first:
+      213: 6520970677990071889
+    second: Tileset para Marte_24
+  - first:
+      213: 3693954089909347515
+    second: Tileset para Marte_25
+  - first:
+      213: -3626329413212148335
+    second: Tileset para Marte_26
+  - first:
+      213: 2701502058225245639
+    second: Tileset para Marte_27
+  - first:
+      213: 8792433075039134374
+    second: Tileset para Marte_28
+  - first:
+      213: 3432446166074733564
+    second: Tileset para Marte_29
+  - first:
+      213: 8521418171983200371
+    second: Tileset para Marte_30
+  - first:
+      213: 1268319798448216849
+    second: Tileset para Marte_31
+  - first:
+      213: 9066083650565048553
+    second: Tileset para Marte_32
+  - first:
+      213: -9168928663299068162
+    second: Tileset para Marte_33
+  - first:
+      213: 5109574891524957279
+    second: Tileset para Marte_34
+  - first:
+      213: 5398990759128649379
+    second: Tileset para Marte_35
+  - first:
+      213: 3422823283755993254
+    second: Tileset para Marte_36
+  - first:
+      213: -5591217205431008541
+    second: Tileset para Marte_37
+  - first:
+      213: -7491867500630746752
+    second: Tileset para Marte_38
+  - first:
+      213: 8427498630344124630
+    second: Tileset para Marte_39
+  - first:
+      213: -2720894987838269706
+    second: Tileset para Marte_40
+  - first:
+      213: -3591012403561367701
+    second: Tileset para Marte_41
+  - first:
+      213: 3735193804289860679
+    second: Tileset para Marte_42
+  - first:
+      213: 3209455167475729275
+    second: Tileset para Marte_43
+  - first:
+      213: 4161905686659264753
+    second: Tileset para Marte_44
+  - first:
+      213: -3192119945211091372
+    second: Tileset para Marte_45
+  - first:
+      213: 6961241383396980476
+    second: Tileset para Marte_46
+  - first:
+      213: 3414191942941372551
+    second: Tileset para Marte_47
+  - first:
+      213: 6099079501007276668
+    second: Tileset para Marte_48
+  - first:
+      213: -4714550009262101273
+    second: Tileset para Marte_49
+  - first:
+      213: -3211599779498606622
+    second: Tileset para Marte_50
+  - first:
+      213: 1416543424095224673
+    second: Tileset para Marte_51
+  - first:
+      213: 3336629046377334626
+    second: Tileset para Marte_52
+  - first:
+      213: 8221081523935812682
+    second: Tileset para Marte_53
+  - first:
+      213: 6816648804198648878
+    second: Tileset para Marte_54
+  - first:
+      213: 2878066845464068378
+    second: Tileset para Marte_55
+  - first:
+      213: -8293208336752030613
+    second: Tileset para Marte_56
+  - first:
+      213: -1615598927151466287
+    second: Tileset para Marte_57
+  - first:
+      213: 1715613409392622245
+    second: Tileset para Marte_58
+  - first:
+      213: -7125040763553910942
+    second: Tileset para Marte_59
+  - first:
+      213: 6923720489061220652
+    second: Tileset para Marte_60
+  - first:
+      213: -598443864128314940
+    second: Tileset para Marte_61
+  - first:
+      213: -3803064175779243792
+    second: Tileset para Marte_62
+  - first:
+      213: 1834392370125555789
+    second: Tileset para Marte_63
+  - first:
+      213: 6841856969918681262
+    second: Tileset para Marte_64
+  - first:
+      213: -5369929966372500779
+    second: Tileset para Marte_65
+  - first:
+      213: -5382512819918840692
+    second: Tileset para Marte_66
+  - first:
+      213: -7878929485561580594
+    second: Tileset para Marte_67
+  - first:
+      213: -5880918694148548084
+    second: Tileset para Marte_68
+  - first:
+      213: 1536411548272165261
+    second: Tileset para Marte_69
+  - first:
+      213: -5477975114633660301
+    second: Tileset para Marte_70
+  - first:
+      213: -143221029354880859
+    second: Tileset para Marte_71
+  - first:
+      213: 4036032337376750173
+    second: Tileset para Marte_72
+  - first:
+      213: 5149768413847852749
+    second: Tileset para Marte_73
+  - first:
+      213: 6948029479420430935
+    second: Tileset para Marte_74
+  - first:
+      213: -5851168073002415979
+    second: Tileset para Marte_75
+  - first:
+      213: -8038586277344031707
+    second: Tileset para Marte_76
+  - first:
+      213: -6850737331544213208
+    second: Tileset para Marte_77
+  - first:
+      213: -5232438119825942100
+    second: Tileset para Marte_78
+  - first:
+      213: -4216347529440904967
+    second: Tileset para Marte_79
+  - first:
+      213: -5336287902340472136
+    second: Tileset para Marte_80
+  - first:
+      213: 7604742069018847743
+    second: Tileset para Marte_81
+  - first:
+      213: 6357698225400225231
+    second: Tileset para Marte_82
+  - first:
+      213: 3428332047118488782
+    second: Tileset para Marte_83
+  - first:
+      213: -2557205893821843447
+    second: Tileset para Marte_84
+  - first:
+      213: 4202780862577486064
+    second: Tileset para Marte_85
+  - first:
+      213: -2890806023335830142
+    second: Tileset para Marte_86
+  - first:
+      213: 6064499839897967751
+    second: Tileset para Marte_87
+  - first:
+      213: -7562662832463509652
+    second: Tileset para Marte_88
+  - first:
+      213: -7915860799287259401
+    second: Tileset para Marte_89
+  - first:
+      213: -686172207276039199
+    second: Tileset para Marte_90
+  - first:
+      213: -6974230748985268796
+    second: Tileset para Marte_91
+  - first:
+      213: -2914997273569236178
+    second: Tileset para Marte_92
+  - first:
+      213: 6778503306587938332
+    second: Tileset para Marte_93
+  - first:
+      213: -1999823438194759246
+    second: Tileset para Marte_94
+  - first:
+      213: -4454694645379770245
+    second: Tileset para Marte_95
+  - first:
+      213: -6252796225005788264
+    second: Tileset para Marte_96
+  - first:
+      213: 1009966494784821803
+    second: Tileset para Marte_97
+  - first:
+      213: -8710607972322582662
+    second: Tileset para Marte_98
+  - first:
+      213: -686131152347968485
+    second: Tileset para Marte_99
+  - first:
+      213: -4102594478439029119
+    second: Tileset para Marte_100
+  - first:
+      213: -2103137256155899894
+    second: Tileset para Marte_101
+  - first:
+      213: 642819065456727310
+    second: Tileset para Marte_102
+  - first:
+      213: -5719718789240066563
+    second: Tileset para Marte_103
+  - first:
+      213: 2635468416775104410
+    second: Tileset para Marte_104
+  - first:
+      213: -6318095483998794275
+    second: Tileset para Marte_105
+  - first:
+      213: -1631008181040638797
+    second: Tileset para Marte_106
+  - first:
+      213: 2859855808488437099
+    second: Tileset para Marte_107
+  - first:
+      213: -7041984819096786158
+    second: Tileset para Marte_108
+  - first:
+      213: 8263493480174093115
+    second: Tileset para Marte_109
+  - first:
+      213: -1284101784582419995
+    second: Tileset para Marte_110
+  - first:
+      213: -2843237290776666244
+    second: Tileset para Marte_111
+  - first:
+      213: -258340709037105162
+    second: Tileset para Marte_112
+  - first:
+      213: 8799479662732009228
+    second: Tileset para Marte_113
+  - first:
+      213: -6971725127396813136
+    second: Tileset para Marte_114
+  - first:
+      213: 5435392285639075620
+    second: Tileset para Marte_115
+  - first:
+      213: -235009881318322166
+    second: Tileset para Marte_116
+  - first:
+      213: -77914856917565646
+    second: Tileset para Marte_117
+  - first:
+      213: 6687147110688174038
+    second: Tileset para Marte_118
+  - first:
+      213: -983947715000360994
+    second: Tileset para Marte_119
+  - first:
+      213: 2953413252842687994
+    second: Tileset para Marte_120
+  - first:
+      213: 5905584626712982058
+    second: Tileset para Marte_121
+  - first:
+      213: -3782993635303542157
+    second: Tileset para Marte_122
+  - first:
+      213: -4724622950721137888
+    second: Tileset para Marte_123
+  - first:
+      213: 1962778327452037149
+    second: Tileset para Marte_124
+  - first:
+      213: -5476236887246047898
+    second: Tileset para Marte_125
+  - first:
+      213: 3119958961576123185
+    second: Tileset para Marte_126
+  - first:
+      213: -169236999667408463
+    second: Tileset para Marte_127
+  - first:
+      213: -7627268285113351484
+    second: Tileset para Marte_128
+  - first:
+      213: -8101025013960524421
+    second: Tileset para Marte_129
+  - first:
+      213: 6704400422109055846
+    second: Tileset para Marte_130
+  - first:
+      213: -2545778277225776564
+    second: Tileset para Marte_131
+  - first:
+      213: -8886332605351921196
+    second: sand_a
+  - first:
+      213: -3192948346963915925
+    second: sand_b
+  - first:
+      213: 878631080851905534
+    second: sand_c
+  - first:
+      213: -8725268914034840093
+    second: sand_d
+  - first:
+      213: 6815887830241725649
+    second: mud_a
+  - first:
+      213: 2540627341327786159
+    second: mud_b
+  - first:
+      213: -5990127242177598853
+    second: mud_c
+  - first:
+      213: -452778965010352378
+    second: mud_d
+  - first:
+      213: -7913934005115621207
+    second: mud_e
+  - first:
+      213: 5611289128525471649
+    second: mud_f
+  - first:
+      213: 4841955260800314698
+    second: mud_hex
+  - first:
+      213: -2105351239654875128
+    second: rocky_ground
+  - first:
+      213: -308151543879969430
+    second: dirt_a
+  - first:
+      213: 5983450907217669708
+    second: dirt_b
+  - first:
+      213: -7445506335639140413
+    second: rubble
+  - first:
+      213: -6384448384464908888
+    second: dirt_fine
+  - first:
+      213: 2710363470726190281
+    second: dunes_a
+  - first:
+      213: -933262307644792952
+    second: dunes_b
+  - first:
+      213: 5828113961392119206
+    second: swirl
+  - first:
+      213: 7510274500458188680
+    second: crater_dark
+  - first:
+      213: 7501860903345803239
+    second: crater_a
+  - first:
+      213: 4950401460602199737
+    second: crater_b
+  - first:
+      213: 1528357595825318511
+    second: crater_c
+  - first:
+      213: 3229663999532838397
+    second: crater_d
+  - first:
+      213: -1107983521376867143
+    second: crater_e
+  - first:
+      213: 2379816544116013410
+    second: rock_big_1
+  - first:
+      213: 935944306422311152
+    second: rock_big_2
+  - first:
+      213: 7499643428749552849
+    second: rock_big_3
+  - first:
+      213: -1276720299482856322
+    second: rock_big_4
+  - first:
+      213: 703997275376549039
+    second: rock_big_5
+  - first:
+      213: 2115267796186251350
+    second: rock_1
+  - first:
+      213: -6546699357316064334
+    second: rock_2
+  - first:
+      213: 4414985671160336941
+    second: rock_3
+  - first:
+      213: 6745779496355511533
+    second: rock_4
+  - first:
+      213: -2490388491417578302
+    second: rock_5
+  - first:
+      213: -3915639213292744380
+    second: rock_6
+  - first:
+      213: -3694438686313188348
+    second: rock_7
+  - first:
+      213: 106130580014269979
+    second: rock_8
+  - first:
+      213: -8228281083760871512
+    second: rock_9
+  - first:
+      213: 7270488257456532823
+    second: rock_10
+  - first:
+      213: 6704783026024054992
+    second: rock_11
+  - first:
+      213: -3936393870623226224
+    second: rock_12
+  - first:
+      213: -338637190947198666
+    second: rock_13
+  - first:
+      213: -8399025901113325242
+    second: rock_14
+  - first:
+      213: 1582494923448540761
+    second: rock_15
+  - first:
+      213: 6787253094370063925
+    second: rock_16
+  - first:
+      213: -8933452447185942237
+    second: rock_17
+  - first:
+      213: 8492561185014901345
+    second: rock_18
+  - first:
+      213: -4116857959258609241
+    second: rock_spike_1
+  - first:
+      213: 7003517511680467661
+    second: rock_spike_2
+  - first:
+      213: 3793058034443759922
+    second: rock_spike_3
+  - first:
+      213: 2462460137284082417
+    second: rock_spike_4
+  - first:
+      213: -2901023871803589485
+    second: rock_spike_5
+  - first:
+      213: 6472275828451707803
+    second: pebbles_1
+  - first:
+      213: 9136732824658746122
+    second: pebbles_2
+  - first:
+      213: 3052010676449912813
+    second: pebbles_3
+  - first:
+      213: -6066294086925368175
+    second: pebbles_4
+  - first:
+      213: -8724034556782770783
+    second: pebbles_5
+  - first:
+      213: 612282415001986391
+    second: pebbles_6
+  - first:
+      213: -5223606111225571262
+    second: pebbles_7
+  - first:
+      213: 2522138930902692558
+    second: pebbles_8
+  - first:
+      213: 3332839955335506278
+    second: pebbles_9
+  - first:
+      213: 521916643410446997
+    second: crystal_blue
+  - first:
+      213: 5838371763956439967
+    second: crystal_orange
+  - first:
+      213: -7258735899663070782
+    second: crystal_pebbles
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sand_a
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 229
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d9f606c3976da480800000000000000
+      internalID: -8886332605351921196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sand_b
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 204
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6b8b09356e50b3d0800000000000000
+      internalID: -3192948346963915925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sand_c
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 179
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efb9bc61056813c00800000000000000
+      internalID: 878631080851905534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sand_d
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 129
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ede131b62e99e680800000000000000
+      internalID: -8725268914034840093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mud_a
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 229
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc47769ed5e69e50800000000000000
+      internalID: 6815887830241725649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mud_b
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 204
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0ec7a2b1f124320800000000000000
+      internalID: 2540627341327786159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mud_c
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 179
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a2d92a20bcedca0800000000000000
+      internalID: -5990127242177598853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mud_d
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 229
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 607f9c42ee767b9f0800000000000000
+      internalID: -452778965010352378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mud_e
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 204
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a0f231c3fe0c2290800000000000000
+      internalID: -7913934005115621207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mud_f
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 179
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1af95c58bbd4fdd40800000000000000
+      internalID: 5611289128525471649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mud_hex
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 129
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4d265ae7a4123340800000000000000
+      internalID: 4841955260800314698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocky_ground
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 129
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80061f0c33a48c2e0800000000000000
+      internalID: -2105351239654875128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dirt_a
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 229
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a65db02bdc939bbf0800000000000000
+      internalID: -308151543879969430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dirt_b
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 204
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ea2bff5ec790350800000000000000
+      internalID: 5983450907217669708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubble
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 179
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c70f4b8f6f3ca890800000000000000
+      internalID: -7445506335639140413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dirt_fine
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 229
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ad07254502e567a0800000000000000
+      internalID: -6384448384464908888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dunes_a
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 204
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c454dc67352d9520800000000000000
+      internalID: 2710363470726190281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dunes_b
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 129
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f129630e26c03f0800000000000000
+      internalID: -933262307644792952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swirl
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 179
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ad954be4ce91e050800000000000000
+      internalID: 5828113961392119206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crater_dark
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 229
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f0c75fddad93860800000000000000
+      internalID: 7510274500458188680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crater_a
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 229
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef415abeb6fb1860800000000000000
+      internalID: 7501860903345803239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crater_b
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 204
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bed4ca66eb53b440800000000000000
+      internalID: 4950401460602199737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crater_c
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 154
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a20f4c221d53510800000000000000
+      internalID: 1528357595825318511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crater_d
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 104
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfda50ccb4212dc20800000000000000
+      internalID: 3229663999532838397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crater_e
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 79
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bc685f8bd6af90f0800000000000000
+      internalID: -1107983521376867143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_big_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 79
+        width: 22
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 269f1aeb98ec60120800000000000000
+      internalID: 2379816544116013410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_big_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 79
+        width: 21
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f8e9d943642dfc00800000000000000
+      internalID: 935944306422311152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_big_3
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 79
+        width: 22
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dca5b0b6f5141860800000000000000
+      internalID: 7499643428749552849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_big_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 79
+        width: 22
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e744bc7e6ad284ee0800000000000000
+      internalID: -1276720299482856322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_big_5
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 79
+        width: 22
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fac79a1cac915c900800000000000000
+      internalID: 703997275376549039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 230
+        width: 20
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650418c7ad0fa5d10800000000000000
+      internalID: 2115267796186251350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_2
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 230
+        width: 20
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bbd5e3de937525a0800000000000000
+      internalID: -6546699357316064334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_3
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 230
+        width: 20
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2293f9831e254d30800000000000000
+      internalID: 4414985671160336941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 205
+        width: 16
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dec326516b2dd9d50800000000000000
+      internalID: 6745779496355511533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_5
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 206
+        width: 20
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c495589cdc507dd0800000000000000
+      internalID: -2490388491417578302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_6
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 205
+        width: 20
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4419817a1ead8a9c0800000000000000
+      internalID: -3915639213292744380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_7
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 206
+        width: 18
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40477d9b697babcc0800000000000000
+      internalID: -3694438686313188348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_8
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 179
+        width: 21
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b168e81433d097100800000000000000
+      internalID: 106130580014269979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_9
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 179
+        width: 22
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a7fd5a13f54fcd80800000000000000
+      internalID: -8228281083760871512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_10
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 182
+        width: 20
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75d6859ac86f5e460800000000000000
+      internalID: 7270488257456532823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_11
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 129
+        width: 22
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d08b3283ac2c0d50800000000000000
+      internalID: 6704783026024054992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_12
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 130
+        width: 22
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0964a7d61ae1f59c0800000000000000
+      internalID: -3936393870623226224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_13
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 130
+        width: 22
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6392bddd44bec4bf0800000000000000
+      internalID: -338637190947198666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_14
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 104
+        width: 20
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 649c5d0617aa07b80800000000000000
+      internalID: -8399025901113325242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_15
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 105
+        width: 22
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e520b9fb626f510800000000000000
+      internalID: 1582494923448540761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_16
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 81
+        width: 19
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 536399a9aba213e50800000000000000
+      internalID: 6787253094370063925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_17
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 80
+        width: 21
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32943aba450060480800000000000000
+      internalID: -8933452447185942237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_18
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 80
+        width: 20
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16a651af663abd570800000000000000
+      internalID: 8492561185014901345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_spike_1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 154
+        width: 22
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a9a6a38f7bfdd6c0800000000000000
+      internalID: -4116857959258609241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_spike_2
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 154
+        width: 22
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc221f5121e713160800000000000000
+      internalID: 7003517511680467661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_spike_3
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 154
+        width: 22
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23136739f26a3a430800000000000000
+      internalID: 3793058034443759922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_spike_4
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 155
+        width: 20
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa906cb27a6c2220800000000000000
+      internalID: 2462460137284082417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_spike_5
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 54
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39cf73ca82e7db7d0800000000000000
+      internalID: -2901023871803589485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pebbles_1
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 182
+        width: 17
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b063b039422d950800000000000000
+      internalID: 6472275828451707803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pebbles_2
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 181
+        width: 18
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0b9f6578123cce70800000000000000
+      internalID: 9136732824658746122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pebbles_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 131
+        width: 19
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de72f7c3a8bea5a20800000000000000
+      internalID: 3052010676449912813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pebbles_4
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 131
+        width: 18
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 194c2c52ba130dba0800000000000000
+      internalID: -6066294086925368175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pebbles_5
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 107
+        width: 19
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a50bb2eac00ee680800000000000000
+      internalID: -8724034556782770783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pebbles_6
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 106
+        width: 18
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7556968cc934f7800800000000000000
+      internalID: 612282415001986391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pebbles_7
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 82
+        width: 18
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24817ddeae50287b0800000000000000
+      internalID: -5223606111225571262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pebbles_8
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 56
+        width: 18
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec273aaaeff600320800000000000000
+      internalID: 2522138930902692558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pebbles_9
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 55
+        width: 19
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 669600ff740a04e20800000000000000
+      internalID: 3332839955335506278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crystal_blue
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 34
+        width: 13
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59a08d40c683e3700800000000000000
+      internalID: 521916643410446997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crystal_orange
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 32
+        width: 17
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9b5b41bf20160150800000000000000
+      internalID: 5838371763956439967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crystal_pebbles
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 31
+        width: 20
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c9053e582ac34b90800000000000000
+      internalID: -7258735899663070782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tileset para Marte_0: -8860165176069553695
+      Tileset para Marte_1: 1371388263749706157
+      Tileset para Marte_10: 6114204592086842225
+      Tileset para Marte_100: -4102594478439029119
+      Tileset para Marte_101: -2103137256155899894
+      Tileset para Marte_102: 642819065456727310
+      Tileset para Marte_103: -5719718789240066563
+      Tileset para Marte_104: 2635468416775104410
+      Tileset para Marte_105: -6318095483998794275
+      Tileset para Marte_106: -1631008181040638797
+      Tileset para Marte_107: 2859855808488437099
+      Tileset para Marte_108: -7041984819096786158
+      Tileset para Marte_109: 8263493480174093115
+      Tileset para Marte_11: 6728026485363940808
+      Tileset para Marte_110: -1284101784582419995
+      Tileset para Marte_111: -2843237290776666244
+      Tileset para Marte_112: -258340709037105162
+      Tileset para Marte_113: 8799479662732009228
+      Tileset para Marte_114: -6971725127396813136
+      Tileset para Marte_115: 5435392285639075620
+      Tileset para Marte_116: -235009881318322166
+      Tileset para Marte_117: -77914856917565646
+      Tileset para Marte_118: 6687147110688174038
+      Tileset para Marte_119: -983947715000360994
+      Tileset para Marte_12: 5821762929126249255
+      Tileset para Marte_120: 2953413252842687994
+      Tileset para Marte_121: 5905584626712982058
+      Tileset para Marte_122: -3782993635303542157
+      Tileset para Marte_123: -4724622950721137888
+      Tileset para Marte_124: 1962778327452037149
+      Tileset para Marte_125: -5476236887246047898
+      Tileset para Marte_126: 3119958961576123185
+      Tileset para Marte_127: -169236999667408463
+      Tileset para Marte_128: -7627268285113351484
+      Tileset para Marte_129: -8101025013960524421
+      Tileset para Marte_13: 3377933273439690835
+      Tileset para Marte_130: 6704400422109055846
+      Tileset para Marte_131: -2545778277225776564
+      Tileset para Marte_14: -7621950105081211240
+      Tileset para Marte_15: -3525300743729802899
+      Tileset para Marte_16: 532995559796192510
+      Tileset para Marte_17: 2702269119769885244
+      Tileset para Marte_18: 2844776156938479299
+      Tileset para Marte_19: 4830613679907401498
+      Tileset para Marte_2: 8195892167123294207
+      Tileset para Marte_20: -2070732855920007037
+      Tileset para Marte_21: 7634789252443544563
+      Tileset para Marte_22: 4754495010608812456
+      Tileset para Marte_23: 2176697827176081818
+      Tileset para Marte_24: 6520970677990071889
+      Tileset para Marte_25: 3693954089909347515
+      Tileset para Marte_26: -3626329413212148335
+      Tileset para Marte_27: 2701502058225245639
+      Tileset para Marte_28: 8792433075039134374
+      Tileset para Marte_29: 3432446166074733564
+      Tileset para Marte_3: -859993118933479067
+      Tileset para Marte_30: 8521418171983200371
+      Tileset para Marte_31: 1268319798448216849
+      Tileset para Marte_32: 9066083650565048553
+      Tileset para Marte_33: -9168928663299068162
+      Tileset para Marte_34: 5109574891524957279
+      Tileset para Marte_35: 5398990759128649379
+      Tileset para Marte_36: 3422823283755993254
+      Tileset para Marte_37: -5591217205431008541
+      Tileset para Marte_38: -7491867500630746752
+      Tileset para Marte_39: 8427498630344124630
+      Tileset para Marte_4: 8118514915877557819
+      Tileset para Marte_40: -2720894987838269706
+      Tileset para Marte_41: -3591012403561367701
+      Tileset para Marte_42: 3735193804289860679
+      Tileset para Marte_43: 3209455167475729275
+      Tileset para Marte_44: 4161905686659264753
+      Tileset para Marte_45: -3192119945211091372
+      Tileset para Marte_46: 6961241383396980476
+      Tileset para Marte_47: 3414191942941372551
+      Tileset para Marte_48: 6099079501007276668
+      Tileset para Marte_49: -4714550009262101273
+      Tileset para Marte_5: 726282302009174309
+      Tileset para Marte_50: -3211599779498606622
+      Tileset para Marte_51: 1416543424095224673
+      Tileset para Marte_52: 3336629046377334626
+      Tileset para Marte_53: 8221081523935812682
+      Tileset para Marte_54: 6816648804198648878
+      Tileset para Marte_55: 2878066845464068378
+      Tileset para Marte_56: -8293208336752030613
+      Tileset para Marte_57: -1615598927151466287
+      Tileset para Marte_58: 1715613409392622245
+      Tileset para Marte_59: -7125040763553910942
+      Tileset para Marte_6: 2161193808621365870
+      Tileset para Marte_60: 6923720489061220652
+      Tileset para Marte_61: -598443864128314940
+      Tileset para Marte_62: -3803064175779243792
+      Tileset para Marte_63: 1834392370125555789
+      Tileset para Marte_64: 6841856969918681262
+      Tileset para Marte_65: -5369929966372500779
+      Tileset para Marte_66: -5382512819918840692
+      Tileset para Marte_67: -7878929485561580594
+      Tileset para Marte_68: -5880918694148548084
+      Tileset para Marte_69: 1536411548272165261
+      Tileset para Marte_7: -4404392246277613927
+      Tileset para Marte_70: -5477975114633660301
+      Tileset para Marte_71: -143221029354880859
+      Tileset para Marte_72: 4036032337376750173
+      Tileset para Marte_73: 5149768413847852749
+      Tileset para Marte_74: 6948029479420430935
+      Tileset para Marte_75: -5851168073002415979
+      Tileset para Marte_76: -8038586277344031707
+      Tileset para Marte_77: -6850737331544213208
+      Tileset para Marte_78: -5232438119825942100
+      Tileset para Marte_79: -4216347529440904967
+      Tileset para Marte_8: -1767851192284183052
+      Tileset para Marte_80: -5336287902340472136
+      Tileset para Marte_81: 7604742069018847743
+      Tileset para Marte_82: 6357698225400225231
+      Tileset para Marte_83: 3428332047118488782
+      Tileset para Marte_84: -2557205893821843447
+      Tileset para Marte_85: 4202780862577486064
+      Tileset para Marte_86: -2890806023335830142
+      Tileset para Marte_87: 6064499839897967751
+      Tileset para Marte_88: -7562662832463509652
+      Tileset para Marte_89: -7915860799287259401
+      Tileset para Marte_9: -3964059132327636234
+      Tileset para Marte_90: -686172207276039199
+      Tileset para Marte_91: -6974230748985268796
+      Tileset para Marte_92: -2914997273569236178
+      Tileset para Marte_93: 6778503306587938332
+      Tileset para Marte_94: -1999823438194759246
+      Tileset para Marte_95: -4454694645379770245
+      Tileset para Marte_96: -6252796225005788264
+      Tileset para Marte_97: 1009966494784821803
+      Tileset para Marte_98: -8710607972322582662
+      Tileset para Marte_99: -686131152347968485
+      crater_a: 7501860903345803239
+      crater_b: 4950401460602199737
+      crater_c: 1528357595825318511
+      crater_d: 3229663999532838397
+      crater_dark: 7510274500458188680
+      crater_e: -1107983521376867143
+      crystal_blue: 521916643410446997
+      crystal_orange: 5838371763956439967
+      crystal_pebbles: -7258735899663070782
+      dirt_a: -308151543879969430
+      dirt_b: 5983450907217669708
+      dirt_fine: -6384448384464908888
+      dunes_a: 2710363470726190281
+      dunes_b: -933262307644792952
+      mud_a: 6815887830241725649
+      mud_b: 2540627341327786159
+      mud_c: -5990127242177598853
+      mud_d: -452778965010352378
+      mud_e: -7913934005115621207
+      mud_f: 5611289128525471649
+      mud_hex: 4841955260800314698
+      pebbles_1: 6472275828451707803
+      pebbles_2: 9136732824658746122
+      pebbles_3: 3052010676449912813
+      pebbles_4: -6066294086925368175
+      pebbles_5: -8724034556782770783
+      pebbles_6: 612282415001986391
+      pebbles_7: -5223606111225571262
+      pebbles_8: 2522138930902692558
+      pebbles_9: 3332839955335506278
+      rock_1: 2115267796186251350
+      rock_10: 7270488257456532823
+      rock_11: 6704783026024054992
+      rock_12: -3936393870623226224
+      rock_13: -338637190947198666
+      rock_14: -8399025901113325242
+      rock_15: 1582494923448540761
+      rock_16: 6787253094370063925
+      rock_17: -8933452447185942237
+      rock_18: 8492561185014901345
+      rock_2: -6546699357316064334
+      rock_3: 4414985671160336941
+      rock_4: 6745779496355511533
+      rock_5: -2490388491417578302
+      rock_6: -3915639213292744380
+      rock_7: -3694438686313188348
+      rock_8: 106130580014269979
+      rock_9: -8228281083760871512
+      rock_big_1: 2379816544116013410
+      rock_big_2: 935944306422311152
+      rock_big_3: 7499643428749552849
+      rock_big_4: -1276720299482856322
+      rock_big_5: 703997275376549039
+      rock_spike_1: -4116857959258609241
+      rock_spike_2: 7003517511680467661
+      rock_spike_3: 3793058034443759922
+      rock_spike_4: 2462460137284082417
+      rock_spike_5: -2901023871803589485
+      rocky_ground: -2105351239654875128
+      rubble: -7445506335639140413
+      sand_a: -8886332605351921196
+      sand_b: -3192948346963915925
+      sand_c: 878631080851905534
+      sand_d: -8725268914034840093
+      swirl: 5828113961392119206
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -12,7 +12,13 @@ public class ResourceBar : MonoBehaviour
     {
         if (fill == null) return;
         float t = max <= 0f ? 0f : value / max;
-        fill.fillAmount = Mathf.Clamp01(t);
+        float c = Mathf.Clamp01(t);
+        fill.fillAmount = c;
+        // El ancho del relleno es el porcentaje (así se ve aunque el relleno no tenga sprite).
+        var rt = fill.rectTransform;
+        rt.anchorMin = new Vector2(0f, rt.anchorMin.y);
+        rt.anchorMax = new Vector2(c, rt.anchorMax.y);
+        fill.enabled = c > 0.01f;   // vacío: no dibujar (evita un relleno de ancho negativo)
         if (!useStateColors) return;
         var th = UITheme.Current;
         if (th == null) return;

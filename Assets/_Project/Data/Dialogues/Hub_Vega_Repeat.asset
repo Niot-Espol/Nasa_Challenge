@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - speaker: 0
+    expression: 2
     text: "Recuerda: ninguna configuraci\xF3n es perfecta. Piensa qu\xE9 est\xE1s
       dispuesto a sacrificar: ciencia, energ\xEDa o presupuesto."
+    highlight: 

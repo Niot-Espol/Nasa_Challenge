@@ -14,11 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - speaker: 1
+    expression: 1
     text: "\xA1Aterrizamos en Jezero, comandante! Hace miles de millones de a\xF1os
       aqu\xED hubo un lago."
+    highlight: 
   - speaker: 1
-    text: "Tenemos 4 minutos de operaci\xF3n. Moverse y escanear gasta energ\xEDa:
-      vigila la barra de arriba."
+    expression: 0
+    text: "Esta es nuestra energ\xEDa. Moverse y escanear la gastan, y nuestra fuente
+      la recarga. Si llega a cero, el rover entra en modo seguro."
+    highlight: energy
   - speaker: 1
-    text: "Busca los tres puntos cient\xEDficos. Ac\xE9rcate y presiona E para escanear.
-      \xA1Vamos!"
+    expression: 0
+    text: "Tenemos solo dos minutos y medio de operaci\xF3n antes de que se cierre
+      la ventana de la misi\xF3n. Planifica la ruta."
+    highlight: time
+  - speaker: 1
+    expression: 1
+    text: "Hay tres puntos cient\xEDficos. Las flechas en el borde de la pantalla
+      te indican d\xF3nde est\xE1n. Ac\xE9rcate y presiona E para escanear. \xA1Vamos!"
+    highlight: science

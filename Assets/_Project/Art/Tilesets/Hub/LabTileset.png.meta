@@ -1,0 +1,1150 @@
+fileFormatVersion: 2
+guid: e1592727d7b3a4207b7f67f13db12826
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1992445497423846122
+    second: Crear Sci-Fi Espacio_0
+  - first:
+      213: -3531162732970231493
+    second: Crear Sci-Fi Espacio_1
+  - first:
+      213: -4982140488516679265
+    second: Crear Sci-Fi Espacio_2
+  - first:
+      213: 3234151028091484570
+    second: Crear Sci-Fi Espacio_3
+  - first:
+      213: -8061045280695164546
+    second: Crear Sci-Fi Espacio_4
+  - first:
+      213: -6329261561872235851
+    second: Crear Sci-Fi Espacio_5
+  - first:
+      213: 8702580808729741962
+    second: Crear Sci-Fi Espacio_6
+  - first:
+      213: 3303445570820667359
+    second: Crear Sci-Fi Espacio_7
+  - first:
+      213: 4934122503587462792
+    second: Crear Sci-Fi Espacio_8
+  - first:
+      213: -8889279630190847797
+    second: Crear Sci-Fi Espacio_9
+  - first:
+      213: 5825245290115492251
+    second: Crear Sci-Fi Espacio_10
+  - first:
+      213: 2037831981402398893
+    second: Crear Sci-Fi Espacio_11
+  - first:
+      213: -6480474860191061823
+    second: Crear Sci-Fi Espacio_12
+  - first:
+      213: 3298077112340042655
+    second: Crear Sci-Fi Espacio_13
+  - first:
+      213: -4298653226612279985
+    second: Crear Sci-Fi Espacio_14
+  - first:
+      213: -7336515678341168240
+    second: Crear Sci-Fi Espacio_15
+  - first:
+      213: -1630953562612740298
+    second: Crear Sci-Fi Espacio_16
+  - first:
+      213: 2774882792428280271
+    second: Crear Sci-Fi Espacio_17
+  - first:
+      213: -212308625718711107
+    second: Crear Sci-Fi Espacio_18
+  - first:
+      213: -1553290532123344947
+    second: Crear Sci-Fi Espacio_19
+  - first:
+      213: 2745240309042186963
+    second: Crear Sci-Fi Espacio_20
+  - first:
+      213: 3211999020412995755
+    second: Crear Sci-Fi Espacio_21
+  - first:
+      213: -7908066690524755482
+    second: Crear Sci-Fi Espacio_22
+  - first:
+      213: 3654043746261106166
+    second: Crear Sci-Fi Espacio_23
+  - first:
+      213: 2006440026028293580
+    second: Crear Sci-Fi Espacio_24
+  - first:
+      213: 2758158067355300224
+    second: Crear Sci-Fi Espacio_25
+  - first:
+      213: -7379473753292991360
+    second: Crear Sci-Fi Espacio_26
+  - first:
+      213: -9048417174526380220
+    second: Crear Sci-Fi Espacio_27
+  - first:
+      213: -3371803959395682685
+    second: Crear Sci-Fi Espacio_28
+  - first:
+      213: 4869198968756412824
+    second: Crear Sci-Fi Espacio_29
+  - first:
+      213: 2299194771107945150
+    second: Crear Sci-Fi Espacio_30
+  - first:
+      213: -7617196551577013377
+    second: Crear Sci-Fi Espacio_31
+  - first:
+      213: -919409254922992287
+    second: Crear Sci-Fi Espacio_32
+  - first:
+      213: -2809511830914778166
+    second: Crear Sci-Fi Espacio_33
+  - first:
+      213: -71384695178633506
+    second: floor_panels
+  - first:
+      213: -2366491526020979237
+    second: floor_rivets
+  - first:
+      213: 6736398475444078066
+    second: floor_grate
+  - first:
+      213: 7746712218497978403
+    second: wall_corner_tl
+  - first:
+      213: -6080658697906817191
+    second: wall_top_cables
+  - first:
+      213: 1494101178304223481
+    second: wall_cables
+  - first:
+      213: 7948149044874925222
+    second: strip_a
+  - first:
+      213: 8114773687058258926
+    second: strip_b
+  - first:
+      213: -6538667514438569748
+    second: strip_c
+  - first:
+      213: 3782371236297195065
+    second: wall_corner_l
+  - first:
+      213: -2996796686694487120
+    second: wall_narrow
+  - first:
+      213: 2033171305955894666
+    second: wall_screen
+  - first:
+      213: -7708951339123361923
+    second: door_closed
+  - first:
+      213: -1535658472809874807
+    second: door_open
+  - first:
+      213: -2170297147265991400
+    second: wall_corner_bl
+  - first:
+      213: 1999377908361758036
+    second: wall_railing
+  - first:
+      213: 4272582452455914261
+    second: wall_railing_cables
+  - first:
+      213: 593445709459613883
+    second: console_small_a
+  - first:
+      213: -4160729923052365213
+    second: console_small_b
+  - first:
+      213: 2759953922149424357
+    second: console_radar
+  - first:
+      213: -3473622165677471007
+    second: console_wide
+  - first:
+      213: 3357582596438058656
+    second: console_c
+  - first:
+      213: -5847713196782240132
+    second: big_screen_mars
+  - first:
+      213: -8439282902346887425
+    second: desk_tools
+  - first:
+      213: 4575135305890353614
+    second: desk_monitors
+  - first:
+      213: -523165383481245860
+    second: shelf_a
+  - first:
+      213: 6190216182270765394
+    second: shelf_b
+  - first:
+      213: -264700429131920200
+    second: poster_rocket
+  - first:
+      213: -8327009183785973253
+    second: poster_rocket_b
+  - first:
+      213: 2167814603908061423
+    second: plant_a
+  - first:
+      213: -6742636230732718331
+    second: plant_b
+  - first:
+      213: -8195559806951486790
+    second: locker_a
+  - first:
+      213: -1829384393497207125
+    second: locker_b
+  - first:
+      213: -8053669763009341925
+    second: locker_c
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: floor_panels
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 216
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede5a797ff3620ff0800000000000000
+      internalID: -71384695178633506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_rivets
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 216
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd52c8bce78882fd0800000000000000
+      internalID: -2366491526020979237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_grate
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 216
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f5c352f8be7c7d50800000000000000
+      internalID: 6736398475444078066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_corner_tl
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 215
+        width: 39
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32010c808b9d18b60800000000000000
+      internalID: 7746712218497978403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_top_cables
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 215
+        width: 39
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 957ffd681292d9ba0800000000000000
+      internalID: -6080658697906817191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_cables
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 215
+        width: 39
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f8d0570b1d1cb410800000000000000
+      internalID: 1494101178304223481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: strip_a
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 188
+        width: 38
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a451a9f17f7d4e60800000000000000
+      internalID: 7948149044874925222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: strip_b
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 188
+        width: 38
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeb5bc9aca77d9070800000000000000
+      internalID: 8114773687058258926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: strip_c
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 188
+        width: 39
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce0b089f98cf145a0800000000000000
+      internalID: -6538667514438569748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_corner_l
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 173
+        width: 39
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e362c799ead7430800000000000000
+      internalID: 3782371236297195065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_narrow
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 173
+        width: 16
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bbe1898a4d3966d0800000000000000
+      internalID: -2996796686694487120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_screen
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 173
+        width: 39
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a85a403d786473c10800000000000000
+      internalID: 2033171305955894666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_closed
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 129
+        width: 60
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77b7c0d99d440590800000000000000
+      internalID: -7708951339123361923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_open
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 129
+        width: 60
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98a39d751ce30bae0800000000000000
+      internalID: -1535658472809874807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_corner_bl
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 138
+        width: 35
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81dba284e3e81e1e0800000000000000
+      internalID: -2170297147265991400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_railing
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 131
+        width: 38
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4558aaf4d973fbb10800000000000000
+      internalID: 1999377908361758036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_railing_cables
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 131
+        width: 39
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51bb3387a134b4b30800000000000000
+      internalID: 4272582452455914261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: console_small_a
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 98
+        width: 27
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb8e1d18ab75c3800800000000000000
+      internalID: 593445709459613883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: console_small_b
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 98
+        width: 26
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36a1022fd2e1246c0800000000000000
+      internalID: -4160729923052365213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: console_radar
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 98
+        width: 63
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ec992628735d4620800000000000000
+      internalID: 2759953922149424357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: console_wide
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 97
+        width: 62
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea0fda5b073bcfc0800000000000000
+      internalID: -3473622165677471007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: console_c
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 97
+        width: 58
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a669bc0597889e20800000000000000
+      internalID: 3357582596438058656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big_screen_mars
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 36
+        width: 106
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e3e6d74dfb8dea0800000000000000
+      internalID: -5847713196782240132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desk_tools
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 63
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffe069ed9e4a1ea80800000000000000
+      internalID: -8439282902346887425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desk_monitors
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 47
+        width: 58
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec151f212552e7f30800000000000000
+      internalID: 4575135305890353614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shelf_a
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 2
+        width: 31
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5fb1d60bd75db8f0800000000000000
+      internalID: -523165383481245860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shelf_b
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2
+        width: 31
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 259af1312d018e550800000000000000
+      internalID: 6190216182270765394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poster_rocket
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 10
+        width: 24
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bcc2b5bc58935cf0800000000000000
+      internalID: -264700429131920200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poster_rocket_b
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 14
+        width: 21
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf985070445807c80800000000000000
+      internalID: -8327009183785973253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plant_a
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 4
+        width: 19
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe818dc85ef951e10800000000000000
+      internalID: 2167814603908061423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plant_b
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 4
+        width: 19
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50f5f7972185d62a0800000000000000
+      internalID: -6742636230732718331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locker_a
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 26
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba003b07c5834e80800000000000000
+      internalID: -8195559806951486790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locker_b
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 4
+        width: 29
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bae94fb2698bc96e0800000000000000
+      internalID: -1829384393497207125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locker_c
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 3
+        width: 26
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b16168d450e9b3090800000000000000
+      internalID: -8053669763009341925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Crear Sci-Fi Espacio_0: 1992445497423846122
+      Crear Sci-Fi Espacio_1: -3531162732970231493
+      Crear Sci-Fi Espacio_10: 5825245290115492251
+      Crear Sci-Fi Espacio_11: 2037831981402398893
+      Crear Sci-Fi Espacio_12: -6480474860191061823
+      Crear Sci-Fi Espacio_13: 3298077112340042655
+      Crear Sci-Fi Espacio_14: -4298653226612279985
+      Crear Sci-Fi Espacio_15: -7336515678341168240
+      Crear Sci-Fi Espacio_16: -1630953562612740298
+      Crear Sci-Fi Espacio_17: 2774882792428280271
+      Crear Sci-Fi Espacio_18: -212308625718711107
+      Crear Sci-Fi Espacio_19: -1553290532123344947
+      Crear Sci-Fi Espacio_2: -4982140488516679265
+      Crear Sci-Fi Espacio_20: 2745240309042186963
+      Crear Sci-Fi Espacio_21: 3211999020412995755
+      Crear Sci-Fi Espacio_22: -7908066690524755482
+      Crear Sci-Fi Espacio_23: 3654043746261106166
+      Crear Sci-Fi Espacio_24: 2006440026028293580
+      Crear Sci-Fi Espacio_25: 2758158067355300224
+      Crear Sci-Fi Espacio_26: -7379473753292991360
+      Crear Sci-Fi Espacio_27: -9048417174526380220
+      Crear Sci-Fi Espacio_28: -3371803959395682685
+      Crear Sci-Fi Espacio_29: 4869198968756412824
+      Crear Sci-Fi Espacio_3: 3234151028091484570
+      Crear Sci-Fi Espacio_30: 2299194771107945150
+      Crear Sci-Fi Espacio_31: -7617196551577013377
+      Crear Sci-Fi Espacio_32: -919409254922992287
+      Crear Sci-Fi Espacio_33: -2809511830914778166
+      Crear Sci-Fi Espacio_4: -8061045280695164546
+      Crear Sci-Fi Espacio_5: -6329261561872235851
+      Crear Sci-Fi Espacio_6: 8702580808729741962
+      Crear Sci-Fi Espacio_7: 3303445570820667359
+      Crear Sci-Fi Espacio_8: 4934122503587462792
+      Crear Sci-Fi Espacio_9: -8889279630190847797
+      big_screen_mars: -5847713196782240132
+      console_c: 3357582596438058656
+      console_radar: 2759953922149424357
+      console_small_a: 593445709459613883
+      console_small_b: -4160729923052365213
+      console_wide: -3473622165677471007
+      desk_monitors: 4575135305890353614
+      desk_tools: -8439282902346887425
+      door_closed: -7708951339123361923
+      door_open: -1535658472809874807
+      floor_grate: 6736398475444078066
+      floor_panels: -71384695178633506
+      floor_rivets: -2366491526020979237
+      locker_a: -8195559806951486790
+      locker_b: -1829384393497207125
+      locker_c: -8053669763009341925
+      plant_a: 2167814603908061423
+      plant_b: -6742636230732718331
+      poster_rocket: -264700429131920200
+      poster_rocket_b: -8327009183785973253
+      shelf_a: -523165383481245860
+      shelf_b: 6190216182270765394
+      strip_a: 7948149044874925222
+      strip_b: 8114773687058258926
+      strip_c: -6538667514438569748
+      wall_cables: 1494101178304223481
+      wall_corner_bl: -2170297147265991400
+      wall_corner_l: 3782371236297195065
+      wall_corner_tl: 7746712218497978403
+      wall_narrow: -2996796686694487120
+      wall_railing: 1999377908361758036
+      wall_railing_cables: 4272582452455914261
+      wall_screen: 2033171305955894666
+      wall_top_cables: -6080658697906817191
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

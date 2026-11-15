@@ -14,10 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - speaker: 1
+    expression: 2
     text: "Entonces... \xBFviajaremos millones de kil\xF3metros para recoger piedras?"
+    highlight: 
   - speaker: 1
+    expression: 1
     text: "\xA1Ah, ya s\xE9! Las rocas pueden guardar la historia de un planeta.
       \xA1Las piedras m\xE1s importantes de mi carrera espacial!"
+    highlight: 
   - speaker: 1
+    expression: 0
     text: "Un consejo: los paneles solares son ligeros y baratos... pero en Marte
       hay tormentas de polvo. Pi\xE9nsalo bien."
+    highlight: 

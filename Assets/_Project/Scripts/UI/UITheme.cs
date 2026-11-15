@@ -86,9 +86,13 @@ public class UITheme : ScriptableObject
     [Header("Taller")]
     public Sprite roverPreview;                  // rover de perfil 96x96 (un solo dibujo)
 
-    [Header("Retratos (64x64)")]
+    [Header("Retratos (neutral / alegre / preocupado-alarmado)")]
     public Sprite portraitVega;
+    public Sprite portraitVegaHappy;
+    public Sprite portraitVegaWorried;
     public Sprite portraitBimo;
+    public Sprite portraitBimoHappy;
+    public Sprite portraitBimoAlert;
 
     // --- Acceso global ---
     static UITheme current;

@@ -54,7 +54,7 @@ public class RoverDesign
         var d = new RoverDesign
         {
             LauncherId = "launcher_light", LauncherCapacity = 500,
-            Power = PowerSource.Solar, RechargePerSecond = 3f,
+            Power = PowerSource.Solar, RechargePerSecond = 2.5f,
             BatteryCapacity = 60f,
             CommsId = "comms_direct", BlackoutSeconds = 40f,
             WheelsId = "wheels_standard", AllTerrainWheels = false,

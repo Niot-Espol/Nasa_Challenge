@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - speaker: 1
+    expression: 2
     text: "\xA1Espera, comandante! Primero habla con la Dra. Vega para recibir el
       briefing de la misi\xF3n."
+    highlight: 

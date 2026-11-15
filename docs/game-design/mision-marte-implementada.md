@@ -70,8 +70,9 @@ Extras: menú de pausa (Esc), transiciones con fundido.
 
 ### Marte: llegada (BIMO)
 1. ¡Aterrizamos en Jezero, comandante! Hace miles de millones de años aquí hubo un lago.
-2. Tenemos 4 minutos de operación. Moverse y escanear gasta energía: vigila la barra de arriba.
-3. Busca los tres puntos científicos. Acércate y presiona E para escanear. ¡Vamos!
+2. Esta es nuestra energía. Moverse y escanear la gastan, y nuestra fuente la recarga. Si llega a cero, el rover entra en modo seguro. *(la barra de energía late)*
+3. Tenemos solo dos minutos y medio de operación antes de que se cierre la ventana de la misión. Planifica la ruta. *(late la barra de tiempo)*
+4. Hay tres puntos científicos. Las flechas en el borde de la pantalla te indican dónde están. Acércate y presiona E para escanear. ¡Vamos!
 
 > Todos los diálogos son assets editables en `Assets/_Project/Data/Dialogues/` (no hace falta programar para cambiarlos).
 
@@ -87,7 +88,7 @@ Extras: menú de pausa (Esc), transiciones con fundido.
 | Lanzador | Ligero | — | 15 | Lleva hasta 500 kg |
 | | Medio | — | 25 | Lleva hasta 700 kg |
 | | Pesado | — | 40 | Lleva hasta 900 kg |
-| Energía | Paneles solares | 40 | 10 | Recarga 3/s; **0 durante la tormenta** |
+| Energía | Paneles solares | 40 | 10 | Recarga 2,5/s; **0 durante la tormenta** |
 | | RTG | 120 | 30 | Recarga 1,5/s siempre |
 | Batería | Pequeña | 30 | 5 | Energía máxima 60 |
 | | Grande | 60 | 12 | Energía máxima 120 |
@@ -118,11 +119,13 @@ Extras: menú de pausa (Esc), transiciones con fundido.
 
 ## 6. Exploración en Marte
 
-**Mapa:** 40 × 30 unidades dentro de un cráter. De arriba a la izquierda hacia el centro baja un **cauce seco** que termina en un **delta**; hay depósitos sedimentarios arriba a la derecha, rocas sueltas, cráteres, una **muralla de rocas** y una **zona rocosa** que separa la esquina inferior derecha. El rover aterriza abajo a la izquierda.
+**Mapa:** 40 × 30 unidades dentro de un cráter rodeado de rocas. El rover aterriza abajo a la izquierda. Los tres puntos están en las otras tres esquinas: el **delta** (barro seco agrietado al final de un cauce) arriba a la izquierda; el **afloramiento mineral** arriba a la derecha, detrás de una **cresta rocosa** que obliga a rodear; y la **roca especial** abajo a la derecha, protegida por una **zona rocosa** (atajo solo con todoterreno) y una **muralla** con un paso estrecho.
 
 **Recursos en vivo:**
-- **Energía:** empieza llena (según la batería). Moverse gasta **2 por segundo**; escanear gasta lo que cueste el instrumento; la fuente recarga continuamente.
-- **Tiempo:** 4 minutos (240 s).
+- **Energía:** empieza llena (según la batería). Moverse gasta **3 por segundo**; escanear gasta lo que cueste el instrumento; la fuente recarga continuamente.
+- **Tiempo:** 2 minutos y medio (150 s).
+- **Escanear** detiene al rover 2,5 s.
+- **Sedimento blando** (delta y cauce): el rover avanza al 55 % de velocidad, salvo con ruedas todoterreno.
 - **Modo seguro:** si la energía llega a 0, el rover se detiene hasta recargar el 30 %. No hay game over, pero se pierde tiempo.
 
 **Tres puntos científicos** (acercarse + E). Si se tiene el instrumento, la energía alcanza y hay comunicación, se completa y BIMO muestra un **dato NASA con su fuente**:
@@ -136,8 +139,8 @@ Extras: menú de pausa (Esc), transiciones con fundido.
 Si falta algo, BIMO lo explica ("No traemos el espectrómetro...", "Necesitamos 35 de energía...", "Sin comunicación no podemos escanear").
 
 **Eventos:**
-- **Tormenta de polvo** (segundo 45, dura 30 s): con paneles solares la recarga baja a 0.
-- **Pérdida de comunicación** (segundo 100): dura 40 s con antena directa o 10 s con relé; durante el apagón no se puede escanear.
+- **Tormenta de polvo** (segundo 35, dura 35 s): con paneles solares la recarga baja a 0.
+- **Pérdida de comunicación** (segundo 75): dura 40 s con antena directa o 10 s con relé; durante el apagón no se puede escanear.
 - **Zona rocosa:** con ruedas estándar es una pared (hay que rodearla); con todoterreno se cruza.
 
 **Fin de la misión:** automático al completar los 3 puntos, al acabarse el tiempo, o con el botón "Terminar misión".

@@ -14,7 +14,10 @@ public class CharacterAnimator : MonoBehaviour
     static readonly int FacingY = Animator.StringToHash("FacingY");
     static readonly int IsMoving = Animator.StringToHash("IsMoving");
 
+    [SerializeField] float stepInterval = 0.32f;   // segundos entre pasos
+
     TopDownMover mover;
+    float stepTimer;
 
     void Awake()
     {
@@ -35,6 +38,14 @@ public class CharacterAnimator : MonoBehaviour
         animator.SetFloat(FacingX, dir.x);
         animator.SetFloat(FacingY, dir.y);
         animator.SetBool(IsMoving, mover.IsMoving);
+
+        // Pasos
+        if (mover.IsMoving && mover.CanMove && Time.timeScale > 0f)
+        {
+            stepTimer -= Time.deltaTime;
+            if (stepTimer <= 0f) { AudioManager.Play(Sfx.Footstep, Random.Range(0.88f, 1.12f)); stepTimer = stepInterval; }
+        }
+        else stepTimer = 0.05f;
 
         // Solo se voltea al mirar a la izquierda; arriba/abajo no se tocan.
         if (dir.x != 0f) spriteRenderer.flipX = dir.x < 0f;

@@ -35,10 +35,15 @@ public class ScienceSitePoint : Interactable
     protected override void Interact()
     {
         var mc = MissionController.Instance;
-        if (mc == null) return;
-        var status = mc.Scan(site);
-        if (status == ScanStatus.Ok && !string.IsNullOrEmpty(fact) && DialogueBox.Instance != null)
-            DialogueBox.Instance.ShowFact(factTitle, fact, factSource);
+        if (mc == null || mc.IsScanning) return;
+        mc.StartCoroutine(mc.ScanRoutine(site, status =>
+        {
+            if (status != ScanStatus.Ok) return;
+            if (!string.IsNullOrEmpty(fact) && DialogueBox.Instance != null)
+                DialogueBox.Instance.ShowFact(factTitle, fact, factSource, () => AudioManager.Play(Sfx.SiteComplete));
+            else
+                AudioManager.Play(Sfx.SiteComplete);
+        }));
     }
 
     void OnSiteCompleted(ScienceSite s)

@@ -56,7 +56,7 @@ public class WorkshopScreen : MonoBehaviour
         {
             if (roverPreview != null) { roverPreview.sprite = th.roverPreview; roverPreview.enabled = th.roverPreview != null; }
             if (roverPreviewPlaceholder != null) roverPreviewPlaceholder.gameObject.SetActive(th.roverPreview == null);
-            if (bimoPortrait != null) { bimoPortrait.sprite = th.portraitBimo; bimoPortrait.gameObject.SetActive(th.portraitBimo != null); }
+            if (bimoPortrait != null) { bimoPortrait.sprite = th.portraitBimo; bimoPortrait.enabled = th.portraitBimo != null; bimoPortrait.gameObject.SetActive(th.portraitBimo != null); }
         }
         Refresh();
     }

@@ -58,9 +58,14 @@ public class LaunchSequence : MonoBehaviour
         for (int i = 3; i >= 1 && !skip; i--)
         {
             countdownText.text = i.ToString();
+            AudioManager.Play(Sfx.Countdown);
             yield return Wait(1f);
         }
         countdownText.text = "¡DESPEGUE!";
+        AudioManager.Play(Sfx.Countdown, 1.5f);
+        AudioManager.SetLoop(Loop.RocketRoar, true);
+        RectTransform shakeTarget = (RectTransform)launchGroup.transform;
+        Vector2 groupStart = shakeTarget.anchoredPosition;
 
         // 2) Despegue
         if (flame != null) flame.enabled = true;
@@ -69,9 +74,13 @@ public class LaunchSequence : MonoBehaviour
         {
             float e = t * t * 0.5f;                                  // acelera
             rocket.anchoredPosition = start + new Vector2(Random.Range(-3f, 3f), e * 420f);
+            float k = Mathf.Lerp(14f, 3f, t / 2.2f);   // sacudida de pantalla que se va calmando
+            shakeTarget.anchoredPosition = groupStart + new Vector2(Random.Range(-k, k), Random.Range(-k, k));
             if (flame != null) flame.transform.localScale = new Vector3(1, Random.Range(0.8f, 1.25f), 1);
             yield return null;
         }
+
+        shakeTarget.anchoredPosition = groupStart;
 
         // 3) Viaje
         yield return Fade(launchGroup, 1, 0, 0.4f);

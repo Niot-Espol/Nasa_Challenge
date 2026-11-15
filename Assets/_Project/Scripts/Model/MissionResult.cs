@@ -57,17 +57,17 @@ public class MissionResult
     {
         var r = new MissionResult
         {
-            TimeLimitSeconds = 240f,
-            TimeUsedSeconds = 240f,
+            TimeLimitSeconds = 150f,
+            TimeUsedSeconds = 150f,
             EnergyConsumed = 180f,
             DataTransmitted = true,
         };
         r.CompletedSites.Add(ScienceSite.Delta);
         r.CompletedSites.Add(ScienceSite.MineralOutcrop);
-        r.Incidents.Add(new MissionIncident(IncidentType.DustStorm, 90f, 30f));
-        r.Incidents.Add(new MissionIncident(IncidentType.SafeMode, 110f, 25f));
-        r.Incidents.Add(new MissionIncident(IncidentType.CommsBlackout, 160f, 40f));
-        r.Incidents.Add(new MissionIncident(IncidentType.TimeOut, 240f));
+        r.Incidents.Add(new MissionIncident(IncidentType.DustStorm, 35f, 35f));
+        r.Incidents.Add(new MissionIncident(IncidentType.SafeMode, 50f, 25f));
+        r.Incidents.Add(new MissionIncident(IncidentType.CommsBlackout, 75f, 40f));
+        r.Incidents.Add(new MissionIncident(IncidentType.TimeOut, 150f));
         return r;
     }
 }
