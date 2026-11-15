@@ -126,6 +126,7 @@ public class MissionController : MonoBehaviour
 
     // --- Escaneo con duración: el rover se detiene; el costo y el resultado se aplican al final ---
     public bool IsScanning { get; private set; }
+    public ScienceSite ScanningSite { get; private set; }
     public float ScanProgress { get; private set; }
     public float ScanDuration => scanDuration;
 
@@ -133,7 +134,7 @@ public class MissionController : MonoBehaviour
     {
         var pre = State.CanScan(site);
         if (pre != ScanStatus.Ok) { done?.Invoke(Scan(site)); yield break; }
-        IsScanning = true; ScanProgress = 0f;
+        IsScanning = true; ScanProgress = 0f; ScanningSite = site;
         AudioManager.Play(Sfx.Scan);
         Post("Escaneando...");
         while (ScanProgress < 1f)

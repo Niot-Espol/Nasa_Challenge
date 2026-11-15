@@ -12,6 +12,8 @@ public class MarsScreenEffects : MonoBehaviour
     [SerializeField] Image dustTint;
     [SerializeField] RawImage lowEnergyVignette;
 
+    [SerializeField] Texture2D dustTexture;      // textura de polvo repetible (arte); vacío = se genera por código
+    [SerializeField] float dustTiles = 7f;        // cuántas veces se repite a lo ancho de la pantalla
     [SerializeField] float dustMaxAlpha = 0.4f;
     [SerializeField] float tintMaxAlpha = 0.1f;
 
@@ -19,7 +21,8 @@ public class MarsScreenEffects : MonoBehaviour
 
     void Start()
     {
-        var tex = ProceduralSprites.Dust();
+        Texture tex = dustTexture != null ? (Texture)dustTexture : ProceduralSprites.Dust();
+        if (dustTexture == null) dustTiles = 1.6f;
         if (dustA != null) dustA.texture = tex;
         if (dustB != null) dustB.texture = tex;
         if (lowEnergyVignette != null) lowEnergyVignette.texture = ProceduralSprites.Vignette();
@@ -36,8 +39,9 @@ public class MarsScreenEffects : MonoBehaviour
         float target = s.DustStormActive ? 1f : 0f;
         dust = Mathf.MoveTowards(dust, target, Time.unscaledDeltaTime / 1.5f);
         float t = Time.unscaledTime;
-        if (dustA != null) dustA.uvRect = new Rect(t * 0.12f, t * 0.03f, 1.6f, 0.9f);
-        if (dustB != null) dustB.uvRect = new Rect(-t * 0.2f + 0.37f, t * 0.05f + 0.21f, 2.4f, 1.35f);
+        float a = dustTiles, ah = dustTiles * 9f / 16f;
+        if (dustA != null) dustA.uvRect = new Rect(t * 0.35f, t * 0.06f, a, ah);
+        if (dustB != null) dustB.uvRect = new Rect(-t * 0.55f + 0.37f, t * 0.1f + 0.21f, a * 1.5f, ah * 1.5f);
 
         // Viñeta de energía baja
         float vig = 0f;

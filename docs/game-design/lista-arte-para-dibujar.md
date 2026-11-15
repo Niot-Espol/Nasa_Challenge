@@ -7,7 +7,7 @@
 Hacer primero todo lo P1 (meta: sábado por la noche), después P2 y por último P3.
 
 > **Estado (domingo 15, madrugada):** ✅ personajes, retratos, tileset de Marte, tileset del laboratorio y rover de perfil ya están **dentro del juego**.
-> **Falta integrar:** la nueva animacion de conduccion del rover elegida por Kailo. Tambien faltan los **iconos** (componentes y recursos), el **lanzamiento** y la **interfaz**. Ver "Que falta" al final.
+> **Falta:** la **interfaz**, los **íconos** (componentes y recursos) y el **lanzamiento**. Ver "Qué falta" al final.
 
 ---
 
@@ -53,7 +53,7 @@ Hacer primero todo lo P1 (meta: sábado por la noche), después P2 y por último
 
 | ✓ | Prio | Asset | Tamaño | Frames | Notas | Quién |
 |---|---|---|---|---|---|---|
-| [x] | P1 | **Rover de conduccion** | 80x64 | 3 direcciones (abajo, arriba, derecha) x 4 frames | Nueva entrega basada en la referencia elegida por Kailo; escala corregida y animaciones listas. Pendiente asignar en Unity y probar en Play. | PixelLab / Codex |
+| [x] | P1 | **Rover de conducción** (DrivingV2) | 80×64 | 3 direcciones × 4 frames | **En el juego** (Marte). Sustituye al rover provisional. | PixelLab / Codex |
 | [x] | P1 | **Rover de perfil** (vista previa del taller) | 96×96 | 1 | **En el juego** (Taller). | PixelLab / Codex |
 
 ## 4. Mapa de Marte: tileset (`Art/Tilesets/Mars/`)
@@ -74,14 +74,14 @@ Hacer primero todo lo P1 (meta: sábado por la noche), después P2 y por último
 
 | ✓ | Prio | Asset | Tamaño | Notas | Quién |
 |---|---|---|---|---|---|
-| [x] | P1 | **Punto cient?fico 1: delta** | 32?32 | En juego: roca en aguja del tileset; alternativa PixelLab de estratos entregada, pendiente conectar. | Equipo / PixelLab / Codex |
-| [x] | P1 | **Punto cient?fico 2: afloramiento mineral** | 32?32 | En juego: cristales naranjas del tileset; alternativa PixelLab con vetas entregada, pendiente conectar. | Equipo / PixelLab / Codex |
-| [x] | P1 | **Punto cient?fico 3: roca especial** | 32?32 | En juego: cristales azules del tileset; alternativa PixelLab de roca erosionada entregada, pendiente conectar. | Equipo / PixelLab / Codex |
-| [x] | P1 | **Marca de "punto completado"** | 16?16 | Sprite PixelLab entregado; en juego a?n se muestra el texto "OK". | PixelLab / Codex |
-| [x] | P1 | **Indicador de interacci?n** | 16?16, 2 frames | Sprite PixelLab de tecla E entregado; en juego a?n se muestra el texto "[E]". | PixelLab / Codex |
-| [x] | P1 | **M?dulo de aterrizaje** | 48?48 | Sprite PixelLab entregado, pendiente colocar en el mapa. | PixelLab / Codex |
-| [x] | P2 | Efecto de escaneo | 32?32, 4 frames | Sprite PixelLab entregado, pendiente conectar al an?lisis. | PixelLab / Codex |
-| [x] | P2 | Part?cula de polvo de la tormenta | 64?64, repetible | En juego: polvo generado por c?digo; textura PixelLab alternativa entregada. | Equipo / PixelLab / Codex |
+| [x] | P1 | **Punto científico 1: delta** | 32×32 | Sedimentos en capas. **En el juego.** | PixelLab / Codex |
+| [x] | P1 | **Punto científico 2: afloramiento mineral** | 32×32 | Roca roja con vetas. **En el juego.** | PixelLab / Codex |
+| [x] | P1 | **Punto científico 3: roca especial** | 32×32 | Roca erosionada con espiral. **En el juego.** | PixelLab / Codex |
+| [x] | P1 | **Marca de "punto completado"** | 16×16 | **En el juego.** | PixelLab / Codex |
+| [x] | P1 | **Indicador de interacción** | 16×16, 2 frames | **En el juego** (Marte y Hub). | PixelLab / Codex |
+| [x] | P1 | **Módulo de aterrizaje** | 48×48 | **En el juego**, junto al rover. | PixelLab / Codex |
+| [x] | P2 | Efecto de escaneo | 32×32, 4 frames | **En el juego**, sobre el punto mientras se escanea. | PixelLab / Codex |
+| [x] | P2 | Partícula de polvo de la tormenta | 64×64, repetible | **En el juego** (capas de la tormenta). | PixelLab / Codex |
 
 ## 6. Centro espacial: tileset de interior (`Art/Tilesets/Hub/`)
 
@@ -173,13 +173,11 @@ Hacer primero todo lo P1 (meta: sábado por la noche), después P2 y por último
 
 | # | Bloque | Piezas | Por qué importa |
 |---|---|---|---|
-| 1 | **Integrar rover de conduccion** (seccion 3) | 3 direcciones x 4 frames entregados | Ejecutar el comando de Editor, comprobar escala y probar las cuatro direcciones en Play. |
-| 2 | **Interfaz** (sección 10) | ~13 piezas | Marcos, botones, barras y caja de diálogo: es lo que más cambia la sensación de "juego terminado". |
-| 3 | **Íconos de componentes** (sección 7) | 14 | El Taller hoy es solo texto. |
-| 4 | **Íconos de recursos** (sección 8) | 6 (+2) | HUD de Marte y barras del Taller. |
-| 5 | **Lanzamiento** (sección 9) | 8 | Hoy son rectángulos de colores. |
-| 6 | **Indicador "E"** y **marca de completado** (sección 5) | 2 | Hoy son texto. |
-| 7 | Bordes de cauce/delta, módulo de aterrizaje, efecto de escaneo | P2 | Pulido. |
+| 1 | **Interfaz** (sección 10) | ~13 piezas | Marcos, botones, barras y caja de diálogo: es lo que más cambia la sensación de "juego terminado". |
+| 2 | **Íconos de componentes** (sección 7) | 14 | El Taller hoy es solo texto. |
+| 3 | **Íconos de recursos** (sección 8) | 6 (+2) | HUD de Marte y barras del Taller. |
+| 4 | **Lanzamiento** (sección 9) | 8 | Hoy son rectángulos de colores. |
+| 5 | Bordes de cauce/delta | P2 | Pulido. |
 
 **Audio:** no entra en esta lista. Los efectos son P1 y la música P2, y se buscarán en bancos libres.
 

@@ -10,6 +10,7 @@ public class ScienceSitePoint : Interactable
     [SerializeField] Sprite completedSprite;       // arte pendiente (opcional)
     [SerializeField] Color completedTint = new Color(0.55f, 1f, 0.55f);
     [SerializeField] GameObject completedMarker;   // banderita "completado" (opcional)
+    [SerializeField] GameObject scanEffect;        // anillos de escaneo (se muestran mientras se escanea este punto)
 
     [Header("Dato NASA (se muestra al completar)")]
     [SerializeField] string factTitle = "Dato NASA";
@@ -24,6 +25,13 @@ public class ScienceSitePoint : Interactable
         if (completedMarker != null) completedMarker.SetActive(false);
         var mc = MissionController.Instance;
         if (mc != null) mc.State.SiteCompleted += OnSiteCompleted;
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+        var mc = MissionController.Instance;
+        if (scanEffect != null) scanEffect.SetActive(mc != null && mc.IsScanning && mc.ScanningSite == site);
     }
 
     void OnDestroy()
