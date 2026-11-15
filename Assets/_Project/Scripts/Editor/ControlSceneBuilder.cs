@@ -47,6 +47,9 @@ public static class ControlSceneBuilder
         Remove(left.transform, "desk_tools");
         Remove(right.transform, "big_screen_mars"); Remove(right.transform, "desk_monitors");
 
+        // En las salas laterales no hay puerta del Hub: se rellena ese tramo de pared con paneles
+        FillTopGap(left.transform); FillTopGap(right.transform);
+
         // Puertas entre salas
         Doorway(center, "Wall_Left"); Doorway(center, "Wall_Right");
         Doorway(left, "Wall_Right"); Doorway(right, "Wall_Left");
@@ -73,6 +76,26 @@ public static class ControlSceneBuilder
         EditorSceneManager.MarkSceneDirty(scene);
         EditorSceneManager.SaveScene(scene);
         return "06_Control construida (3 salas)";
+    }
+
+    // Tramo de pared superior donde en la sala central está la puerta (x ≈ -2.7 … 2.2)
+    static void FillTopGap(Transform room)
+    {
+        var panels = room.Find("WallPanels");
+        if (panels == null) return;
+        Transform cables = null, screen = null;
+        foreach (Transform t in panels)
+        {
+            float x = t.GetComponent<SpriteRenderer>().bounds.min.x - room.position.x;
+            if (cables == null && t.name == "wall_cables" && x < -9f) cables = t;
+            if (screen == null && t.name == "wall_screen" && x < -7f && x > -8f) screen = t;
+        }
+        foreach (var src in new[] { cables, screen })
+        {
+            if (src == null) continue;
+            var c = Object.Instantiate(src.gameObject, panels); c.name = src.name + "_fill";
+            c.transform.position = src.position + new Vector3(7.3f, 0, 0);
+        }
     }
 
     static void Remove(Transform root, string name)

@@ -56,7 +56,7 @@ public class PauseMenu : MonoBehaviour
         var k = Keyboard.current;
         if (k == null || !k.escapeKey.wasPressedThisFrame) return;
         string scene = SceneManager.GetActiveScene().name;
-        if (scene == SceneFlow.Title || scene == SceneFlow.Launch) return;
+        if (scene == SceneFlow.Title || scene == SceneFlow.Launch || scene == SceneFlow.Intro) return;
         if (DialogueBox.IsOpen && !paused) return;
         SetPaused(!paused);
     }

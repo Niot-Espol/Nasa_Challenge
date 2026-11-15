@@ -117,6 +117,7 @@ public class AudioManager : MonoBehaviour
         switch (scene)
         {
             case SceneFlow.Title: PlayMusic(Music.Title); break;
+            case SceneFlow.Intro: PlayMusic(Music.Title); break;
             case SceneFlow.Hub: PlayMusic(Music.Hub); break;
             case SceneFlow.Workshop: PlayMusic(Music.Workshop); break;
             case SceneFlow.Launch: PlayMusic(Music.None); break;

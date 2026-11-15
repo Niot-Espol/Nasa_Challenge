@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class SceneFlow : MonoBehaviour
 {
     // Nombres de las escenas (deben coincidir con Build Settings).
+    public const string Intro = "00_Intro";
     public const string Title = "00_Title";
     public const string Hub = "01_Hub";
     public const string Workshop = "02_Workshop";
