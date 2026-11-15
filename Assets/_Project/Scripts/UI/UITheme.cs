@@ -67,6 +67,22 @@ public class UITheme : ScriptableObject
     public Sprite badgeEfficient;
     public Sprite badgeNoSafeMode;
 
+    [Header("Título")]
+    public Sprite logo;                          // ~192x64
+    public Sprite titleBackground;               // 320x180
+    public Sprite missionEarth;                  // tarjetas 64x64
+    public Sprite missionMoon;
+    public Sprite missionMars;
+
+    [Header("Lanzamiento")]
+    public Sprite launchBackground;              // plataforma 320x180
+    public Sprite spaceBackground;               // estrellas 320x180
+    public Sprite rocket;                        // 32x64
+    public Sprite[] rocketFlame;                 // 3 frames 16x32
+    public Sprite earth;                         // 64x64
+    public Sprite mars;                          // 64x64
+    public Sprite cruiseShip;                    // 32x32
+
     [Header("Taller")]
     public Sprite roverPreview;                  // rover de perfil 96x96 (un solo dibujo)
 
