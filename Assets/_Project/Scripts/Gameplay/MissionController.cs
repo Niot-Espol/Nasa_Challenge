@@ -95,7 +95,7 @@ public class MissionController : MonoBehaviour
         Invoke(nameof(GoToReport), 1.5f);
     }
 
-    void GoToReport() => SceneManager.LoadScene(reportScene);
+    void GoToReport() => SceneFlow.Go(reportScene);
 
     void Post(string msg)
     {
