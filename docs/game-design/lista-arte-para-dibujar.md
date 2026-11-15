@@ -31,18 +31,18 @@ Hacer primero todo lo P1 (meta: sábado por la noche), después P2 y por último
 |---|---|---|---|---|---|---|
 | [x] | P1 | **Protagonista** (AstronautStocky) | 32×32 | quieto + correr en 3 dir × 8 | **Ya está hecho**, es la referencia de estilo. | — |
 | [ ] | P1 | **Dra. Elena Vega**, quieta | 32×32 | 2–4 frames mirando abajo | Directora científica. Bata o uniforme del centro espacial. Respiración leve. | |
-| [ ] | P1 | **BIMO**, quieto | 32×32 | 2–4 frames | Robot asistente pequeño y simpático, flotando o balanceándose. | |
-| [ ] | P2 | **BIMO**, moviéndose | 32×32 | 4 frames × 3 dir (abajo, arriba, derecha) | Para que siga al jugador en el centro espacial. | |
-| [ ] | P3 | Mateo Rojas, quieto | 32×32 | 2 frames | Ingeniero del taller. | |
-| [ ] | P3 | Luna Torres, quieta | 32×32 | 2 frames | Especialista de operaciones. | |
+| [x] | P1 | **BIMO**, quieto | 32×32 | 2–4 frames | Robot asistente pequeño y simpático, flotando o balanceándose. | PixelLab / Codex |
+| [x] | P2 | **BIMO**, moviéndose | 32×32 | 4 frames × 3 dir (abajo, arriba, derecha) | Para que siga al jugador en el centro espacial. | PixelLab / Codex |
+| [x] | P3 | Mateo Rojas, quieto | 32×32 | 2 frames | Ingeniero del taller. | PixelLab / Codex |
+| [x] | P3 | Luna Torres, quieta | 32×32 | 2 frames | Especialista de operaciones. | PixelLab / Codex |
 
 ## 2. Retratos para diálogos (`Art/Sprites/Portraits/`)
 
 | ✓ | Prio | Asset | Tamaño | Notas | Quién |
 |---|---|---|---|---|---|
 | [ ] | P1 | Retratos de **Dra. Vega** × 3 | 64×64 | Expresiones: **neutral, contenta, preocupada**. Busto, fondo transparente. | |
-| [ ] | P1 | Retratos de **BIMO** × 3 | 64×64 | Expresiones: **neutral, alegre, alarmado** (para cuando avisa de un problema). | |
-| [ ] | P3 | Retratos de Mateo y Luna (1 c/u) | 64×64 | Neutral. | |
+| [x] | P1 | Retratos de **BIMO** × 3 | 64×64 | Expresiones: **neutral, alegre, alarmado** (para cuando avisa de un problema). | PixelLab / Codex |
+| [x] | P3 | Retratos de Mateo y Luna (1 c/u) | 64×64 | Neutral. | PixelLab / Codex |
 
 ## 3. Rover (`Art/Sprites/Rover/`)
 
@@ -50,8 +50,8 @@ Hacer primero todo lo P1 (meta: sábado por la noche), después P2 y por último
 
 | ✓ | Prio | Asset | Tamaño | Frames | Notas | Quién |
 |---|---|---|---|---|---|---|
-| [ ] | P1 | **Rover top-down** | 32×32 | 3 dir (abajo, arriba, derecha) × 2 frames | Visto desde arriba. Los 2 frames son para que las ruedas parezcan moverse. Inspirado en Perseverance pero simplificado. | |
-| [ ] | P1 | **Rover de perfil** (vista previa del taller) | 96×96 | 1 | Dibujo grande y bonito del mismo rover, de lado. Es lo que se ve en el taller. | |
+| [x] | P1 | **Rover top-down** | 32×32 | 3 dir (abajo, arriba, derecha) × 2 frames | Visto desde arriba. Los 2 frames son para que las ruedas parezcan moverse. Inspirado en Perseverance pero simplificado. | PixelLab / Codex |
+| [x] | P1 | **Rover de perfil** (vista previa del taller) | 96×96 | 1 | Dibujo grande y bonito del mismo rover, de lado. Es lo que se ve en el taller. | PixelLab / Codex |
 
 ## 4. Mapa de Marte: tileset (`Art/Tilesets/Mars/`)
 

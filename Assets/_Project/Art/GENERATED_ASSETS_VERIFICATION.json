@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "date": "2026-11-15",
+  "pngAssets": 37,
+  "productionPng": 32,
+  "referenceSprites": 5,
+  "protectedFilesUnchanged": 143,
+  "protectedMetadataUnchanged": true,
+  "exactDimensions": true,
+  "rgba8": true,
+  "binaryAlpha": true,
+  "maxPaletteColors": 32,
+  "humanFeetPixelIdentical": true,
+  "bimoPortraitBodyPixelIdentical": true,
+  "roverBodyAndAlphaStable": true,
+  "uniqueNewGuids": true,
+  "noTokenInChanges": true,
+  "noScenePrefabMechanicsChanges": true,
+  "unityPlayTested": false,
+  "webGLBuildTested": false,
+  "pushed": false
+}

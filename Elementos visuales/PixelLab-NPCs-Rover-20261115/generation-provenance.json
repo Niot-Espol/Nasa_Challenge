@@ -1,0 +1,342 @@
+{
+  "jobs": [
+    {
+      "id": "869f4d57-7380-455d-9f64-deb4d99bacc4",
+      "labels": [
+        "bimo-base-result"
+      ],
+      "chargedGenerations": 5
+    },
+    {
+      "id": "f44a7ad2-80f3-4d1b-a237-fadfbd1a744b",
+      "labels": [
+        "bimo-east-corrected-queue",
+        "bimo-east-corrected-result"
+      ],
+      "description": "Rotate BIMO exactly NINETY DEGREES to a TRUE RIGHT-FACING SIDE PROFILE, EAST. This is a turntable rotation, NOT merely glancing sideways. Show ONE side pod and one side of the round white body, the dark face display on the FAR RIGHT EDGE pointing right, one visible cyan eye in profile. The front-facing broad two-eye screen must not face the viewer. Preserve white round shell, orange side thruster, compact robot identity and matching scale. Low top-down GBA RPG perspective. Entire robot fully inside 32x32 transparent canvas.",
+      "chargedGenerations": 5
+    },
+    {
+      "id": "0112b7f5-f29d-4643-ac92-559f889cf380",
+      "labels": [
+        "bimo-east-queue",
+        "bimo-east-result"
+      ],
+      "description": "Turn the SAME robot to face EAST, the RIGHT side of the screen. Show its right-facing facial screen in profile, NOT left. Same compact shell and orange markings. Preserve BIMO identity, dimensions, low top-down angle, clean outlined GBA pixel art. Whole robot inside unchanged 32x32 canvas, centered; no translation, no ground, transparent background.",
+      "chargedGenerations": 5
+    },
+    {
+      "id": "65028ac8-97ce-49d8-9770-b619fd59e319",
+      "labels": [
+        "bimo-idle-queue",
+        "bimo-idle-result"
+      ]
+    },
+    {
+      "id": "8874a2c6-dbe0-4aa3-9e1b-6c1ae593b8f5",
+      "labels": [
+        "bimo-move-east-corrected-queue",
+        "bimo-move-east-corrected-result"
+      ]
+    },
+    {
+      "id": "02a91c49-2a38-4a6a-a83d-a5a7f1947399",
+      "labels": [
+        "bimo-move-east-queue"
+      ]
+    },
+    {
+      "id": "66daea97-7dd1-43e1-ba83-94bf118a6681",
+      "labels": [
+        "bimo-move-north-queue",
+        "bimo-move-north-result"
+      ]
+    },
+    {
+      "id": "f1c7ffa9-7a2f-40db-9b82-a844167b87c7",
+      "labels": [
+        "bimo-move-south-queue",
+        "bimo-move-south-result"
+      ]
+    },
+    {
+      "id": "566fda17-1240-4bae-a536-c3ec0173fca6",
+      "labels": [
+        "bimo-north-queue",
+        "bimo-north-result"
+      ],
+      "description": "Turn the SAME robot to face NORTH, showing its BACK panel and rear propulsion pods; no face or eyes visible on its rear. Same compact shape and orange markings. Preserve BIMO identity, dimensions, low top-down angle, clean outlined GBA pixel art. Whole robot inside unchanged 32x32 canvas, centered; no translation, no ground, transparent background.",
+      "chargedGenerations": 5
+    },
+    {
+      "id": "c910f72c-832f-45fb-8740-e2bea26f41d3",
+      "labels": [
+        "bimo-portrait-alert-queue",
+        "bimo-portrait-alert-result"
+      ],
+      "description": "Change ONLY the digital eyes to widened concerned warning eyes, add ONE small amber status light on the screen. BIMO is worried and urgently helpful, never angry. SAME robot body, orange side pods, exact shell, outline, proportions, pose, 64x64 framing and pixel art. No text.",
+      "chargedGenerations": 5
+    },
+    {
+      "id": "64452e08-5179-4c31-8ed7-e67741b16d8c",
+      "labels": [
+        "bimo-portrait-happy-queue",
+        "bimo-portrait-happy-result"
+      ],
+      "description": "Change ONLY the cyan digital eyes to friendly joyful smiling crescent-shaped eyes, with a tiny happy cyan digital mouth. The SAME BIMO white robot portrait, exact body, orange side pods, outline, mechanical details, palette, pose and framing. Keep shell and silhouette pixel-identical where possible. No text.",
+      "chargedGenerations": 5
+    },
+    {
+      "id": "a30eae25-3d33-4940-bde6-0a3ebaa26709",
+      "labels": [
+        "bimo-portrait-neutral-queue",
+        "bimo-portrait-neutral-result"
+      ],
+      "description": "ONE head-and-shoulders dialogue portrait of BIMO, the EXACT SAME compact robot shown on RIGHT of reference collage: rounded white shell with dark navy facial screen and two cyan digital eyes, orange side propulsion pods and white/gray lower mechanical body. Calm attentive neutral expression. Use LEFT image ONLY for crisp 16-bit GBA portrait pixel rendering, dark outlines, restrained shading; DO NOT draw a human or a collage. Robot bust centered toward viewer, include both side pods and entire head, comfortable 2px margin. Single transparent 64x64 portrait, same white/navy/orange/cyan colors, strong recognizable silhouette, no text.",
+      "chargedGenerations": 5
+    },
+    {
+      "id": "4203d70f-b1d4-4f7a-923a-daff948b6403",
+      "labels": [
+        "luna-base-queue",
+        "luna-base-result"
+      ],
+      "description": "Full-body NPC sprite of Luna Torres, adult female MISSION OPERATIONS SPECIALIST, distinct from scientist Vega. Dark hair in neat ponytail, warm medium skin, composed professional friendly face, navy mission control uniform with cyan and subtle industrial orange accents, communications headset with a tiny microphone, ID badge and practical dark boots. NO lab coat, no helmet, no spacesuit. Same compact chibi proportions and native pixel scale as Vega reference, but different face and hairstyle. Low top-down GBA RPG view facing SOUTH straight toward viewer. Entire character centered approx 17px wide and 29px tall, feet at y30. Crisp dark outlines, refined readable pixels, restrained shading. ONE sprite only, 32x32 transparent, no ground shadow.",
+      "chargedGenerations": 5
+    },
+    {
+      "id": "a402c29a-e565-4bfb-9c63-8a1e6fadac93",
+      "labels": [
+        "luna-idle-queue",
+        "luna-idle-result"
+      ]
+    },
+    {
+      "id": "034d465e-8309-4850-8d6f-bbe46c5dc4d1",
+      "labels": [
+        "luna-portrait-queue",
+        "luna-portrait-result"
+      ],
+      "description": "ONE head-and-shoulders NEUTRAL dialogue portrait of Luna Torres, the EXACT woman shown as SMALL sprite on RIGHT: mission operations specialist, dark neat ponytail, warm medium skin, composed focused friendly expression, navy mission-control uniform with cyan and subtle orange accents, communication headset and tiny microphone, ID badge. No lab coat, no helmet. Use LEFT Vega crop ONLY for refined GBA portrait pixel rendering and outlining, never copy her hairstyle or outfit. Center entire head and shoulders within 64x64, hair not cropped, transparent background. Crisp 16-bit pixel art, few shading levels and limited palette. Not a collage.",
+      "chargedGenerations": 5
+    },
+    {
+      "id": "f586ccc4-764a-4142-9b94-ad75825915df",
+      "labels": [
+        "mateo-base-queue",
+        "mateo-base-result"
+      ],
+      "description": "Full-body NPC sprite of Mateo Rojas, adult male WORKSHOP ENGINEER, not an astronaut. Short dark brown hair, subtle beard stubble, warm medium skin, friendly experienced face. Charcoal gray technical jumpsuit, industrial orange shoulder panels, tool belt, work gloves, sturdy boots. SAME compact chibi body proportions and native pixel scale as Dr Elena Vega reference, NOT her face or outfit. Low top-down GBA RPG view, faces SOUTH straight toward viewer, feet near bottom at y30, centered body approx 17px wide, 29px tall. Crisp dark outlines and restrained shading, clear identity at 32px, transparent. No helmet, lab coat, tools in hands, floor or shadow. ONE character only.",
+      "chargedGenerations": 5
+    },
+    {
+      "id": "59bfdaa1-7aa7-47cf-a19c-defd71f5aa29",
+      "labels": [
+        "mateo-idle-queue",
+        "mateo-idle-result"
+      ]
+    },
+    {
+      "id": "4b72f5ac-cf8c-4b1a-b4dd-e28e445a8ae8",
+      "labels": [
+        "mateo-portrait-queue",
+        "mateo-portrait-result"
+      ],
+      "description": "ONE head-and-shoulders dialogue portrait of Mateo Rojas, EXACT SAME adult male workshop engineer as the SMALL sprite on RIGHT of reference: short dark brown hair, warm medium skin, subtle beard stubble, charcoal technical jumpsuit, industrial orange shoulder panels, friendly experienced confident NEUTRAL expression. Adult face with subtle laugh lines, no helmet. Use LEFT Dr Vega image ONLY as portrait pixel art style reference, never copy her face or lab coat. Match refined 16-bit GBA portrait rendering, clean dark outlines, limited palette and few shading levels. Center his entire head and shoulders in 64x64, no cropping hair, transparent background. Do NOT draw reference collage.",
+      "chargedGenerations": 5
+    },
+    {
+      "id": "26ef3a58-92b5-45be-9119-a1e59c756ff4",
+      "labels": [
+        "rover-east-queue",
+        "rover-east-result"
+      ],
+      "description": "Rotate this EXACT rover to face EAST, front pointing RIGHT. Low top-down side-on RPG angle, horizontal chassis, front camera mast and sampling arm pointing right. Three solid dark wheels on near lower side and corresponding far-side suspension, same SIX-wheel vehicle, white chassis, orange panels and proportions. Do not face left or toward viewer. Clean crisp GBA pixel art, simple grouped shading with dark outlines. No redesign, no equipment changes, no dust or ground. Keep whole vehicle centered inside 32x32 transparent canvas with clear margin.",
+      "chargedGenerations": 5
+    },
+    {
+      "id": "cc10a0c7-e3cf-4e3c-9cce-50e88c5e0c38",
+      "labels": [
+        "rover-north-queue",
+        "rover-north-result"
+      ],
+      "description": "Turn this EXACT rover 180 degrees to face NORTH, front pointing straight UP. Show rear panels toward viewer at bottom, same camera mast/sampling arm now toward upper side. SAME six solid dark wheels in two columns of three, white rectangular chassis, orange side markings, geometry and scale. Low top-down RPG view. Clean crisp GBA pixel art, simple grouped shading with dark outlines. No redesign, no equipment changes, no dust or ground. Keep whole vehicle centered inside 32x32 transparent canvas with clear margin.",
+      "chargedGenerations": 5
+    },
+    {
+      "id": "1758469c-5723-4899-8e9a-676e58f6bea7",
+      "labels": [
+        "rover-side-corrected-queue",
+        "rover-side-corrected-result"
+      ],
+      "description": "CORRECT CAMERA ANGLE ONLY: rotate the SAME rover into an EXACT ORTHOGRAPHIC SIDE ELEVATION, pointing RIGHT. This is NOT a three-quarter or isometric view. Camera at wheel axle height. NO TOP SURFACES of chassis visible and NO FRONT FACE visible. Show exactly THREE EQUAL-SIZED circular wheels in ONE STRAIGHT HORIZONTAL ROW on the near side, with rocker-bogie suspension. Long white rectangular side body with orange side panel, front camera mast and sampling arm to RIGHT, rear antenna to LEFT. Preserve the recognizable scientific rover, white/gray/orange colors and its components. Crisp hand-drawn 16-bit GBA pixel art with flat grouped shading. Entire vehicle centered in unchanged transparent 96x96 canvas, all wheels fully inside, generous margins. No perspective, ground or text.",
+      "chargedGenerations": 5
+    },
+    {
+      "id": "7c8efa0a-6f84-46b9-861d-767904dffa11",
+      "labels": [
+        "rover-side-queue",
+        "rover-side-result"
+      ],
+      "chargedGenerations": 10
+    },
+    {
+      "id": "e0674bc9-caf8-4090-aba1-8ebc4453b791",
+      "labels": [
+        "rover-south-polished-queue",
+        "rover-south-polished-result"
+      ],
+      "description": "Polish this SAME SOUTH-facing six-wheel rover into CLEAN hand-drawn GBA PIXEL ART. Preserve exact white body, orange side panels, camera mast and six-wheel layout (three down each side). Replace noisy speckles and grain with SIX SOLID readable dark rubber tires, short gray tread marks and simple mechanical joints. Strong crisp one-pixel dark outlines, flat grouped white and gray pixels with 3 shading levels, tiny cyan camera lens. NOT a miniature photograph, no disconnected specks or dust. Low top-down, front points DOWN. All parts inside unchanged transparent 32x32 canvas with a clear border. Keep same vehicle.",
+      "chargedGenerations": 5
+    },
+    {
+      "id": "72b15c3a-767d-4c6b-a929-c0992f970405",
+      "labels": [
+        "rover-south-queue",
+        "rover-south-result"
+      ],
+      "chargedGenerations": 10
+    }
+  ],
+  "failures": [
+    {
+      "asset": "BIMO East initial",
+      "reason": "First lateral was too frontal; discarded and corrected; its queued animation is not used",
+      "job": "0112b7f5-f29d-4643-ac92-559f889cf380"
+    },
+    {
+      "asset": "Rover South first pass",
+      "reason": "First 32px redraw had noisy/dithered tire details; polished before generating other directions",
+      "job": "72b15c3a-767d-4c6b-a929-c0992f970405"
+    },
+    {
+      "asset": "Rover workshop first pass",
+      "reason": "First edit retained an oblique camera; corrected to strict orthographic side elevation before accepting",
+      "job": "7c8efa0a-6f84-46b9-861d-767904dffa11"
+    }
+  ],
+  "notes": [
+    "BIMO portrait expressions: only screen ROI x=21..43,y=20..35 composited from PixelLab edits; body/framing held to neutral pixels.",
+    {
+      "asset": "Rover south",
+      "method": "Two wheel-tread phases; no body/suspension translation; both frames packed identically with nearest-neighbor to retain a 2px canvas margin",
+      "rawWheelMasks": [
+        [
+          0,
+          0,
+          5,
+          8
+        ],
+        [
+          25,
+          0,
+          5,
+          8
+        ],
+        [
+          0,
+          10,
+          5,
+          8
+        ],
+        [
+          25,
+          10,
+          5,
+          8
+        ],
+        [
+          0,
+          20,
+          5,
+          8
+        ],
+        [
+          25,
+          20,
+          5,
+          8
+        ]
+      ],
+      "changedFinalPixels": 66,
+      "bodyAndAlphaLocked": true
+    },
+    {
+      "asset": "Rover north",
+      "method": "Two wheel-tread phases; no body/suspension translation; both frames packed identically with nearest-neighbor to retain a 2px canvas margin",
+      "rawWheelMasks": [
+        [
+          1,
+          1,
+          5,
+          8
+        ],
+        [
+          26,
+          1,
+          5,
+          8
+        ],
+        [
+          1,
+          10,
+          5,
+          8
+        ],
+        [
+          26,
+          10,
+          5,
+          8
+        ],
+        [
+          1,
+          20,
+          5,
+          8
+        ],
+        [
+          26,
+          20,
+          5,
+          8
+        ]
+      ],
+      "changedFinalPixels": 72,
+      "bodyAndAlphaLocked": true
+    },
+    {
+      "asset": "Rover east",
+      "method": "Two wheel-tread phases; no body/suspension translation; both frames packed identically with nearest-neighbor to retain a 2px canvas margin",
+      "rawWheelMasks": [
+        [
+          1,
+          19,
+          7,
+          8
+        ],
+        [
+          11,
+          19,
+          7,
+          8
+        ],
+        [
+          21,
+          19,
+          7,
+          8
+        ]
+      ],
+      "changedFinalPixels": 60,
+      "bodyAndAlphaLocked": true
+    },
+    "Workshop profile: original oblique artwork + final East sprite supplied to edit_image; strict side camera corrected with Pro Flash; translated on transparent 96x96 canvas to center full vehicle without resampling."
+  ],
+  "accountUsage": {
+    "observedGenerationsUsedBefore": 0,
+    "observedGenerationsUsedAfter": 102,
+    "observedDelta": 102,
+    "generationsRemaining": 1898
+  }
+}

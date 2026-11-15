@@ -68,6 +68,7 @@ Elementos visuales/                   zips originales de los personajes (fuente;
 **El juego se puede jugar de principio a fin con placeholders.** Flujo: Título → Hub → Taller → Lanzamiento → Marte → Reporte → (Rediseñar → Taller | Terminar → Título).
 
 ### Hecho
+- **Arte NPCs/rover preparado localmente:** BIMO (idle + movimiento S/N/E y tres retratos), Mateo y Luna (idle + retrato) y rover (dos frames por S/N/E + perfil). Ver `Assets/_Project/Art/GENERATED_ASSETS_REPORT.md`; PNG completos y metadatos incluidos, integración en Unity pendiente, sin cambios en los protagonistas/Vega ni push.
 - **Dra. Elena Vega: recursos aportados guardados:** ocho orientaciones y nueve frames de idle en `Art/Sprites/Characters/DrElenaVega/`; retratos neutral, feliz y preocupada (128×128) en `Art/Sprites/Portraits/DrElenaVega/`, todos con `.meta`. Fuentes y manifiesto en `Elementos visuales/DrElenaVega/`. Pendiente conectar a escenas, diálogos y animación.
 - **Fuentes de terrenos entregadas:** `Elementos visuales/Mars-Crafts-Terrenos/` contiene la biblioteca de 182 piezas, tiles de 32 px, exterior, interiores, catálogo y editables; ver su README para la diferencia con la escala de 16 px del juego. Entrega de fuentes; la integración del Tilemap sigue pendiente.
 - **Base:** 6 escenas en Build Settings, en orden. `SceneFlow` navega por nombre (`Go`, `NewGame`, `Redesign`, `BackToTitle`). `SceneFader` (fundido) y `PauseMenu` (Esc) se crean solos. `AudioManager` + `Resources/AudioLibrary.asset` con todos los sonidos y músicas ya llamados desde el código.
