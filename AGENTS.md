@@ -33,7 +33,7 @@
 | Input | **Solo el Input System nuevo** (`Keyboard.current`, Input Actions). `UnityEngine.Input` lanza una excepción. |
 | UI | UGUI + **TextMeshPro** (TMP Essentials importado). `EventSystem` con `InputSystemUIInputModule`. |
 | Física | Physics 2D. Usa `rb.linearVelocity`, no `velocity`. |
-| Pixel art | **32 px = 1 unidad** para todo (tiles de 32×32 = 1 celda, personajes 32×32, objetos a su tamaño nativo); el rover a 64 px = 1 unidad. Filtro Point, sin compresión. `PixelArtImporter` lo aplica según la carpeta. Orden por Y en las cámaras (`TransparencySortMode.CustomAxis` (0,1,0)). |
+| Pixel art | **32 px = 1 unidad** para todo (tiles de 32×32 = 1 celda, personajes 32×32, objetos a su tamaño nativo); el rover a 64 px = 1 unidad. Filtro Point, sin compresión. `PixelArtImporter` lo aplica según la carpeta. Orden por Y: `YSortCamera` en la cámara (`CustomAxis` (0,1,0)) y los sprites del mundo con *Sprite Sort Point = Pivot* (pivote en los pies/base). Objetos nuevos: menú *Mars Crafts › Orden por profundidad › Aplicar en la escena abierta*. |
 | IA | **MCP for Unity** (`com.coplaydev.unity-mcp`). Con Unity abierto, sirve en `http://127.0.0.1:8080/mcp`. En Claude Code: `claude mcp add --transport http unityMCP http://127.0.0.1:8080/mcp`. |
 
 ## 3. Arquitectura (resumen; detalle en `docs/architecture/`)
