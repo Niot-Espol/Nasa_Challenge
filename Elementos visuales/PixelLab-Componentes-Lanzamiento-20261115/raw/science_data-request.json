@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one tiny 16x16 pixel art resource icon representing collected scientific research data in Mars Crafts.\n\nA compact clearly recognizable scientific magnifying glass with a light steel rim, restrained cyan lens, short dark handle and a small simple data sample or research plate behind it.\n\nThe silhouette should communicate scientific investigation and collected research information at a glance.\n\nAuthentic Game Boy Advance spacecraft HUD pixel art, crisp dark outlines, limited blue-gray and cyan palette, centered transparent background.\n\nNo text, no letters, no numbers, no complex chart, no large document, no frame.",
+  "size": [
+    16,
+    16
+  ],
+  "reference": "hud-ref.png",
+  "transparent": true
+}

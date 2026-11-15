@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one isolated 32x32 pixel art inventory icon of a small compact spacecraft battery module for a Mars rover.\n\nShow a single rectangular rugged battery pack, dark blue-gray industrial housing, light gray metallic upper casing, two small electrical connector terminals, a simple restrained cyan energy status stripe and tiny orange mounting details.\n\nCompact, lightweight-looking proportions with a clean recognizable mechanical silhouette.\n\nUse the same three-quarter product presentation view, upper-left lighting, lower-right shadows, pixel scale and dark outlines as the existing Mars Crafts equipment icon set.\n\nAuthentic refined 16-bit Game Boy Advance pixel art, limited metallic color palette.\n\nCentered complete object, transparent background, no text, no capacity number, no interface frame, no rover, no scenery.",
+  "size": [
+    32,
+    32
+  ],
+  "reference": "solar-rover-ref.png",
+  "transparent": true
+}

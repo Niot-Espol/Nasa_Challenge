@@ -1,0 +1,957 @@
+{
+  "assets": [
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Components/solar_panels.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "solar_panels",
+      "job_id": "e52035da-e716-4506-800a-d0930febff32",
+      "bounds": [
+        3,
+        8,
+        29,
+        24
+      ],
+      "visibleColors": 33,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "5a83316711b7bf746505761ec1ca12e231d3501080651407ae168f2fa8aea7f8",
+      "note": "Scaled with Nearest Neighbor only as needed to preserve transparent margins.",
+      "componentId": "power_solar"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Components/rtg_generator.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "rtg_generator",
+      "job_id": "3e1755bc-d8b5-4d21-8f57-1e50350330c7",
+      "bounds": [
+        3,
+        8,
+        29,
+        24
+      ],
+      "visibleColors": 23,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "1d26f6317e12676d2103e394851eaa633a6c6abdd13c948090aecebc6fb4ebb6",
+      "note": "Scaled with Nearest Neighbor only as needed to preserve transparent margins.",
+      "componentId": "power_rtg"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Components/battery_small.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "battery_small",
+      "job_id": "1d510480-03b8-431c-a4a8-6bc243ca1466",
+      "bounds": [
+        6,
+        7,
+        26,
+        25
+      ],
+      "visibleColors": 33,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "f0758a634147839042d5d5f9746ec33e1542c9f95374103704266e7684c5d53f",
+      "note": "Scaled with Nearest Neighbor only as needed to preserve transparent margins.",
+      "componentId": "battery_small"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Components/battery_large.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "battery_large_retry",
+      "job_id": "e0b5f03a-8ded-435e-87d6-78240b7e6741",
+      "bounds": [
+        3,
+        5,
+        29,
+        26
+      ],
+      "visibleColors": 30,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "347e641062780c066c2d238e17511adffb637c13fec4cc931367ec0c213afa0c",
+      "note": "Scaled with Nearest Neighbor only as needed to preserve transparent margins.",
+      "componentId": "battery_large"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Components/camera.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "camera",
+      "job_id": "e34e8bcb-5c00-4884-aabe-e151b90995fa",
+      "bounds": [
+        5,
+        4,
+        26,
+        28
+      ],
+      "visibleColors": 30,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "5019e1c792a0782d0f8762f2bc4300c920003d645d0fdf4db4b948b5ab457172",
+      "note": "Scaled with Nearest Neighbor only as needed to preserve transparent margins.",
+      "componentId": "instrument_camera"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Components/spectrometer.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "spectrometer",
+      "job_id": "49c30509-bb00-4e63-84e5-38aebbd446b0",
+      "bounds": [
+        3,
+        6,
+        28,
+        26
+      ],
+      "visibleColors": 50,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "e1d482576ec57d8751312efc3dae30a30d4f8a17dbe309ab5ad355c2c5fda714",
+      "note": "Scaled with Nearest Neighbor only as needed to preserve transparent margins.",
+      "componentId": "instrument_spectrometer"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Components/drill_arm.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "drill_arm",
+      "job_id": "0515c520-336d-4bcc-adca-1415a2110e02",
+      "bounds": [
+        5,
+        4,
+        27,
+        27
+      ],
+      "visibleColors": 30,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "5feec5184c5ecaacb54a188a8969af433c5556060434668ad4aac232f0a37471",
+      "note": "Scaled with Nearest Neighbor only as needed to preserve transparent margins.",
+      "componentId": "instrument_drill"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Components/direct_antenna.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "direct_antenna",
+      "job_id": "ae6ac3c6-2f1c-4be4-b285-0168161a5282",
+      "bounds": [
+        7,
+        3,
+        25,
+        29
+      ],
+      "visibleColors": 32,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "3e311cca9b9d672940ea95ff7829292384179a82d135e71db44f084842e4babf",
+      "note": "Scaled with Nearest Neighbor only as needed to preserve transparent margins.",
+      "componentId": "comms_direct"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Components/orbital_relay.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "orbital_relay",
+      "job_id": "5a2623f9-2c97-4326-a1af-b3685031668c",
+      "bounds": [
+        3,
+        7,
+        28,
+        25
+      ],
+      "visibleColors": 41,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "2fe500919b62a58c2bbf99c6f61a1bcca0571d7b49101234c37307571cb25bf9",
+      "note": "Scaled with Nearest Neighbor only as needed to preserve transparent margins.",
+      "componentId": "comms_relay"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Components/wheels_standard.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "wheels_standard",
+      "job_id": "a428be25-b76d-4cd9-b21b-03ad4600f81c",
+      "bounds": [
+        5,
+        6,
+        27,
+        25
+      ],
+      "visibleColors": 9,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "e873c01c076b1405cba5888de2084fb591d26a5bde71aa70c5d483f61c281e00",
+      "note": "Scaled with Nearest Neighbor only as needed to preserve transparent margins.",
+      "componentId": "wheels_standard"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Components/wheels_all_terrain.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "wheels_all_terrain",
+      "job_id": "b8204718-c5d5-4e5c-8b1d-19de5ef62f53",
+      "bounds": [
+        3,
+        6,
+        29,
+        26
+      ],
+      "visibleColors": 29,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "6287f5847d0b6f441aff85cb7af8e3e59fc9b753b3c1a4202f48d3341c833ef2",
+      "note": "Scaled with Nearest Neighbor only as needed to preserve transparent margins.",
+      "componentId": "wheels_allterrain"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Components/launcher_light.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "launcher_light",
+      "job_id": "8d2974f7-b2e9-4e4f-9aa0-a176ed5a94e0",
+      "bounds": [
+        13,
+        4,
+        19,
+        29
+      ],
+      "visibleColors": 23,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "e7e20c7ade500d3cbf5fe9a44fe102b1d3bb8c2a93dc64d1b8af8b495fb0aaea",
+      "note": "Scaled with Nearest Neighbor only as needed to preserve transparent margins.",
+      "componentId": "launcher_light"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Components/launcher_medium.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "launcher_medium",
+      "job_id": "9369f5b1-0c2c-4a03-b9bb-0bf4ae11cdd5",
+      "bounds": [
+        11,
+        3,
+        21,
+        29
+      ],
+      "visibleColors": 37,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "0294e8de8ce7c6947fbc3462114144b77f72bdc89499483284bbdec56cd551ab",
+      "note": "Scaled with Nearest Neighbor only as needed to preserve transparent margins.",
+      "componentId": "launcher_medium"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Components/launcher_heavy.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "launcher_heavy",
+      "job_id": "84908e68-b9e6-4553-9961-fbad826c9bdc",
+      "bounds": [
+        10,
+        3,
+        22,
+        29
+      ],
+      "visibleColors": 27,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "03b9a97e27fc44e554450dc2c29a8bc864973623b85bf09bbc112b87909da44c",
+      "note": "Scaled with Nearest Neighbor only as needed to preserve transparent margins.",
+      "componentId": "launcher_heavy"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Resources/budget.png",
+      "size": [
+        16,
+        16
+      ],
+      "source": "budget",
+      "job_id": "646990ab-a9ca-4975-8ba6-6cd3fb555b4e",
+      "bounds": [
+        1,
+        1,
+        15,
+        15
+      ],
+      "visibleColors": 56,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "89540cd135075da2839ed603c99b580b233e17fa60aa46d14d3bc3d9bfad3adf",
+      "note": "Centered native icon with transparent margin."
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Resources/mass.png",
+      "size": [
+        16,
+        16
+      ],
+      "source": "mass",
+      "job_id": "e3ffeb06-be0c-42c1-8174-4c5c9457228e",
+      "bounds": [
+        1,
+        1,
+        15,
+        15
+      ],
+      "visibleColors": 50,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "5178df4ed526272c8a6d0303fcd7d3fc5a636c006166677526fb4e6a471400d2",
+      "note": "Centered native icon with transparent margin."
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Resources/energy.png",
+      "size": [
+        16,
+        16
+      ],
+      "source": "energy",
+      "job_id": "69dfa2ef-4c62-4cd5-9bf1-98f89265ad7b",
+      "bounds": [
+        2,
+        1,
+        14,
+        15
+      ],
+      "visibleColors": 39,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "c598c6ebb3fd47d03f66efa2921182fc37e778283fdc2b4775ecd8fd19d976f2",
+      "note": "Centered native icon with transparent margin."
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Resources/time_sols.png",
+      "size": [
+        16,
+        16
+      ],
+      "source": "time_sols_retry",
+      "job_id": "9adcd448-0d67-4494-be83-ebbb5b971da7",
+      "bounds": [
+        1,
+        1,
+        15,
+        15
+      ],
+      "visibleColors": 26,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "07d1bea4dc578a0fe3596531cf26d9a2e6ba9d2ec293bbfcbe27c2755cccb8a8",
+      "note": "Centered native icon with transparent margin."
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Resources/communications.png",
+      "size": [
+        16,
+        16
+      ],
+      "source": "communications",
+      "job_id": "325e3841-b25c-4cbb-808e-bd69ebd173c2",
+      "bounds": [
+        1,
+        1,
+        14,
+        15
+      ],
+      "visibleColors": 14,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "567eb8d5bd5f83d30eda44b9d5b88e358d121e38e8b34b3310135af730e58e0a",
+      "note": "Centered native icon with transparent margin."
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Resources/science_data.png",
+      "size": [
+        16,
+        16
+      ],
+      "source": "science_data",
+      "job_id": "f38eda95-21ba-44ea-9403-1d232ac4d6de",
+      "bounds": [
+        1,
+        1,
+        15,
+        15
+      ],
+      "visibleColors": 32,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "33a0908a972709af20f928f3765acc4468e2e98de369595ff2c8c0725cd84e76",
+      "note": "Centered native icon with transparent margin."
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Launch/Planets/planet_earth.png",
+      "size": [
+        64,
+        64
+      ],
+      "source": "reused_earth",
+      "job_id": null,
+      "bounds": [
+        3,
+        3,
+        61,
+        61
+      ],
+      "visibleColors": 31,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "6b35ce3317f3dab6576e2affa64d332256177530298642cad28109276501a104",
+      "note": "Existing 64px mission card reused; circular planetary portion isolated from opaque starfield and proportionally enlarged with Nearest Neighbor.",
+      "reference": "Assets/_Project/Art/UI/Missions/Cards/mission_earth.png"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Launch/Planets/planet_mars.png",
+      "size": [
+        64,
+        64
+      ],
+      "source": "reused_mars",
+      "job_id": null,
+      "bounds": [
+        3,
+        3,
+        61,
+        61
+      ],
+      "visibleColors": 25,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "7489d791d09c0390c3381377ad6aad90c0137d985ec3739a27253b8113c49582",
+      "note": "Existing 64px mission card reused; circular planetary portion isolated from opaque starfield and proportionally enlarged with Nearest Neighbor.",
+      "reference": "Assets/_Project/Art/UI/Missions/Cards/mission_mars.png"
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Launch/Rocket/launch_rocket.png",
+      "size": [
+        32,
+        64
+      ],
+      "source": "launch_rocket",
+      "job_id": "2342c31b-261b-4b3e-93f7-5486449d312f",
+      "bounds": [
+        11,
+        6,
+        20,
+        58
+      ],
+      "visibleColors": 34,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "78c2fca22028c5c096d6a1ccb88ef84cd3d7a794d0f6c40896fd69b03aeaa5b2",
+      "note": "Centered on original-size canvas with transparent margin."
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Launch/Spacecraft/cruise_spacecraft.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "cruise_spacecraft",
+      "job_id": "c94ab171-4488-45c2-8df2-a4730bb6f058",
+      "bounds": [
+        2,
+        7,
+        30,
+        25
+      ],
+      "visibleColors": 62,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "b938e1b3fcfbb912a8ed30f77cbe5ec7129e862d3b95dc43dd5d2df6802539fb",
+      "note": "Centered on original-size canvas with transparent margin."
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Launch/Backgrounds/launchpad_background.png",
+      "size": [
+        320,
+        180
+      ],
+      "source": "launchpad_background_retry",
+      "job_id": "1f574166-d00b-46ec-98b4-7b92f013d2d9",
+      "bounds": [
+        0,
+        0,
+        320,
+        180
+      ],
+      "visibleColors": 22,
+      "alpha": [
+        255
+      ],
+      "sha256": "4324656f70f505712d2df88157ebb01dac47abb3b59e08134145ae3c4d620cbb",
+      "note": "PixelLab background with rocket removed by a masked PixelLab inpaint; original outside mask preserved."
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Launch/Backgrounds/space_background.png",
+      "size": [
+        320,
+        180
+      ],
+      "source": "space_background",
+      "job_id": "d4af094e-5267-48b8-9b73-14d713410aed",
+      "bounds": [
+        0,
+        0,
+        320,
+        180
+      ],
+      "visibleColors": 8,
+      "alpha": [
+        255
+      ],
+      "sha256": "5527b7053c790fe136a13066fb1c81ddfffbcf85c62786a7b785830592dd5e71",
+      "note": "PixelLab background; space background opposite edges normalized for seamless repeat."
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Launch/Flame/rocket_flame_000.png",
+      "size": [
+        16,
+        32
+      ],
+      "source": "rocket_flame",
+      "job_id": "6def3937-6036-47bc-9abd-17d3ccfd1486",
+      "bounds": [
+        4,
+        1,
+        12,
+        30
+      ],
+      "visibleColors": 36,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "74014cfc7781d5fe7d268db46430940c36be633c1250c42dce71b01b9defacc1",
+      "note": "PixelLab animation frame; aligned with Nearest Neighbor; flame upper attachment pixels preserved.",
+      "animationJob": "004c6d04-240a-41d9-a2c4-b8d7d1fc610d",
+      "frame": 0,
+      "sourceFrame": 0
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Launch/Flame/rocket_flame_001.png",
+      "size": [
+        16,
+        32
+      ],
+      "source": "rocket_flame",
+      "job_id": "6def3937-6036-47bc-9abd-17d3ccfd1486",
+      "bounds": [
+        4,
+        1,
+        12,
+        28
+      ],
+      "visibleColors": 31,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "8f97a314e1494623f4962a37f8c4a9d89ad33fe9d78df8afabf104579914fe23",
+      "note": "PixelLab animation frame; aligned with Nearest Neighbor; flame upper attachment pixels preserved.",
+      "animationJob": "004c6d04-240a-41d9-a2c4-b8d7d1fc610d",
+      "frame": 1,
+      "sourceFrame": 1
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Launch/Flame/rocket_flame_002.png",
+      "size": [
+        16,
+        32
+      ],
+      "source": "rocket_flame",
+      "job_id": "6def3937-6036-47bc-9abd-17d3ccfd1486",
+      "bounds": [
+        4,
+        1,
+        12,
+        30
+      ],
+      "visibleColors": 29,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "a7a43be918f4377a08e2c49d3a2efd0091dc0274fc1a692a11172e3070d45519",
+      "note": "PixelLab animation frame; aligned with Nearest Neighbor; flame upper attachment pixels preserved.",
+      "animationJob": "004c6d04-240a-41d9-a2c4-b8d7d1fc610d",
+      "frame": 2,
+      "sourceFrame": 2
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Launch/Smoke/launch_smoke_000.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "launch_smoke",
+      "job_id": "98ee8f01-d616-4364-91f6-3ee2dbeaf9d2",
+      "bounds": [
+        6,
+        8,
+        25,
+        31
+      ],
+      "visibleColors": 28,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "99c599063e544d00f1e57bccee6ac258d5533ed899ace2d2e3291c9d0c0e7f6a",
+      "note": "PixelLab animation frame; centered and aligned to lower origin; last frame selected from the dispersed fifth returned image.",
+      "animationJob": "28fb6e4c-0e51-448b-8971-cab91f457009",
+      "frame": 0,
+      "sourceFrame": 0
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Launch/Smoke/launch_smoke_001.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "launch_smoke",
+      "job_id": "98ee8f01-d616-4364-91f6-3ee2dbeaf9d2",
+      "bounds": [
+        5,
+        6,
+        26,
+        31
+      ],
+      "visibleColors": 27,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "50f51ff06146600d829de617177db5619e06588cf22038f8b2ab6c87ad112472",
+      "note": "PixelLab animation frame; centered and aligned to lower origin; last frame selected from the dispersed fifth returned image.",
+      "animationJob": "28fb6e4c-0e51-448b-8971-cab91f457009",
+      "frame": 1,
+      "sourceFrame": 1
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Launch/Smoke/launch_smoke_002.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "launch_smoke",
+      "job_id": "98ee8f01-d616-4364-91f6-3ee2dbeaf9d2",
+      "bounds": [
+        5,
+        6,
+        26,
+        31
+      ],
+      "visibleColors": 25,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "4b9c0072c438b4929472032afbe22045f85395d0b6b7e827ce55f436d278587e",
+      "note": "PixelLab animation frame; centered and aligned to lower origin; last frame selected from the dispersed fifth returned image.",
+      "animationJob": "28fb6e4c-0e51-448b-8971-cab91f457009",
+      "frame": 2,
+      "sourceFrame": 2
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Launch/Smoke/launch_smoke_003.png",
+      "size": [
+        32,
+        32
+      ],
+      "source": "launch_smoke",
+      "job_id": "98ee8f01-d616-4364-91f6-3ee2dbeaf9d2",
+      "bounds": [
+        6,
+        9,
+        26,
+        31
+      ],
+      "visibleColors": 6,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "bb3f7362432364e5cddfb7c81c1cce11ac3944fd71f5429df56a6f0dd83e46c3",
+      "note": "PixelLab animation frame; centered and aligned to lower origin; last frame selected from the dispersed fifth returned image.",
+      "animationJob": "28fb6e4c-0e51-448b-8971-cab91f457009",
+      "frame": 3,
+      "sourceFrame": 4
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Resources/safe_mode.png",
+      "size": [
+        16,
+        16
+      ],
+      "source": "safe_mode",
+      "job_id": "46740c42-25cc-432a-bfef-8ba0537378bb",
+      "bounds": [
+        1,
+        1,
+        14,
+        15
+      ],
+      "visibleColors": 40,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "20b1c7e6e6b5436c29e70861e9f9a7fc0689ed9e0d44c5aafa65e472ee864591",
+      "note": ""
+    },
+    {
+      "path": "Assets/_Project/Art/Sprites/Icons/Resources/no_signal.png",
+      "size": [
+        16,
+        16
+      ],
+      "source": "derived_no_signal",
+      "job_id": null,
+      "bounds": [
+        1,
+        1,
+        15,
+        15
+      ],
+      "visibleColors": 14,
+      "alpha": [
+        0,
+        255
+      ],
+      "sha256": "3bf2a1737604a9a960b1853eb4966cd98bf07ccc38fd715b35de3fbb3861add0",
+      "note": "Derived from the existing communications icon by adding a pixel-perfect red slash; exact base symbol retained."
+    },
+    {
+      "path": "Assets/_Project/Art/UI/Workshop/workshop_background.png",
+      "size": [
+        320,
+        180
+      ],
+      "source": "workshop_background",
+      "job_id": "e638c122-5fc1-4d2c-a5bf-14e129462693",
+      "bounds": [
+        0,
+        0,
+        320,
+        180
+      ],
+      "visibleColors": 27,
+      "alpha": [
+        255
+      ],
+      "sha256": "c6e75a454fb2d9191f5cd0a5d07a38e29da09f09ff558c5e9a6491913ea3aae8",
+      "note": "Optional static 320x180 background, not wired into workshop."
+    }
+  ],
+  "jobs": [
+    {
+      "name": "solar_panels",
+      "job_id": "e52035da-e716-4506-800a-d0930febff32"
+    },
+    {
+      "name": "rtg_generator",
+      "job_id": "3e1755bc-d8b5-4d21-8f57-1e50350330c7"
+    },
+    {
+      "name": "battery_small",
+      "job_id": "1d510480-03b8-431c-a4a8-6bc243ca1466"
+    },
+    {
+      "name": "battery_large_retry",
+      "job_id": "e0b5f03a-8ded-435e-87d6-78240b7e6741"
+    },
+    {
+      "name": "camera",
+      "job_id": "e34e8bcb-5c00-4884-aabe-e151b90995fa"
+    },
+    {
+      "name": "spectrometer",
+      "job_id": "49c30509-bb00-4e63-84e5-38aebbd446b0"
+    },
+    {
+      "name": "drill_arm",
+      "job_id": "0515c520-336d-4bcc-adca-1415a2110e02"
+    },
+    {
+      "name": "direct_antenna",
+      "job_id": "ae6ac3c6-2f1c-4be4-b285-0168161a5282"
+    },
+    {
+      "name": "orbital_relay",
+      "job_id": "5a2623f9-2c97-4326-a1af-b3685031668c"
+    },
+    {
+      "name": "wheels_standard",
+      "job_id": "a428be25-b76d-4cd9-b21b-03ad4600f81c"
+    },
+    {
+      "name": "wheels_all_terrain",
+      "job_id": "b8204718-c5d5-4e5c-8b1d-19de5ef62f53"
+    },
+    {
+      "name": "launcher_light",
+      "job_id": "8d2974f7-b2e9-4e4f-9aa0-a176ed5a94e0"
+    },
+    {
+      "name": "launcher_medium",
+      "job_id": "9369f5b1-0c2c-4a03-b9bb-0bf4ae11cdd5"
+    },
+    {
+      "name": "launcher_heavy",
+      "job_id": "84908e68-b9e6-4553-9961-fbad826c9bdc"
+    },
+    {
+      "name": "budget",
+      "job_id": "646990ab-a9ca-4975-8ba6-6cd3fb555b4e"
+    },
+    {
+      "name": "mass",
+      "job_id": "e3ffeb06-be0c-42c1-8174-4c5c9457228e"
+    },
+    {
+      "name": "energy",
+      "job_id": "69dfa2ef-4c62-4cd5-9bf1-98f89265ad7b"
+    },
+    {
+      "name": "time_sols_retry",
+      "job_id": "9adcd448-0d67-4494-be83-ebbb5b971da7"
+    },
+    {
+      "name": "communications",
+      "job_id": "325e3841-b25c-4cbb-808e-bd69ebd173c2"
+    },
+    {
+      "name": "science_data",
+      "job_id": "f38eda95-21ba-44ea-9403-1d232ac4d6de"
+    },
+    {
+      "name": "launch_rocket",
+      "job_id": "2342c31b-261b-4b3e-93f7-5486449d312f"
+    },
+    {
+      "name": "cruise_spacecraft",
+      "job_id": "c94ab171-4488-45c2-8df2-a4730bb6f058"
+    },
+    {
+      "name": "launchpad_inpaint",
+      "job_id": "174cfef2-1844-4b6b-a1bd-5151171a71f1"
+    },
+    {
+      "name": "launchpad_background_retry",
+      "job_id": "1f574166-d00b-46ec-98b4-7b92f013d2d9"
+    },
+    {
+      "name": "space_background",
+      "job_id": "d4af094e-5267-48b8-9b73-14d713410aed"
+    },
+    {
+      "name": "rocket_flame_animation",
+      "job_id": "004c6d04-240a-41d9-a2c4-b8d7d1fc610d"
+    },
+    {
+      "name": "rocket_flame",
+      "job_id": "6def3937-6036-47bc-9abd-17d3ccfd1486"
+    },
+    {
+      "name": "launch_smoke_animation",
+      "job_id": "28fb6e4c-0e51-448b-8971-cab91f457009"
+    },
+    {
+      "name": "launch_smoke",
+      "job_id": "98ee8f01-d616-4364-91f6-3ee2dbeaf9d2"
+    },
+    {
+      "name": "safe_mode",
+      "job_id": "46740c42-25cc-432a-bfef-8ba0537378bb"
+    },
+    {
+      "name": "workshop_background",
+      "job_id": "e638c122-5fc1-4d2c-a5bf-14e129462693"
+    }
+  ],
+  "notes": []
+}

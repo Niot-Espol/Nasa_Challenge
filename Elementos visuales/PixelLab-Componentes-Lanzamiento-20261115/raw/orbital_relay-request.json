@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one isolated 32x32 pixel art inventory icon representing an orbital communication relay satellite for Mars Crafts.\n\nShow a compact scientific orbital satellite with a small white and blue-gray central spacecraft body, two symmetrical short dark blue solar panel wings, a small communication dish or antenna mounted above the central body, and restrained industrial orange markings.\n\nThe silhouette must clearly read as a small orbital satellite, distinct from the standalone direct communication dish antenna.\n\nUse a consistent three-quarter product presentation angle, upper-left illumination, crisp dark outlines, limited industrial space technology colors and authentic refined 16-bit Game Boy Advance pixel art.\n\nCenter the complete satellite inside a 32x32 transparent canvas with small margins.\n\nNo planet, no outer-space background, no radio-wave decoration, no text, no frame.",
+  "size": [
+    32,
+    32
+  ],
+  "reference": "solar-rover-ref.png",
+  "transparent": true
+}

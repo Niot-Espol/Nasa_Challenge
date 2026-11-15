@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one isolated 32x32 pixel art inventory icon of a pair of standard scientific Mars rover wheels.\n\nShow two compact dark charcoal metallic rover wheels in a consistent three-quarter product view, one slightly in front of the other, with readable circular light gray hubs, moderate simple tread grooves and subtle industrial mounting details.\n\nThe wheels should look lightweight and suitable for ordinary Martian terrain, with a relatively smooth controlled tread pattern.\n\nMatch the wheel construction and color palette of the existing Mars Crafts rover.\n\nAuthentic refined 16-bit Game Boy Advance pixel art, crisp dark outlines, upper-left highlights, limited metallic colors.\n\nCentered complete wheel assembly, transparent 32x32 canvas, no ground, no text, no frame, no entire rover.",
+  "size": [
+    32,
+    32
+  ],
+  "reference": "solar-rover-ref.png",
+  "transparent": true
+}

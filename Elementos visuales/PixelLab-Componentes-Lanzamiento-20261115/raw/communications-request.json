@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one tiny 16x16 pixel art HUD icon representing communication signal in Mars Crafts.\n\nA simple compact light gray communication antenna or small satellite dish with one or two clearly readable cyan radio-wave arcs, dark navy outline and restrained blue-gray metallic shading.\n\nThe symbol must communicate active communications instantly without requiring text.\n\nAuthentic Game Boy Advance pixel art, simple strong silhouette, centered transparent background, limited industrial palette.\n\nNo satellite spacecraft, no numbers, no text, no circle, no frame, no excessive glow.",
+  "size": [
+    16,
+    16
+  ],
+  "reference": "hud-ref.png",
+  "transparent": true
+}

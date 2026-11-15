@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create the large-capacity version of the exact supplied Mars Crafts small rover battery icon.\n\nPreserve the same industrial design family, metallic materials, dark outlines, blue-gray housing, cyan status stripe, connector style, three-quarter viewing angle and upper-left lighting.\n\nMake the battery noticeably larger and heavier-looking through a wider rectangular casing, two or three clearly visible modular battery sections and stronger mounting details.\n\nThe large battery must be recognizable as the upgraded version of the small battery, not a different device.\n\nKeep the complete object inside the same 32x32 transparent canvas with appropriate margins.\n\nAuthentic refined 16-bit Game Boy Advance pixel art.\n\nNo text, no capacity labels, no frame, no rover, no background.",
+  "size": [
+    32,
+    32
+  ],
+  "reference": "battery_small-result-0.png",
+  "transparent": true
+}

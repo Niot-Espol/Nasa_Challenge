@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create the medium-capacity launch vehicle icon from the same Mars Crafts rocket family as the supplied lightweight launcher.\n\nMaintain the same white and light gray spacecraft materials, industrial orange mission markings, dark engine details, crisp outlines, upright orientation, lighting direction and 16-bit Game Boy Advance pixel art style.\n\nMake the rocket visibly more substantial through a wider body, two clearly readable main stage sections, a larger engine assembly and subtle reinforced lower-stage details.\n\nIt must look like the intermediate launch vehicle between the light and heavy variants.\n\nKeep the complete rocket inside the same centered 32x32 transparent canvas.\n\nNo exhaust, no flame, no smoke, no ground, no text, no UI frame.",
+  "size": [
+    32,
+    32
+  ],
+  "reference": "launcher_light-result-0.png",
+  "transparent": true
+}

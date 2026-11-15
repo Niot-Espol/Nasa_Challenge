@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create the rugged all-terrain upgraded version of the exact supplied Mars Crafts standard rover wheel icon.\n\nPreserve the same two-wheel composition, three-quarter presentation angle, hub design, lighting direction, metallic color palette and overall visual family.\n\nMake the wheels noticeably wider and more robust, with clearly visible deep traction grooves, pronounced rugged metal tread cleats and reinforced metallic hubs.\n\nThe upgraded wheels must visually communicate greater traction and rocky-terrain capability without relying only on a color change.\n\nAuthentic refined 16-bit Game Boy Advance pixel art, clean dark outlines, restrained highlights.\n\nCentered complete assembly inside the same 32x32 transparent canvas.\n\nNo text, no ground, no rocks, no frame, no entire rover.",
+  "size": [
+    32,
+    32
+  ],
+  "reference": "wheels_standard-result-0.png",
+  "transparent": true
+}

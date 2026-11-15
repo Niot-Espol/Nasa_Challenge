@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one isolated 32x32 pixel art equipment inventory icon of a compact deployable solar panel assembly for a scientific Mars rover in Mars Crafts.\n\nShow two rectangular dark navy photovoltaic panel surfaces attached to a small central light gray metallic hinge and mounting bracket.\n\nUse a clearly readable grid of dark blue solar cells with restrained cyan highlights, thin pale steel borders, compact mechanical joints and a tiny industrial orange engineering accent.\n\nThree-quarter product presentation view with the upper surface and a small front-facing edge visible. Upper-left lighting, dark lower-right shading.\n\nAuthentic refined 16-bit Game Boy Advance pixel art, clean dark outlines, limited industrial space technology palette, visually consistent with the existing Mars Crafts rover and spacecraft UI.\n\nCenter the complete component inside a 32x32 transparent canvas with small even margins.\n\nOne item only. No rover, no ground, no interface button, no frame, no text, no background, no realistic gradients, no antialiasing.",
+  "size": [
+    32,
+    32
+  ],
+  "reference": "rover-ref.png",
+  "transparent": true
+}

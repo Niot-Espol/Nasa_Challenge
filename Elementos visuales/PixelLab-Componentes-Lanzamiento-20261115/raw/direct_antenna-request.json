@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one isolated 32x32 pixel art inventory icon of a direct-to-Earth communication dish antenna for a scientific Mars rover.\n\nShow a compact pale gray parabolic satellite dish with a visible concave surface, a small central feed receiver supported by thin mechanical struts, an adjustable dark blue-gray mounting arm and a compact rover-compatible mounting base.\n\nUse restrained cyan electronic accents, subtle industrial orange details, crisp dark outlines and carefully placed upper-left metallic highlights.\n\nThe dish should be clearly recognizable as a communication antenna, not a telescope or radar weapon.\n\nConsistent three-quarter product presentation angle, authentic detailed 16-bit Game Boy Advance pixel art.\n\nCentered complete component inside a 32x32 transparent canvas.\n\nNo text, no giant radio waves, no rover, no background, no UI frame.",
+  "size": [
+    32,
+    32
+  ],
+  "reference": "solar-rover-ref.png",
+  "transparent": true
+}

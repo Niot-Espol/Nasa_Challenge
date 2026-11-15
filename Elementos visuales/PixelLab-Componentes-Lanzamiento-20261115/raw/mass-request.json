@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one 16x16 pixel art resource icon representing payload mass for the Mars Crafts rover engineering interface.\n\nA simple compact industrial weight with a recognizable trapezoidal metal body, flat heavy base, small upper carrying handle, dark navy outline, pale steel upper-left highlight and dark blue-gray lower shading.\n\nThe symbol must clearly communicate weight or mass.\n\nAuthentic Game Boy Advance pixel art, strong readable silhouette, limited industrial colors, centered transparent background.\n\nNo letters, no kg label, no numbers, no frame, no realistic gradients.",
+  "size": [
+    16,
+    16
+  ],
+  "reference": "hud-ref.png",
+  "transparent": true
+}

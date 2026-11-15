@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one isolated 32x32 pixel art inventory icon of a compact scientific spectrometer instrument for a Mars exploration rover.\n\nShow a rugged light gray rectangular scientific analysis module with a small dark optical sampling aperture, precision sensor housing, compact metallic mounting bracket, subtle electronic connectors and a tiny restrained multicolor spectral indicator strip.\n\nUse white and blue-gray space technology materials, small cyan status details and a limited industrial palette.\n\nThe instrument must be visually distinct from a camera: focus on a scientific analyzer body and optical sampling aperture rather than a large photographic lens.\n\nConsistent three-quarter product presentation view, upper-left lighting, clean dark outlines, authentic refined 16-bit Game Boy Advance pixel art.\n\nCentered complete object inside a 32x32 transparent canvas.\n\nNo text, no giant rainbow, no laser weapon, no glowing beam, no rover, no environment, no interface frame.",
+  "size": [
+    32,
+    32
+  ],
+  "reference": "solar-rover-ref.png",
+  "transparent": true
+}

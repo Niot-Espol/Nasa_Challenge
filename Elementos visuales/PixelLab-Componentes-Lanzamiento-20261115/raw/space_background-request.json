@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pixflux",
+  "prompt": "Create an exact 320x180 seamless repeatable pixel art outer-space starfield background for the Mars Crafts interplanetary travel sequence.\n\nUse a deep near-black navy space background with a carefully balanced irregular distribution of tiny crisp white, pale blue and muted cyan pixel stars.\n\nMost stars should be one or two pixels, with only a few slightly larger restrained star clusters to provide visual variety.\n\nKeep the overall composition calm, dark and uncluttered so separate spacecraft, Earth and Mars planet sprites remain clearly readable.\n\nAuthentic 16-bit Game Boy Advance pixel art, limited color palette, exact square pixels.\n\nDesign the background to tile seamlessly horizontally and preferably vertically, without visible seams or abrupt edge changes.\n\nWide 16:9 composition.\n\nNo planets, no spacecraft, no large nebula, no galaxies dominating the scene, no text, no interface, no smooth gradients, no photorealism.",
+  "size": [
+    320,
+    180
+  ],
+  "reference": "background-palette-ref.png",
+  "transparent": false
+}

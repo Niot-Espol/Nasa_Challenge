@@ -1,0 +1,12 @@
+{
+  "files": 36,
+  "errors": [],
+  "checks": [
+    "PNG dimensions and loading",
+    "binary transparency and margins for sprites",
+    "Unity sprite .meta present",
+    "space background opposing edges match",
+    "flame anchor pixels match"
+  ],
+  "unityPlayTest": "not run; artwork has not been integrated"
+}

@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one isolated 32x32 pixel art rocket launch smoke cloud effect for Mars Crafts.\n\nA compact rounded irregular cluster of exhaust vapor and smoke, using pale gray-white upper highlights, light cool gray body tones and restrained blue-gray lower shadows.\n\nCreate volume through clean stepped pixel clusters, with a soft-looking organic cloud silhouette built from crisp square pixels rather than blurred edges.\n\nAuthentic 16-bit Game Boy Advance pixel art, matching the Mars Crafts scientific launch sequence.\n\nCentered complete cloud inside a transparent 32x32 canvas.\n\nNo rocket, no flame, no explosion, no black destruction smoke, no background, no text, no realistic gradients.",
+  "size": [
+    32,
+    32
+  ],
+  "reference": "rocket-small-ref.png",
+  "transparent": true
+}

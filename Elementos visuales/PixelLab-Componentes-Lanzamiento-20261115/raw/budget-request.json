@@ -1,0 +1,10 @@
+{
+  "tool": "create_image_pro_flash",
+  "prompt": "Create one tiny 16x16 pixel art resource icon representing mission budget or scientific mission credits in Mars Crafts.\n\nA compact recognizable golden credit token or coin with a crisp dark outline, light golden upper-left highlight, warm amber lower shading and a simple recessed geometric center mark.\n\nThe icon should communicate available budget at a glance.\n\nMatch the existing industrial Game Boy Advance style spacecraft UI.\n\nCentered transparent background, clean square pixels, limited colors, readable at actual 16x16 size.\n\nNo text, no numbers, no currency amount, no decorative frame, no realistic glow.",
+  "size": [
+    16,
+    16
+  ],
+  "reference": "hud-ref.png",
+  "transparent": true
+}

@@ -210,3 +210,63 @@ PixelLab MCP `edit_image_pro_flash` generó las vistas hacia abajo (`South`) y a
 Archivos finales: `Assets/_Project/Art/Sprites/Rover/DrivingV2/{South,North,East}/drive_{south,north,east}_{000..003}.png`, **12 PNG** de 80×64, RGBA transparente, Point, sin compresión ni mipmaps, pivote central y 32 PPU para igualar el rover ya asignado en `04_Mars`. Las versiones anteriores permanecen disponibles. Jobs MCP: South `a7865b6f-9678-402a-8f49-514addb40bed`, North `a938cc77-d4e0-4dc3-9178-ba98c00fd97e`, animación East `5fad21bd-f6a3-4445-bab9-b3000a1cc122`, South `928754a0-5084-4519-b729-07346c703916`, North `c30c00bd-01de-4970-99a4-2f77fff897e8`.
 
 `ROVER_DRIVING_PREVIEW.html` reproduce las cuatro direcciones y `ROVER_DRIVING_PREVIEW.png` las muestra sobre el suelo existente. Para asignar los frames al rover de la escena se agregó el comando del Editor **Mars Crafts → Art → Aplicar animación del rover a Marte**. Ejecutarlo en Unity abre `04_Mars`, rellena las tres listas del `DirectionalSpriteAnimator` y guarda la escena conservando controlador, posición, collider y movimiento. No se ejecutó aquí porque Unity no está instalado en este entorno; la prueba en Play y WebGL queda pendiente. En Play: mover con WASD/flechas hacia los cuatro lados y detenerse; las ruedas deben animarse al mover y volver al frame 000 en reposo.
+
+## Puntos 7, 8 y 9 — Componentes, recursos y lanzamiento (15 noviembre 2026)
+
+**Estado: arte generado y comprobado técnicamente; integración y validación visual por el equipo pendientes.** Las composiciones son propuestas, no capturas de una escena funcional.
+
+### Punto 7 — Componentes del taller
+
+14 PNG de 32×32 con transparencia en `Sprites/Icons/Components/`; el manifiesto vincula cada archivo a su ID real de `ComponentData`, sin modificar sus referencias ni valores. El fondo opcional `UI/Workshop/workshop_background.png` mide 320×180. El rover de perfil existente se reutilizó como referencia y en el montaje, sin modificaciones. Los iconos no se montan sobre él.
+
+### Punto 8 — Recursos
+
+Ocho PNG de 16×16 en `Sprites/Icons/Resources/`: presupuesto, masa, energía, soles, comunicaciones, datos científicos, modo seguro y sin señal. La variante sin señal reutiliza el icono de comunicaciones y agrega una línea roja con edición pixel-perfect.
+
+### Punto 9 — Lanzamiento y viaje
+
+En `Sprites/Launch/`: cohete separado 32×64; tres fotogramas de llama 16×32; cuatro de humo 32×32; fondos de plataforma y espacio 320×180; nave de crucero 32×32 y planetas de 64×64. La llama conserva el mismo anclaje superior; el humo final corresponde al quinto resultado devuelto para mostrar dispersión. Tierra y Marte se extrajeron de las tarjetas planetarias existentes con máscara circular y escalado Nearest Neighbor, sin regenerar los planetas. El fondo espacial normaliza sus dos píxeles exteriores al color dominante para que coincidan los bordes repetidos. El fondo de plataforma recibió un inpaint localizado para retirar el cohete generado dentro de la imagen; los píxeles fuera de la máscara proceden del fondo original.
+
+### Referencias, trazabilidad y verificación
+
+Se enviaron como referencias reales el rover de perfil, el icono solar para la familia de componentes, el icono pequeño para la batería grande, la rueda estándar para la todoterreno, el lanzador ligero para los otros, referencias del HUD y una paleta extraída de arte existente. Los PNG de origen y las solicitudes sin credenciales están en `Elementos visuales/PixelLab-Componentes-Lanzamiento-20261115/raw/`; `manifest.json` conserva dimensiones, IDs y hashes. Las primeras propuestas de batería grande, soles y plataforma fueron descartadas por recortes o cohete incrustado.
+
+Los nuevos sprites llevan `.meta` con Sprite Single, filtro Point, sin compresión ni mipmaps, alfa y 25 PPU según UI existente; el fondo espacial usa Repeat. Comprobación automatizada: 36 archivos, dimensiones y lectura PNG, alfa binario y márgenes, bordes de espacio coincidentes y anclaje de llama. Las composiciones y su `validation.json` están en `docs/art-review/componentes-recursos-lanzamiento/`.
+
+No se asignaron iconos en ScriptableObjects ni se modificaron escenas, prefabs, mecánicas o datos. Unity Play y WebGL no se ejecutaron; quedan pendientes la revisión visual por el equipo, la integración autorizada y las pruebas funcionales. No se realizó push.
+
+### Identificadores PixelLab
+
+| Generación | Job |
+|---|---|
+| `solar_panels` | `e52035da-e716-4506-800a-d0930febff32` |
+| `rtg_generator` | `3e1755bc-d8b5-4d21-8f57-1e50350330c7` |
+| `battery_small` | `1d510480-03b8-431c-a4a8-6bc243ca1466` |
+| `battery_large_retry` | `e0b5f03a-8ded-435e-87d6-78240b7e6741` |
+| `camera` | `e34e8bcb-5c00-4884-aabe-e151b90995fa` |
+| `spectrometer` | `49c30509-bb00-4e63-84e5-38aebbd446b0` |
+| `drill_arm` | `0515c520-336d-4bcc-adca-1415a2110e02` |
+| `direct_antenna` | `ae6ac3c6-2f1c-4be4-b285-0168161a5282` |
+| `orbital_relay` | `5a2623f9-2c97-4326-a1af-b3685031668c` |
+| `wheels_standard` | `a428be25-b76d-4cd9-b21b-03ad4600f81c` |
+| `wheels_all_terrain` | `b8204718-c5d5-4e5c-8b1d-19de5ef62f53` |
+| `launcher_light` | `8d2974f7-b2e9-4e4f-9aa0-a176ed5a94e0` |
+| `launcher_medium` | `9369f5b1-0c2c-4a03-b9bb-0bf4ae11cdd5` |
+| `launcher_heavy` | `84908e68-b9e6-4553-9961-fbad826c9bdc` |
+| `budget` | `646990ab-a9ca-4975-8ba6-6cd3fb555b4e` |
+| `mass` | `e3ffeb06-be0c-42c1-8174-4c5c9457228e` |
+| `energy` | `69dfa2ef-4c62-4cd5-9bf1-98f89265ad7b` |
+| `time_sols_retry` | `9adcd448-0d67-4494-be83-ebbb5b971da7` |
+| `communications` | `325e3841-b25c-4cbb-808e-bd69ebd173c2` |
+| `science_data` | `f38eda95-21ba-44ea-9403-1d232ac4d6de` |
+| `launch_rocket` | `2342c31b-261b-4b3e-93f7-5486449d312f` |
+| `cruise_spacecraft` | `c94ab171-4488-45c2-8df2-a4730bb6f058` |
+| `launchpad_inpaint` | `174cfef2-1844-4b6b-a1bd-5151171a71f1` |
+| `launchpad_background_retry` | `1f574166-d00b-46ec-98b4-7b92f013d2d9` |
+| `space_background` | `d4af094e-5267-48b8-9b73-14d713410aed` |
+| `rocket_flame_animation` | `004c6d04-240a-41d9-a2c4-b8d7d1fc610d` |
+| `rocket_flame` | `6def3937-6036-47bc-9abd-17d3ccfd1486` |
+| `launch_smoke_animation` | `28fb6e4c-0e51-448b-8971-cab91f457009` |
+| `launch_smoke` | `98ee8f01-d616-4364-91f6-3ee2dbeaf9d2` |
+| `safe_mode` | `46740c42-25cc-432a-bfef-8ba0537378bb` |
+| `workshop_background` | `e638c122-5fc1-4d2c-a5bf-14e129462693` |
