@@ -23,7 +23,32 @@ public class ReportScreen : MonoBehaviour
         var result = GameSession.EnsureResult();
         var rep = ReportBuilder.Build(design, result);
         Show(rep);
-        if (rep.Stars > 0) AudioManager.Play(Sfx.Success);
+        StartCoroutine(RevealStars(rep.Stars));
+    }
+
+    readonly System.Collections.Generic.List<Image> stars = new System.Collections.Generic.List<Image>();
+
+    // Las estrellas ganadas aparecen una por una, con un "ding" cada vez más agudo.
+    System.Collections.IEnumerator RevealStars(int count)
+    {
+        var th = UITheme.Current;
+        yield return new WaitForSecondsRealtime(0.6f);
+        for (int i = 0; i < count && i < stars.Count; i++)
+        {
+            var img = stars[i];
+            if (th != null && th.starFull != null) { img.sprite = th.starFull; img.color = Color.white; }
+            else img.color = th != null ? th.accent : Color.yellow;
+            AudioManager.Play(Sfx.StarDing, 1f + i * 0.12f);
+            for (float t = 0; t < 0.25f; t += Time.unscaledDeltaTime)
+            {
+                float k = 1f + 0.35f * Mathf.Sin(t / 0.25f * Mathf.PI);
+                img.transform.localScale = new Vector3(k, k, 1);
+                yield return null;
+            }
+            img.transform.localScale = Vector3.one;
+            yield return new WaitForSecondsRealtime(0.25f);
+        }
+        if (count == 3) AudioManager.Play(Sfx.Success);
     }
 
     public void Show(ReportData rep)
@@ -36,18 +61,15 @@ public class ReportScreen : MonoBehaviour
         if (starsRow != null)
         {
             UIKit.Clear(starsRow);
+            stars.Clear();
+            // Todas empiezan vacías; RevealStars enciende las ganadas.
             for (int i = 0; i < 3; i++)
             {
-                bool on = i < rep.Stars;
-                Sprite s = th != null ? (on ? th.starFull : th.starEmpty) : null;
-                if (s != null) UIKit.Icon(starsRow, "Star", s, new Vector2(starSize, starSize));
-                else
-                {
-                    // Sin sprite todavía: cuadro de color (naranja = ganada, gris = vacía)
-                    var img = UIKit.Icon(starsRow, "Star", null, new Vector2(starSize, starSize));
-                    img.enabled = true;
-                    img.color = th != null ? (on ? th.accent : new Color(0.3f, 0.34f, 0.42f)) : Color.white;
-                }
+                Sprite s = th != null ? th.starEmpty : null;
+                var img = UIKit.Icon(starsRow, "Star", s, new Vector2(starSize, starSize));
+                img.enabled = true;
+                img.color = s != null ? Color.white : new Color(0.3f, 0.34f, 0.42f);
+                stars.Add(img);
             }
         }
 

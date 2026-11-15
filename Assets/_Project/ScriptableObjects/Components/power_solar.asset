@@ -17,7 +17,7 @@ MonoBehaviour:
   category: 1
   mass: 40
   cost: 10
-  rechargePerSecond: 3
+  rechargePerSecond: 2.5
   powerSource: 1
   capacity: 0
   instrument: 0

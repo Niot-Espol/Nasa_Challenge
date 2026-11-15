@@ -17,6 +17,12 @@ public class MissionHUD : MonoBehaviour
     [SerializeField] Image scienceIcon;
     [SerializeField] TMP_Text statusText;        // MODO SEGURO / TORMENTA / SIN SEÑAL
     [SerializeField] TMP_Text messageText;       // mensajes de BIMO
+    [SerializeField] RectTransform messagePanel;  // se anima al llegar un mensaje
+    [SerializeField] UnityEngine.UI.Image messagePanelImage;
+    [SerializeField] float messageDimAfter = 6f;  // segundos hasta atenuarse
+
+    float messageAge = 999f;
+    Color panelBase;
 
     // compatibilidad con la versión anterior (solo texto)
     [SerializeField] TMP_Text statsText;
@@ -45,6 +51,31 @@ public class MissionHUD : MonoBehaviour
     void OnMessage(string m)
     {
         if (messageText != null) messageText.text = "<color=#FF9A3C>BIMO:</color> " + m;
+        messageAge = 0f;
+        AudioManager.Play(Sfx.Typing, 1.6f);
+    }
+
+    void AnimateMessage()
+    {
+        if (messagePanel == null) return;
+        if (messagePanelImage != null && panelBase.a == 0f) panelBase = messagePanelImage.color;
+        messageAge += Time.unscaledDeltaTime;
+        // Golpe de escala al llegar
+        float pop = messageAge < 0.35f ? 1f + 0.12f * Mathf.Sin(messageAge / 0.35f * Mathf.PI) : 1f;
+        messagePanel.localScale = new Vector3(pop, pop, 1f);
+        // Destello naranja que se desvanece
+        if (messagePanelImage != null)
+        {
+            var th = UITheme.Current;
+            Color flash = th != null ? th.accent : new Color(1f, 0.55f, 0.15f);
+            float f = Mathf.Clamp01(1f - messageAge / 0.8f);
+            Color c = Color.Lerp(panelBase, flash, f * 0.7f);
+            // Pasado un rato se atenúa para no molestar (el próximo mensaje vuelve a destacar)
+            float dim = messageAge > messageDimAfter ? Mathf.Lerp(1f, 0.45f, Mathf.Clamp01((messageAge - messageDimAfter) / 1.5f)) : 1f;
+            c.a = panelBase.a * dim;
+            messagePanelImage.color = c;
+            if (messageText != null) messageText.alpha = dim;
+        }
     }
 
     static void SetIcon(Image img, Sprite s)
@@ -56,6 +87,7 @@ public class MissionHUD : MonoBehaviour
 
     void Update()
     {
+        AnimateMessage();
         var mc = MissionController.Instance;
         if (mc == null) return;
         var s = mc.State;
@@ -80,9 +112,13 @@ public class MissionHUD : MonoBehaviour
         if (scienceText != null) scienceText.text = $"Puntos científicos: {s.Result.ScienceCount}/3";
 
         string status = "";
-        if (s.InSafeMode) status += "<color=#FF5555>MODO SEGURO</color>   ";
-        if (s.DustStormActive) status += "<color=#FFAA44>TORMENTA DE POLVO</color>   ";
-        if (s.CommsDown) status += "<color=#9FA8FF>SIN SEÑAL</color>";
+        if (s.InSafeMode)
+            status += s.DustStormActive && s.Design.UsesSolar
+                ? $"<color=#FF5555>MODO SEGURO · sin Sol, espera {mc.StormTimeLeft:0} s</color>   "
+                : $"<color=#FF5555>MODO SEGURO · recargando {Mathf.Clamp01(s.Energy / (s.MaxEnergy * MissionState.SafeModeResumeFraction)) * 100f:0}%</color>   ";
+        if (s.DustStormActive) status += $"<color=#FFAA44>TORMENTA {mc.StormTimeLeft:0} s</color>   ";
+        if (s.CommsDown) status += $"<color=#9FA8FF>SIN SEÑAL {mc.BlackoutTimeLeft:0} s</color>   ";
+        if (mc.IsScanning) status += $"<color=#7FE8FF>ESCANEANDO {mc.ScanProgress * 100f:0}%</color>";
         if (statusText != null) statusText.text = status;
 
         if (statsText != null)

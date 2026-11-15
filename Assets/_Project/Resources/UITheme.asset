@@ -77,5 +77,22 @@ MonoBehaviour:
   badgeCommander: {fileID: 0}
   badgeEfficient: {fileID: 0}
   badgeNoSafeMode: {fileID: 0}
-  portraitVega: {fileID: 0}
-  portraitBimo: {fileID: 0}
+  logo: {fileID: 0}
+  titleBackground: {fileID: 0}
+  missionEarth: {fileID: 0}
+  missionMoon: {fileID: 0}
+  missionMars: {fileID: 0}
+  launchBackground: {fileID: 0}
+  spaceBackground: {fileID: 0}
+  rocket: {fileID: 0}
+  rocketFlame: []
+  earth: {fileID: 0}
+  mars: {fileID: 0}
+  cruiseShip: {fileID: 0}
+  roverPreview: {fileID: 21300000, guid: 329054c98039456d9939c1693c89a5bd, type: 3}
+  portraitVega: {fileID: 21300000, guid: 80eb514c123a4364a9ca1afbbe98e5c4, type: 3}
+  portraitVegaHappy: {fileID: 21300000, guid: 268270ac09664440b55524f8958758e2, type: 3}
+  portraitVegaWorried: {fileID: 21300000, guid: 6bb0334bcfee4366971d595465968e30, type: 3}
+  portraitBimo: {fileID: 21300000, guid: c812c16c956343d98b6c6d27fda83043, type: 3}
+  portraitBimoHappy: {fileID: 21300000, guid: 4f06671c98754b738404a03d73e8210a, type: 3}
+  portraitBimoAlert: {fileID: 21300000, guid: e33533d2de3047f081b420bd0ee8fff6, type: 3}

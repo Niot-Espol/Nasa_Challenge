@@ -15,6 +15,9 @@ public class DialogueBox : MonoBehaviour
     public static bool IsOpen => Instance != null && Instance.open;
     // Frame en que se cerró: los interactuables ignoran la E de ese frame (para no reabrir).
     public static int LastClosedFrame { get; private set; } = -1;
+    // Id del elemento de UI a resaltar (UIHighlight lo escucha). null = ninguno.
+    public static event Action<string> HighlightChanged;
+    static void SetHighlight(string id) => HighlightChanged?.Invoke(string.IsNullOrEmpty(id) ? null : id);
 
     [SerializeField] GameObject root;            // se activa/desactiva
     [SerializeField] ThemedImage frame;          // DialogueBox o FactPopup según el uso
@@ -24,6 +27,7 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] TMP_Text sourceText;        // solo en datos NASA
     [SerializeField] TMP_Text hintText;          // "E para continuar"
     [SerializeField] float charsPerSecond = 55f;
+    [SerializeField] int charsPerBlip = 2;        // cada cuántas letras suena el tecleo
 
     DialogueLine[] lines;
     int index;
@@ -32,6 +36,9 @@ public class DialogueBox : MonoBehaviour
     Action onDone;
     Coroutine typer;
     float prevTimeScale = 1f;
+    float typingPitch = 1f;
+
+    static float PitchFor(Speaker s) => s == Speaker.Bimo ? 1.3f : s == Speaker.Vega ? 0.9f : 1f;
 
     void Awake()
     {
@@ -61,8 +68,10 @@ public class DialogueBox : MonoBehaviour
         lines = new[] { new DialogueLine { speaker = Speaker.Bimo, text = fact } };
         index = 0; onDone = done;
         Open(UIElement.FactPopup);
+        typingPitch = PitchFor(Speaker.Bimo);
+        SetHighlight(null);
         if (nameText != null) nameText.text = title;
-        SetPortrait(Speaker.Bimo);
+        SetPortrait(Speaker.Bimo, Expression.Happy);
         if (sourceText != null)
         {
             sourceText.gameObject.SetActive(!string.IsNullOrEmpty(source));
@@ -84,16 +93,20 @@ public class DialogueBox : MonoBehaviour
     {
         AudioManager.Play(Sfx.Dialogue);
         var l = lines[index];
+        typingPitch = PitchFor(l.speaker);
+        SetHighlight(l.highlight);
         if (nameText != null) nameText.text = DialogueData.SpeakerName(l.speaker);
-        SetPortrait(l.speaker);
+        SetPortrait(l.speaker, l.expression);
         Type(l.text);
     }
 
-    void SetPortrait(Speaker s)
+    void SetPortrait(Speaker s, Expression e = Expression.Neutral)
     {
         if (portrait == null) return;
-        var sp = DialogueData.Portrait(s);
+        var sp = DialogueData.Portrait(s, e);
         portrait.sprite = sp;
+        portrait.enabled = sp != null;
+        portrait.preserveAspect = true;
         portrait.gameObject.SetActive(sp != null);
     }
 
@@ -111,10 +124,18 @@ public class DialogueBox : MonoBehaviour
         bodyText.ForceMeshUpdate();
         int total = bodyText.textInfo.characterCount;
         float shown = 0;
+        int lastBlip = 0;
         while (shown < total)
         {
             shown += charsPerSecond * Time.unscaledDeltaTime;
-            bodyText.maxVisibleCharacters = Mathf.Min(total, (int)shown);
+            int visible = Mathf.Min(total, (int)shown);
+            bodyText.maxVisibleCharacters = visible;
+            if (visible - lastBlip >= charsPerBlip)
+            {
+                lastBlip = visible;
+                char c = bodyText.textInfo.characterInfo[Mathf.Max(0, visible - 1)].character;
+                if (!char.IsWhiteSpace(c)) AudioManager.PlayTyping(typingPitch);
+            }
             yield return null;
         }
         bodyText.maxVisibleCharacters = int.MaxValue;
@@ -151,6 +172,7 @@ public class DialogueBox : MonoBehaviour
     void Close()
     {
         open = false;
+        SetHighlight(null);
         if (root != null) root.SetActive(false);
         Time.timeScale = prevTimeScale;
         LastClosedFrame = Time.frameCount;

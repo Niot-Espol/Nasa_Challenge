@@ -17,9 +17,9 @@ public enum ScanStatus
 public class MissionState
 {
     // Reglas de exploración (unidades de juego, ver docs/game-design/sistema-recursos-y-assets.md)
-    public const float DefaultMoveCostPerSecond = 2f;   // doc decía 1; con 1 los paneles (3/s) nunca se vacían
+    public const float DefaultMoveCostPerSecond = 3f;   // doc decía 1; con menos de 3 los paneles casi nunca se vacían
     public const float SafeModeResumeFraction = 0.3f;   // sale del modo seguro al recargar 30 %
-    public const float DefaultTimeLimit = 240f;          // 4 minutos reales
+    public const float DefaultTimeLimit = 150f;          // 2.5 minutos reales
 
     public readonly RoverDesign Design;
     public readonly MissionResult Result = new MissionResult();

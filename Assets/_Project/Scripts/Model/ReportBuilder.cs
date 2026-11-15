@@ -71,7 +71,7 @@ public static class ReportBuilder
 
         if (d.UsesSolar && safeDuringStorm)
             rep.Lines.Add(new ReportLine(ReportTone.Bad,
-                "Elegiste paneles solares: la tormenta de polvo cortó la recarga y el rover entró en modo seguro."));
+                "Elegiste paneles solares: la tormenta de polvo tapó el Sol, cortó la recarga y el rover quedó detenido en modo seguro. Con un RTG habría seguido recargando."));
         else if (d.UsesSolar && storm)
             rep.Lines.Add(new ReportLine(ReportTone.Good,
                 "La tormenta apagó tus paneles solares, pero tu batería aguantó hasta que pasó."));

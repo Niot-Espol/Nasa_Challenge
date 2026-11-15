@@ -26,7 +26,8 @@ public class PixelArtImporter : AssetPostprocessor
 
         var importer = (TextureImporter)assetImporter;
         importer.textureType = TextureImporterType.Sprite;
-        importer.spriteImportMode = SpriteImportMode.Single;
+        // Las hojas cortadas en varias piezas (Multiple) se respetan; lo demás es un sprite único.
+        if (importer.spriteImportMode != SpriteImportMode.Multiple) importer.spriteImportMode = SpriteImportMode.Single;
         importer.spritePixelsPerUnit = ppu;
         importer.filterMode = FilterMode.Point;
         importer.textureCompression = TextureImporterCompression.Uncompressed;
@@ -36,6 +37,7 @@ public class PixelArtImporter : AssetPostprocessor
 
         var settings = new TextureImporterSettings();
         importer.ReadTextureSettings(settings);
+        if (importer.spriteImportMode == SpriteImportMode.Multiple) { importer.SetTextureSettings(settings); return; }
         settings.spriteAlignment = (int)pivot;
         settings.spriteMeshType = SpriteMeshType.FullRect;
         importer.SetTextureSettings(settings);

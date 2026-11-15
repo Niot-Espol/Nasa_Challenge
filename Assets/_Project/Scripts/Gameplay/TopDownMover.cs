@@ -10,6 +10,7 @@ public class TopDownMover : MonoBehaviour
     public Vector2 Facing { get; private set; } = Vector2.down; // para animaciones e interacción
     public bool IsMoving => input.sqrMagnitude > 0.01f;          // para gastar energía mientras se mueve
     public bool CanMove { get; set; } = true;                    // se apaga en diálogos o en modo seguro
+    public float SpeedMultiplier { get; set; } = 1f;             // zonas lentas (sedimento blando)
 
     Rigidbody2D rb;
     Vector2 input;
@@ -32,6 +33,6 @@ public class TopDownMover : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.linearVelocity = input * speed;
+        rb.linearVelocity = input * speed * SpeedMultiplier;
     }
 }
