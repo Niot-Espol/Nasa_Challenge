@@ -11,7 +11,7 @@ La visión narrativa comprende misiones a Tierra, Luna y Marte. El **alcance aco
 - Motor: Unity **6000.5.4f1**, proyecto Unity 2D, URP 2D, Input System nuevo, UGUI/TextMeshPro, Cinemachine y Physics 2D. Las versiones concretas están en `ProjectSettings/ProjectVersion.txt` y `Packages/manifest.json`.
 - Repositorio: <https://github.com/Niot-Espol/Nasa_Challenge>; rama principal: `main`.
 - Danilo es el integrador y responsable de Unity según `AGENTS.md`; los demás nombres, funciones y disponibilidad del equipo no están confirmados. Coordinar con él los cambios en escenas. El usuario ha dirigido la selección y generación de arte; Codex generó/preparó varias entregas con PixelLab.
-- Referencia exacta de la última entrega: rama publicada `art/componentes-recursos-lanzamiento-20261115`, commit `eedfb40`, basada en `83b9537`. Se hizo push de la rama; **no se comprobó su fusión en `main`**. Consultar GitHub y el estado remoto actual. Este documento se creó después del push y, hasta que el usuario lo suba, solo existe en su copia local.
+- El arte `eedfb40` se incorporó a `main` en `21e20fc` y el equipo lo integró en Unity en `2e3e2ed`. El documento de contexto se añadió en `b4688f8`; verificar el estado remoto actual.
 
 ## 2. Historia y personajes
 
@@ -51,7 +51,7 @@ Según `AGENTS.md`, los scripts y la documentación de diseño, existe una base 
 - Interacción con NPCs y diálogos basados en datos. El briefing habilita el acceso al taller; BIMO comunica avisos. El detalle exacto de diálogos y conexiones visuales debe verificarse en Unity.
 - Taller con categorías energía, batería, instrumentos, comunicaciones, ruedas y lanzador. El jugador selecciona componentes; el verificador comprueba restricciones y explica problemas. La vista previa del rover conserva su diseño único. El botón de lanzar depende de la validez de la configuración.
 - Recursos de juego: presupuesto, masa, capacidad de lanzamiento, energía/recarga y condiciones de comunicación. Solar ofrece más ciencia con vulnerabilidad durante tormentas; RTG ofrece energía estable con otras compensaciones. Son valores educativos de juego, no especificaciones reales.
-- Cuenta regresiva, despegue y viaje Tierra→Marte mediante `LaunchSequence`; se documenta omisión con espacio/clic. El arte nuevo de esta transferencia todavía no estaba conectado a la secuencia.
+- Cuenta regresiva, despegue y viaje Tierra→Marte mediante `LaunchSequence`; se documenta omisión con espacio/clic. El equipo conectó la entrega gráfica en `2e3e2ed`; verificar en Play.
 - Exploración de Marte con tres puntos científicos, popup de datos y fuente, HUD, área rocosa condicionada por ruedas todoterreno y eventos de tormenta y pérdida de comunicación. La documentación registra tormenta a 45 s durante 30 s, apagón a 100 s y misión de 240 s; confirmar valores en configuración vigente antes de usarlos como constantes. El avance temporal tiene condiciones específicas en el código.
 - Informe con puntuación, estrellas/insignias, explicación de causas y decisiones, comparación con Perseverance y regreso al taller. Modo seguro busca evitar un bloqueo definitivo.
 
@@ -83,19 +83,19 @@ Estado según la lista vigente en la rama de arte y los reportes (un `[x]` puede
 | 4 Marte | Tileset/suelo, rocas y borde del cráter reportados integrados. Cauce y delta funcionan con bordes escalonados; faltan transiciones/esquinas y depósitos sedimentarios como pulido. |
 | 5 Objetos Marte | La lista más reciente declara integrados puntos, módulo, indicadores, escaneo y polvo; notas anteriores del reporte dicen pendiente. Verificar escena/historial antes de modificar. |
 | 6 Hub | `LabTileset.png` y elementos de interior reportados en juego; conservar construcciones y arquitectura visual elegidas. |
-| 7 Taller | 14 iconos de 32×32 y fondo opcional de 320×180 generados, con `.meta` y validación técnica; **revisión visual e integración pendientes**. En `Assets/_Project/Art/Sprites/Icons/Components/` y `Art/UI/Workshop/`. El manifiesto vincula los iconos a los IDs reales de `ComponentData`. |
-| 8 Recursos | 8 iconos de 16×16, incluidos modo seguro y sin señal, en `Art/Sprites/Icons/Resources/`; validados técnicamente, sin asignación funcional confirmada. Sin señal deriva de comunicaciones mediante una línea roja. |
-| 9 Lanzamiento | Cohete 32×64; 3 frames de llama 16×32; 4 de humo 32×32; plataforma y espacio 320×180; Tierra/Marte 64×64 y nave 32×32 en `Art/Sprites/Launch/`. PNG separados, revisión visual e integración pendientes. Tierra y Marte reutilizan las tarjetas existentes; el fondo espacial tiene bordes coincidentes y la plataforma recibió un inpaint localizado para retirar un cohete incrustado. |
+| 7 Taller | 14 iconos y fondo opcional generados, asignados por el equipo a `ComponentData.icon` y al taller en `2e3e2ed`; verificar en Play. |
+| 8 Recursos | 8 iconos generados y asignados por el equipo al tema, HUD y taller en `2e3e2ed`; verificar en Play. Sin señal deriva de comunicaciones. |
+| 9 Lanzamiento | Cohete, 3 frames de llama, 4 de humo, fondos, planetas y nave generados como PNG separados en `Art/Sprites/Launch/`; integrados por el equipo en `03_Launch` en `2e3e2ed`. Verificar en Play. |
 | 10 Interfaz | Botones, marcos, barras, diálogos, popup científico, estrellas, insignias, tarjetas, candado, logo, fondo de título y aviso BIMO aparecen como **en juego** en la lista más reciente. Reportes anteriores y cambios locales de una copia indican tareas pendientes; verificar conexiones reales en Unity y el historial actual antes de rehacer o reasignar. |
 
 Las imágenes finales de la entrega 7–9, las fuentes y solicitudes sin credenciales se rastrean en `Elementos visuales/PixelLab-Componentes-Lanzamiento-20261115/manifest.json` y `raw/`. Las composiciones están en `docs/art-review/componentes-recursos-lanzamiento/index.html`; son montajes de revisión con sprites reales, no capturas ni evidencia de integración. `Assets/_Project/Art/GENERATED_ASSETS_REPORT.md` documenta rutas, referencias, jobs y limitaciones. Otras entregas y fuentes aparecen bajo `Elementos visuales/`; la biblioteca de terrenos anterior contiene 182 piezas y prototipos/editables, pero esos prototipos no equivalen a implementación Unity.
 
 ## 7. Estado actual del desarrollo
 
-- **Arte de última tanda:** 36 PNG descargados y organizados (14 componentes, 8 recursos, fondo opcional de taller y 13 piezas/frames de lanzamiento), con fuentes y `.meta`; validación automatizada técnica y composiciones realizadas. No se ha recibido aprobación de integración visual.
+- **Arte de última tanda:** 36 PNG descargados y organizados (14 componentes, 8 recursos, fondo opcional de taller y 13 piezas/frames de lanzamiento), con fuentes y `.meta`; validación automatizada técnica y composiciones realizadas. Posteriormente el equipo integró los recursos en `2e3e2ed`; no se ha verificado esa integración en Play durante esta transferencia.
 - **Código y flujo:** hay una demo estructurada en seis escenas y mecánicas documentadas. No se ha comprobado aquí su funcionamiento completo actual en Unity, ni una build web. No describir la demo como terminada.
 - **UI, personajes y mapa:** la lista de arte reciente declara varios activos integrados. Hay informes históricos que conservan el estado anterior «pendiente»; examinar escena, historial y rama actual en lugar de mezclar fechas. Una etiqueta de completado de una generación no demuestra integración funcional.
-- **Último trabajo exacto:** commit `eedfb40` publicado en `art/componentes-recursos-lanzamiento-20261115`; no se modificaron escenas, prefabs, ScriptableObjects ni mecánicas para integrarlo. Su página de revisión es `docs/art-review/componentes-recursos-lanzamiento/index.html`. No hay confirmación de merge a `main`.
+- **Último trabajo:** el arte `eedfb40` se incorporó a `main` en `21e20fc`; el equipo lo integró en escenas, datos y UI en `2e3e2ed`. Revisiones: `docs/art-review/componentes-recursos-lanzamiento/index.html`. Después hubo ajustes de HUD y un perfil de build web.
 - **Copia de trabajo original:** al momento del corte, otra copia local `Nasa_Challenge` estaba en `main`, por detrás del `origin/main` conocido y con cambios previos preparados, en particular metadatos y documentación/revisiones de UI. No descartarlos, sobrescribirlos ni trasladarlos sin inspección y acuerdo; no asumir que están en GitHub. Esos cambios podrían no viajar al nuevo equipo si no se respaldan o publican. Esta observación es un estado histórico local, no una afirmación sobre el estado futuro del remoto.
 
 ## 8. Decisiones y restricciones
@@ -104,7 +104,7 @@ Las imágenes finales de la entrega 7–9, las fuentes y solicitudes sin credenc
 2. El rover tiene un diseño visual único, independientemente del equipamiento. Los 14 componentes son iconos de UI, no piezas superpuestas ni variaciones del rover.
 3. No modificar mecánicas, cálculos, misiones, diálogos, reglas de comunicación ni condiciones de lanzamiento sin autorización concreta. Respetar los sistemas existentes.
 4. Cohete único para la secuencia; los tres lanzadores del taller son iconos de selección, no tres secuencias diferentes. Mantener cohete, llama, humo, planetas, nave, fondo y trayectoria dinámica independientes.
-5. **La integración funcional de la entrega de arte 7–9 requiere aprobación del resultado visual**. No sustituir masivamente escenas ni prefabs antes de esa revisión. Esta transferencia no concede dicha aprobación.
+5. El equipo ya integró la entrega 7–9. Para nuevos cambios visuales o sustituciones en escenas, coordinar y obtener la aprobación correspondiente; no rehacer la integración existente.
 6. Leer `AGENTS.md`; consultar estado de Git y coordinar con Danilo. No sobrescribir trabajo ajeno ni realizar operaciones destructivas. La política del repositorio pide sincronizar y coordinar escenas; prevalece cualquier instrucción más reciente del usuario, incluida su decisión sobre commit/push.
 7. No editar como texto `.unity`, `.prefab` ni `.asset`; usar Unity/MCP o scripts de editor. Los assets nuevos o movidos requieren `.meta`; no borrar ni duplicar GUID. No tocar configuraciones de paquete/proyecto sin autorización.
 8. Datos NASA verificables y con fuente; valores de simulación y ficción se identifican como tales. La interfaz no debe hornear cantidades o estados dinámicos.
@@ -124,8 +124,8 @@ Las imágenes finales de la entrega 7–9, las fuentes y solicitudes sin credenc
 ## 10. Plan de continuación
 
 1. **Identificar la base correcta:** clonar/actualizar de forma segura, inspeccionar `git status`, ramas y PR/merge de `art/componentes-recursos-lanzamiento-20261115`. Asegurar que los cambios locales de la otra computadora estén respaldados; coordinar con Danilo antes de tocar escenas. No ejecutar un pull que sobrescriba cambios.
-2. **Próxima acción concreta:** abrir `docs/art-review/componentes-recursos-lanzamiento/index.html`, revisar con el usuario las láminas de componentes, HUD, plataforma, despegue y viaje, y obtener su aprobación para integración o sus correcciones. Ver también `Art/GENERATED_ASSETS_REPORT.md` y `manifest.json`. La revisión visual precede cualquier cambio funcional.
-3. **Tras aprobación:** inspeccionar `ComponentData`, `WorkshopScreen`, `MissionHUD`, `UITheme` y `LaunchSequence` y asignar arte con Unity de manera incremental: primero iconos según IDs reales, luego indicadores, luego elementos independientes del lanzamiento. Mantener datos, posiciones/eventos y trayectoria existente; no añadir reglas nuevas. El manifiesto de la entrega proporciona el mapeo de componentes.
+2. **Próxima acción concreta:** revisar con el equipo la integración `2e3e2ed` y comprobar en Unity taller, HUD y lanzamiento. Las láminas en `docs/art-review/componentes-recursos-lanzamiento/index.html` son referencias, no capturas de Play.
+3. **Si se solicitan correcciones:** inspeccionar `ComponentData`, `WorkshopScreen`, `MissionHUD`, `UITheme` y `LaunchSequence`; modificar la integración existente incrementalmente, conservando los datos y la lógica.
 4. **Verificar junto al equipo:** revisar si DrivingV2, Vega/BIMO, mapa y punto 10 ya están asignados en la rama real; evitar repetir trabajo. Resolver únicamente las conexiones faltantes autorizadas.
 5. **Probar en Unity cuando se solicite:** título → Hub/briefing → taller con diseño válido → lanzamiento → Marte y eventos → reporte/rediseño. Comprobar cálculo y visuales con diferentes componentes, estados de comunicación/seguridad, efectos y referencias. Registrar resultados reales.
 6. **Demo web:** instalar/verificar módulo WebGL, crear una build de prueba y comprobar en navegador controles, audio activado por interacción, presentación y flujo completo. Determinar alojamiento/despliegue con el equipo. Verificar fuentes NASA, licencias y posibles errores antes de entregar.
@@ -137,7 +137,7 @@ Las imágenes finales de la entrega 7–9, las fuentes y solicitudes sin credenc
 - Trabaja por tareas concretas y cambios pequeños. Conserva recursos originales y variantes; usa las composiciones para comunicar propuestas, no como pruebas de Play. No inventes rutas, herramientas, aprobaciones o datos.
 - Para escenas, prefabs y ScriptableObjects usa Unity o herramientas de editor, nunca edición textual; coordina con Danilo y conserva `.meta` y referencias. Revisa las reglas del repositorio antes de cualquier cambio y da pasos de verificación.
 - Los personajes, terrenos, rover y UI no requieren regeneración salvo una solicitud concreta. PixelLab se reserva para piezas específicas y no se deben incluir credenciales en archivos o mensajes.
-- Si falta una decisión necesaria, indica la incertidumbre; no conviertas propuestas narrativas ni documentos de un estado anterior en funcionalidades implementadas. Pregunta por autorización de integración visual si sigue pendiente.
+- Si falta una decisión necesaria, indica la incertidumbre; no conviertas propuestas narrativas ni documentos de un estado anterior en funcionalidades implementadas. Solicita autorización para cambios visuales adicionales cuando corresponda.
 - No hacer commit, push ni publicar por cuenta propia si las instrucciones actuales del usuario lo prohíben; si se autoriza, identificar exactamente rama y cambios. Las restricciones específicas de una tarea prevalecen sobre pautas generales del repositorio.
 
 ## 12. Documentación de referencia
@@ -147,7 +147,7 @@ Las imágenes finales de la entrega 7–9, las fuentes y solicitudes sin credenc
 - `docs/game-design/historia-mars-crafts.md`: narrativa 1.65 y referencias; contiene también la versión 1.0 obsoleta.
 - `docs/game-design/sistema-recursos-y-assets.md`: recursos, balance y componentes.
 - `docs/game-design/mision-marte-implementada.md`: diseño de la misión implementada.
-- `docs/game-design/lista-arte-para-dibujar.md`: lista de arte actual; sus marcas de las secciones 7–9 representan generación/validación técnica, no integración.
+- `docs/game-design/lista-arte-para-dibujar.md`: lista de arte; las notas de entrega pueden preceder a la integración de `2e3e2ed`, contrastar con el historial.
 - `docs/game-design/UI_ART_PLAN.md`: planificación de la interfaz.
 - `docs/architecture/arquitectura-unity.md` y `docs/architecture/como-reemplazar-arte-y-audio.md`: organización y puntos de conexión; contrastar rutas de propuestas con archivos reales.
 - `Assets/_Project/Art/GENERATED_ASSETS_REPORT.md`: entregas gráficas y estado reportado en cada momento.
